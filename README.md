@@ -30,10 +30,9 @@
 1. [eclipse git 연동](https://recollectionis.tistory.com/166)
 2. [JDK 설치 방법, 환경변수 설정](https://jhnyang.tistory.com/224)
 3. [STS, Gradle 설치](    https://linked2ev.github.io/gitlog/2019/08/19/springboot-mvc-2-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95-%EB%B0%8F-Eclipse-STS-Gradle-%EC%84%A4%EC%B9%98/[)
-4. [Eclipse 연동 시 에러 - Unable to start embedded Tomcat org.springframework.context.ApplicationContextException](https://dreaming-soohyun.tistory.com/entry/eclipse-Git-Clone-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%9C%EB%B2%84-%EA%B5%AC%EB%8F%99-%EB%B6%88%EA%B0%80-%ED%98%84%EC%83%81)
-5. [](http://www.mkyong.com/gradle/gradle-create-java-project-structure-automatically/)
+4.[Create Java project structure automatically](http://www.mkyong.com/gradle/gradle-create-java-project-structure-automatically/)
 
-## Eclipse 연동 시 에러
+## Eclipse 연동 시 에러 Unable to start embedded Tomcat
 
 1. [eclipse Git Clone 프로젝트 서버 구동 불가 현상](https://dreaming-soohyun.tistory.com/entry/eclipse-Git-Clone-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%9C%EB%B2%84-%EA%B5%AC%EB%8F%99-%EB%B6%88%EA%B0%80-%ED%98%84%EC%83%81)
 
