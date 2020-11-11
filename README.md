@@ -30,7 +30,7 @@
 1. [eclipse git 연동](https://recollectionis.tistory.com/166)
 2. [JDK 설치 방법, 환경변수 설정](https://jhnyang.tistory.com/224)
 3. [STS, Gradle 설치](    https://linked2ev.github.io/gitlog/2019/08/19/springboot-mvc-2-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95-%EB%B0%8F-Eclipse-STS-Gradle-%EC%84%A4%EC%B9%98/[)
-4.[Create Java project structure automatically](http://www.mkyong.com/gradle/gradle-create-java-project-structure-automatically/)
+4. [Create Java project structure automatically](http://www.mkyong.com/gradle/gradle-create-java-project-structure-automatically/)
 
 ## Eclipse 연동 시 에러 Unable to start embedded Tomcat
 
@@ -58,4 +58,3 @@
   - 삭제하고 싶은 라이브러리의 경우는 build.cradle에서 해당 파일을 삭제 후, 동일하게 Refresh Gradle Project
   - 그래도 되지 않을때의 방법 [이클립스 The selection cannot be launched and there are no recent launches](https://zxcv5500.tistory.com/268)
   - <b>run as java 하고 refresh<b> [youtube ](https://www.youtube.com/watch?v=OaAz1g2Cwx8)
-
