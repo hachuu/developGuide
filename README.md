@@ -21,6 +21,16 @@
 
 
 
+### 개발 도구
+
+1. [정규식 검사](https://regex101.com/r/cO8lqs/4)
+2. [css 에디터](https://jsbin.com/wubapojoci/edit?html,css,output)
+3. [flex box 연습 - frogbox](https://flexboxfroggy.com/#ko)
+4. [javascript 연습장](https://jsfiddle.net/)
+5. [color tool](https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=B388FF)
+6. [google Font](https://fonts.google.com/specimen/Secular+One?sidebar.open=true&selection.family=Secular+One)
+7. [icon `<script>` injection](https://fontawesome.com/icons/bars?style=solid)
+
 
 
 # eclipse setting
@@ -58,3 +68,8 @@
   - 삭제하고 싶은 라이브러리의 경우는 build.cradle에서 해당 파일을 삭제 후, 동일하게 Refresh Gradle Project
   - 그래도 되지 않을때의 방법 [이클립스 The selection cannot be launched and there are no recent launches](https://zxcv5500.tistory.com/268)
   - <b>run as java 하고 refresh<b> [youtube ](https://www.youtube.com/watch?v=OaAz1g2Cwx8)
+
+
+
+
+
