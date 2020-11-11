@@ -31,6 +31,7 @@
 6. [google Font](https://fonts.google.com/specimen/Secular+One?sidebar.open=true&selection.family=Secular+One)
 7. [icon `<script>` injection](https://fontawesome.com/icons/bars?style=solid)
 
+---
 
 
 # eclipse setting
@@ -42,7 +43,7 @@
 3. [STS, Gradle 설치](    https://linked2ev.github.io/gitlog/2019/08/19/springboot-mvc-2-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95-%EB%B0%8F-Eclipse-STS-Gradle-%EC%84%A4%EC%B9%98/[)
 4. [Create Java project structure automatically](http://www.mkyong.com/gradle/gradle-create-java-project-structure-automatically/)
 
-## Eclipse 연동 시 에러 Unable to start embedded Tomcat
+## Eclipse 연동 시 에러 Unable to start embedded Tomcat 🤯
 
 1. [eclipse Git Clone 프로젝트 서버 구동 불가 현상](https://dreaming-soohyun.tistory.com/entry/eclipse-Git-Clone-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%9C%EB%B2%84-%EA%B5%AC%EB%8F%99-%EB%B6%88%EA%B0%80-%ED%98%84%EC%83%81)
 
@@ -69,7 +70,13 @@
   - 그래도 되지 않을때의 방법 [이클립스 The selection cannot be launched and there are no recent launches](https://zxcv5500.tistory.com/268)
   - <b>run as java 하고 refresh<b> [youtube ](https://www.youtube.com/watch?v=OaAz1g2Cwx8)
 
+---
 
+## 알고리즘
 
+[알고리즘 공부 시작 방법 및 순서](https://blog.yena.io/studynote/2018/11/14/Algorithm-Basic.html)
 
+[PS roadmap](https://plzrun.tistory.com/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4PS-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)
+
+[인프런 알고리즘 강좌](https://www.inflearn.com/course/알고리즘-강좌/lecture/4083?tab=note)
 
