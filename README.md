@@ -85,4 +85,5 @@
 ## React 개발시 참고할만한 reference
 
 [함수형 컴포넌트 클래스형 컴포넌트 차이](https://xiubindev.tistory.com/107)
+[React v17.0](https://reactjs.org/blog/2020/10/20/react-v17.html)
 
