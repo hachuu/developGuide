@@ -66,6 +66,7 @@
 2. [JDK 설치 방법, 환경변수 설정](https://jhnyang.tistory.com/224)
 3. [STS, Gradle 설치](    https://linked2ev.github.io/gitlog/2019/08/19/springboot-mvc-2-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95-%EB%B0%8F-Eclipse-STS-Gradle-%EC%84%A4%EC%B9%98/[)
 4. [Create Java project structure automatically](http://www.mkyong.com/gradle/gradle-create-java-project-structure-automatically/)
+5. [CORS 문제 api 연동 해결 (maven, gradle)](https://spring.io/guides/gs/rest-service-cors/)
 
 ## Eclipse 연동 시 에러 Unable to start embedded Tomcat 🤯
 
