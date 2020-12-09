@@ -109,3 +109,4 @@
 - 상태 라이브러리 NgRx Store provides reactive state management for <b>Angular apps<b> inspired by Redux(React).
   - RxJS with React Hooks for state management
   - Rxjs를 store개념에 접근하여 상태를 관리하는 라이브로서 combineLatest map filter Observable등이 있다 [참조](https://blog.logrocket.com/rxjs-with-react-hooks-for-state-management/)
+- [React-query](https://react-query.tanstack.com/docs/overview)
