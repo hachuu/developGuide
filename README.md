@@ -101,3 +101,6 @@
 - [React v17.0](https://reactjs.org/blog/2020/10/20/react-v17.html)
 - [React version up & webpack version up](https://marlom.dev/upgrade-to-react-17-and-webpack-5)
 - [[번역] useEffect 완벽 가이드](https://rinae.dev/posts/a-complete-guide-to-useeffect-ko)
+- 상태 라이브러리 NgRx Store provides reactive state management for <b>Angular apps<b> inspired by Redux(React).
+  - RxJS with React Hooks for state management
+  - Rxjs를 store개념에 접근하여 상태를 관리하는 라이브로서 combineLatest map filter Observable등이 있다 [참조](https://blog.logrocket.com/rxjs-with-react-hooks-for-state-management/)
