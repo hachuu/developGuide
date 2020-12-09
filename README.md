@@ -79,12 +79,16 @@
   - 
 
 4. The selection cannot be launched and there are no recent launches 문제 해결
+    1. 방법
+      - Eclipse 프로젝트 이름 위에서 마우스 오른쪽 버튼을 누른 후, Gradle >> Refresh Gradle Project하거나 그냥 프로젝트 Refresh
+      - 삭제하고 싶은 라이브러리의 경우는 build.cradle에서 해당 파일을 삭제 후, 동일하게 Refresh Gradle Project
+      - 그래도 되지 않을때의 방법 [이클립스 The selection cannot be launched and there are no recent launches](https://zxcv5500.tistory.com/268)
+      - <b>run as java 하고 refresh<b> [youtube ](https://www.youtube.com/watch?v=OaAz1g2Cwx8)
+    2. 방법 [출처](https://zxcv5500.tistory.com/268)
+      - Window - > Preferecences 클릭
+      - Run/Debug -> Launching 란을 보면 Launch Operation 항목이 있다.
+      - Launch the selected resource or active editor. if not launchable: 항목의 라디오 그룹에서 --> Launch the associated project 를 선택해 준다.
 
-- 방법
-  - Eclipse 프로젝트 이름 위에서 마우스 오른쪽 버튼을 누른 후, Gradle >> Refresh Gradle Project하거나 그냥 프로젝트 Refresh
-  - 삭제하고 싶은 라이브러리의 경우는 build.cradle에서 해당 파일을 삭제 후, 동일하게 Refresh Gradle Project
-  - 그래도 되지 않을때의 방법 [이클립스 The selection cannot be launched and there are no recent launches](https://zxcv5500.tistory.com/268)
-  - <b>run as java 하고 refresh<b> [youtube ](https://www.youtube.com/watch?v=OaAz1g2Cwx8)
 
 ---
 
