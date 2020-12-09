@@ -76,7 +76,6 @@
   - Eclipse 실행해서,  앞 단계에서 생성한 Java 프로젝트를 import한다.
   - 외부 라이브러리가 있는 경우 Eclipse에서 build.gradle 파일을 연 후 필요한 라이브러리를 추가
   - build.gradle 파일이 수정 됐으므로, Refresh Gradle Project를 해준다
-  - 
 
 4. The selection cannot be launched and there are no recent launches 문제 해결
     1. 방법
@@ -88,7 +87,8 @@
       - Window - > Preferecences 클릭
       - Run/Debug -> Launching 란을 보면 Launch Operation 항목이 있다.
       - Launch the selected resource or active editor. if not launchable: 항목의 라디오 그룹에서 --> Launch the associated project 를 선택해 준다.
-
+    3. 방법 [출처 유튭](https://www.youtube.com/watch?v=OaAz1g2Cwx8)
+      - rus as java 하고 refresh
 
 ---
 
