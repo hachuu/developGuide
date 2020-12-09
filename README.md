@@ -19,6 +19,7 @@
 - java
   1. [spring boot 프로젝트 생성](https://aljjabaegi.tistory.com/480)
   2. [eclipse setting](#eclipse-setting)
+  3. [스프링 배치만들기](https://github.com/hachuu/developGuide/blob/main/%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B0%B0%EC%B9%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)
 
 ## 알고리즘😡😱
 
