@@ -31,6 +31,11 @@
 - [Github Actions를 이용한 클라이언트 CI/CD 구축 1 - 프로젝트 개요](https://velog.io/@eomttt/Github-Actions%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-CICD-%EA%B5%AC%EC%B6%95)
 - [Github Actions를 이용한 클라이언트 CI/CD 구축 2 - 프로젝트 구성 및 S3를 이용한 정적사이트 만들기](https://velog.io/@eomttt/Github-Actions%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-CICD-%EA%B5%AC%EC%B6%95-ejdd96kp)
 - [Github Actions를 이용한 클라이언트 CI/CD 구축 3 - Github Actions 사용해보기](https://velog.io/@eomttt/Github-Actions%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-CICD-%EA%B5%AC%EC%B6%95-Github-Actions-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0)
+
+## 연산자
+1. [표현식과 연산자](https://github.com/hachuu/study/edit/master/%ED%91%9C%ED%98%84%EC%8B%9D%EA%B3%BC%20%EC%97%B0%EC%82%B0%EC%9E%90.md)
+2. [연산자 우선순위 MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/%EC%97%B0%EC%82%B0%EC%9E%90_%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84)
+
 ### 개발 도구
 
 1. [정규식 검사](https://regex101.com/r/cO8lqs/4)
