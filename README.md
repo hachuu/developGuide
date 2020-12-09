@@ -16,8 +16,9 @@
 
 ## Setting Of Developement
 
-1. [spring boot 프로젝트 생성](https://aljjabaegi.tistory.com/480)
-2. [eclipse setting](#eclipse-setting)
+- java
+  1. [spring boot 프로젝트 생성](https://aljjabaegi.tistory.com/480)
+  2. [eclipse setting](#eclipse-setting)
 
 ## 알고리즘😡😱
 
