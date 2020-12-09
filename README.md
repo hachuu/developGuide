@@ -20,7 +20,10 @@
   1. [spring boot 프로젝트 생성](https://aljjabaegi.tistory.com/480)
   2. [eclipse setting](#eclipse-setting)
   3. [스프링 배치만들기](https://github.com/hachuu/developGuide/blob/main/%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B0%B0%EC%B9%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)
-
+- Gradle
+  1. [실제 gradle 설치 방법](https://park-jongseok.github.io/languages/java/2019/11/01/installing-gradle.html) - eclipse marketplace가 아님
+  2. 'gradle'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다. => 시스템 환경 변수 %GRADLE_HOME%\bin 순서를 상위로 옮겨줌.
+  3. Run the init task (gradle init --type java-library) [출처](https://docs.gradle.org/current/samples/sample_building_java_libraries.html)
 ## 알고리즘😡😱
 
 1. [알고리즘 공부 시작 방법 및 순서](https://blog.yena.io/studynote/2018/11/14/Algorithm-Basic.html)
