@@ -50,3 +50,11 @@ function getMin(min, max) {
     }
 }
 ```
+
+## 아스키코드 character
+
+```javascript
+'a'.charCodeAt(0); //97;
+String.fromCharCode(97) //a;
+String.fromCharCode(x.charCodeAt(0) + n);
+```
