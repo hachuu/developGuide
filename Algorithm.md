@@ -51,7 +51,9 @@ function getMin(min, max) {
 }
 ```
 
-## 아스키코드 character
+## 아스키 코드, 문자열 코드 character변환
+- 'a'.charCodeAt: 문자열 코드를 아스키코드로 표현.
+- String.fromCharCode(): 유니코드 또는 아스키 코드 번호를, 문자열 코드로 표현.
 
 ```javascript
 'a'.charCodeAt(0); //97;
