@@ -60,3 +60,13 @@ function getMin(min, max) {
 String.fromCharCode(97) //a;
 String.fromCharCode(x.charCodeAt(0) + n);
 ```
+
+## 형변환 string, number
+- Number to String
+   - +""; => String으로 변환
+- String to Number
+   - +"10"; => Number로 변환
+```javascript
+10+""; //"10"
++"10"; //10
+```
