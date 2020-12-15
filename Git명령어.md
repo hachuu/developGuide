@@ -11,6 +11,7 @@
 3. branch
 - git branch {branchName} 브랜치 생성
 - git checkout {branchName} 브랜치 변경
+- git checkout -b {branchName} 브랜치 작성 및 체크아웃 동시에
 - git branch feature/{기능이름} => feature branch 생성
 - git checkout feature/{기능이름} => feature branch checkout
 
@@ -44,6 +45,9 @@
 - git status
 - git log => 전체 log 확인 무한 enter 후 나가고 싶을 때 q를 누르면 됨
 - git log -g => 가장 최근 log 확인
+
+6. merge
+- git merge feature/{기능이름}
 
 # 기타
 - git config --global gui.encoding utf-8 => utf-8 한글깨짐 문제
