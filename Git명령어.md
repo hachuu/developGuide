@@ -23,6 +23,9 @@
 - git config user.name => 계정 확인
 - git config user.email => 계정 메일 확인
 
+6. git init
+- 새로운 Git 저장소(repository)를 생성
+
 ## git commit 과정
 
 1. add: 수정 파일 add
@@ -46,7 +49,7 @@
 - git log => 전체 log 확인 무한 enter 후 나가고 싶을 때 q를 누르면 됨
 - git log -g => 가장 최근 log 확인
 
-6. merge
+### git merge
 - git merge feature/{기능이름}
 
 # 기타
