@@ -54,3 +54,4 @@
 
 # 기타
 - git config --global gui.encoding utf-8 => utf-8 한글깨짐 문제
+- commit 말고 임시 저장 [git stash](https://m.blog.naver.com/PostView.nhn?blogId=lucy9211&logNo=221453954198&proxyReferer=https:%2F%2Fwww.google.com%2F)
