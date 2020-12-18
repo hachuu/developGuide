@@ -70,3 +70,12 @@ String.fromCharCode(x.charCodeAt(0) + n);
 10+""; //"10"
 +"10"; //10
 ```
+
+## 배열 apply를 활용한 Max, Min 값 구하기
+```javascript
+var numbers = [10, 20, 3, 16, 45];
+var max = Math.max.apply(null, numbers);
+var min = Math.min.apply(null, numbers);
+console.log(max, min); //45 3
+```
+
