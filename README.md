@@ -4,7 +4,7 @@
 1. [자주 쓰는 명령어](https://github.com/hachuu/developGuide/blob/main/Git%EB%AA%85%EB%A0%B9%EC%96%B4.md)
 
 ## javascript Reference
-
+- [내가 정리하고 있는 javascript concept](https://github.com/hachuu/developGuide/blob/main/javascript.md)
 1. [Web Development Resources](https://github.com/MarkoDenic/web-development-resources?fbclid=IwAR0AdDnj6dw1eoONieLcFhDzTg3cbLe_OwTiB3sohqd1kYTisy369piHs80 "Web Development Resources")
 2. [javascript utilities - 1loc.dev](https://1loc.dev)
 3. [javascript theory](https://helloworldjavascript.net/pages/190-array.html)
