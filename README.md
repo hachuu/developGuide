@@ -9,6 +9,7 @@
 2. [javascript utilities - 1loc.dev](https://1loc.dev)
 3. [javascript theory](https://helloworldjavascript.net/pages/190-array.html)
 4. [javascript concept](https://www.30secondsofcode.org/)
+5. [javascript prototype 2016년 글](https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67)
 
 ## React Reference
 
