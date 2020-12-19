@@ -45,6 +45,18 @@
 ## regular expression
 [example](https://github.com/hachuu/developGuide/blob/main/regularExpression.md)
 
+## Webpack vs (Grunt vs Gulp)
+[출처](https://ehddnjs8989.medium.com/webpack%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%B4%85%EC%8B%9C%EB%8B%A4-c953181e79ad)
+- Webpack = (Grunt|Gulp) + Browserify(Node.js기반 javascript code를 브라우저 환경에서도 실행 가능하도록 해줌)
+- Webpack = 모듈 번들러 / Grunt vs Gulp = task runners
+
+## Babel
+- Babel : JavaScript 컴파일러, ES6 이후의 코드를 구형 브라우저 환경에 맞게 변환
+- polyfill : 폴리필은 웹 개발에서 기능을 지원하지 않는 웹 브라우저 상의 기능을 구현하는 코드
+
+## RESTful Api
+[출처](https://meetup.toast.com/posts/92)
+
 ## 도커 Docker
 - 컨테이너 기반의 오픈소스 가상화 플랫폼
 - 도커 빌드
