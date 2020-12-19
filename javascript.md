@@ -7,6 +7,7 @@
 - __proto__는 객체가 생성될 때 조상이었던 함수의 Prototype Object를 가리킴
 - - ![img](https://github.com/hachuu/developGuide/blob/main/image/prototype%20Object.PNG)
 - 이렇게 __proto__속성을 통해 상위 프로토타입과 연결되어있는 형태를 프로토타입 체인(Chain)이라고 함
+- __proto__ is deprecated in ES6. Object.getPrototypeOf 와 Object.setPrototypeOf
 
 ## javascript Class
 - ECMA6 표준에서는 Class 문법이 추가
