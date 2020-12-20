@@ -65,6 +65,12 @@ console.log(Function.prototype.__proto__ === Object.prototype); // ⑤ true
 ## javascript Class
 - ECMA6 표준에서는 Class 문법이 추가
 
+### 일시적 사각 지대 (Temporal Dead Zone; TDZ)
+- var 변수의 경우 선언 단계 - 초기화 가 동시에 이루어지는 반면, let/const 변수의 경우 선언 단계와 초기화 단계가 나누어서 이루어짐
+- let/const 변수의 선언 단계와 초기화 단계 사이를 일시적 사각 지대 (Temporal Dead Zone; TDZ)라고 부름
+- 실제 코드에서 let 변수의 선언 또는 const 변수의 선언 및 할당 (const 의 경우 선언과 동시에 값 할당이 되어야 함)이 나오기 전까지는 해당 변수는 TDZ에서 관리 한다고 생각하면 됨
+- 해당 코드가 나오기 전에 미리 사용을 하려고 할 경우 TDZ에서 ReferenceError를 발생 시킴
+
 
 ### 출처
 1. [[Javascript ] 프로토타입 이해하기](https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67)
