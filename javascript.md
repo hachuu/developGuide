@@ -66,6 +66,12 @@ console.log(Function.prototype.__proto__ === Object.prototype); // ⑤ true
 
 - __proto__ is deprecated in ES6. Object.getPrototypeOf 와 Object.setPrototypeOf
 
+
+- ES5에서 프로토타입 기반 프로그래밍은 클래스가 필요없는(class-free) 객체지향 프로그래밍 스타일로 프로토타입 체인과 클로저 등으로 객체 지향 언어의 상속, 캡슐화(정보 은닉) 등의 개념을 구현할 수 있다.
+
+**자바스크립트의 모든 객체는 프로토타입이라 불리는 또다른 객체를 내부적으로 참조할 수 있다. 객체는 프로토타입의 프로퍼티들을 자신의 프로퍼티로 가져온다**
+**결국 자바스크립트의 객체는 자신의 프로토타입에 있는 프로퍼티들을 상속받는다.**
+
 ## javascript Class
 - ECMA6 표준에서는 Class 문법이 추가
 
@@ -78,6 +84,7 @@ console.log(Function.prototype.__proto__ === Object.prototype); // ⑤ true
 - 자식 클래스의 정적 메소드 내부에서도 super 키워드를 사용하여 부모 클래스의 정적 메소드를 호출할 수 있다. 이는 자식 클래스는 프로토타입 체인에 의해 부모 클래스의 정적 메소드를 참조할 수 있기 때문이다.
 
 - 하지만 자식 클래스의 일반 메소드(프로토타입 메소드) 내부에서는 super 키워드를 사용하여 부모 클래스의 정적 메소드를 호출할 수 없다. 이는 자식 클래스의 인스턴스는 프로토타입 체인에 의해 부모 클래스의 정적 메소드를 참조할 수 없기 때문이다.
+
 
 
 ### 일시적 사각 지대 (Temporal Dead Zone; TDZ)
