@@ -1,5 +1,9 @@
 # javascript 개념 정리
 
+## ProtoType과 Instance
+- Prototype : 객체를 만드는 기본 틀, 객체의 원형 속성과 기능(함수)이 들어있다.
+- Instance : 프로토타입을 통해 새로 만들어진 객체. 객체의 속성과 함수를 사용할 수 있다.
+
 ## javascript prototype
 - javascript는 프로토타입기반 언어
 - ![img](https://github.com/hachuu/developGuide/blob/main/image/prototype.PNG)
@@ -70,7 +74,7 @@ console.log(Function.prototype.__proto__ === Object.prototype); // ⑤ true
 - 오버로딩(Overloading)
 매개변수의 타입 또는 갯수가 다른, 같은 이름의 메소드를 구현하고 매개변수에 의해 메소드를 구별하여 호출하는 방식이다. 자바스크립트는 오버로딩을 지원하지 않지만 arguments 객체를 사용하여 구현할 수는 있다.
 
-- ㅍㅡㄹㅗㅌㅗㅌㅏㅇㅣㅂㄱㅗㅏㅇㅡㅣ ㅊㅏㅇㅣ
+- 프로토타입과의 차이
 - 자식 클래스의 정적 메소드 내부에서도 super 키워드를 사용하여 부모 클래스의 정적 메소드를 호출할 수 있다. 이는 자식 클래스는 프로토타입 체인에 의해 부모 클래스의 정적 메소드를 참조할 수 있기 때문이다.
 
 - 하지만 자식 클래스의 일반 메소드(프로토타입 메소드) 내부에서는 super 키워드를 사용하여 부모 클래스의 정적 메소드를 호출할 수 없다. 이는 자식 클래스의 인스턴스는 프로토타입 체인에 의해 부모 클래스의 정적 메소드를 참조할 수 없기 때문이다.
