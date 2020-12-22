@@ -79,3 +79,8 @@ var min = Math.min.apply(null, numbers);
 console.log(max, min); //45 3
 ```
 
+## 제곱근
+```javascript
+Math.sqrt(121) => 11
+Math.pow(3, 2)=> 9
+```
