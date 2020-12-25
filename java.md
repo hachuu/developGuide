@@ -1,0 +1,72 @@
+# JAVA 정리
+
+## java 비동기식 처리
+
+```java
+public class Main {
+	public static void main(String[] args) {
+	    Thread thread1 = new Thread(()-> method_1);
+	    Thread thread2 = new Thread(()-> method_2);
+	    Thread thread3 = new Thread(()-> method_3);
+	    Thread thread4 = new Thread(()-> method_4);
+
+	    thread1.start();
+	    thread2.start();
+	    thread3.start();
+	    thread4.start();
+  	}
+
+  	public static void method_1() {
+	    try {
+	        System.out.println("start method_1");
+	        Thread.sleep(1000);
+	        System.out.println("end method_1");
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+	}
+
+	public static void method_2() {
+	    try {
+	        System.out.println("start method_2");
+	        Thread.sleep(1000);
+	        System.out.println("end method_2");
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+	}
+
+	public static void method_3() {
+	    try {
+	        System.out.println("start method_3");
+	        Thread.sleep(1000);
+	        System.out.println("end method_3");
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+	}
+
+	public static void method_4() {
+	    try {
+	        System.out.println("start method_4");
+	        Thread.sleep(1000);
+	        System.out.println("end method_4");
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+	}
+}
+
+
+```
+
+### java CompletableFuture.runAsync
+- Thread로 구현하지 않아도 java 비동기식 호출 가능
+- [Java - CompletableFuture 사용 방법](https://codechacha.com/ko/java-completable-future/)
+- [CompletableFuture - 안정적 비동기 프로그래밍에 대해 - (1)](https://pjh3749.tistory.com/280)
+
+### Spring boot 라이브러리 java 비동기식 호출 방법
+- [Spring Boot @Async 어떻게 동작하는가?](https://brunch.co.kr/@springboot/401)
+
+#### java time delay 방법
+- [자바에서 몇 초를 지연시키는 방법](https://www.delftstack.com/ko/howto/java/how-to-delay-few-seconds-in-java/)
