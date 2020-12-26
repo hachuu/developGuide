@@ -70,3 +70,6 @@ public class Main {
 
 #### java time delay 방법
 - [자바에서 몇 초를 지연시키는 방법](https://www.delftstack.com/ko/howto/java/how-to-delay-few-seconds-in-java/)
+
+### 로드밸런서 
+[대용량 세션을 위한 로드밸런서](https://d2.naver.com/helloworld/605418)
