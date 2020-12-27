@@ -68,11 +68,14 @@ public class Main {
 ### Spring boot 라이브러리 java 비동기식 호출 방법
 - [Spring Boot @Async 어떻게 동작하는가?](https://brunch.co.kr/@springboot/401)
 
-#### java time delay 방법
-- [자바에서 몇 초를 지연시키는 방법](https://www.delftstack.com/ko/howto/java/how-to-delay-few-seconds-in-java/)
-
 ### 로드밸런서 
 [대용량 세션을 위한 로드밸런서](https://d2.naver.com/helloworld/605418)
 
+#### java time delay 방법
+- [자바에서 몇 초를 지연시키는 방법](https://www.delftstack.com/ko/howto/java/how-to-delay-few-seconds-in-java/)
+
 #### spring 기본 개념
 [Spring이란](https://jerryjerryjerry.tistory.com/62)
+
+#### JPA
+[[JPA] JPA란](https://gmlwjd9405.github.io/2019/08/04/what-is-jpa.html)
