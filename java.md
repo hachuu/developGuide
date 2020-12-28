@@ -71,6 +71,9 @@ public class Main {
 ### 로드밸런서 
 [대용량 세션을 위한 로드밸런서](https://d2.naver.com/helloworld/605418)
 
+### ArrayList
+[자료구조 생활코딩 ArrayList](https://programmers.co.kr/learn/courses/17/lessons/805)
+
 #### java time delay 방법
 - [자바에서 몇 초를 지연시키는 방법](https://www.delftstack.com/ko/howto/java/how-to-delay-few-seconds-in-java/)
 
