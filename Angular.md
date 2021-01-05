@@ -15,4 +15,6 @@
 
 # 양방향 바인딩
 
+```html
 <counter [count]="value" (countChange)="value=$event"></counter>
+```
