@@ -18,3 +18,33 @@
 ```html
 <counter [count]="value" (countChange)="value=$event"></counter>
 ```
+
+# FormControl 클래스와 formControlName
+
+```html
+<form [formGroup]="userForm" novalidate>
+<div>
+<input type="text" formControlName="userid" placeholder="user id">
+</div>
+<div formGroupName="passwordGroup">
+<div>
+<input type="password" formControlName="password" placeholder="password">
+</div>
+<div>
+<input type="password" formControlName="confirmPassword" placeholder="confirmpassword">
+</div>
+</div>
+</form>
+```
+
+```typescript
+ngOnInit() {
+this.userForm = new FormGroup({
+userid: new FormControl(''),
+passwordGroup: new FormGroup({
+password: new FormControl(''),
+confirmPassword: new FormControl('')
+})
+})
+}
+```
