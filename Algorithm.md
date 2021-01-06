@@ -84,3 +84,10 @@ console.log(max, min); //45 3
 Math.sqrt(121) => 11
 Math.pow(3, 2)=> 9
 ```
+
+## 올림, 버림, 반올림
+```javascript
+Math.ceil() => 올림
+Math.floor() => 버림
+Math.round() => 반올림
+```
