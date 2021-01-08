@@ -120,6 +120,7 @@ foo.hasOwnProperty('arguments'); // true
 -  화살표 함수는 super가 없다.
 
 ## Spread 연산자
+- 함수의 인자로 사용하는 경우
 ```javascript
 function foo(x, y, z) {
   console.log(x); // 1
@@ -138,6 +139,18 @@ function foo(param, ...rest) {
 }
 foo(1, 2, 3);
 ```
+
+- 배열에서 사용하는 경우
+1. concat
+```javascript
+var arr = [1, 2, 3];
+console.log(arr.concat([4, 5, 6])); // [1, 2, 3, 4, 5, 6]
+```
+2. push
+3. splice
+4. copy
+
+- 객체에서 사용하는 경우
 
 ### 일시적 사각 지대 (Temporal Dead Zone; TDZ)
 - var 변수의 경우 선언 단계 - 초기화 가 동시에 이루어지는 반면, let/const 변수의 경우 선언 단계와 초기화 단계가 나누어서 이루어짐
