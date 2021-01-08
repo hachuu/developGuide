@@ -89,6 +89,32 @@ console.log(Function.prototype.__proto__ === Object.prototype); // ⑤ true
 ## promise await 차이
 - promise.then().catch()로 에러를 잡으면 되지만 await의 경우 try catch문으로 reject를 체크
 
+## 화살표 함수 [출처](https://ko.javascript.info/arrow-functions)
+- this를 가지지 않습니다.
+```javascript
+let foo = (x) => console.log(arguments);
+foo(1, 2);
+  VM170:1 Uncaught ReferenceError: arguments is not defined
+      at foo (<anonymous>:1:30)
+      at <anonymous>:1:1
+```
+
+```javascript
+let foo = function () { console.log(arguments);};
+foo(1, 2);
+  Arguments(2) [1, 2, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+  0: 1
+  1: 2
+  callee: ƒ ()
+  length: 2
+  Symbol(Symbol.iterator): ƒ values()
+  __proto__: Object
+```
+
+- arguments를 지원하지 않습니다.
+- new와 함께 호출할 수 없습니다.
+- 이 외에도 화살표 함수는 super가 없다
+
 ### 일시적 사각 지대 (Temporal Dead Zone; TDZ)
 - var 변수의 경우 선언 단계 - 초기화 가 동시에 이루어지는 반면, let/const 변수의 경우 선언 단계와 초기화 단계가 나누어서 이루어짐
 - let/const 변수의 선언 단계와 초기화 단계 사이를 일시적 사각 지대 (Temporal Dead Zone; TDZ)라고 부름
@@ -99,3 +125,4 @@ console.log(Function.prototype.__proto__ === Object.prototype); // ⑤ true
 ### 출처
 1. [[Javascript ] 프로토타입 이해하기](https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67)
 2. [출처 poiemaweb](https://poiemaweb.com/js-prototype)
+
