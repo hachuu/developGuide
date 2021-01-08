@@ -28,7 +28,7 @@ console.log(Person.constructor === Function); // true
 
 - __proto__속성은 모든 객체가 빠짐없이 가지고 있는 속성
 - __proto__는 객체가 생성될 때 조상이었던 함수의 Prototype Object를 가리킴
-- - ![img](https://github.com/hachuu/developGuide/blob/main/image/prototype%20Object.PNG)
+- ![img](https://github.com/hachuu/developGuide/blob/main/image/prototype%20Object.PNG)
 
 - 이렇게 __proto__속성을 통해 상위 프로토타입과 연결되어있는 형태를 프로토타입 체인(Chain)이라고 함
 
@@ -90,7 +90,7 @@ console.log(Function.prototype.__proto__ === Object.prototype); // ⑤ true
 - promise.then().catch()로 에러를 잡으면 되지만 await의 경우 try catch문으로 reject를 체크
 
 ## 화살표 함수 [출처](https://ko.javascript.info/arrow-functions)
-- this를 가지지 않습니다.
+- this를 가지지 않는다.
 ```javascript
 let foo = (x) => console.log(arguments);
 foo(1, 2);
@@ -111,9 +111,9 @@ foo(1, 2);
   __proto__: Object
 ```
 
-- arguments를 지원하지 않습니다.
-- new와 함께 호출할 수 없습니다.
-- 이 외에도 화살표 함수는 super가 없다
+- arguments를 지원하지 않는다.
+- new와 함께 호출할 수 없다.
+-  화살표 함수는 super가 없다.
 
 ### 일시적 사각 지대 (Temporal Dead Zone; TDZ)
 - var 변수의 경우 선언 단계 - 초기화 가 동시에 이루어지는 반면, let/const 변수의 경우 선언 단계와 초기화 단계가 나누어서 이루어짐
