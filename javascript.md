@@ -97,6 +97,8 @@ foo(1, 2);
   VM170:1 Uncaught ReferenceError: arguments is not defined
       at foo (<anonymous>:1:30)
       at <anonymous>:1:1
+      
+foo.hasOwnProperty('arguments'); // false
 ```
 
 ```javascript
@@ -109,6 +111,8 @@ foo(1, 2);
   length: 2
   Symbol(Symbol.iterator): ƒ values()
   __proto__: Object
+  
+foo.hasOwnProperty('arguments'); // true
 ```
 
 - arguments를 지원하지 않는다.
