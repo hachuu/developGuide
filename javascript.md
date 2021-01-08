@@ -147,10 +147,63 @@ var arr = [1, 2, 3];
 console.log(arr.concat([4, 5, 6])); // [1, 2, 3, 4, 5, 6]
 ```
 2. push
+```javascript
+var arr1 = [1, 2, 3];
+var arr2 = [4, 5, 6];
+Array.prototype.push.apply(arr1, arr2);
+console.log(arr1); // [1, 2, 3, 4, 5, 6]
+```
 3. splice
-4. copy
+```javascript
+var arr1 = [1, 2, 3, 6];
+var arr2 = [4, 5];
 
+Array.prototype.splice.apply(arr1, [3, 0].concat(arr2));
+
+// 같은 표현
+arr1.splice(3, 0, ...arr2); // arr1.splice(3, 0, 4, 5);와 같다.
+
+console.log(arr1); // [1, 2, 3, 4, 5, 6]
+```
+4. copy
+```javascript
+var arr = [1, 2, 3];
+var copy = arr.slice();
+console.log(copy); // [1, 2, 3]
+
+// copy 변경
+copy.push(4);
+console.log(copy); // [1, 2, 3, 4]
+// arr은 변경되지 않음
+console.log(arr); // [1, 2, 3]
+```
+
+```javascript
+const arr = [1, 2, 3];
+const copy = [...arr];
+console.log(copy); // [1, 2, 3]
+
+// copy 변경
+copy.push(4);
+console.log(copy); // [1, 2, 3, 4]
+// arr은 변경되지 않음
+console.log(arr); // [1, 2, 3]
+```
 - 객체에서 사용하는 경우
+- - Spread 연산자를 사용하여 객체를 손쉽게 병합 또는 변경 가능
+- - Object.assign 메소드를 사용하여 동일하게 작업 가능
+```javascript
+const merged = Object.assign({}, {x: 1, y: 2}, {g: 10, z: 3});
+console.log(merged); // {x: 1, y: 10, z: 3}
+```
+- - Spread 연산자를 사용하면 유사 배열 객체를 배열로 손쉽게 변환 가능
+```javascript
+const htmlCollection = document.getElementsByTagName('li');
+// 유사 배열인 HTMLCOLLECTION을 배열로 변환한다.
+const newArray = [...htmlCollection]; // Spread 연산자
+// ES6의 Array.from 메소드를 사용할 수도 있다.
+const newArray = Array.from(htmlCollection);
+```
 
 ### 일시적 사각 지대 (Temporal Dead Zone; TDZ)
 - var 변수의 경우 선언 단계 - 초기화 가 동시에 이루어지는 반면, let/const 변수의 경우 선언 단계와 초기화 단계가 나누어서 이루어짐
