@@ -206,6 +206,8 @@ const newArray = Array.from(htmlCollection);
 ```
 
 ## Symbol
+- Symbols 는 'new' 키워드를 사용하지 못함
+- Symbol은 
 [Symbol은 왜 쓰는가](https://medium.com/@hyunwoojo/javascript-symbol-%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-6aa5903fb6f1)
 
 ### 일시적 사각 지대 (Temporal Dead Zone; TDZ)
