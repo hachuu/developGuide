@@ -210,6 +210,16 @@ const newArray = Array.from(htmlCollection);
 - Symbol은 
 [Symbol은 왜 쓰는가](https://medium.com/@hyunwoojo/javascript-symbol-%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-6aa5903fb6f1)
 
+
+## export default
+- 단일 값을 내보내거나 모듈의 기본 값이 필요한 경우, 기본 내보내기를 사용한다.
+```javascript
+let cube = function cube(x) {
+  return x * x * x;
+};
+export default cube;
+```
+
 ### 일시적 사각 지대 (Temporal Dead Zone; TDZ)
 - var 변수의 경우 선언 단계 - 초기화 가 동시에 이루어지는 반면, let/const 변수의 경우 선언 단계와 초기화 단계가 나누어서 이루어짐
 - let/const 변수의 선언 단계와 초기화 단계 사이를 일시적 사각 지대 (Temporal Dead Zone; TDZ)라고 부름
