@@ -232,6 +232,10 @@ export default function (x) {
 - 실제 코드에서 let 변수의 선언 또는 const 변수의 선언 및 할당 (const 의 경우 선언과 동시에 값 할당이 되어야 함)이 나오기 전까지는 해당 변수는 TDZ에서 관리 한다고 생각하면 됨
 - 해당 코드가 나오기 전에 미리 사용을 하려고 할 경우 TDZ에서 ReferenceError를 발생 시킴
 
+### HTML 특수기호 변환
+```javascript
+const unescape = str => str.replace(/&/g , '&').replace(/&lt;/g  , '<').replace(/&gt;/g  , '>').replace(/&#0*39;/g , "'").replace(/&quot;/g, '"');
+```
 
 ### 출처
 1. [[Javascript ] 프로토타입 이해하기](https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67)
