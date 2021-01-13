@@ -91,3 +91,12 @@ Math.ceil() => 올림
 Math.floor() => 버림
 Math.round() => 반올림
 ```
+
+## 중복 제거
+- Set 객체는 자료형에 관계 없이 원시 값과 객체 참조 모두 유일한 값을 저장할 수 있다.
+```javascript
+const a = [1, 2, 3, 4, 3, 5, 6, 4];
+const b = [...new Set(a)];
+console.log(b); // [1, 2, 3, 4, 5, 6]
+```
+
