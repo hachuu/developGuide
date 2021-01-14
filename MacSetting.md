@@ -1,5 +1,15 @@
 # 맥 세팅하기
 
+## 맥 검사
+
+- Apple 진단 시작하기
+Apple Silicon이 탑재된 Mac을 사용 중인지 확인한 다음 아래의 적절한 단계를 따릅니다.
+Apple Silicon
+
+1. Mac을 켜고 Mac이 시동될 때 전원 버튼을 길게 누릅니다.
+'옵션'이라고 표시된 기어 아이콘이 포함된 시동 옵션 윈도우가 나타나면 눌렀던 전원 버튼을 놓습니다.
+키보드에서 command(⌘)-D 키를 누릅니다.
+
 ## 세팅 순서
 
 1. [개발자 세팅](https://subicura.com/2017/11/22/mac-os-development-environment-setup.html)
