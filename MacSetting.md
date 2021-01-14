@@ -6,7 +6,7 @@
 
 2. [homebrew m1 세팅](https://subicura.com/2017/11/22/mac-os-development-environment-setup.html)
 - brew 경로: /opt/homebrew
-*/opt/homebrew로 경로 설정핮 않으면 'zsh: command not found: brew'에러 남*
+*/opt/homebrew로 경로 설정하지 않으면 'zsh: command not found: brew'에러 남*
 ```
 cd /opt
 mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
