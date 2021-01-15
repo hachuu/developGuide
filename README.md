@@ -132,3 +132,4 @@
   - Rxjs를 store개념에 접근하여 상태를 관리하는 라이브로서 combineLatest map filter Observable등이 있다 [참조](https://blog.logrocket.com/rxjs-with-react-hooks-for-state-management/)
 - [React-query](https://react-query.tanstack.com/docs/overview)
 - [Jest를 이용해 Snapshot testing하기](https://wkdtjsgur100.github.io/jest-snapshot-testing/)
+- [React-router-dom에서 Link 태그를 사용하는 법](https://codeameba.netlify.app/blog/how-to-use-link-tag)
