@@ -53,5 +53,12 @@
 - git merge feature/{기능이름}
 
 # 기타
+1. 한글깨짐 문제
 - git config --global gui.encoding utf-8 => utf-8 한글깨짐 문제
+2. 임시 저장
 - commit 말고 임시 저장 [git stash](https://m.blog.naver.com/PostView.nhn?blogId=lucy9211&logNo=221453954198&proxyReferer=https:%2F%2Fwww.google.com%2F)
+3. git push 권한 문제 생길 때
+```
+git remote remove origin
+git remote add origin https://hachuu@github.com/hachuu/angular_page.git
+```
