@@ -53,3 +53,16 @@ echo “{ \”₩\” = (\”insertText:\”, \”\`\”); }” >> ~/Library/Key
 - 방법 
   - git remote remove origin
   - git remote add origin https://hachuu@github.com/hachuu/angular_page.git
+
+
+### 단축키
+| 기능              | 단축키                                                         |
+| ----------------- | ------------------------------------------------------------ |
+|최소화| command + M |
+|프로그램 종료| command + Q |
+|Alt Tap| command + Tab |
+|복사| command + C |
+|붙여넣기| command + V |
+|작업취소| command + Z |
+|오려두기| command + X |
+|스포트라이트| command + space bar |
