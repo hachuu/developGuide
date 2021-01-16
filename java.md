@@ -71,8 +71,13 @@ public class Main {
 ### 로드밸런서 
 [대용량 세션을 위한 로드밸런서](https://d2.naver.com/helloworld/605418)
 
-### ArrayList
-[자료구조 생활코딩 ArrayList](https://programmers.co.kr/learn/courses/17/lessons/805)
+### HashMap, ArrayList, LinkedList 비교
+```
+HashMap은 Key, Value 쌍을 가지는 데이터를 관리할 때
+ArrayList는 데이터가 입력 되고 삭제가 빈번하지 않은 경우
+Linkedlist는 Queue와 같이 Head와 Read와 가까이에서 탐색, 삭제가 이뤄지는 경우
+```
+[출처: HashMap, ArrayList, LinkedList 속도 비교](https://nnoco.tistory.com/73)
 
 #### java time delay 방법
 - [자바에서 몇 초를 지연시키는 방법](https://www.delftstack.com/ko/howto/java/how-to-delay-few-seconds-in-java/)
