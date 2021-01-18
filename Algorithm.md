@@ -50,6 +50,16 @@ function getMin(min, max) {
     }
 }
 ```
+3. 배열의 최대공약수
+```javascript
+function nlcm(arr) {
+ return arr.reduce((min, max) => min*max / gcd(min, max))  
+}
+
+function gcd(min, max) {
+  return min % max ? gcd(max, min%max) : max
+}
+```
 
 ## 아스키 코드, 문자열 코드 character변환
 - 'a'.charCodeAt: 문자열 코드를 아스키코드로 표현.
