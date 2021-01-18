@@ -227,6 +227,15 @@ ___
 - Symbol은 
 [Symbol은 왜 쓰는가](https://medium.com/@hyunwoojo/javascript-symbol-%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-6aa5903fb6f1)
 
+### tuple
+- 고정된 요소 수만큼의 타입을 미리 선언 후 배열을 표현
+```javascript
+let tuple: [string, number];
+tuple = ['hello', 10];
+```
+
+### enum
+- 열거형은 숫자 값 집합에 값 집합에 이름을 지정한 것
 
 ## export default
 - 단일 값을 내보내거나 모듈의 기본 값이 필요한 경우, 기본 내보내기를 사용한다.
