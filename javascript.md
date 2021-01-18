@@ -256,6 +256,22 @@ function infiniteLoop(): never {
 }
 ```
 
+### string vs String
+- string: 기본 자료형 문자열 타입
+- String: String 생성자 함수로 생성된 String 래퍼 객체 타입
+```javascript
+let primiteveStr: string;
+primiteveStr = 'hello'; // Correct
+primiteveStr = new String('hello'); // Incorrect
+```
+```javascript
+let objectStr: String;
+objectStr = 'hello'; // Correct
+objectStr = new String('hello'); // Correct
+```
+
+___
+
 ## export default
 - 단일 값을 내보내거나 모듈의 기본 값이 필요한 경우, 기본 내보내기를 사용한다.
 ```javascript
