@@ -236,6 +236,25 @@ tuple = ['hello', 10];
 
 ### enum
 - 열거형은 숫자 값 집합에 값 집합에 이름을 지정한 것
+```javascript
+enum Color1 {Red, Green, Blue};
+```
+
+### void
+- 함수에서 반환값이 없을 때 사용
+```javascript
+function warnUser(): void{
+  console.log("This is my warning message");
+}
+```
+
+### never
+- 결코 발생하지 않는 값
+```javascript
+function infiniteLoop(): never {
+  while (true) {}
+}
+```
 
 ## export default
 - 단일 값을 내보내거나 모듈의 기본 값이 필요한 경우, 기본 내보내기를 사용한다.
