@@ -205,7 +205,24 @@ const newArray = [...htmlCollection]; // Spread 연산자
 const newArray = Array.from(htmlCollection);
 ```
 
-## Symbol
+## 자바스크립트 타입 + (타입스크립트 타입)
+|타입|JS|TS|설명|
+|---|--|--|--|
+|boolean|O|O|true와 false|
+|null|O|O|값이 없다는 것을 병시|
+|undefined|O|O|값을 할당하지 않은 변수의 초기값|
+|number|O|O|숫자(정수와 실수, infinity, NaN|
+|string|O|O|문자열|
+|symbol|O|O|고유하고 수정 불가능한 데이터 타입이며 주로 객체 프로퍼티이 식별자로 사용(ES6)|
+|object|O|O|객체형(참조형)|
+|array||O|배열|
+|tuple||O|고정된 요소 수만큼의 자료형을 미리 선언 후 배열을 표현|
+|enum||O|열거형, 숫자 값 집합에 이름을 지정한 것|
+|any||O|타입 추론할 수 없거나 타입 체크가 필요 없는 변수에 사용, var 키워드로 선언한 변수와 같이 어떤 타입의 값이라도 할당 가능|
+|void||O|일반적으로 함수에서 반환값이 없을 때 사용|
+|never||O|결코 발생하지 않는 값|
+___
+### Symbol
 - Symbols 는 'new' 키워드를 사용하지 못함
 - Symbol은 
 [Symbol은 왜 쓰는가](https://medium.com/@hyunwoojo/javascript-symbol-%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-6aa5903fb6f1)
