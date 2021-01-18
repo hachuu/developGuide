@@ -42,7 +42,17 @@ brew
 mkdir ~/Library/KeyBindings
 touch DefaultkeyBinding.dict
 echo “{ \”₩\” = (\”insertText:\”, \”\`\”); }” >> ~/Library/KeyBindings/DefaultkeyBinding.dict
+
 ```
+
+## homebrew 설치
+- jumpcut: 클립보드 관리
+```
+brew tap homebrew/cask
+brew cask install jumpcut(에러: brew cask install is disabled)
+=> 대체 brew install --cask jumpcut
+```
+
 ### 문제 해결
 
 *주의점*
