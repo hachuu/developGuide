@@ -85,4 +85,10 @@ ngOnInit() {
  <button (click)="removeUser(user.id)">X</button>
 </li>
 ```
+```typescript
+trackByUserId(index: number, user: User) {
+ // user.id를 기준으로 변경을 트래킹한다.
+ return user.id;
+}
+```
 
