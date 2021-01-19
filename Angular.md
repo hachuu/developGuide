@@ -76,4 +76,13 @@ ngOnInit() {
 ```
 
 ## 빌트인 구조 디렉티브
-- ngFor: index 이외에도 first, last, even, odd도 가능
+- ngFor
+ 1. index 이외에도 first, last, even, odd도 가능
+ 2. trackBy 제공: 퍼포먼스를 향상하기 위해
+```html
+<li *ngFor="let user of users; let i=index; trackBy: trackByUserId">
+ {{i}}: {{user.name}}
+ <button (click)="removeUser(user.id)">X</button>
+</li>
+```
+
