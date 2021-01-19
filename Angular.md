@@ -74,3 +74,6 @@ ngOnInit() {
   }, { validator: PasswordValidator.match }),
 
 ```
+
+## 빌트인 구조 디렉티브
+- ngFor: index 이외에도 first, last, even, odd도 가능
