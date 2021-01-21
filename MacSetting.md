@@ -76,6 +76,7 @@ brew cask install jumpcut(에러: brew cask install is disabled)
 |작업취소| command + Z |
 |오려두기| command + X |
 |스포트라이트| command + space bar |
+
 | VSCode              | 단축키                                                         |
 | ----------------- | ------------------------------------------------------------ |
 |자동정렬| command + K + F |
