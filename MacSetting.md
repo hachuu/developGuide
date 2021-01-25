@@ -82,4 +82,4 @@ brew cask install jumpcut(에러: brew cask install is disabled)
 | VSCode              | 단축키                                                         |
 | ----------------- | ------------------------------------------------------------ |
 |자동정렬| command + K + F |
-|readme Preview| Ctrl+Shift+V |
+|readme Preview| Command(Ctrl)+Shift+V |
