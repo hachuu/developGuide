@@ -93,6 +93,8 @@
 4. [Create Java project structure automatically](http://www.mkyong.com/gradle/gradle-create-java-project-structure-automatically/)
 5. [CORS 문제 api 연동 해결 (maven, gradle)](https://spring.io/guides/gs/rest-service-cors/)
 
+6.[STS와 깃허브(GitHub)연동하는 방법](https://all-record.tistory.com/163)
+
 ## Eclipse 연동 시 에러 Unable to start embedded Tomcat 🤯
 
 1. [eclipse Git Clone 프로젝트 서버 구동 불가 현상](https://dreaming-soohyun.tistory.com/entry/eclipse-Git-Clone-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%9C%EB%B2%84-%EA%B5%AC%EB%8F%99-%EB%B6%88%EA%B0%80-%ED%98%84%EC%83%81)
