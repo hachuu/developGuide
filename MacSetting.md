@@ -31,7 +31,7 @@ brew
 - 순서
   1. command+space bar
   2. terminall.app 실행
-  3. 경ㄹ 이동 cd /opt
+  3. 경로 이동 cd /opt
 - 다운 예시: brew install node
 - brew update: brew upgrade node brew upgrade yarn
 
@@ -82,4 +82,6 @@ brew cask install jumpcut(에러: brew cask install is disabled)
 | VSCode              | 단축키                                                         |
 | ----------------- | ------------------------------------------------------------ |
 |자동정렬| command + K + F |
-|readme Preview| Command(Ctrl)+Shift+V |
+|readme Preview| Command(Ctrl) + Shift + V |
+|setting.json| Command + , |
+|preview MD| Shift + Command + V |
