@@ -93,5 +93,6 @@ trackByUserId(index: number, user: User) {
 ```
 
 ## angular universal
+- Angular에서 SSR을 사용하는 방법
 [실습예제](https://ksrae.github.io//angular/angular-universal/)
 
