@@ -99,10 +99,10 @@ trackByUserId(index: number, user: User) {
 2. Show the first page quickly
 3. Improve performance for low-powered devices
 
-- ㅂㅣㄹㄷㅡ ㅂㅏㅇㅂㅓㅂ
- - npm run dev:ssr
+- 빌드 방법
+  - npm run dev:ssr
 
-- ㅅㅓㅂㅓ ㄱㅣㄷㅗㅇ
- - npm run serve:ssr 또는 dist> node server
-[실습예제](https://ksrae.github.io//angular/angular-universal/)
+- 서버 구동
+  - npm run serve:ssr 또는 dist> node server
+  - [실습예제](https://ksrae.github.io//angular/angular-universal/)
 
