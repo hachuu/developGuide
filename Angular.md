@@ -106,3 +106,5 @@ trackByUserId(index: number, user: User) {
   - npm run serve:ssr 또는 dist> node server
   - [실습예제](https://ksrae.github.io//angular/angular-universal/)
 
+## google map api
+- 출처: [angular + google map](https://velog.io/@noyo0123/angular-google-map)
