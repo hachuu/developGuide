@@ -98,6 +98,11 @@ trackByUserId(index: number, user: User) {
 1. Improve Search Engine Optimization (SEO)
 2. Show the first page quickly
 3. Improve performance for low-powered devices
-- npm run dev:ssr
+
+- ㅂㅣㄹㄷㅡ ㅂㅏㅇㅂㅓㅂ
+ - npm run dev:ssr
+
+- ㅅㅓㅂㅓ ㄱㅣㄷㅗㅇ
+ - npm run serve:ssr 또는 dist> node server
 [실습예제](https://ksrae.github.io//angular/angular-universal/)
 
