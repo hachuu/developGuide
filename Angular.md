@@ -94,5 +94,10 @@ trackByUserId(index: number, user: User) {
 
 ## angular universal
 - Angular에서 SSR을 사용하는 방법
+- Angular Universal is a toolkit that allows us to do server-side rendering (SSR) and pre-rendering for our Angular applications.
+1. Improve Search Engine Optimization (SEO)
+2. Show the first page quickly
+3. Improve performance for low-powered devices
+- npm run dev:ssr
 [실습예제](https://ksrae.github.io//angular/angular-universal/)
 
