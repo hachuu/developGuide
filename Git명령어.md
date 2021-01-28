@@ -65,3 +65,9 @@
 git remote remove origin
 git remote add origin https://hachuu@github.com/hachuu/angular_page.git
 ```
+4. 코드 변경 이력 덮어쓰기
+- [출처](https://www.daleseo.com/git-push/)
+- git push -f origin my-feature
+
+5. git cherrypick
+- [git cherry pick 예제](https://medium.com/react-native-seoul/git-cherry-pick-%EC%82%AC%EC%9A%A9%EB%B2%95-fe1a3346bd27)
