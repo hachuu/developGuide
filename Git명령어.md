@@ -71,3 +71,6 @@ git remote add origin https://hachuu@github.com/hachuu/angular_page.git
 
 5. git cherrypick
 - [git cherry pick 예제](https://medium.com/react-native-seoul/git-cherry-pick-%EC%82%AC%EC%9A%A9%EB%B2%95-fe1a3346bd27)
+
+6. 워킹 디렉토리, header, index 개념
+- [Git 도구 - Reset 명확히 알고 가기](https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0)
