@@ -43,6 +43,9 @@
 - git push origin master
 - git push origin feature/{기능이름}
 - git push -f origin master => 강제 push
+- git push만 하고 싶을 때[출처](https://www.daleseo.com/git-push/)
+  1. git push -u origin master
+  2. git config --global push.default current
 
 5. 상태 확인
 - git status
