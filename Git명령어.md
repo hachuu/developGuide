@@ -26,6 +26,9 @@
 6. git init
 - 새로운 Git 저장소(repository)를 생성
 
+7. git 생성, 삭제
+- [Git Branch(1) - 기초(Branch 생성 및 사용)](https://goddaehee.tistory.com/274)
+
 ## git commit 과정
 
 1. add: 수정 파일 add
@@ -74,3 +77,6 @@ git remote add origin https://hachuu@github.com/hachuu/angular_page.git
 
 6. 워킹 디렉토리, header, index 개념
 - [Git 도구 - Reset 명확히 알고 가기](https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0)
+
+7. 서브모듈
+[Git 도구 - 서브모듈](https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%EC%84%9C%EB%B8%8C%EB%AA%A8%EB%93%88)
