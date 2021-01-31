@@ -29,6 +29,9 @@
 7. git 생성, 삭제
 - [Git Branch(1) - 기초(Branch 생성 및 사용)](https://goddaehee.tistory.com/274)
 
+8. git repository 변경
+- git remote set-url origin https://github.com/hachuu/react-blog.git
+
 ## git commit 과정
 
 1. add: 수정 파일 add
