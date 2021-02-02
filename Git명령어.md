@@ -97,6 +97,9 @@ git remote add origin https://hachuu@github.com/hachuu/angular_page.git
 
 7. 서브모듈
 [Git 도구 - 서브모듈](https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%EC%84%9C%EB%B8%8C%EB%AA%A8%EB%93%88)
+```
+git clone --recurse-submodules {git url}
+```
 
 8. github 페이지 배포
 - [[React] 프로젝트 GitHub Pages 배포하기](https://velog.io/@byjihye/react-github-pages)
