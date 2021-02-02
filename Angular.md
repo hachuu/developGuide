@@ -3,6 +3,9 @@
 - href: 서버로 페이지 요청이 이뤄짐
 - routerLink: 자신의 값을 라우터에 전달, 해당 컴포넌트를 활성화, 뷰 출력
 
+# 속도 최적화
+- [Angular 앱 성능 최적화를 위한 14가지 방법](https://dev.grapecity.co.kr/bbs/board.php?bo_table=Insight&wr_id=2&sca=IT%EF%BC%86%EA%B0%9C%EB%B0%9C+%EC%A0%95%EB%B3%B4&page=1)
+
 # SEO문제
 - 서버 사이드 랜더링을 지원하는 SEO 대응 기술이 이미 존재 -> [angular universal](#angular-universal)
 
