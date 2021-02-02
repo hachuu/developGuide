@@ -11,7 +11,9 @@
 3. branch
 - git branch {branchName} 브랜치 생성
 - git checkout {branchName} 브랜치 변경
-- git checkout -b {branchName} 브랜치 전환 (브랜치 작성 및 체크아웃 동시에)
+
+- git checkout -b {branchName} 브랜치 전환 (브랜치 작성 및 체크아웃 동시에) => origin을 꼭 써야 하는지?
+
 - git branch feature/{기능이름} => feature branch 생성
 - git checkout feature/{기능이름} => feature branch checkout
 
@@ -31,6 +33,18 @@
 
 8. git repository 변경
 - git remote set-url origin https://github.com/hachuu/react-blog.git
+
+9. git remote update
+- 원격 저장소의 git을 update해줌
+
+10. git branch
+- 로컬저장소의 브랜치 목록
+
+11. git branch -r
+- *원격저장소*의 브랜치 리스트
+
+12. git branch -a
+- 모든 브랜치의 리스트
 
 ## git commit 과정
 
@@ -75,7 +89,7 @@ git remote add origin https://hachuu@github.com/hachuu/angular_page.git
 - [출처](https://www.daleseo.com/git-push/)
 - git push -f origin my-feature
 
-5. git cherrypick
+5. git cherrypick: 
 - [git cherry pick 예제](https://medium.com/react-native-seoul/git-cherry-pick-%EC%82%AC%EC%9A%A9%EB%B2%95-fe1a3346bd27)
 
 6. 워킹 디렉토리, header, index 개념
