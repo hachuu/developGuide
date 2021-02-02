@@ -78,7 +78,7 @@ String.fromCharCode(x.charCodeAt(0) + n);
    - +"10"; => Number로 변환
 ```javascript
 10+""; //"10"
-+"10"; //10
++"10"; //10 string값에+를 붙여준다.
 ```
 
 ## 배열 apply를 활용한 Max, Min 값 구하기
