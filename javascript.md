@@ -222,6 +222,51 @@ const newArray = Array.from(htmlCollection);
 |void||O|일반적으로 함수에서 반환값이 없을 때 사용|
 |never||O|결코 발생하지 않는 값|
 ___
+
+## 배열 map, forEach등 새로운 배열 변환하는 아이들/ 아닌 것
+- 새로운 배열 변환
+  1. splice
+  ```
+  d // [2, 4, 6, 8]
+  const p = d.splice(0,2);
+  p // [2, 4]
+  d // [6, 8]
+  ```
+  
+- 그대로 유지
+  1. filter
+  ```
+  const a = [1, 2, 3, 4];
+  const b = a.filter(x=>x>2)
+  a // [1, 2, 3, 4]
+  b // [3, 4]
+  ```
+  2. concat
+  ```
+  const a = [1,2,3];
+  const b = [4,5,6];
+  const c = a.concat(b);
+  c // [1, 2, 3, 4, 5, 6]
+  a // [1, 2, 3]
+  ```
+  3. slice
+  ```
+  const c = a.slice(0,3)
+  c // [1, 2, 3]
+  a // [1, 2, 3, 4]
+  ```
+  
+  4. map
+  ```
+  a // [1, 2, 3, 4]
+  const d = a.map(x=>x*2)
+  d // [2, 4, 6, 8]
+  a // [1, 2, 3, 4]
+  ```
+  
+- 참조 
+  1. [[Javascript] Set 객체를 배열(Array)로 변환하는 3가지 방법](https://hianna.tistory.com/421)
+
 ### Symbol
 - Symbols 는 'new' 키워드를 사용하지 못함
 - Symbol은 
