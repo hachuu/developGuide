@@ -112,3 +112,6 @@ trackByUserId(index: number, user: User) {
 
 ## google map api
 - 출처: [angular + google map](https://velog.io/@noyo0123/angular-google-map)
+
+## angular mouseover mouseleave
+- 출처: [How to use mouseover and mouseout in Angular 6](https://stackoverflow.com/questions/51491225/how-to-use-mouseover-and-mouseout-in-angular-6)
