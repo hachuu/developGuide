@@ -141,3 +141,6 @@
   
 ## FlexBox (Flexbox Froggy를 통한 정리)
 [flexbox.md](https://github.com/hachuu/developGuide/blob/main/flexbox.md)
+
+## 종합 개발 팁
+- [브라우저 개발자도구에서 formdata를 숨기는 방법이 있는가요?](https://studyforus.com/help/667208)
