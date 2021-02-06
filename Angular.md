@@ -110,7 +110,8 @@ trackByUserId(index: number, user: User) {
   - npm run serve:ssr 또는 dist> node server
   - [실습예제](https://ksrae.github.io//angular/angular-universal/)
   - [바닐라 Node.js를 사용한 Angular SSR](https://dev.to/igorfilippov3/angular-ssr-with-vanilla-node-js-15pj)
-
+  - [Angular universal 실전 상](https://m.blog.naver.com/kitepc/221380895021)
+  - [Angular universal 실전 하](https://m.blog.naver.com/kitepc/221380916242)
 ## google map api
 - 출처: [angular + google map](https://velog.io/@noyo0123/angular-google-map)
 
