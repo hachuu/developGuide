@@ -263,6 +263,17 @@ ___
   d // [2, 4, 6, 8]
   a // [1, 2, 3, 4]
   ```
+  - array => json array
+  ```
+  const a = [1,2,3,4];
+  const b = a.map(x => {return {value: x}});
+  /*
+  0: {value: 1}
+  1: {value: 2}
+  2: {value: 3}
+  3: {value: 4}
+  */
+  ```
   
 - 참조 
   1. [[Javascript] Set 객체를 배열(Array)로 변환하는 3가지 방법](https://hianna.tistory.com/421)
