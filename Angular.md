@@ -8,6 +8,9 @@
 
 # SEO문제
 - 서버 사이드 랜더링을 지원하는 SEO 대응 기술이 이미 존재 -> [angular universal](#angular-universal)
+- [universal.interceptor.ts](https://gist.github.com/UserGalileo/1c1241ed150cc86f309bef92a1811eea)
+- [Angular Server Side Rendering State Transfer For HTTP Requests](https://hackernoon.com/angular-server-side-rendering-state-transfer-for-http-requests-wu263t3h)
+- [Angular Universal + Caching (TransferState)](https://itnext.io/angular-universal-caching-transferstate-96eaaa386198)
 
 # 모듈
 - 모듈 분리
