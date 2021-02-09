@@ -119,6 +119,9 @@ trackByUserId(index: number, user: User) {
 ## Observable, BehaviorSubject 차이
   - [Angular Observable과 BehaviorSubject로 구독, 갱신하기](https://blog.eunsatio.io/develop/Angular-Observable%EA%B3%BC-BehaviorSubject%EB%A1%9C-%EA%B5%AC%EB%8F%85,-%EA%B0%B1%EC%8B%A0%ED%95%98%EA%B8%B0)
   
+## declare: 외부 라이브러리 사용하기 
+  - [외부 라이브러리 사용하기 (카카오예시)](https://rottk.tistory.com/entry/Angular-%EC%99%B8%EB%B6%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)
+  
 ## google map api
 - 출처: [angular + google map](https://velog.io/@noyo0123/angular-google-map)
 
