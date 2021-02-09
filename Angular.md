@@ -115,6 +115,10 @@ trackByUserId(index: number, user: User) {
   - [바닐라 Node.js를 사용한 Angular SSR](https://dev.to/igorfilippov3/angular-ssr-with-vanilla-node-js-15pj)
   - [Angular universal 실전 상](https://m.blog.naver.com/kitepc/221380895021)
   - [Angular universal 실전 하](https://m.blog.naver.com/kitepc/221380916242)
+  
+## Observable, BehaviorSubject 차이
+  - [Angular Observable과 BehaviorSubject로 구독, 갱신하기](https://blog.eunsatio.io/develop/Angular-Observable%EA%B3%BC-BehaviorSubject%EB%A1%9C-%EA%B5%AC%EB%8F%85,-%EA%B0%B1%EC%8B%A0%ED%95%98%EA%B8%B0)
+  
 ## google map api
 - 출처: [angular + google map](https://velog.io/@noyo0123/angular-google-map)
 
