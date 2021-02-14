@@ -2,7 +2,7 @@
 
 ## VSCode 세팅
 [TSLint](http://ngmsoftware.com/bbs/board.php?bo_table=study&wr_id=266&sca=Error&sst=wr_datetime&sod=desc&sop=and&page=1)
-
+=> eslint 변환 작업
 ## Mac M1 세팅
 [맥 세팅 작업중...](https://github.com/hachuu/developGuide/blob/main/MacSetting.md)
 
