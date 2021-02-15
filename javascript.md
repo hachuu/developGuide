@@ -360,6 +360,9 @@ export default function (x) {
 const unescape = str => str.replace(/&/g , '&').replace(/&lt;/g  , '<').replace(/&gt;/g  , '>').replace(/&#0*39;/g , "'").replace(/&quot;/g, '"');
 ```
 
+### eventListener
+- [Event Binding Mechanism in Angular](https://blog.bitsrc.io/event-binding-mechanism-in-angular-b38f0e46d2ed)
+
 ### 출처
 1. [[Javascript ] 프로토타입 이해하기](https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67)
 2. [출처 poiemaweb](https://poiemaweb.com/js-prototype)
