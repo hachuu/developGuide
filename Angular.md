@@ -133,3 +133,12 @@ trackByUserId(index: number, user: User) {
 - [angular eventManager](https://angular.io/api/platform-browser/EventManager)
 - [hostlistener](https://angular.io/api/core/HostListener)
 - [click event is not working in innerhtml string angular 6](https://stackoverflow.com/questions/58641615/click-event-is-not-working-in-innerhtml-string-angular-6)
+```
+public ngAfterViewInit() {
+  // Solution for catching click events on anchors using querySelectorAll:
+  this.anchors = this.elementRef.nativeElement.querySelectorAll('a');
+  this.anchors.forEach((anchor: HTMLAnchorElement) => {
+    anchor.addEventListener('click', this.handleAnchorClick)
+  })
+}
+```
