@@ -127,3 +127,8 @@ trackByUserId(index: number, user: User) {
 
 ## angular mouseover mouseleave
 - 출처: [How to use mouseover and mouseout in Angular 6](https://stackoverflow.com/questions/51491225/how-to-use-mouseover-and-mouseout-in-angular-6)
+
+## eventListener
+- [Event Binding Mechanism in Angular](https://blog.bitsrc.io/event-binding-mechanism-in-angular-b38f0e46d2ed)
+- [angular eventManager](https://angular.io/api/platform-browser/EventManager)
+- [hostlistener](https://angular.io/api/core/HostListener)
