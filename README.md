@@ -3,7 +3,9 @@
 ## VSCode 세팅
 [TSLint](http://ngmsoftware.com/bbs/board.php?bo_table=study&wr_id=266&sca=Error&sst=wr_datetime&sod=desc&sop=and&page=1)
 => eslint 변환 작업
+- npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
 - npx tslint-to-eslint-config
+- [tslint to eslint](https://pks2974.medium.com/tslint-%EC%97%90%EC%84%9C-eslint-%EB%A1%9C-%EC%9D%B4%EC%82%AC%ED%95%98%EA%B8%B0-ecd460a1e599)
 
 ## Mac M1 세팅
 [맥 세팅 작업중...](https://github.com/hachuu/developGuide/blob/main/MacSetting.md)
