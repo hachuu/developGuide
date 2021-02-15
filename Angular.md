@@ -132,3 +132,4 @@ trackByUserId(index: number, user: User) {
 - [Event Binding Mechanism in Angular](https://blog.bitsrc.io/event-binding-mechanism-in-angular-b38f0e46d2ed)
 - [angular eventManager](https://angular.io/api/platform-browser/EventManager)
 - [hostlistener](https://angular.io/api/core/HostListener)
+- [click event is not working in innerhtml string angular 6](https://stackoverflow.com/questions/58641615/click-event-is-not-working-in-innerhtml-string-angular-6)
