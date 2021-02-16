@@ -142,3 +142,22 @@ public ngAfterViewInit() {
   })
 }
 ```
+- 방법 찾음
+```
+  constructor(
+    ...
+    private elementRef: ElementRef
+  ) {
+  }
+
+  mouseOverFunc() {
+    console.log('a tag mouseover');
+  }
+
+  ngAfterViewChecked() {
+    const aTags = this.elementRef.nativeElement.querySelectorAll('a');
+    aTags.forEach((anchor: HTMLAnchorElement) => {
+      anchor.addEventListener('mouseover', this.mouseOverFunc)
+    })
+  }
+```
