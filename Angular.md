@@ -161,3 +161,8 @@ public ngAfterViewInit() {
     })
   }
 ```
+
+## 모듈 등록
+- a router 사용 => RouterModule
+- ngIf 사용 => CommonModule
+- ngModel 사용 => FormsModule
