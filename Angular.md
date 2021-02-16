@@ -151,7 +151,7 @@ public ngAfterViewInit() {
   }
 
   mouseOverFunc() {
-    console.log('a tag mouseover');
+    console.log('hello    ', e.fromElement.children[0].attributes.href.nodeValue); // To-do children 중에 a태그만 찾아서 추출하는 방법을 찾아보자
   }
 
   ngAfterViewChecked() {
