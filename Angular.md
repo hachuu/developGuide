@@ -169,3 +169,5 @@ public ngAfterViewInit() {
 
 ## selecbox binding ul li 만들어주기
 - [Display form fields based on dropdown selection](https://www.xspdf.com/resolution/54748676.html)
+1. 상위 셀렉트 선택할 시 Li 태그를 추가로 넣어줘보기
+2. ngif를 다시 걸어서 하위 데이터를 그릴 수 있도록 해보기
