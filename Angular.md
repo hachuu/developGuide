@@ -142,7 +142,7 @@ public ngAfterViewInit() {
   })
 }
 ```
-- 방법 찾음
+- 방법 찾음[click event is not working in innerhtml string angular 6](https://stackoverflow.com/questions/58641615/click-event-is-not-working-in-innerhtml-string-angular-6)
 ```
   constructor(
     ...
