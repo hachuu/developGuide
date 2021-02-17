@@ -166,3 +166,6 @@ public ngAfterViewInit() {
 - a router 사용 => RouterModule
 - ngIf 사용 => CommonModule
 - ngModel 사용 => FormsModule
+
+## selecbox binding ul li 만들어주기
+- [Display form fields based on dropdown selection](https://www.xspdf.com/resolution/54748676.html)
