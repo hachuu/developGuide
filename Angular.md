@@ -174,7 +174,7 @@ public ngAfterViewInit() {
 2. ngif를 다시 걸어서 하위 데이터를 그릴 수 있도록 해보기
 
 ## jquery fadein
-- [](https://stackoverflow.com/questions/34422022/in-angular-2-is-it-possible-to-fadein-fadeout-instead-of-hidden-xxx/45838232)
+- [In Angular 2, is it possible to fadeIn / fadeout instead of [hidden='xxx]?](https://stackoverflow.com/questions/34422022/in-angular-2-is-it-possible-to-fadein-fadeout-instead-of-hidden-xxx/45838232)
 ```
 import { trigger, state, transition, style, animate } from '@angular/animations';
 
