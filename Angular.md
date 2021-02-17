@@ -172,3 +172,32 @@ public ngAfterViewInit() {
 - [Creating a Dynamic Select with Angular Forms](https://coryrylan.com/blog/creating-a-dynamic-select-with-angular-forms)
 1. 상위 셀렉트 선택할 시 Li 태그를 추가로 넣어줘보기
 2. ngif를 다시 걸어서 하위 데이터를 그릴 수 있도록 해보기
+
+## jquery fadein
+- [](https://stackoverflow.com/questions/34422022/in-angular-2-is-it-possible-to-fadein-fadeout-instead-of-hidden-xxx/45838232)
+```
+import { trigger, state, transition, style, animate } from '@angular/animations';
+
+@Component({
+  selector: 'some-selector',
+  templateUrl: 'my-template.html',
+  animations: [
+    trigger('visibilityChanged', [
+      state('shown', style({ opacity: 1 })),
+      state('hidden', style({ opacity: 0 })),
+      transition('shown => hidden', animate('600ms')),
+      transition('hidden => shown', animate('300ms')),
+    ])
+  ]
+})
+export class MyComponent {
+  visiblityState = 'hidden';
+  toggle() {
+    if (this.visiblityState === 'hidden')
+      this.visiblityState = 'shown';
+    else
+      this.visiblityState = 'hidden';
+  }
+}
+
+```
