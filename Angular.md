@@ -170,7 +170,8 @@ public ngAfterViewInit() {
 ## selecbox binding ul li 만들어주기
 - [Display form fields based on dropdown selection](https://www.xspdf.com/resolution/54748676.html)
 - [Creating a Dynamic Select with Angular Forms](https://coryrylan.com/blog/creating-a-dynamic-select-with-angular-forms)
-1. 상위 셀렉트 선택할 시 Li 태그를 추가로 넣어줘보기
+1. 상위 셀렉트 선택할 시 Li 태그를 추가로 넣어줘보기=> library사용
+- directive사용 ngviewinit 할때 생성
 2. ngif를 다시 걸어서 하위 데이터를 그릴 수 있도록 해보기
 
 ## jquery fadein
