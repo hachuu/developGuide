@@ -1,6 +1,7 @@
 # Router
 - routerLink vs href
 - href: 서버로 페이지 요청이 이뤄짐
+  Window.open()
 - routerLink: 자신의 값을 라우터에 전달, 해당 컴포넌트를 활성화, 뷰 출력
 
 # 속도 최적화
