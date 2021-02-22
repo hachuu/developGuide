@@ -209,7 +209,7 @@ export class MyComponent {
 @ViewChild('myname') input:ElementRef; 
 this.input.nativeElement.value
 ```
-- input debouncing 처리 (input valuechanged debouncing 작업)
+- input debouncing 처리 (input valuechanged debouncing 작업) [출처](https://stackoverflow.com/questions/32051273/angular-and-debounce)
 ```
 import { Subscription } from 'rxjs/internal/Subscription';
 import 'rxjs/add/operator/debounceTime';
