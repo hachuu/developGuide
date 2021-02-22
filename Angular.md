@@ -203,3 +203,9 @@ export class MyComponent {
 }
 
 ```
+
+## viewChild input value
+```
+@ViewChild('myname') input:ElementRef; 
+this.input.nativeElement.value
+```
