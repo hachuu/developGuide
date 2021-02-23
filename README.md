@@ -25,6 +25,7 @@
 
 1. [30-Days-Of-React (1day: javascript)](https://github.com/Asabeneh/30-Days-Of-React/blob/master/01_Day_JavaScript_Refresher/01_javascript_refresher.md)
 2. [강좌 7편 Component LifeCycle API](https://velopert.com/1130)
+3. [Api 연동하기](https://react.vlpt.us/integrate-api/01-basic.html)
 
 ## Setting Of Developement
 
