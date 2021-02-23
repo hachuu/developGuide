@@ -27,6 +27,12 @@
 <counter [count]="value" (countChange)="value=$event"></counter>
 ```
 
+# Ag-grid
+- [guide 문서](https://www.ag-grid.com/documentation/angular/status-bar/)
+
+# Ag-map
+- [guide 문서](https://angular-maps.com/api-docs/agm-core/components/agmmap#zoom)
+
 # Form
 
 ## FormControl 클래스와 formControlName
