@@ -24,7 +24,7 @@
 ## React Reference
 
 1. [30-Days-Of-React (1day: javascript)](https://github.com/Asabeneh/30-Days-Of-React/blob/master/01_Day_JavaScript_Refresher/01_javascript_refresher.md)
-2. [강좌 7편 Component LifeCycle API](https://velopert.com/1130)
+2. [강좌 7편 Component LifeCycle API](https://velopert.com/1130) => [리액트의 Hooks 완벽 정복하기](https://velog.io/@velopert/react-hooks) 이게 읽기 좀 더 편한듯..
 3. [Api 연동하기](https://react.vlpt.us/integrate-api/01-basic.html)
 
 ## Setting Of Developement
