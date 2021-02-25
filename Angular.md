@@ -229,3 +229,14 @@ this.formCtrlSub = this.dtlAddressControl.valueChanges
         console.log('delayed key press value',value);
     });
 ```
+
+## 모든 페이지 열릴 경우 scrollTop
+- scrollPositionRestoration: 'enabled'
+```
+@NgModule({
+  imports: [RouterModule.forRoot(routes,{
+    scrollPositionRestoration: 'enabled'
+  })],
+  exports: [RouterModule]
+})
+```
