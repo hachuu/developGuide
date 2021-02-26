@@ -69,7 +69,10 @@
 - polyfill : 폴리필은 웹 개발에서 기능을 지원하지 않는 웹 브라우저 상의 기능을 구현하는 코드
 
 ## RESTful Api
-[출처](https://meetup.toast.com/posts/92)
+- 401, 403: 권한 없음
+  - 401 에러는 유효하지 않은 인증 토큰일 경우 반환하고
+  - 403 에러는 토큰은 있지만, 그 토큰을 받은 유저가 scope 가 부족할 때 반환하는 것
+- [REST API 제대로 알고 사용하기](https://meetup.toast.com/posts/92)
 
 ## 도커 Docker
 - 컨테이너 기반의 오픈소스 가상화 플랫폼
