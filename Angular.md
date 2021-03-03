@@ -243,3 +243,22 @@ this.formCtrlSub = this.dtlAddressControl.valueChanges
   exports: [RouterModule]
 })
 ```
+
+## remove element by renderer2
+
+```
+const childElements = this.el.nativeElement.children;
+for (let child of childElements) {
+  this.renderer.removeChild(this.el.nativeElement, child);
+}
+```
+```
+/**
+ * Implement this callback to remove a child node from the host element's DOM.
+ * @param parent The parent node.
+ * @param oldChild The child node to remove.
+ * @param isHostElement Optionally signal to the renderer whether this element is a host element
+ * or not
+ */
+abstract removeChild(parent: any, oldChild: any, isHostElement?: boolean): void;
+```
