@@ -14,6 +14,7 @@
   - [python down grade](https://www.python.org/downloads/release/python-2710/)
 ```
 npm install --global --production windows-build-tools
+npm install --global node-gyp
 ```
 
 ## Mac M1 세팅
