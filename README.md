@@ -10,6 +10,8 @@
 ### npm install 시 python이나 기타 모듈 내려받을 때 에러나는 경우
 - powershell 관리자 권한으로 실행
 - 해당 프로젝트 경로에서 하위를 입력
+- [!!! 에러 해결법 총집합 !!! npm-gyp 오류/python 오류/truffle 컴파일 에러/Unknown network klaytn 에러 나시는 분들은](https://www.inflearn.com/questions/11540)
+  - [python down grade](https://www.python.org/downloads/release/python-2710/)
 ```
 npm install --global --production windows-build-tools
 ```
