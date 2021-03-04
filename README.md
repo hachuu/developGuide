@@ -7,6 +7,13 @@
 - npx tslint-to-eslint-config
 - [tslint to eslint](https://pks2974.medium.com/tslint-%EC%97%90%EC%84%9C-eslint-%EB%A1%9C-%EC%9D%B4%EC%82%AC%ED%95%98%EA%B8%B0-ecd460a1e599)
 
+### npm install 시 python이나 기타 모듈 내려받을 때 에러나는 경우
+- powershell 관리자 권한으로 실행
+- 해당 프로젝트 경로에서 하위를 입력
+```
+npm install --global --production windows-build-tools
+```
+
 ## Mac M1 세팅
 [맥 세팅 작업중...](https://github.com/hachuu/developGuide/blob/main/MacSetting.md)
 
