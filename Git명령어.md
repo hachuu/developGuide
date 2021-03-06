@@ -48,6 +48,11 @@
 
 ## git commit 과정
 
+0. git rm --cached
+- git rm => 원격 저장소와 로컬 저장소에 있는 파일을 삭제한다.
+- git rm --cached => 원격 저장소에 있는 파일을 삭제한다. 로컬 저장소에 있는 파일은 삭제하지 않는다.
+출처:[마이구미의 HelloWorld](https://mygumi.tistory.com/103)
+
 1. add: 수정 파일 add
 - git add .
 
