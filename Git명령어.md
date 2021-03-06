@@ -109,3 +109,9 @@ git clone --recurse-submodules {git url}
 
 8. github 페이지 배포
 - [[React] 프로젝트 GitHub Pages 배포하기](https://velog.io/@byjihye/react-github-pages)
+
+9. git pull시 에러 fatal: refusing to merge unrelated histories
+- [git push, pull (fatal: refusing to merge unrelated histories) 에러](https://jobc.tistory.com/177)
+
+10. git commit 시 에러 Your branch is up to date with 'origin/master'
+- [Your branch is up to date with 'origin/master'](https://log-laboratory.tistory.com/213)
