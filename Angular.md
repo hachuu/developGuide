@@ -262,3 +262,17 @@ for (let child of childElements) {
  */
 abstract removeChild(parent: any, oldChild: any, isHostElement?: boolean): void;
 ```
+
+## download excel file as an API response
+- [출처](https://stackoverflow.com/questions/58335807/how-to-download-an-excel-file-in-angular-8-as-an-api-response)
+- Add header { responseType: 'blob'}
+```
+this.http.post<any>(apiEndpoint,request,{ responseType: 'blob'} )
+```
+```
+downloadFile(data: Response) {
+  const blob = new Blob([data], { type: 'application/octet-stream' });
+  const url= window.URL.createObjectURL(blob);
+  window.open(url);
+}
+```
