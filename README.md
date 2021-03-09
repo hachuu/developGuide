@@ -42,7 +42,7 @@ npm install --global node-gyp
 - [React 041. Socket.IO로 실시간 채팅 구현
 ](https://m.blog.naver.com/PostView.nhn?blogId=bkcaller&logNo=221366361792&proxyReferer=https:%2F%2Fwww.google.co.kr%2F)
 - 배포 [A3 CDN] (https://youtu.be/-DDGYzKtNwc)
-
+- [웹팩설정](https://ideveloper2.tistory.com/m/75)
 ## Setting Of Developement
 
 - java
