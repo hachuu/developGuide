@@ -1,5 +1,12 @@
 # Develop Guide Reference
 
+## choco, yarn 다운
+- powershell 관리자도구 
+1. Remove-Item C:\ProgramData\chocolatey -Recurse
+2. Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+3. choco install yarn
+
+
 ## VSCode 세팅
 [TSLint](http://ngmsoftware.com/bbs/board.php?bo_table=study&wr_id=266&sca=Error&sst=wr_datetime&sod=desc&sop=and&page=1)
 => eslint 변환 작업
