@@ -115,3 +115,6 @@ git clone --recurse-submodules {git url}
 
 10. git commit 시 에러 Your branch is up to date with 'origin/master'
 - [Your branch is up to date with 'origin/master'](https://log-laboratory.tistory.com/213)
+
+11. gitHub repository 연결
+- [GitHub Repository(원격저장소) 생성, GitBash로 연결, 초대하기](https://goddaehee.tistory.com/221)
