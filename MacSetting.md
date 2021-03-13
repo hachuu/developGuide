@@ -63,6 +63,8 @@ brew cask install jumpcut(에러: brew cask install is disabled)
 - 방법 
   - git remote remove origin
   - git remote add origin https://hachuu@github.com/hachuu/angular_page.git
+2. 검은 화면 마우스만 보일때
+3. [맥북 검은색 화면에 마우스 커서만 보일때 처리방법](http://blog.naver.com/PostView.nhn?blogId=cir213&logNo=221657033278&parentCategoryNo=&categoryNo=12&viewDate=&isShowPopularPosts=false&from=postView)
 
 
 ### 단축키
