@@ -118,3 +118,8 @@ git clone --recurse-submodules {git url}
 
 11. gitHub repository 연결
 - [GitHub Repository(원격저장소) 생성, GitBash로 연결, 초대하기](https://goddaehee.tistory.com/221)
+
+12. git repository 해제
+```
+git remote remove origin
+```
