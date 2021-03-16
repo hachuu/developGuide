@@ -44,6 +44,7 @@ npm install --global node-gyp
 2. [강좌 7편 Component LifeCycle API](https://velopert.com/1130) => [리액트의 Hooks 완벽 정복하기](https://velog.io/@velopert/react-hooks) 이게 읽기 좀 더 편한듯..
 3. [Api 연동하기](https://react.vlpt.us/integrate-api/01-basic.html)
 4. [react-use gitHub](https://github.com/streamich/react-use)
+5. [Context 와 함께 사용하기](https://react.vlpt.us/integrate-api/05-using-with-context.html#)
 
 ### react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
