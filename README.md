@@ -57,7 +57,7 @@ npm install --global node-gyp
 
 - [React app Amazon s3에 배포하기](https://bongster88.blogspot.com/2019/08/welcome-file.html)
 - [리액트 앱 AWS S3, CloudFront 에 배포하기](https://react-etc.vlpt.us/08.deploy-s3.html)
-
+- [Java에서 OTP 인증하기 (w/ Google OTP)](https://medium.com/@eungook/java에서-otp-인증하기-w-google-otp-3f93d670f37b)
 ## Setting Of Developement
 
 - java
