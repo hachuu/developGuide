@@ -155,3 +155,4 @@ npm install --global node-gyp
 - [알아두면 쓸만한 Chrome Console 기능](https://dev-momo.tistory.com/entry/%EC%95%8C%EB%A7%88%EB%91%90%EB%A9%B4-%EC%93%B8%EB%A7%8C%ED%95%9C-Chrome-Console-%EA%B8%B0%EB%8A%A5)
 - [JWT 토큰 변환](https://jwt.io/)
 - [Single Sign On (& Single Sign Out) : 부제(로그인 통합 인증)](https://authentication.tistory.com/26)
+- [Create React App 에서 ESLint 와 Prettier 설정 하기](https://velog.io/@gwangsuda/2019-09-25-1009-%EC%9E%91%EC%84%B1%EB%90%A8-bwk0ylejxj)
