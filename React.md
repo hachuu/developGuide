@@ -31,7 +31,10 @@
     </div>
   )
   ```
-
+2. 특수 문자 쓸때 문법
+  ```
+  Traffic {' & '} Sales // Traffic & Sales
+  ```
 
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
