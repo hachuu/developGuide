@@ -85,6 +85,15 @@ console.log(Function.prototype.__proto__ === Object.prototype); // ⑤ true
 
 - 하지만 자식 클래스의 일반 메소드(프로토타입 메소드) 내부에서는 super 키워드를 사용하여 부모 클래스의 정적 메소드를 호출할 수 없다. 이는 자식 클래스의 인스턴스는 프로토타입 체인에 의해 부모 클래스의 정적 메소드를 참조할 수 없기 때문이다.
 
+## console 찍을 때 [object, object] 로 찍히는 경우 
+```
+JSON.stringify(data) // 에러 발생시
+for (val in data){
+  console.log("키: "+JSON.stringify(val));
+  console.log("값: "+data[val]);
+}
+
+```
 
 ## promise await 차이
 - promise.then().catch()로 에러를 잡으면 되지만 await의 경우 try catch문으로 reject를 체크
