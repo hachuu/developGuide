@@ -49,7 +49,7 @@
 - [리액트 앱 AWS S3, CloudFront 에 배포하기](https://react-etc.vlpt.us/08.deploy-s3.html)
 - [Java에서 OTP 인증하기 (w/ Google OTP)](https://medium.com/@eungook/java에서-otp-인증하기-w-google-otp-3f93d670f37b)
 - [프론트에서 안전하게 로그인 처리하기 (ft. React)](https://velog.io/@yaytomato/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%90%EC%84%9C-%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%B2%98%EB%A6%AC%ED%95%98%EA%B8%B0)
-
+- hash router dom router hash는 서버내 호출하여 불안정할 수 있음
 
 ## React 개발시 참고할만한 reference
 
