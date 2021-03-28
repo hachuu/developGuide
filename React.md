@@ -36,6 +36,12 @@
   Traffic {' & '} Sales // Traffic & Sales
   ```
 
+3. useParams: urlParam을 가져올 수 있음
+```
+let { id } = useParam();
+Router/:id
+```
+
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
 ](https://m.blog.naver.com/PostView.nhn?blogId=bkcaller&logNo=221366361792&proxyReferer=https:%2F%2Fwww.google.co.kr%2F)
