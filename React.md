@@ -37,9 +37,10 @@
   ```
 
 3. useParams: urlParam을 가져올 수 있음
+:은 아무 문자가 오든 간에 이 페이지로 이동 시켜주세요
 ```
 let { id } = useParam();
-Router/:id
+<Route path="/detail/:id">
 ```
 
 ## react to do admin
