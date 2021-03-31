@@ -43,6 +43,18 @@ let { id } = useParam();
 <Route path="/detail/:id">
 ```
 
+4. useEffect 
+- 처음 랜더링 할 때만 쓰고 싶을 때
+```
+() => ({
+}, [])
+```
+- inputData state가 변경될때만 쓰고 싶을 때
+```
+() => ({
+}, [inputData])
+```
+
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
 ](https://m.blog.naver.com/PostView.nhn?blogId=bkcaller&logNo=221366361792&proxyReferer=https:%2F%2Fwww.google.co.kr%2F)
