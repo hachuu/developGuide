@@ -55,6 +55,9 @@ let { id } = useParam();
 }, [inputData])
 ```
 
+5. Axios
+- 서버에서 주고 받는 응답 데이터는 JSON 형식이 default이지만 axios로 받는 경우 object로 변환해줌
+
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
 ](https://m.blog.naver.com/PostView.nhn?blogId=bkcaller&logNo=221366361792&proxyReferer=https:%2F%2Fwww.google.co.kr%2F)
