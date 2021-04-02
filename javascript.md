@@ -88,7 +88,7 @@ console.log(Function.prototype.__proto__ === Object.prototype); // ⑤ true
 ## console 찍을 때 [object, object] 로 찍히는 경우 
 ```
 JSON.stringify(data) // 에러 발생시
-for (val in data){
+for (let val in data){
   console.log("키: "+JSON.stringify(val));
   console.log("값: "+data[val]);
 }
