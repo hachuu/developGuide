@@ -12,7 +12,9 @@
 - git branch {branchName} 브랜치 생성
 - git checkout {branchName} 브랜치 변경
 
-- git checkout -b {branchName} 브랜치 전환 (브랜치 작성 및 체크아웃 동시에) => origin을 꼭 써야 하는지?
+- git checkout -b {branchName} 브랜치 전환 (브랜치 작성 및 체크아웃 동시에)
+  - Q. origin을 꼭 써야 하는지?
+  - A. 안써도 됨, git commit, push는 해야함
 
 - git branch feature/{기능이름} => feature branch 생성
 - git checkout feature/{기능이름} => feature branch checkout
