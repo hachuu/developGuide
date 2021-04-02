@@ -80,6 +80,7 @@ let { id } = useParam();
 3. [Api 연동하기](https://react.vlpt.us/integrate-api/01-basic.html)
 4. [react-use gitHub](https://github.com/streamich/react-use)
 5. [Context 와 함께 사용하기](https://react.vlpt.us/integrate-api/05-using-with-context.html#)
+6. [React Router 제한적 경로 접근](https://velog.io/@public_danuel/Restrict-Route)
 
 ---
 
