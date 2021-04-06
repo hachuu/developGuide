@@ -6,6 +6,7 @@
     ```
   - routerLink: 자신의 값을 라우터에 전달, 해당 컴포넌트를 활성화, 뷰 출력
   - * a태그 상위에 (click) event가 있는 경우 href 이동이 되지 않으므로 click event에 function으로 이동할 수 있도록 작업한다.
+  - [URL을 통해 GET 통신으로 특정 페이지화면으로 접근하면 404 에러가 발생](https://jamong-icetea.tistory.com/214)
 
 # 속도 최적화
 - [Angular 앱 성능 최적화를 위한 14가지 방법](https://dev.grapecity.co.kr/bbs/board.php?bo_table=Insight&wr_id=2&sca=IT%EF%BC%86%EA%B0%9C%EB%B0%9C+%EC%A0%95%EB%B3%B4&page=1)
