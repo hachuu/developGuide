@@ -281,3 +281,6 @@ downloadFile(data: Response) {
 ## SPA 공통 사항
 1. router이동시 이미 받아진 라이브러리는 다시 받지 않는다.
 2. a 태그 or url 직접 입력해서 진입하는 경우 라이브러리를 다시 로드한다.
+
+## Infinite scroll
+[Infinite Virtual Scroll with the Angular CDK](https://fireship.io/lessons/infinite-virtual-scroll-angular-cdk/)
