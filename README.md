@@ -1,5 +1,10 @@
 # Develop Guide Reference
 
+## 'ng'는 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다.
+- 시스템 환경 변수 편집
+  1. 시스템 변수 Path => %SystemRoot%\system32%SystemRoot% 추가
+  2. node_modules 경로에서 C:\Users\tradlinx\AppData\Roaming\npm\node_modules\@angular\cli\bin\ng 등록, C:\Users\tradlinx\AppData\Roaming\npm 
+
 ## choco, yarn 다운
 - powershell 관리자도구 
 1. Remove-Item C:\ProgramData\chocolatey -Recurse
@@ -164,3 +169,5 @@ ssh-keygen -C "jamal@fabrikam.com"
 - [Create React App 에서 ESLint 와 Prettier 설정 하기](https://velog.io/@gwangsuda/2019-09-25-1009-%EC%9E%91%EC%84%B1%EB%90%A8-bwk0ylejxj)
 - [table을 좌우 스크롤(수평 스크롤, 스와이프)할 때 특정 컬럼을 고정하고 싶다면](https://xetown.com/tips/1183430)
 - [React table bootstrap](https://react-bootstrap.netlify.app/components/table/#tables)
+- [SEO 4가지 사례로 알아보는 올바른 캐노니컬 태그 적용 방법](https://www.twinword.co.kr/blog/how-to-apply-canonical-tag-properly/)
+- 
