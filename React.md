@@ -95,7 +95,7 @@ let { id } = useParam();
 - [Jest를 이용해 Snapshot testing하기](https://wkdtjsgur100.github.io/jest-snapshot-testing/)
 - [React-router-dom에서 Link 태그를 사용하는 법](https://codeameba.netlify.app/blog/how-to-use-link-tag)
 - [몽고 db 연동 및 연결 3강](https://www.inflearn.com/course/%EB%94%B0%EB%9D%BC%ED%95%98%EB%A9%B0-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%85%B8%EB%93%9C-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EA%B8%B0%EB%B3%B8)
-
+- combinereducer
 
 ## React Native
 1. Window로 react native 세팅
