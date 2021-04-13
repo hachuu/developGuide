@@ -1,3 +1,6 @@
+# HttpClient async/await화
+- [Angular HttpClient의 프로미스화, 그리고 HttpInterceptor](https://blog.eunsatio.io/develop/Angular-HttpClient%EC%9D%98-%ED%94%84%EB%A1%9C%EB%AF%B8%EC%8A%A4%ED%99%94,-%EA%B7%B8%EB%A6%AC%EA%B3%A0-HttpInterceptor)
+
 # Router
 - routerLink vs href
   - href: 서버로 페이지 요청이 이뤄짐
