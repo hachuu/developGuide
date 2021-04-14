@@ -62,8 +62,15 @@ let { id } = useParam();
 - [데이터를 가져오기 위한 Suspense](https://ko.reactjs.org/docs/concurrent-mode-suspense.html)
 
 7. PWA
+*세팅파일* (CRA 사용하면 굳이 만들지 않아도 됨)
 - manifest.json
 - service-worker.js
+
+- index.js 에서 serviceWorker.register();
+- yarn build후 빌드 파일을 배포하면 됨
+
+8. Memo
+- 데이터 재 할당시 페이지 리로드가 일어나는데 memo로 불필요한 랜더링을 줄일 수 있다
 
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
