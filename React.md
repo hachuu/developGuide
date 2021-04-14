@@ -61,11 +61,12 @@ let { id } = useParam();
 6. Suspense
 - [데이터를 가져오기 위한 Suspense](https://ko.reactjs.org/docs/concurrent-mode-suspense.html)
 
+7. PwA
 
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
 ](https://m.blog.naver.com/PostView.nhn?blogId=bkcaller&logNo=221366361792&proxyReferer=https:%2F%2Fwww.google.co.kr%2F)
-- 배포 [A3 CDN] (https://youtu.be/-DDGYzKtNwc)
+- 배포 [A3 CDN] (https://youtu be.be/-DDGYzKtNwc)
 - [웹팩설정](https://ideveloper2.tistory.com/m/75)
 - [CRA webpack setting](https://maxkim-j.github.io/posts/cra-webpack-config)
 - production 모드로 빌드된 번들링 결과물에 해쉬코드를 붙이는 이유가 뭘까요? 브라우저에는 캐싱 기능이 존재하기 때문에 예전에 배포되었던 번들링 파일들의 일부를 저장하고 있습니다. 따라서 앱을 수정하고 다시 배포할 경우 캐싱되는 대상이 바뀌어야 하므로, 파일의 내용이 바뀌었다고 브라우저에게 알려줘야 할 필요가 생깁니다. 가장 쉽게 파일의 변경을 알려주는 방법은 이전과 다른 이름의 번들링 파일을 배포하는 것입니다. 그래서 수정해서 빌드할 때마다 바뀌는 해쉬코드를 번들링 결과물에 추가하면 브라우저에게 파일이 변경되었음을 쉽게 알려줄 수 있는 것이죠.
