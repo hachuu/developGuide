@@ -182,6 +182,16 @@ public ngAfterViewInit() {
 - ngIf 사용 => CommonModule
 - ngModel 사용 => FormsModule
 
+## 내장 지시자
+- ngNonBindable속성
+- This is what {{ item }} 으로 화면에 출력
+```
+<div>
+  <span>{{ item }}</span>
+  <span ngNonBindable>This is what {{ item }}</span>
+</div>
+```
+
 ## selecbox binding ul li 만들어주기
 - [Display form fields based on dropdown selection](https://www.xspdf.com/resolution/54748676.html)
 - [Creating a Dynamic Select with Angular Forms](https://coryrylan.com/blog/creating-a-dynamic-select-with-angular-forms)
