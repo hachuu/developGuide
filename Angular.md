@@ -28,21 +28,12 @@
 - module provider 등록하는 경우 service의 Injdectable의 providedIn 메타데이터 삭제 (모듈에 등록된 서비스가 많은 경우 모듈의 프로바이더에서 서비스를 관리하는 것이 유리)
 - [angular module(component 및 module 만들기)](https://kamang-it.tistory.com/entry/Angular-08angular-modulecomponent-%EB%B0%8F-module-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
-# 양방향 바인딩
-
-```html
-<counter [count]="value" (countChange)="value=$event"></counter>
-```
-
-# Ag-grid
-- [guide 문서](https://www.ag-grid.com/documentation/angular/status-bar/)
-
-# Ag-map
-- [guide 문서](https://angular-maps.com/api-docs/agm-core/components/agmmap#zoom)
-
 # Form
+  - FormControl
+  - FormGroup
+  - (ngSubmit)
 
-## FormControl 클래스와 formControlName
+1. FormControl 클래스와 formControlName
 
 ```html
 <form [formGroup]="userForm" novalidate>
@@ -72,12 +63,12 @@ ngOnInit() {
 }
 ```
 
-## 리액티브 폼
+2. 리액티브 폼
 - 컴포넌트 클래스에서 폼 요소의 값 및 유효성 검증 상태를 관리하는 자바스크립트 객체인 폼 모델(FormGroup, FormControl, FormArray)을 직접 정의/생성
 - form* 접두사가 붙은 디렉티브(formGroup, formGroupName, formControlName, formArrayName)를 사용하여 템플릿의 폼 요소와 컴포넌트 클래스의 폼 모델을 프로퍼티 바인딩으로 연결
 
-## FormBuilder
-- 더 간편한 방법으로 리액티브 폼을 구성
+3. FormBuilder
+- 더 간편한 방법으로 리액티브 폼을 구성 (객체 공장 개념)
 ```typescript
 
   passwordGroup: new FormGroup({
@@ -95,6 +86,20 @@ ngOnInit() {
   }, { validator: PasswordValidator.match }),
 
 ```
+
+# 양방향 바인딩
+
+```html
+<counter [count]="value" (countChange)="value=$event"></counter>
+```
+
+# Ag-grid
+- [guide 문서](https://www.ag-grid.com/documentation/angular/status-bar/)
+
+# Ag-map
+- [guide 문서](https://angular-maps.com/api-docs/agm-core/components/agmmap#zoom)
+
+
 
 ## 빌트인 구조 디렉티브
 - ngFor
@@ -180,7 +185,8 @@ public ngAfterViewInit() {
 ## 모듈 등록
 - a router 사용 => RouterModule
 - ngIf 사용 => CommonModule
-- ngModel 사용 => FormsModule
+- ngModel, ngForm 사용 => FormsModule
+- FormGroup, FormControl 사용 => ReactiveFormsModule
 
 ## 내장 지시자
 - ngNonBindable속성
