@@ -1,5 +1,24 @@
 # Develop Guide Reference
 
+## SEO canonical 기존 link rel 삭제, 새로 등록하는 script
+```
+const headerDoc = this.document.head;
+const bodyDoc = this.document.body;
+for (let i = 0; i < bodyDoc.children.length; i++) {
+  if (bodyDoc.children[i].localName === 'link' && bodyDoc.children[i].rel === 'canonical') bodyDoc.children[i].remove();
+}
+for (let i = 0; i < headerDoc.children.length; i++) {
+  if (headerDoc.children[i].localName === 'link' && headerDoc.children[i].rel === 'canonical') headerDoc.children[i].remove();
+}
+
+const domain = 'www....';
+
+var link = document.createElement('link');
+link.setAttribute('rel', 'canonical');
+link.setAttribute('href', 'https://' + domain + window.location.pathname);
+document.head.appendChild(link);
+```
+
 ## 개발자도구 lighthouse-SEO
 
 ## 'ng'는 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다.
