@@ -2,7 +2,9 @@
 
 * 어떠한 문제를 해결하기 위해 정해진 일련의 절차나 방법을 공식화한 형태로 표현한 것.
 
-
+## 동치 비교
+[동치 비교 및 동일성](https://developer.mozilla.org/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- == 의 경우 null == undefined -> true
 
 ## Sort 개념
 
