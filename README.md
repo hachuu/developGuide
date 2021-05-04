@@ -135,7 +135,7 @@ ssh-keygen -C "jamal@fabrikam.com"
 6. [google Font](https://fonts.google.com/specimen/Secular+One?sidebar.open=true&selection.family=Secular+One)
 7. [icon `<script>` injection](https://fontawesome.com/icons/bars?style=solid)
 8. [소스 한줄 정렬](https://gandevelop.tistory.com/9)
-
+9. [QA자동화](https://www.npmjs.com/package/selenium-webdriver)
 ---
 
 
