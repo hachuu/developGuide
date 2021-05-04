@@ -191,4 +191,4 @@ ssh-keygen -C "jamal@fabrikam.com"
 - [table을 좌우 스크롤(수평 스크롤, 스와이프)할 때 특정 컬럼을 고정하고 싶다면](https://xetown.com/tips/1183430)
 - [React table bootstrap](https://react-bootstrap.netlify.app/components/table/#tables)
 - [SEO 4가지 사례로 알아보는 올바른 캐노니컬 태그 적용 방법](https://www.twinword.co.kr/blog/how-to-apply-canonical-tag-properly/)
-- 
+- [Web Testing - Element 검색해서 클릭하기](https://miaow-miaow.tistory.com/m/150)
