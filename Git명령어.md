@@ -82,7 +82,7 @@
 
 ### git merge
 - git merge feature/{기능이름}
-
+- [git merge rebase 차이](https://firework-ham.tistory.com/12)
 # 기타
 1. 한글깨짐 문제
 - git config --global gui.encoding utf-8 => utf-8 한글깨짐 문제
