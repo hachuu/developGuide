@@ -181,7 +181,7 @@ ssh-keygen -C "jamal@fabrikam.com"
 ## FlexBox (Flexbox Froggy를 통한 정리)
 [flexbox.md](https://github.com/hachuu/developGuide/blob/main/flexbox.md)
 
-## 종합 개발 팁
+## 종합 개발 
 - [브라우저 개발자도구에서 formdata를 숨기는 방법이 있는가요?](https://studyforus.com/help/667208)
 - ppt나 excel 자동 영어 <=> 한글 변환 끄기 [파워포인트(PPT) 자동 한영 전환 기능 끄기](https://dev-jaeho.tistory.com/10)
 - [알아두면 쓸만한 Chrome Console 기능](https://dev-momo.tistory.com/entry/%EC%95%8C%EB%A7%88%EB%91%90%EB%A9%B4-%EC%93%B8%EB%A7%8C%ED%95%9C-Chrome-Console-%EA%B8%B0%EB%8A%A5)
@@ -192,3 +192,4 @@ ssh-keygen -C "jamal@fabrikam.com"
 - [React table bootstrap](https://react-bootstrap.netlify.app/components/table/#tables)
 - [SEO 4가지 사례로 알아보는 올바른 캐노니컬 태그 적용 방법](https://www.twinword.co.kr/blog/how-to-apply-canonical-tag-properly/)
 - [Web Testing - Element 검색해서 클릭하기](https://miaow-miaow.tistory.com/m/150)
+- [d.ts](https://kjwsx23.tistory.com/522)
