@@ -193,3 +193,13 @@ ssh-keygen -C "jamal@fabrikam.com"
 - [SEO 4가지 사례로 알아보는 올바른 캐노니컬 태그 적용 방법](https://www.twinword.co.kr/blog/how-to-apply-canonical-tag-properly/)
 - [Web Testing - Element 검색해서 클릭하기](https://miaow-miaow.tistory.com/m/150)
 - [d.ts](https://kjwsx23.tistory.com/522)
+- [npm install --save](https://docs.npmjs.com/cli/v7/commands/npm-install)
+```
+-P, --save-prod: Package will appear in your dependencies. This is the default unless -D or -O are present.
+
+-D, --save-dev: Package will appear in your devDependencies.
+
+-O, --save-optional: Package will appear in your optionalDependencies.
+
+--no-save: Prevents saving to dependencies.
+```
