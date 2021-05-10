@@ -136,6 +136,7 @@ ssh-keygen -C "jamal@fabrikam.com"
 7. [icon `<script>` injection](https://fontawesome.com/icons/bars?style=solid)
 8. [소스 한줄 정렬](https://gandevelop.tistory.com/9)
 9. [QA자동화](https://www.npmjs.com/package/selenium-webdriver)
+10. [HTML WEB 웹 개발 각각 cache 유무 코드의 no-cache 캐시삭제, browser 가 caching 하지 않게 하는 http header 설정](https://202psj.tistory.com/763)
 ---
 
 
