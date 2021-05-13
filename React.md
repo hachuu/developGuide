@@ -72,6 +72,9 @@ let { id } = useParam();
 8. Memo
 - 데이터 재 할당시 페이지 리로드가 일어나는데 memo로 불필요한 랜더링을 줄일 수 있다
 
+9. useCallback
+- [useCallback 을 사용하여 함수 재사용하기](https://react.vlpt.us/basic/18-useCallback.html)
+
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
 ](https://m.blog.naver.com/PostView.nhn?blogId=bkcaller&logNo=221366361792&proxyReferer=https:%2F%2Fwww.google.co.kr%2F)
