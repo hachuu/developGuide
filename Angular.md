@@ -304,3 +304,8 @@ downloadFile(data: Response) {
 
 ## Infinite scroll
 [Infinite Virtual Scroll with the Angular CDK](https://fireship.io/lessons/infinite-virtual-scroll-angular-cdk/)
+
+
+## ngcc 에러..
+- Angular 9 - NGCC fails with an unhandled exception
+[Angular 9-처리되지 않은 예외로 NGCC가 실패합니다.](https://stackoverflow.com/questions/61222467/angular-9-ngcc-fails-with-an-unhandled-exception)
