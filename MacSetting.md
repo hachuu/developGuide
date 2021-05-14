@@ -53,6 +53,11 @@ brew cask install jumpcut(에러: brew cask install is disabled)
 => 대체 brew install --cask jumpcut
 ```
 
+## ssh keygen
+- window
+  - [id_rsa] (C:\Users\name\.ssh)
+  - [id_rsa.pub] => ssh key 생성함, text내용이 ssh-rsa 로 시작함
+
 ### 문제 해결
 
 *주의점*
