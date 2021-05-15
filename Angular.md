@@ -309,3 +309,6 @@ downloadFile(data: Response) {
 ## ngcc 에러..
 - Angular 9 - NGCC fails with an unhandled exception
 [Angular 9-처리되지 않은 예외로 NGCC가 실패합니다.](https://stackoverflow.com/questions/61222467/angular-9-ngcc-fails-with-an-unhandled-exception)
+
+## angular 12 release
+[angular12](https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49)
