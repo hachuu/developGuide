@@ -95,8 +95,11 @@ for (let val in data){
 
 ```
 
-## promise await 차이
+## 비동기처리
+1. promise await 차이
 - promise.then().catch()로 에러를 잡으면 되지만 await의 경우 try catch문으로 reject를 체크
+2. 비동기처리에 따른 컨퍼런스
+- [우아하게 비동기처리하기](https://m.youtube.com/watch?v=FvRtoViujGg&list=PL1DJtS1Hv1PiGXmgruP1_gM2TSvQiOsFL&index=15)
 
 ## 화살표 함수 [출처](https://ko.javascript.info/arrow-functions)
 - this를 가지지 않는다.
