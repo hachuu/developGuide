@@ -117,6 +117,7 @@ ssh-keygen -C "jamal@fabrikam.com"
   - 401 에러는 유효하지 않은 인증 토큰일 경우 반환하고
   - 403 에러는 토큰은 있지만, 그 토큰을 받은 유저가 scope 가 부족할 때 반환하는 것
 - [REST API 제대로 알고 사용하기](https://meetup.toast.com/posts/92)
+- [고양이사진으로 보는 응답코드](https://http.cat/)
 
 ## 도커 Docker
 - 컨테이너 기반의 오픈소스 가상화 플랫폼
@@ -137,6 +138,7 @@ ssh-keygen -C "jamal@fabrikam.com"
 8. [소스 한줄 정렬](https://gandevelop.tistory.com/9)
 9. [QA자동화](https://www.npmjs.com/package/selenium-webdriver)
 10. [HTML WEB 웹 개발 각각 cache 유무 코드의 no-cache 캐시삭제, browser 가 caching 하지 않게 하는 http header 설정](https://202psj.tistory.com/763)
+11. [Azure 배포](https://helloblog.net/azure-devops/)
 ---
 
 
