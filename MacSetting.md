@@ -61,7 +61,7 @@ brew cask install jumpcut(에러: brew cask install is disabled)
 ### 문제 해결
 
 *주의점*
-- M1과 기존 인텔 일반 맥북고 세팅이 다를 수 있으니 M1용을 한번 더 검색해보기!
+- M1과 기존 인텔 일반 맥북과 세팅이 다를 수 있으니 M1용을 한번 더 검색해보기!
 
 1. source tree push할 때 권한 문제로 안되는 경우
 - 출처 : [push 권한 문제](https://blog.naver.com/xyz37/220056104469)
