@@ -77,6 +77,7 @@ let { id } = useParam();
 
 10. Redux
 - [React-redux 이해하기](https://www.howdy-mj.me/redux/react-redux-intro/)
+- connect를 사용하여 dispatch, state를 가져옴
 
 
 ## react to do admin
