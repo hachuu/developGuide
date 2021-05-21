@@ -79,6 +79,11 @@ let { id } = useParam();
 - [React-redux 이해하기](https://www.howdy-mj.me/redux/react-redux-intro/)
 - connect를 사용하여 dispatch, state를 가져옴
 
+11. router로 이동한 param 가져오기
+- useParams
+```
+let { id } = useParams();
+```
 
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
