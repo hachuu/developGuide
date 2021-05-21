@@ -3,6 +3,9 @@
 ---
 *스터디하면서 알게된 점들*
 
+
+- 리액트 컴포넌트는 하위 컴포넌트에서 바뀐 내용이 없더라도 상위에서 리랜더링되는 경우 하위 컴포넌트도 리랜더링 됨.
+
 1. JSX 조건부 연산자
   1. 조건부 연산자
   ```
@@ -59,7 +62,22 @@ let { id } = useParam();
 - 서버에서 주고 받는 응답 데이터는 JSON 형식이 default이지만 axios로 받는 경우 object로 변환해줌
 
 6. Suspense
-- [데이터를 가져오기 위한 Suspense](https://ko.reactjs.org/docs/concurrent-mode-suspense.html)
+- Suspense를 사용하면 컴포넌트가 렌더링되기 전까지 기다릴 수 있습니다. 이 예시에서는 두 컴포넌트가 데이터를 불러오는 비동기 API 호출을 기다립니다.
+```
+const resource = fetchProfileData();
+
+function ProfilePage() {
+  return (
+    <Suspense fallback={<h1>Loading profile...</h1>}>
+      <ProfileDetails />
+      <Suspense fallback={<h1>Loading posts...</h1>}>
+        <ProfileTimeline />
+      </Suspense>
+    </Suspense>
+  );
+}
+```
+- 출처: [데이터를 가져오기 위한 Suspense](https://ko.reactjs.org/docs/concurrent-mode-suspense.html)
 
 7. PWA
 *세팅파일* (CRA 사용하면 굳이 만들지 않아도 됨)
@@ -71,19 +89,19 @@ let { id } = useParam();
 
 8. Memo
 - 데이터 재 할당시 페이지 리로드가 일어나는데 memo로 불필요한 랜더링을 줄일 수 있다
+```
+export default React.memo(CreateUser);
+```
 
-9. useCallback
-- [useCallback 을 사용하여 함수 재사용하기](https://react.vlpt.us/basic/18-useCallback.html)
+9. [hook 정리](/Users/songhayeong/dev/developGuide/React/hook.md)
 
 10. Redux
 - [React-redux 이해하기](https://www.howdy-mj.me/redux/react-redux-intro/)
 - connect를 사용하여 dispatch, state를 가져옴
 
-11. router로 이동한 param 가져오기
-- useParams
-```
-let { id } = useParams();
-```
+11. custom hook
+
+12. container & presenter pattern
 
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
