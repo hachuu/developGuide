@@ -135,5 +135,18 @@ const onChange = useCallback(
     4-2. useReducer vs useState
     - 컴포넌트에서 관리하는 값이 여러개가 되어서 상태의 구조가 복잡해진다면 useReducer로 관리하는 것이 좋을 수도 있음
 
+5. Custom hook
+- 커스텀 Hooks 를 만드는 방법: 
+useState, useEffect, useReducer, useCallback 등 Hooks 를 사용하여 원하는 기능을 구현해주고, 컴포넌트에서 사용하고 싶은 값들을 반환
+```
+function useInputs(initialForm) {
+
+ ...(생략)
+ return [form, onChange, reset];
+
+ export default useInputs;
+}
+```
+
 ## 참조 url
 https://react.vlpt.us/
