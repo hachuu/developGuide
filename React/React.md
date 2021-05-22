@@ -93,7 +93,7 @@ function ProfilePage() {
 export default React.memo(CreateUser);
 ```
 
-9. [hook 정리](/Users/songhayeong/dev/developGuide/React/hook.md)
+9. [hook 정리](https://github.com/hachuu/developGuide/blob/main/React/hook.md)
 
 10. Redux
 - [React-redux 이해하기](https://www.howdy-mj.me/redux/react-redux-intro/)
@@ -102,6 +102,7 @@ export default React.memo(CreateUser);
 11. custom hook
 
 12. container & presenter pattern
+- [Presentational & Container 컴포넌트는 이제 그만](https://ridicorp.com/story/how-to-use-redux-in-ridi/)
 
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
