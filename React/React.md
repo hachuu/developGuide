@@ -104,6 +104,20 @@ export default React.memo(CreateUser);
 12. container & presenter pattern
 - [Presentational & Container 컴포넌트는 이제 그만](https://ridicorp.com/story/how-to-use-redux-in-ridi/)
 
+13. React index.html의 설정값 확인
+```
+short_name: 사용자 홈 화면에서 아이콘 이름으로 사용
+name: 웹앱 설치 배너에 사용
+icons: 홈 화면에 추가할때 사용할 이미지
+start_url: 웹앱 실행시 시작되는 URL 주소
+display: 디스플레이 유형(fullscreen, standalone, browser 중 설정)
+theme_color: 상단 툴바의 색상
+background_color: 스플래시 화면 배경 색상
+orientation: 특정 방향을 강제로 지정(landscape, portrait 중 설정)
+```
+- [초기 환경 세팅하기, create-react-app으로 앱 만들기](https://imki123.github.io/posts/29)
+- [웹앱 매니페스트 & 서비스워커(Web App Manifest & Service Worker)](https://altenull.github.io/2018/03/09/%EC%9B%B9%EC%95%B1-%EB%A7%A4%EB%8B%88%ED%8E%98%EC%8A%A4%ED%8A%B8-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%9B%8C%EC%BB%A4-Web-App-Manifest-Service-Worker/)
+
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
 ](https://m.blog.naver.com/PostView.nhn?blogId=bkcaller&logNo=221366361792&proxyReferer=https:%2F%2Fwww.google.co.kr%2F)
