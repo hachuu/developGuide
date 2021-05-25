@@ -81,6 +81,8 @@ ssh-keygen -C "jamal@fabrikam.com"
   1. [실제 gradle 설치 방법](https://park-jongseok.github.io/languages/java/2019/11/01/installing-gradle.html) - eclipse marketplace가 아님
   2. 'gradle'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다. => 시스템 환경 변수 %GRADLE_HOME%\bin 순서를 상위로 옮겨줌.
   3. Run the init task (gradle init --type java-library) [출처](https://docs.gradle.org/current/samples/sample_building_java_libraries.html)
+
+
 ## 알고리즘😡😱
 
 1. [알고리즘 공부 시작 방법 및 순서](https://blog.yena.io/studynote/2018/11/14/Algorithm-Basic.html)
@@ -88,6 +90,7 @@ ssh-keygen -C "jamal@fabrikam.com"
 3. [인프런 알고리즘 강좌](https://www.inflearn.com/course/알고리즘-강좌/lecture/4083?tab=note)
 4. [공부하면서 알게된 것들 ](https://github.com/hachuu/developGuide/blob/main/Algorithm.md)
 5. [trekhleb/javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)
+
 
 ## GitHub Action 배포
 1. [Github Actions으로 배포 자동화하기](https://velog.io/@bluestragglr/Github-Action%EC%9C%BC%EB%A1%9C-%EB%B0%B0%ED%8F%AC-%EC%9E%90%EB%8F%99%ED%99%94%ED%95%98%EA%B8%B0)
@@ -183,6 +186,10 @@ ssh-keygen -C "jamal@fabrikam.com"
   
 ## FlexBox (Flexbox Froggy를 통한 정리)
 [flexbox.md](https://github.com/hachuu/developGuide/blob/main/flexbox.md)
+  
+## React 스터디 정리
+[React 정리](https://github.com/hachuu/developGuide/blob/main/React/React.md)
+[Hook 정리](https://github.com/hachuu/developGuide/blob/main/React/hook.md)
 
 ## 종합 개발 
 - [브라우저 개발자도구에서 formdata를 숨기는 방법이 있는가요?](https://studyforus.com/help/667208)
