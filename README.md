@@ -206,3 +206,11 @@ ssh-keygen -C "jamal@fabrikam.com"
 
 --no-save: Prevents saving to dependencies.
 ```
+  
+## Firebase 배포
+```
+npm run build
+firebase init hosting
+firebase deploy --only hosting
+firebase serve --only hosting
+```
