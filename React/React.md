@@ -118,6 +118,12 @@ orientation: 특정 방향을 강제로 지정(landscape, portrait 중 설정)
 - [초기 환경 세팅하기, create-react-app으로 앱 만들기](https://imki123.github.io/posts/29)
 - [웹앱 매니페스트 & 서비스워커(Web App Manifest & Service Worker)](https://altenull.github.io/2018/03/09/%EC%9B%B9%EC%95%B1-%EB%A7%A4%EB%8B%88%ED%8E%98%EC%8A%A4%ED%8A%B8-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%9B%8C%EC%BB%A4-Web-App-Manifest-Service-Worker/)
 
+14. react 배포
+14-1. 배포시 Loading chunk n failed. 에러 
+- 원인: 이중 router 선언 시 baseurl을 설정하지 않아서 cdn js, css 경로를 못 불러옴
+- 해결: index.html에 <base href="%PUBLIC_URL%/" /> 추가
+  
+
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
 ](https://m.blog.naver.com/PostView.nhn?blogId=bkcaller&logNo=221366361792&proxyReferer=https:%2F%2Fwww.google.co.kr%2F)
