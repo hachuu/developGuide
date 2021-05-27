@@ -121,7 +121,7 @@ ssh-keygen -C "jamal@fabrikam.com"
   - 403 에러는 토큰은 있지만, 그 토큰을 받은 유저가 scope 가 부족할 때 반환하는 것
 - [REST API 제대로 알고 사용하기](https://meetup.toast.com/posts/92)
 - [고양이사진으로 보는 응답코드](https://http.cat/)
-
+- [Front 외부 API 연동 의구심](https://okky.kr/article/882992?note=2257178)
 ## 도커 Docker
 - 컨테이너 기반의 오픈소스 가상화 플랫폼
 - 도커 빌드
