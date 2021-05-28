@@ -301,6 +301,17 @@ downloadFile(data: Response) {
 ## SPA 공통 사항
 1. router이동시 이미 받아진 라이브러리는 다시 받지 않는다.
 2. a 태그 or url 직접 입력해서 진입하는 경우 라이브러리를 다시 로드한다.
+3. 브라우저 닫을 때 이벤트 감지 HostListener: beforeunload
+```
+@HostListener("window:beforeunload", ["$event"])
+beforeUnloadHander(event: Event) {
+}
+```
+4. 다른 페이지로 이동 이벤트 감지 => 브라우저 닫을 시에 ngOnDestroy는 태우지 않는다.
+```
+ngOnDestroy() {
+}
+```
 
 ## Infinite scroll
 [Infinite Virtual Scroll with the Angular CDK](https://fireship.io/lessons/infinite-virtual-scroll-angular-cdk/)
