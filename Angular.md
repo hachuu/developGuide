@@ -312,7 +312,11 @@ beforeUnloadHander(event: Event) {
 ngOnDestroy() {
 }
 ```
-
+5. SSR 처리 할 시 
+```
+this.router.navigate() // 문제
+window.replace // 로 해결
+```
 ## Infinite scroll
 [Infinite Virtual Scroll with the Angular CDK](https://fireship.io/lessons/infinite-virtual-scroll-angular-cdk/)
 
