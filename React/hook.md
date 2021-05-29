@@ -148,5 +148,18 @@ function useInputs(initialForm) {
 }
 ```
 
+6. useContext
+```
+const value = useContext(MyContext);
+```
+context 객체(React.createContext에서 반환된 값)을 받아 그 context의 현재 값을 반환
+context의 현재 값은 트리 안에서 이 Hook을 호출하는 컴포넌트에 가장 가까이에 있는 <MyContext.Provider>의 value prop에 의해 결정
+맞는 사용: useContext(MyContext)
+틀린 사용: useContext(MyContext.Consumer)
+틀린 사용: useContext(MyContext.Provider)
+useContext를 호출한 컴포넌트는 context 값이 변경되면 항상 리렌더링 될 것입니다. 만약 컴포넌트를 리렌더링 하는 것에 비용이 많이 든다면, 메모이제이션을 사용하여 최적화할 수 있습니다.
+
+
 ## 참조 url
 https://react.vlpt.us/
+https://ko.reactjs.org/docs/hooks-reference.html#usecontext
