@@ -159,6 +159,8 @@ context의 현재 값은 트리 안에서 이 Hook을 호출하는 컴포넌트�
 틀린 사용: useContext(MyContext.Provider)
 useContext를 호출한 컴포넌트는 context 값이 변경되면 항상 리렌더링 될 것입니다. 만약 컴포넌트를 리렌더링 하는 것에 비용이 많이 든다면, 메모이제이션을 사용하여 최적화할 수 있습니다.
 
+7. Api error처리에 따른 hook 관리
+[Centralizing API error handling in React App](https://itnext.io/centralizing-api-error-handling-in-react-apps-810b2be1d39d)
 
 ## 참조 url
 https://react.vlpt.us/
