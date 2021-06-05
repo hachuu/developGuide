@@ -147,6 +147,8 @@ function useInputs(initialForm) {
  export default useInputs;
 }
 ```
+- 같은 Hook을 사용하는 두 개의 컴포넌트는 state를 공유하지 않으
+- 사용자 정의 Hook은 상태 관련 로직(구독을 설정하고 현재 변숫값을 기억하는 것)을 재사용하는 메커니즘이지만 사용자 Hook을 사용할 때마다 그 안의 state와 effect는 완전히 독립적 [참조](https://ko.reactjs.org/docs/hooks-custom.html)
 
 6. useContext
 ```
