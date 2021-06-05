@@ -135,6 +135,43 @@ const onChange = useCallback(
     4-2. useReducer vs useState
     - 컴포넌트에서 관리하는 값이 여러개가 되어서 상태의 구조가 복잡해진다면 useReducer로 관리하는 것이 좋을 수도 있음
 
+
+5. useContext
+```
+const value = useContext(MyContext);
+```
+context 객체(React.createContext에서 반환된 값)을 받아 그 context의 현재 값을 반환
+context의 현재 값은 트리 안에서 이 Hook을 호출하는 컴포넌트에 가장 가까이에 있는 <MyContext.Provider>의 value prop에 의해 결정
+맞는 사용: useContext(MyContext)
+틀린 사용: useContext(MyContext.Consumer)
+틀린 사용: useContext(MyContext.Provider)
+useContext를 호출한 컴포넌트는 context 값이 변경되면 항상 리렌더링 될 것입니다. 만약 컴포넌트를 리렌더링 하는 것에 비용이 많이 든다면, 메모이제이션을 사용하여 최적화할 수 있습니다.
+
+6. useRef
+
+```
+const refContainer = useRef(initialValue);
+```
+
+- useRef는 .current 프로퍼티로 전달된 인자(initialValue)로 초기화된 변경 가능한 ref 객체를 반환
+- 반환된 객체는 컴포넌트의 전 생애주기를 통해 유지
+
+```
+function TextInputWithFocusButton() {
+  const inputEl = useRef(null);
+  const onButtonClick = () => {
+    // `current` points to the mounted text input element
+    inputEl.current.focus();
+  };
+  return (
+    <>
+      <input ref={inputEl} type="text" />
+      <button onClick={onButtonClick}>Focus the input</button>
+    </>
+  );
+}
+```
+
 5. Custom hook
 - 커스텀 Hooks 를 만드는 방법: 
 useState, useEffect, useReducer, useCallback 등 Hooks 를 사용하여 원하는 기능을 구현해주고, 컴포넌트에서 사용하고 싶은 값들을 반환
@@ -150,16 +187,6 @@ function useInputs(initialForm) {
 - 같은 Hook을 사용하는 두 개의 컴포넌트는 state를 공유하지 않으
 - 사용자 정의 Hook은 상태 관련 로직(구독을 설정하고 현재 변숫값을 기억하는 것)을 재사용하는 메커니즘이지만 사용자 Hook을 사용할 때마다 그 안의 state와 effect는 완전히 독립적 [참조](https://ko.reactjs.org/docs/hooks-custom.html)
 
-6. useContext
-```
-const value = useContext(MyContext);
-```
-context 객체(React.createContext에서 반환된 값)을 받아 그 context의 현재 값을 반환
-context의 현재 값은 트리 안에서 이 Hook을 호출하는 컴포넌트에 가장 가까이에 있는 <MyContext.Provider>의 value prop에 의해 결정
-맞는 사용: useContext(MyContext)
-틀린 사용: useContext(MyContext.Consumer)
-틀린 사용: useContext(MyContext.Provider)
-useContext를 호출한 컴포넌트는 context 값이 변경되면 항상 리렌더링 될 것입니다. 만약 컴포넌트를 리렌더링 하는 것에 비용이 많이 든다면, 메모이제이션을 사용하여 최적화할 수 있습니다.
 
 7. Api error처리에 따른 hook 관리
 [Centralizing API error handling in React App](https://itnext.io/centralizing-api-error-handling-in-react-apps-810b2be1d39d)
