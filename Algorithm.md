@@ -124,3 +124,8 @@ console.log(b); // [1, 2, 3, 4, 5, 6]
    1. shift : pop 메서드와 비슷하며, 배열의 마지막 요소 대신 0번째 요소를 제거하고 반환
    2. unshift: 메서드는 새로운 요소를 배열의 맨 앞쪽에 추가하고, 새로운 길이를 반환
 
+## length만 아는 array 생성하기
+```
+const testArr = Array.from({length: 5}, (x, i) => i+1);
+//  [1, 2, 3, 4, 5]
+```
