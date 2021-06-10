@@ -123,6 +123,21 @@ orientation: 특정 방향을 강제로 지정(landscape, portrait 중 설정)
 - 원인: 이중 router 선언 시 baseurl을 설정하지 않아서 cdn js, css 경로를 못 불러옴
 - 해결: index.html에 <base href="%PUBLIC_URL%/" /> 추가
   
+15. Redux 사용시 주의할 점
+  1. 객체나 배열 사용시 state 복사를 통해 update를 진행해야함
+  ```
+  const fruits = ['apple', 'banana']
+
+  // 틀린 방법
+  fruits.push('melon')
+  fruits.pop()
+  fruits[0] = 'cherry'
+
+  // 올바른 방법
+  [...state, 'melon']
+  fruits.filter(fruit => fruit !== 'melon')
+  fruits.map(fruit => fruit === 'apple' ? 'cherry' : fruit)
+  ```
 
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
