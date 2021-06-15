@@ -20,3 +20,41 @@
   로그인 구현에 validation까지 소스 참조가 가능
   ```
 - [참조 소스코드](https://github.com/ungmo2/angular8-jwt-auth)
+- [express-session](https://velopert.com/406)
+  1. express-session : Express 프레임워크에서 세션을 관리하기 위해 필요한 미들웨어
+  2. express session key
+  3. 세션 초기 설정 (initialization)
+  ```
+  app.get('/', function(req, res){
+    sess = req.session;
+    console.log(sess.username);
+  });
+  ```
+  
+  4. 세션 변수 설정
+
+
+  ```
+  app.get('/login', function(req, res){
+      sess = req.session;
+      sess.username = "velopert"
+  });
+  ```
+
+  5. 로그아웃
+  
+  ```
+      app.get('/logout', function(req, res){
+        sess = req.session;
+        if(sess.username){
+            req.session.destroy(function(err){
+                if(err){
+                    console.log(err);
+                }else{
+                    res.redirect('/');
+                }
+            })
+        }else{
+            res.redirect('/');
+        }
+  ```
