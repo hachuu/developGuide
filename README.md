@@ -234,3 +234,6 @@ firebase serve --only hosting
 - Storage - CDN 연결 작업
   1. 엔드포인트 추가
   2. 스토리지 생성에서 생긴 엔드포인트 연결
+  
+## host 파일 경로
+- C:\Windows\System32\drivers\etc
