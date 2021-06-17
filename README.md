@@ -237,3 +237,6 @@ firebase serve --only hosting
   
 ## host 파일 경로
 - C:\Windows\System32\drivers\etc
+  
+## jquery => javascript
+- [JQUERY TO JAVASCRIPT](http://www.workversatile.com/jquery-to-javascript-converter)
