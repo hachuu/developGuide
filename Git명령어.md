@@ -125,3 +125,13 @@ git clone --recurse-submodules {git url}
 ```
 git remote remove origin
 ```
+
+13. gitignore 적용 안될때
+- .gitignore가 적용안되고 changes에 나오는 경우
+- 원인 : git의 캐시가 문제
+- 해결 : 캐시 내용을 전부 삭제후 다시 add All해서 커밋하시면 됩니다.
+```
+git rm -r --cached .
+git add .
+git commit -m "fixed untracked files"
+```
