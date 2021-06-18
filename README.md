@@ -240,3 +240,13 @@ firebase serve --only hosting
   
 ## jquery => javascript
 - [JQUERY TO JAVASCRIPT](http://www.workversatile.com/jquery-to-javascript-converter)
+  
+## npm 배포[출처](https://www.daleseo.com/js-npm-publish/)
+```
+  npm login // 로그인
+  npm whoami // 내 id 확인
+  npm info hello-login // hello-login npm package가 있는 지 확인 E404응답이면 배포 가능
+  npm publish // 배포
+```
+  
+  
