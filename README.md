@@ -213,6 +213,8 @@ ssh-keygen -C "jamal@fabrikam.com"
 
 --no-save: Prevents saving to dependencies.
 ```
+*--save를 쓰지 않아도 되는 이유 추가: npm5 부터는 --save 옵션을 사용하지 않아도 dependencies에 항목을 추가해줌
+출처: https://xtring-dev.tistory.com/entry/NPM-npm-install-할-때-save를-함께-입력하는-이유*
 - [axios excel 파일 다운로드](https://soonh.tistory.com/38)
   
 ## Firebase 배포
