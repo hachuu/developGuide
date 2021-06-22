@@ -361,6 +361,26 @@ export default function (x) {
 };
 ```
 
+## for await of
+- [for await...of](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for-await...of)
+```
+async function* asyncGenerator() {
+  let i = 0;
+  while (i < 3) {
+    yield i++;
+  }
+}
+
+(async function() {
+  for await (let num of asyncGenerator()) {
+    console.log(num);
+  }
+})();
+// 0
+// 1
+// 2
+```
+
 ### 일시적 사각 지대 (Temporal Dead Zone; TDZ)
 - var 변수의 경우 선언 단계 - 초기화 가 동시에 이루어지는 반면, let/const 변수의 경우 선언 단계와 초기화 단계가 나누어서 이루어짐
 - let/const 변수의 선언 단계와 초기화 단계 사이를 일시적 사각 지대 (Temporal Dead Zone; TDZ)라고 부름
