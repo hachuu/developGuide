@@ -344,6 +344,12 @@ objectStr = 'hello'; // Correct
 objectStr = new String('hello'); // Correct
 ```
 
+### 암호화 복호화
+```
+window.btoa(''); // 암호화
+window.atob(''); // 
+```
+
 ___
 
 ## export default
