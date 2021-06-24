@@ -129,6 +129,11 @@ ssh-keygen -C "jamal@fabrikam.com"
 - 서버 구현까지 [출처](https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html)
 - [참조](https://www.slideshare.net/pyrasis/docker-fordummies-44424016)
 
+## SSO 로그인
+- [OAuth2 정리](https://github.com/hachuu/developGuide/blob/main/SSO/OAuth2.md)
+- [SSO 정리](https://github.com/hachuu/developGuide/blob/main/SSO/SSO.md)
+- [cookie session 정리](https://github.com/hachuu/developGuide/blob/main/SSO/cookie%EC%99%80session.md)
+
 ### 개발 도구
 
 1. [정규식 검사](https://regex101.com/r/cO8lqs/4)
