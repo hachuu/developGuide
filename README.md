@@ -31,7 +31,10 @@ document.head.appendChild(link);
 1. Remove-Item C:\ProgramData\chocolatey -Recurse
 2. Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 3. choco install yarn
-
+- yarn 다운
+```
+npm install --global yarn
+```
 
 ## VSCode 세팅
 [TSLint](http://ngmsoftware.com/bbs/board.php?bo_table=study&wr_id=266&sca=Error&sst=wr_datetime&sod=desc&sop=and&page=1)
