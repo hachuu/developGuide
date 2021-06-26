@@ -2,3 +2,9 @@
 ```
 "next dev -p 1234",
 ```
+
+2. now
+- Next.js 배포 가능
+```
+npm install now
+```
