@@ -350,6 +350,16 @@ window.btoa(''); // 암호화
 window.atob(''); // 
 ```
 
+### 객체 생성시 key값이 variable인 경우
+```
+const parmKey = Object.keys(paramObj)[0];
+const reqBody = {
+  params: { [parmKey] : paramObj[parmKey]}
+  // 예제 params: { blNo : 'ALL'}
+  // blNo이나 cntrNo나 po라는 key값이 올 수 있으므로 [parmKey]로 
+}
+```
+
 ___
 
 ## export default
