@@ -8,3 +8,8 @@
 ```
 npm install now
 ```
+
+3. Styled-component className 못 찾을 때
+```
+npm install --save-dev babel-plugin-styled-components
+```
