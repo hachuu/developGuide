@@ -114,6 +114,18 @@ ssh-keygen -C "jamal@fabrikam.com"
 - Webpack = (Grunt|Gulp) + Browserify(Node.js기반 javascript code를 브라우저 환경에서도 실행 가능하도록 해줌)
 - Webpack = 모듈 번들러 / Grunt vs Gulp = task runners
 
+
+### webpack
+- An ejected project cannot use the build command anymore.
+=> 해결 angular-cli.json 에서 다음 기입
+```
+"project": {
+   "name": "proj-name",
+   "ejected": true,
+}
+```
+
+
 ## Babel
 - Babel : JavaScript 컴파일러, ES6 이후의 코드를 구형 브라우저 환경에 맞게 변환
 - polyfill : 폴리필은 웹 개발에서 기능을 지원하지 않는 웹 브라우저 상의 기능을 구현하는 코드
