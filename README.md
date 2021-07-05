@@ -224,6 +224,8 @@ ssh-keygen -C "jamal@fabrikam.com"
 - [Web Testing - Element 검색해서 클릭하기](https://miaow-miaow.tistory.com/m/150)
 - [d.ts](https://kjwsx23.tistory.com/522)
 - [npm install --save](https://docs.npmjs.com/cli/v7/commands/npm-install)
+- [RGB <-> HEX 색상코드 확인](https://hi098123.tistory.com/132#94d0cc)
+- [Color palettes](https://colorhunt.co/)
 ```
 -P, --save-prod: Package will appear in your dependencies. This is the default unless -D or -O are present.
 
