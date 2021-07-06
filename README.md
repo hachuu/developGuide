@@ -273,4 +273,8 @@ firebase serve --only hosting
   npm publish // 배포
 ```
   
+## package의 명령어
+  1. --sourceMap==false : webpack에 의해 번들링 된 파일과 해당 파일에 대응되는 sourcemap이 생성, 실제 배포 시 sourcemap은 제거하겠다는 명령어
+[React build 시 sourcemap 제거하기](https://velog.io/@racoon/React-build-%EC%8B%9C-sourcemap-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0)
+  
   
