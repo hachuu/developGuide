@@ -41,3 +41,6 @@ document.cookie = "user=John; max-age=3600";
 
 ###### 출처 : [쿠키와 document.cookie](https://ko.javascript.info/cookie)
 2. 세션
+
+3. [로그인 유지 작업](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=commind7&logNo=220631505184)
+브라우저 닫을 시 로그아웃 처리..
