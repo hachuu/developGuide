@@ -138,3 +138,16 @@ git commit -m "fixed untracked files"
 
 14. git ssh key 생성
 [Git 서버 - SSH 공개키 만들기](https://git-scm.com/book/ko/v2/Git-%EC%84%9C%EB%B2%84-SSH-%EA%B3%B5%EA%B0%9C%ED%82%A4-%EB%A7%8C%EB%93%A4%EA%B8%B0)
+
+15. git log 확인
+```
+ git log : 현재 브랜치에 대한 로그 커밋만
+
+ git log --branches : 모든 브랜치의 로그 출력
+
+ git log  --branches --decorate : 모든 브랜치의 브랜치명 표시
+
+ git log  --branches --decorate --graph : 로그 왼쪽에 그래프가 출력
+
+ git log  --branches --decorate --graph --online : 간단하게 볼 수 있도록 표시
+```
