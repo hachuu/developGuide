@@ -39,6 +39,8 @@ document.cookie = "user=John; max-age=3600";
 - 광고회사는 사용자의 이용 행태를 추적하고, 광고를 제공하기 위해 오래전부터 서드 파티 쿠키를 사용하고 있음
 - 서드파티 쿠키는 쿠키를 설정한 도메인에 종속되기 때문에 ads.com은 사용자가 어떤 사이트를 방문했는지 추적할 수 있음
 
+1.2 TIL
+- [브라우저 쿠키와 SameSite 속성](https://seob.dev/posts/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%BF%A0%ED%82%A4%EC%99%80-SameSite-%EC%86%8D%EC%84%B1/)
 ###### 출처 : [쿠키와 document.cookie](https://ko.javascript.info/cookie)
 2. 세션
 
