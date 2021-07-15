@@ -52,6 +52,11 @@ npm install --global yarn
 npm install --global --production windows-build-tools
 npm install --global node-gyp
 ```
+- node_modules 삭제 명령어
+```
+rm -rf node_modules
+rm -rf node_modules && npm install
+```
 
 ## Mac M1 세팅
 [맥 세팅 작업중...](https://github.com/hachuu/developGuide/blob/main/MacSetting.md)
