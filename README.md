@@ -54,8 +54,8 @@ npm install --global node-gyp
 ```
 - node_modules 삭제 명령어
 ```
-rm -rf node_modules
-rm -rf node_modules && npm install
+rmdir node_modules /s /q 
+rmdir node_modules /s /q  && npm install --legacy-peer-deps
 ```
 
 ## Mac M1 세팅
