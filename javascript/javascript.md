@@ -360,6 +360,10 @@ const reqBody = {
 }
 ```
 
+### Object 중 해당하는 property가 존재하는지 안하는지 검색
+```
+.hasOwnProperty
+```
 ___
 
 ## export default
