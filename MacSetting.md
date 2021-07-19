@@ -45,6 +45,17 @@ echo “{ \”₩\” = (\”insertText:\”, \”\`\”); }” >> ~/Library/Key
 
 ```
 
+6. hosts 파일 수정하기
+```
+sudo vim /private/etc/hosts
+```
+  - i (insert) 키 입력
+  - 맨 아래줄에서 원하는 ip주소, 도메인 명령 작성
+  - esc로 insert모드 해제
+  - :키로 명령어 모드 실행
+  - :wq가 되도록 wq를 입력 후 Enter로 저장
+- [출처](https://stories.tistory.com/530)
+
 ## homebrew 설치
 - jumpcut: 클립보드 관리
 ```
