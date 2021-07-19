@@ -57,6 +57,11 @@ npm install --global node-gyp
 rmdir node_modules /s /q 
 rmdir node_modules /s /q  && npm install --legacy-peer-deps
 ```
+### npm install 시 왠지 node때문인거 같을 때
+```
+ npm install -g n
+ sudo n 14.15.4
+```
 
 ## Mac M1 세팅
 [맥 세팅 작업중...](https://github.com/hachuu/developGuide/blob/main/MacSetting.md)
