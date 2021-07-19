@@ -30,7 +30,6 @@
     console.log(sess.username);
   });
   ```
-  
   4. 세션 변수 설정
 
 
@@ -58,3 +57,4 @@
             res.redirect('/');
         }
   ```
+- 보안 취약점 해결을 위한 header에 넣는 값 Content-Security-Policy: policy
