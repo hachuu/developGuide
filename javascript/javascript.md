@@ -418,6 +418,9 @@ const unescape = str => str.replace(/&/g , '&').replace(/&lt;/g  , '<').replace(
 ### Debounce Throttle
 - [디바운스(Debounce)와 스로틀(Throttle ) 그리고 차이점](https://webclub.tistory.com/607)
 
+### Navigator - geolocation
+- [Navigator - geolocation](https://developer.mozilla.org/ko/docs/Web/API/Navigator/geolocation)
+- 
 ### 출처
 1. [[Javascript ] 프로토타입 이해하기](https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67)
 2. [출처 poiemaweb](https://poiemaweb.com/js-prototype)
