@@ -340,3 +340,8 @@ window.replace // 로 해결
 
 ## angular 12 release
 [angular12](https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49)
+
+## Angular input ngmodel setcomma해서 보여주기
+```
+[ngModel]="value | setCommaPipe" (ngModelChange)="value = $event"
+```
