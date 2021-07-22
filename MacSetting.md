@@ -56,6 +56,10 @@ sudo vim /private/etc/hosts
   - :wq가 되도록 wq를 입력 후 Enter로 저장
 - [출처](https://stories.tistory.com/530)
 
+7. npm install 시 에러 EACCES: permission denied, access '/usr/local/lib/node_modules'
+- sudo npm install~로 명령어 실행하면됨
+- [[TIP] MAC에서 node install 시 권한 오류 발생 할때](https://blog.sonim1.com/125)
+
 ## homebrew 설치
 - jumpcut: 클립보드 관리
 ```
