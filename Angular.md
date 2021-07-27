@@ -345,3 +345,9 @@ window.replace // 로 해결
 ```
 [ngModel]="value | setCommaPipe" (ngModelChange)="value = $event"
 ```
+
+### @Output childEvent not initialized 에러
+```
+import { EventEmitter } from 'events'; => 삭제
+import { EventEmitter } from '@angular/core'; => 변경
+```
