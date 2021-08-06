@@ -73,6 +73,14 @@ brew cask install jumpcut(에러: brew cask install is disabled)
   - [id_rsa] (C:\Users\name\.ssh)
   - [id_rsa.pub] => ssh key 생성함, text내용이 ssh-rsa 로 시작함
 
+## 인증서 등록하기
+맥 로컬 접속
+1. 키체인 - 시스템 루트에서 해당 인증서 항상 허용으로 변경 - 쿠키 삭제 - 시크릿모드에선 접속 가능
+2. 크롬 - 설정 - 개인정보 및 보안 - 사이트 설정 - 안전하지 않은 콘텐츠 - 표시가 허용됨에 로컬 주소 입력 - 쿠키 삭제
+3. chrome://net-internals/#hsts 접속 - Delete domain security policies - Domain에 로컬 주소 입력 후 Delete 클릭 - 쿠키 삭제
+4. 로컬 주소 접속 - "연결이 비공개로 어쩌구" 페이지에서 빈 공간 아무곳이나 클릭 - thisisunsafe 입력
+5. 접속
+
 ### 문제 해결
 
 *주의점*
