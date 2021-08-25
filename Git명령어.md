@@ -48,6 +48,23 @@
 12. git branch -a
 - 모든 브랜치의 리스트
 
+13. git branch 삭제
+  1. git branch 원격 삭제
+```
+방법 1
+git push origin --delete estimate
+방법 2
+git branch -d estimate
+git push origin estimate
+```
+  
+  2. git 로컬 삭제
+```
+git branch -d estimate // commit, push할 내용이 없는 branch인 경우
+git branch -D estimate // 병합되지 않은 branch의 경우
+```
+
+
 ## git commit 과정
 
 0. git rm --cached
