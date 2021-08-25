@@ -351,3 +351,6 @@ window.replace // 로 해결
 import { EventEmitter } from 'events'; => 삭제
 import { EventEmitter } from '@angular/core'; => 변경
 ```
+
+### aggrid infinite scroll
+[handleScroll method](https://github.com/ag-grid/ag-grid/issues/3089)
