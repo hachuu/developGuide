@@ -288,3 +288,7 @@ firebase serve --only hosting
 [React build 시 sourcemap 제거하기](https://velog.io/@racoon/React-build-%EC%8B%9C-sourcemap-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0)
   2. node --max-old-space-size=???? : 힙 메모리 부족시 
   
+## device나 mobile/pc 판별
+```
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+```
