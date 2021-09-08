@@ -401,6 +401,15 @@ async function* asyncGenerator() {
 // 2
 ```
 
+## window.open() 도메인 다른 경우
+[window.opener에 권한 문제로 접근할 수 없는 경우 해결방법](https://noritersand.github.io/javascript/javascript-window.opener%EC%97%90-%EA%B6%8C%ED%95%9C-%EB%AC%B8%EC%A0%9C%EB%A1%9C-%EC%A0%91%EA%B7%BC%ED%95%A0-%EC%88%98-%EC%97%86%EB%8A%94-%EA%B2%BD%EC%9A%B0-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95/)
+- 로그인 새창열기
+```
+openLogin() {
+    window.open('https://local.test.com:4222/login', 'name', 'width=410, height=700, resizable=0, scrollbars=no, status=0, titlebar=0, toolbar=0, left=300, top=200');
+   }
+```
+
 ### 일시적 사각 지대 (Temporal Dead Zone; TDZ)
 - var 변수의 경우 선언 단계 - 초기화 가 동시에 이루어지는 반면, let/const 변수의 경우 선언 단계와 초기화 단계가 나누어서 이루어짐
 - let/const 변수의 선언 단계와 초기화 단계 사이를 일시적 사각 지대 (Temporal Dead Zone; TDZ)라고 부름
