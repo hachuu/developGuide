@@ -33,6 +33,7 @@ ng g c new-component --module app => 실행하는 경우 app.module.ts에 자동
 - [universal.interceptor.ts](https://gist.github.com/UserGalileo/1c1241ed150cc86f309bef92a1811eea)
 - [Angular Server Side Rendering State Transfer For HTTP Requests](https://hackernoon.com/angular-server-side-rendering-state-transfer-for-http-requests-wu263t3h)
 - [Angular Universal + Caching (TransferState)](https://itnext.io/angular-universal-caching-transferstate-96eaaa386198)
+- [angular - can't run rxjs interval with angular universal](https://stackoverflow.com/questions/55370609/angular-cant-run-rxjs-interval-with-angular-universal)
 
 # 모듈
 - 모듈 분리
