@@ -292,3 +292,17 @@ firebase serve --only hosting
 ```
   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 ```
+  
+## Static web app 설정
+```
+  // 
+ {
+  "routes": [
+    {
+      "route": "/*",
+      "serve": "/index.html",
+      "statusCode": 200
+    }
+  ]
+}
+```
