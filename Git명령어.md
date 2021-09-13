@@ -84,6 +84,11 @@ git branch -D estimate // 병합되지 않은 branch의 경우
 - git reset --hard HEAD => 원격 저장소 마지막 commit 상태로 되돌림
 - git reset HEAD^ 가장 최근의 commit 취소 (HEAD^는 git commit id 번호)
 [git reset/revert](https://www.devpools.kr/2017/02/05/%EC%B4%88%EB%B3%B4%EC%9A%A9-git-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0-reset-revert/)
+
+* git reset --hard gitversion
+* git push -f origin master
+* 원하는 git version으로 되돌릴때
+
 4. push
 - git push origin master
 - git push origin feature/{기능이름}
