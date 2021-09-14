@@ -64,6 +64,11 @@ git branch -d estimate // commit, push할 내용이 없는 branch인 경우
 git branch -D estimate // 병합되지 않은 branch의 경우
 ```
 
+14. git fetch
+```
+git fetch -p origin // remote 서버 브랜치 정보를 다시 가져옴
+```
+
 
 ## git commit 과정
 
