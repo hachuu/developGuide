@@ -306,3 +306,6 @@ firebase serve --only hosting
   ]
 }
 ```
+
+## Cookie 도메인간 공유를 위한 header 설정 withcredentials true
+[withCredentials](https://kosaf04pyh.tistory.com/152)
