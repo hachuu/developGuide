@@ -436,3 +436,37 @@ import { EventEmitter } from '@angular/core'; => 변경
 
 ### aggrid infinite scroll
 [handleScroll method](https://github.com/ag-grid/ag-grid/issues/3089)
+
+
+### object key string 변수로 가지고 오고 싶을때 에러나는 현상
+```
+getErrorMsg(errorCode: string) {
+  const msg: ObjType = {
+    'WRONG_USER': '비밀번호가 맞지 않습니다. 확인 후 다시 입력해 주세요.'
+  }
+  return msg[errorCode];
+}
+```
+- 발생: return msg[errorCode]; 부분에서 Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ WRONG_USER: string; }'.
+  No index signature with a parameter of type 'string' was found on type '{ WRONG_USER: string; }'
+- 원인: typescript에서 type을 지정해주지 않았기 때문에 발생한 문제
+
+```
+// typescript에서는 Object의 string key 타입 선언을 해줘야함
+type ObjType = {
+  [index: string]: string
+}
+```
+```
+// 수정된 method
+getErrorMsg(errorCode: string) {
+  type ObjType = {
+    [index: string]: string
+  }
+  const msg: ObjType = {
+    'WRONG_USER': '비밀번호가 맞지 않습니다. 확인 후 다시 입력해 주세요.'
+    // '존재하지 않는 아이디 입니다.'
+  }
+  return msg[errorCode];
+}
+```
