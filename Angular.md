@@ -470,3 +470,6 @@ getErrorMsg(errorCode: string) {
   return msg[errorCode];
 }
 ```
+
+### file upload 공식 문서 확인하기
+[angular-file-upload](https://blog.angular-university.io/angular-file-upload/)
