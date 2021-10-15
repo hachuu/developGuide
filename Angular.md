@@ -473,3 +473,34 @@ getErrorMsg(errorCode: string) {
 
 ### file upload 공식 문서 확인하기
 [angular-file-upload](https://blog.angular-university.io/angular-file-upload/)
+[How to Post/Upload FormData (multipart/form-data) with Angular 10, TypeScript and HttpClient](https://www.techiediaries.com/angular-formdata/)
+```
+<form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">
+  <input class="upload-name" value="파일선택">
+  <label for="file">업로드</label> 
+  <input type="file" id="file" 
+  (change)="onFileSelected(fileUpload.files)"
+  #fileUpload> 
+</form>
+```
+```
+@ViewChild('fileUpload', { static: false })
+fileUpload!: ElementRef;
+
+// formbuilder를 통한 form 생성 후 post 전달
+this.uploadForm = this.formBuilder.group({
+  corpReg: ['']
+});
+
+onFileSelected(files: any) {
+  if (files && files[0]) {
+    this.uploadForm.get('corpReg')?.setValue(files[0]);
+    this.onSubmit();
+  }
+}
+onSubmit() {
+  const formData = new FormData();
+  formData.append('corpRegFile', this.uploadForm.get('corpReg')?.value);
+  formData.append('corpRegNo', '');
+}
+```
