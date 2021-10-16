@@ -14,3 +14,45 @@ num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 ```
 return num.replace(/,/g, "");
 ```
+
+- Angular formbuild (회원가입) 정규식 체크 구현
+```
+// email, password, passwordConfirm, name, phone, typing input text, 비밀번호 같은지 여부
+formBuilderSetting() {
+  this.signupForm = this.signupFormBuilder.group({
+    email: 
+    ['', Validators.compose([Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")])],
+    password: 
+    ['', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(16), Validators.pattern(/((?=.*\d)(?=.*[a-zA-Z]))/)])],
+    passwordConfirm: ['', Validators.compose([Validators.required])],
+    firstName: ['', Validators.compose([Validators.required, Validators.pattern(/^[가-힣a-zA-Z]*$/)])],
+    lastName: ['', Validators.compose([Validators.required, Validators.pattern(/^[가-힣a-zA-Z]*$/)])],
+    // phone: ['', Validators.compose([Validators.required, Validators.pattern(/^0+[0-9]{8,10}$/g)])],
+    phone: ['', Validators.compose([Validators.required, Validators.pattern(/^[0]+[0-9]*$/), Validators.minLength(9)])],
+    // company: ['', Validators.required],
+    company: ['', Validators.required],
+    companyType: ['', []],
+    companyTypeInput: ['', Validators.compose([Validators.required, Validators.pattern(/^[가-힣a-zA-Z]*$/)])],
+    position: ['', []],
+    positionInput: ['', Validators.compose([Validators.required, Validators.pattern(/^[가-힣a-zA-Z]*$/)])],
+  }, {
+    validator: this.isSamePassword()
+  });
+}
+
+isSamePassword() {
+  return (formGroup: FormGroup) => {
+    const password = formGroup.controls['password'];
+    const passwordConfirm = formGroup.controls['passwordConfirm'];
+    if (passwordConfirm.errors && !passwordConfirm.errors.confirmedValidator) {
+        return;
+    }
+    if (password.value !== passwordConfirm.value) {
+      passwordConfirm.setErrors({'samePassword': true});
+    } else {
+      passwordConfirm.setErrors(null);
+    }
+  }
+}
+```
+
