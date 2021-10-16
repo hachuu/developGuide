@@ -504,3 +504,13 @@ onSubmit() {
   formData.append('corpRegNo', '');
 }
 ```
+
+### pipe에 따른 form 값 변경 인지 로직
+```
+<form [formGroup]="myForm">
+  <input 
+    [value]="myForm.get('amount').value | udpCurrency"
+    formControlName="amount" 
+    placeholder="Amount">
+</form>
+```
