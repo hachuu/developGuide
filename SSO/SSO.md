@@ -58,3 +58,5 @@
         }
   ```
 - 보안 취약점 해결을 위한 header에 넣는 값 Content-Security-Policy: policy
+- Cookie 도메인간 공유를 위한 header 설정 withcredentials true : 
+[withCredentials](https://kosaf04pyh.tistory.com/152)
