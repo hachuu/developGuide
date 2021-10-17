@@ -505,6 +505,9 @@ onSubmit() {
 }
 ```
 
+### file drop event
+[hosteventlistener drop이벤트를 통한 작업](https://medium.com/@tarekabdelkhalek/how-to-create-a-drag-and-drop-file-uploading-in-angular-78d9eba0b854)
+
 ### pipe에 따른 form 값 변경 인지 로직
 ```
 <form [formGroup]="myForm">
@@ -514,3 +517,5 @@ onSubmit() {
     placeholder="Amount">
 </form>
 ```
+
+
