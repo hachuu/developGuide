@@ -518,4 +518,5 @@ onSubmit() {
 </form>
 ```
 
-
+### 외부 라이브러리 제작 시 필요한 선행
+[[Gulp.js] Gulp 입문 ① - Gulp에 대한 소개](https://programmingsummaries.tistory.com/356)
