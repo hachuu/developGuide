@@ -523,3 +523,6 @@ onSubmit() {
 [Angular 라이브러리 만들기](https://angular.kr/guide/creating-libraries)
 [javascript로 외부 html 불러오는 방법](https://kyung-a.tistory.com/18)
 [iframe height scrollbar 없애기](https://stackoverflow.com/questions/9975810/make-iframe-automatically-adjust-height-according-to-the-contents-without-using)
+[Make iframe automatically adjust height according to the contents without using scrollbar](https://helpcenter.websitex5.com/en/post/185264)
+(https://www.phpschool.com/gnuboard4/bbs/board.php?bo_table=qna_html&wr_id=72725)
+(https://badyouny.tistory.com/m/28)
