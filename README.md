@@ -311,4 +311,17 @@ firebase serve --only hosting
   ]
 }
 ```
+## How do you explicitly set a new property on `window` in TypeScript?
+1. 방법1
+```
+declare global {
+  interface Window { MyNamespace: any; }
+}
 
+window.MyNamespace = window.MyNamespace || {};
+```
+2. 방법2
+```
+    (window as any).tradlinx = this;
+    (window as any).tradlinx.app = app;
+```
