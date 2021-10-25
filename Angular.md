@@ -34,7 +34,7 @@ ng g c new-component --module app => 실행하는 경우 app.module.ts에 자동
 - [Angular Server Side Rendering State Transfer For HTTP Requests](https://hackernoon.com/angular-server-side-rendering-state-transfer-for-http-requests-wu263t3h)
 - [Angular Universal + Caching (TransferState)](https://itnext.io/angular-universal-caching-transferstate-96eaaa386198)
 - [angular - can't run rxjs interval with angular universal](https://stackoverflow.com/questions/55370609/angular-cant-run-rxjs-interval-with-angular-universal)
-
+- [universal에서 ReferenceError: localStorage is not defined](https://www.thecodehubs.com/how-to-solve-localstorage-is-not-defined-in-angular-11/)
 # 모듈
 - 모듈 분리
 - 기능 모듈: 특정 화면을 구성하는 구성요소
