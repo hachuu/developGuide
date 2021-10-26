@@ -519,10 +519,10 @@ onSubmit() {
 ```
 
 ### 외부 라이브러리 제작 시 필요한 선행
-[[Gulp.js] Gulp 입문 ① - Gulp에 대한 소개](https://programmingsummaries.tistory.com/356)
-[Angular 라이브러리 만들기](https://angular.kr/guide/creating-libraries)
-[javascript로 외부 html 불러오는 방법](https://kyung-a.tistory.com/18)
-[iframe height scrollbar 없애기](https://stackoverflow.com/questions/9975810/make-iframe-automatically-adjust-height-according-to-the-contents-without-using)
-[Make iframe automatically adjust height according to the contents without using scrollbar](https://helpcenter.websitex5.com/en/post/185264)
-(https://www.phpschool.com/gnuboard4/bbs/board.php?bo_table=qna_html&wr_id=72725)
-(https://badyouny.tistory.com/m/28)
+1. [[Gulp.js] Gulp 입문 ① - Gulp에 대한 소개](https://programmingsummaries.tistory.com/356)
+2. [Angular 라이브러리 만들기](https://angular.kr/guide/creating-libraries)
+3. [javascript로 외부 html 불러오는 방법](https://kyung-a.tistory.com/18)
+4. [iframe height scrollbar 없애기](https://stackoverflow.com/questions/9975810/make-iframe-automatically-adjust-height-according-to-the-contents-without-using)
+5. [Make iframe automatically adjust height according to the contents without using scrollbar](https://helpcenter.websitex5.com/en/post/185264)
+6. (https://www.phpschool.com/gnuboard4/bbs/board.php?bo_table=qna_html&wr_id=72725)
+7. [html에서 아이프레임 로딩시 스크롤 없이 100%로 보기](https://badyouny.tistory.com/m/28)
