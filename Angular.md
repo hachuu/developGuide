@@ -114,7 +114,10 @@ ngOnInit() {
 # Ag-map
 - [guide 문서](https://angular-maps.com/api-docs/agm-core/components/agmmap#zoom)
 
-
+## NG0200: Circular dependency in DI detected while instantiating a provider
+[Injectable root인 서비스에서 같은 root의 서비스를 호출할 때의 문제점](https://angular.io/errors/NG0200)
+- 종속성에 어긋나기때문에 같은 레벨의 서비스는 호출이 불가하고, 해당 에러가 발생한다.
+- *서비스끼리 호출하지 않도록 구조를 설계해야한다.*
 
 ## 빌트인 구조 디렉티브
 - ngFor
