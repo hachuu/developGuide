@@ -13,3 +13,19 @@
 Just-in-Time (JIT): 브라우저에서 애플리케이션을 실행하면서 코드를 직접 컴파일하는 방식입니다. Angular 8까지는 기본 컴파일러였습니다.
 Ahead-of-Time (AOT): 브라우저에 애플리케이션 코드를 보내기 전에 미리 컴파일하는 방식입니다. Angular 9부터 기본 컴파일러
 ```
+
+# Universal 구조
+```
+src/
+  index.html                 애플리케이션 웹 페이지
+  main.ts                    클라이언트 앱을 부트스트랩하는 파일
+  main.server.ts             * 서버 앱을 부트스트랩하는 파일
+  style.css                  앱 전역 스타일 파일
+  app/ ...                   애플리케이션 코드
+    app.server.module.ts     * 서버 사이드 애플리케이션 모듈
+server.ts                    * Express 웹 서버
+tsconfig.json                TypeScript 기본 환경설정 파일
+tsconfig.app.json            TypeScript 브라우저용 환경설정 파일
+tsconfig.server.json         TypeScript 서버용 환경설정 파일
+tsconfig.spec.json           TypeScript 스펙용 환경설정 파일
+```
