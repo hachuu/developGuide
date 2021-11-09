@@ -114,6 +114,15 @@ ngOnInit() {
 # Ag-map
 - [guide 문서](https://angular-maps.com/api-docs/agm-core/components/agmmap#zoom)
 
+# IE 11 지원
+- tsconfig.json [설정파일 변경 출처](https://dev.to/coly010/angular-how-to-support-ie11-4924)
+```
+"compilerOptions": {
+    ...
+    "target": "es5"
+}
+```
+
 ## NG0200: Circular dependency in DI detected while instantiating a provider
 [Injectable root인 서비스에서 같은 root의 서비스를 호출할 때의 문제점](https://angular.io/errors/NG0200)
 - 종속성에 어긋나기때문에 같은 레벨의 서비스는 호출이 불가하고, 해당 에러가 발생한다.
