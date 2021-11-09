@@ -35,6 +35,13 @@ ng g c new-component --module app => 실행하는 경우 app.module.ts에 자동
 - [Angular Universal + Caching (TransferState)](https://itnext.io/angular-universal-caching-transferstate-96eaaa386198)
 - [angular - can't run rxjs interval with angular universal](https://stackoverflow.com/questions/55370609/angular-cant-run-rxjs-interval-with-angular-universal)
 - [universal에서 ReferenceError: localStorage is not defined](https://www.thecodehubs.com/how-to-solve-localstorage-is-not-defined-in-angular-11/)
+
+# Angular version up 10 to 11
+```
+npm install --legacy-peer-deps
+ng update @angular/cli@11.2.9 --allow-dirty --force
+```
+
 # 모듈
 - 모듈 분리
 - 기능 모듈: 특정 화면을 구성하는 구성요소
