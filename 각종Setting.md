@@ -6,7 +6,7 @@
 - npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
 - npx tslint-to-eslint-config
 - [tslint to eslint](https://pks2974.medium.com/tslint-%EC%97%90%EC%84%9C-eslint-%EB%A1%9C-%EC%9D%B4%EC%82%AC%ED%95%98%EA%B8%B0-ecd460a1e599)
-
+- [[VScode]터미널에서 VSCode 실행하기](https://grahams.tistory.com/188)
 ## 'ng'는 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다.
 - 시스템 환경 변수 편집
   1. 시스템 변수 Path => %SystemRoot%\system32%SystemRoot% 추가
