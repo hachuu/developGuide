@@ -95,6 +95,15 @@ for (let val in data){
 
 ```
 
+## 호이스팅
+
+- 정의 : 인터프리터가 변수와 함수의 메모리 공간을 선언 전에 미리 할당하는 것
+- var vs let, const
+*둘 다 호이스팅을 함 *
+```
+var 로 선언한 변수의 경우 호이스팅 시 undefined로 변수를 초기화
+반면 let과 const로 선언한 변수의 경우 호이스팅 시 변수를 초기화하지 않습니다.
+```
 ## 비동기처리
 1. promise await 차이
 - promise.then().catch()로 에러를 잡으면 되지만 await의 경우 try catch문으로 reject를 체크
