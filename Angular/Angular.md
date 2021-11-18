@@ -139,6 +139,8 @@ ngOnInit() {
 - ngFor
  1. index 이외에도 first, last, even, odd도 가능
  2. trackBy 제공: 퍼포먼스를 향상하기 위해
+      => ngFor의 단점: for문 안에 영향을 미치는 이벤트가 발생할 때 모든 Dom이 Refresh된다.
+         고유값만 포함하여야 한다.
 ```html
 <li *ngFor="let user of users; let i=index; trackBy: trackByUserId">
  {{i}}: {{user.name}}
