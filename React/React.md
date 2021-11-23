@@ -162,7 +162,7 @@ orientation: 특정 방향을 강제로 지정(landscape, portrait 중 설정)
 4. [react-use gitHub](https://github.com/streamich/react-use)
 5. [Context 와 함께 사용하기](https://react.vlpt.us/integrate-api/05-using-with-context.html#)
 6. [React Router 제한적 경로 접근](https://velog.io/@public_danuel/Restrict-Route)
-
+7. [함수형 컴포넌트 || styled-component로 kakaomap 불러올 때 문제](https://gingerkang.tistory.com/65)
 ---
 
 - [함수형 컴포넌트 클래스형 컴포넌트 차이](https://xiubindev.tistory.com/107)
