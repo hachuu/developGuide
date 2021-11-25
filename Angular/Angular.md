@@ -531,6 +531,7 @@ onSubmit() {
 
 ### file drop event
 [hosteventlistener drop이벤트를 통한 작업](https://medium.com/@tarekabdelkhalek/how-to-create-a-drag-and-drop-file-uploading-in-angular-78d9eba0b854)
+[How to create a Drag and Drop file uploading in Angular](https://medium.com/@tarekabdelkhalek/how-to-create-a-drag-and-drop-file-uploading-in-angular-78d9eba0b854) * 강추 *
 
 ### pipe에 따른 form 값 변경 인지 로직
 ```
