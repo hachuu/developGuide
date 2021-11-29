@@ -20,8 +20,7 @@ return num.replace(/,/g, "");
 // email, password, passwordConfirm, name, phone, typing input text, 비밀번호 같은지 여부
 formBuilderSetting() {
   this.signupForm = this.signupFormBuilder.group({
-    email: 
-    ['', Validators.compose([Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")])],
+    email:  ['', Validators.compose([Validators.required, Validators.pattern(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/)])],
     password: 
     ['', Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(16), Validators.pattern(/((?=.*\d)(?=.*[a-zA-Z]))/)])],
     passwordConfirm: ['', Validators.compose([Validators.required])],
