@@ -555,3 +555,4 @@ autocomplete="new-password"
 5. [Make iframe automatically adjust height according to the contents without using scrollbar](https://helpcenter.websitex5.com/en/post/185264)
 6. (https://www.phpschool.com/gnuboard4/bbs/board.php?bo_table=qna_html&wr_id=72725)
 7. [html에서 아이프레임 로딩시 스크롤 없이 100%로 보기](https://badyouny.tistory.com/m/28)
+8. [How to Create Library in Angular and Publishing to NPM 유튭 강의](https://www.youtube.com/watch?v=eZDx2G0E-dQ)
