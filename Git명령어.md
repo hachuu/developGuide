@@ -178,3 +178,16 @@ git commit -m "fixed untracked files"
 
  git log  --branches --decorate --graph --online : 간단하게 볼 수 있도록 표시
 ```
+
+16. git remote repository 변경 방법
+```
+git remote set-url origin {git url}
+git remote -v // 원격 주소 확인
+git push origin master // git push
++ git remote update origin --prune // 원격 repository와 동기화 시키기
+```
+
+18. 특정 버전 clone하기
+```
+git reset --hard {git version}
+```
