@@ -233,6 +233,13 @@ public ngAfterViewInit() {
   <span ngNonBindable>This is what {{ item }}</span>
 </div>
 ```
+## Angular Video autoplay 방법
+```
+   <video #video 
+      (canplay)="video.play()"
+      (loadedmetadata)="video.muted = true">
+   </video>
+```
 
 ## selecbox binding ul li 만들어주기
 - [Display form fields based on dropdown selection](https://www.xspdf.com/resolution/54748676.html)
