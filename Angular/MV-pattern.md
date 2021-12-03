@@ -1,4 +1,4 @@
-# [MVVM modal in Angular](https://malcoded.com/posts/angular-2-components-and-mvvm/)
+# [MVVM model in Angular](https://malcoded.com/posts/angular-2-components-and-mvvm/)
 
 ## Model / View / ViewModel
 
