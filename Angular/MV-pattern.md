@@ -1,6 +1,6 @@
-# MVVM modal in Angular
+# [MVVM modal in Angular](https://malcoded.com/posts/angular-2-components-and-mvvm/)
 
-## Model View ViewModel
+## Model / View / ViewModel
 
 ## Model 
 - 정의: 개체의 구조를 정의하는 컨테이너
