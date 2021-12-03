@@ -40,6 +40,6 @@
     ```
 - component는 혼자서 view에 적용될 수 없음
 - 한 모듈에 무조건 기입이 되어 있어야만 사용이 가능
-- 루트 모듈은 AppModule이며, 기입한 component를 사용하기 위해서는 부모 모듀ㅠㄹ의 declaration 섹션에 등록을 
+- 루트 모듈은 AppModule이며, 기입한 component를 사용하기 위해서는 부모 모듈의 declaration 섹션에 등록을 해야함
 
 
