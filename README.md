@@ -211,3 +211,13 @@ window.MyNamespace = window.MyNamespace || {};
     (window as any).tradlinx = this;
     (window as any).tradlinx.app = app;
 ```
+
+## javascript 퍼포먼스 속도 체크하기
+```
+const t0 = performance.now()
+for (let i = 0; i < array.length; i++) {
+  // some code.......
+}
+const t1 = performance.now()
+console.log(t1 - t0, 'milliseconds')
+```
