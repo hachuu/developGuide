@@ -138,7 +138,7 @@ PATCH|	Update/Modify|	405 (Method Not Allowed), unless you want to modify the co
 - [npm install --save](https://docs.npmjs.com/cli/v7/commands/npm-install)
 - [RGB <-> HEX 색상코드 확인](https://hi098123.tistory.com/132#94d0cc)
 - [Color palettes](https://colorhunt.co/)
-
+- [함수 퍼포먼스 체크](https://jsbench.me/)
   
 ## Firebase 배포
 ```
