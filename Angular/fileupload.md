@@ -1,3 +1,7 @@
+# 파일업로드 Angular 로직
+
+- 라이브러리를 사용하지 않고 직접 form를 통해 구현
+- component.html
 ``` html
 <form [formGroup] = "uploadForm">
   <a class="upload-name" [ngClass]="{'hover': !!fileName}" (click)="downloadFile()" href="javascript:void(0)" (keyup.enter)="downloadFile()">
@@ -9,7 +13,7 @@
   #fileUpload> 
 </form>
 ```
-
+- component.ts
 ```
 @ViewChild('fileUpload', { static: false }) fileUpload!: ElementRef;
 uploadForm: FormGroup;
