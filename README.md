@@ -1,6 +1,6 @@
 # Develop Guide Reference
 
-## [각종 Setting 문서 정리](https://github.com/hachuu/developGuide/edit/main/%EA%B0%81%EC%A2%85Setting.md)
+## [각종 Setting 문서 정리](https://github.com/hachuu/developGuide/blob/main/%EA%B0%81%EC%A2%85Setting.md)
 
 ## SEO canonical 기존 link rel 삭제, 새로 등록하는 script
 ```
@@ -49,6 +49,7 @@ document.head.appendChild(link);
 - [Github Actions를 이용한 클라이언트 CI/CD 구축 2 - 프로젝트 구성 및 S3를 이용한 정적사이트 만들기](https://velog.io/@eomttt/Github-Actions%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-CICD-%EA%B5%AC%EC%B6%95-ejdd96kp)
 - [Github Actions를 이용한 클라이언트 CI/CD 구축 3 - Github Actions 사용해보기](https://velog.io/@eomttt/Github-Actions%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-CICD-%EA%B5%AC%EC%B6%95-Github-Actions-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0)
 - [AWS node.js배포](https://velog.io/@rheey90/AWS-EC2-Node.js-서버-배포)
+- 
 ## 연산자
 1. [표현식과 연산자](https://github.com/hachuu/developGuide/blob/main/%ED%91%9C%ED%98%84%EC%8B%9D%EA%B3%BC%20%EC%97%B0%EC%82%B0%EC%9E%90.md)
 2. [연산자 우선순위 MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/%EC%97%B0%EC%82%B0%EC%9E%90_%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84)
@@ -99,23 +100,7 @@ PATCH|	Update/Modify|	405 (Method Not Allowed), unless you want to modify the co
 - [SSO 정리](https://github.com/hachuu/developGuide/blob/main/SSO/SSO.md)
 - [cookie session 정리](https://github.com/hachuu/developGuide/blob/main/SSO/cookie%EC%99%80session.md)
 
-### 개발 도구
-
-1. [정규식 검사](https://regex101.com/r/cO8lqs/4)
-2. [css 에디터](https://jsbin.com/wubapojoci/edit?html,css,output)
-3. [flex box 연습 - frogbox](https://flexboxfroggy.com/#ko)
-4. [javascript 연습장](https://jsfiddle.net/)
-5. [color tool](https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=B388FF)
-6. [google Font](https://fonts.google.com/specimen/Secular+One?sidebar.open=true&selection.family=Secular+One)
-7. [icon `<script>` injection](https://fontawesome.com/icons/bars?style=solid)
-8. [소스 한줄 정렬](https://gandevelop.tistory.com/9)
-9. [QA자동화](https://www.npmjs.com/package/selenium-webdriver)
-10. [HTML WEB 웹 개발 각각 cache 유무 코드의 no-cache 캐시삭제, browser 가 caching 하지 않게 하는 http header 설정](https://202psj.tistory.com/763)
-11. [Azure 배포](https://helloblog.net/azure-devops/)
-12. [[웹폰트] 올바른 방법으로 로딩하자. - 사이트 로딩 속도 개선](https://web-atelier.tistory.com/43)
----
-
-  
+ 
 ## FlexBox (Flexbox Froggy를 통한 정리)
 [flexbox.md](https://github.com/hachuu/developGuide/blob/main/flexbox.md)
   
@@ -123,23 +108,6 @@ PATCH|	Update/Modify|	405 (Method Not Allowed), unless you want to modify the co
 [React 정리](https://github.com/hachuu/developGuide/blob/main/React/React.md)
 [Hook 정리](https://github.com/hachuu/developGuide/blob/main/React/hook.md)
 
-## 종합 개발 
-- [브라우저 개발자도구에서 formdata를 숨기는 방법이 있는가요?](https://studyforus.com/help/667208)
-- ppt나 excel 자동 영어 <=> 한글 변환 끄기 [파워포인트(PPT) 자동 한영 전환 기능 끄기](https://dev-jaeho.tistory.com/10)
-- [알아두면 쓸만한 Chrome Console 기능](https://dev-momo.tistory.com/entry/%EC%95%8C%EB%A7%88%EB%91%90%EB%A9%B4-%EC%93%B8%EB%A7%8C%ED%95%9C-Chrome-Console-%EA%B8%B0%EB%8A%A5)
-- [JWT 토큰 변환](https://jwt.io/)
-- [Single Sign On (& Single Sign Out) : 부제(로그인 통합 인증)](https://authentication.tistory.com/26)
-- [Create React App 에서 ESLint 와 Prettier 설정 하기](https://velog.io/@gwangsuda/2019-09-25-1009-%EC%9E%91%EC%84%B1%EB%90%A8-bwk0ylejxj)
-- [table을 좌우 스크롤(수평 스크롤, 스와이프)할 때 특정 컬럼을 고정하고 싶다면](https://xetown.com/tips/1183430)
-- [React table bootstrap](https://react-bootstrap.netlify.app/components/table/#tables)
-- [SEO 4가지 사례로 알아보는 올바른 캐노니컬 태그 적용 방법](https://www.twinword.co.kr/blog/how-to-apply-canonical-tag-properly/)
-- [Web Testing - Element 검색해서 클릭하기](https://miaow-miaow.tistory.com/m/150)
-- [d.ts](https://kjwsx23.tistory.com/522)
-- [npm install --save](https://docs.npmjs.com/cli/v7/commands/npm-install)
-- [RGB <-> HEX 색상코드 확인](https://hi098123.tistory.com/132#94d0cc)
-- [Color palettes](https://colorhunt.co/)
-- [함수 퍼포먼스 체크](https://jsbench.me/)
-  
 ## Firebase 배포
 ```
 npm run build
@@ -221,3 +189,37 @@ for (let i = 0; i < array.length; i++) {
 const t1 = performance.now()
 console.log(t1 - t0, 'milliseconds')
 ```
+
+## 종합 개발 
+- [브라우저 개발자도구에서 formdata를 숨기는 방법이 있는가요?](https://studyforus.com/help/667208)
+- ppt나 excel 자동 영어 <=> 한글 변환 끄기 [파워포인트(PPT) 자동 한영 전환 기능 끄기](https://dev-jaeho.tistory.com/10)
+- [알아두면 쓸만한 Chrome Console 기능](https://dev-momo.tistory.com/entry/%EC%95%8C%EB%A7%88%EB%91%90%EB%A9%B4-%EC%93%B8%EB%A7%8C%ED%95%9C-Chrome-Console-%EA%B8%B0%EB%8A%A5)
+- [JWT 토큰 변환](https://jwt.io/)
+- [Single Sign On (& Single Sign Out) : 부제(로그인 통합 인증)](https://authentication.tistory.com/26)
+- [Create React App 에서 ESLint 와 Prettier 설정 하기](https://velog.io/@gwangsuda/2019-09-25-1009-%EC%9E%91%EC%84%B1%EB%90%A8-bwk0ylejxj)
+- [table을 좌우 스크롤(수평 스크롤, 스와이프)할 때 특정 컬럼을 고정하고 싶다면](https://xetown.com/tips/1183430)
+- [React table bootstrap](https://react-bootstrap.netlify.app/components/table/#tables)
+- [SEO 4가지 사례로 알아보는 올바른 캐노니컬 태그 적용 방법](https://www.twinword.co.kr/blog/how-to-apply-canonical-tag-properly/)
+- [Web Testing - Element 검색해서 클릭하기](https://miaow-miaow.tistory.com/m/150)
+- [d.ts](https://kjwsx23.tistory.com/522)
+- [npm install --save](https://docs.npmjs.com/cli/v7/commands/npm-install)
+- [RGB <-> HEX 색상코드 확인](https://hi098123.tistory.com/132#94d0cc)
+- [Color palettes](https://colorhunt.co/)
+- [함수 퍼포먼스 체크](https://jsbench.me/)
+  
+
+### 개발 도구
+
+1. [정규식 검사](https://regex101.com/r/cO8lqs/4)
+2. [css 에디터](https://jsbin.com/wubapojoci/edit?html,css,output)
+3. [flex box 연습 - frogbox](https://flexboxfroggy.com/#ko)
+4. [javascript 연습장](https://jsfiddle.net/)
+5. [color tool](https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=B388FF)
+6. [google Font](https://fonts.google.com/specimen/Secular+One?sidebar.open=true&selection.family=Secular+One)
+7. [icon `<script>` injection](https://fontawesome.com/icons/bars?style=solid)
+8. [소스 한줄 정렬](https://gandevelop.tistory.com/9)
+9. [QA자동화](https://www.npmjs.com/package/selenium-webdriver)
+10. [HTML WEB 웹 개발 각각 cache 유무 코드의 no-cache 캐시삭제, browser 가 caching 하지 않게 하는 http header 설정](https://202psj.tistory.com/763)
+11. [Azure 배포](https://helloblog.net/azure-devops/)
+12. [[웹폰트] 올바른 방법으로 로딩하자. - 사이트 로딩 속도 개선](https://web-atelier.tistory.com/43)
+---
