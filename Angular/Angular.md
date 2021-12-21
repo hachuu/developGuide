@@ -556,6 +556,7 @@ autocomplete="new-password"
 
 ### Angular 내부에서 post로 받고 싶을때..
 [프록시 혹은 app.post()](https://daddyprogrammer.org/post/4245/angular2-httpclient-proxy/)
+[response.writeHead not sending post data](https://stackoverflow.com/questions/23356313/response-writehead-not-sending-post-data)
 ```
 app.post('*', (req, res) => {
   let Authorization = '';
