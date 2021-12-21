@@ -554,6 +554,23 @@ onSubmit() {
 autocomplete="new-password"
 ```
 
+### Angular 내부에서 post로 받고 싶을때..
+[프록시 혹은 app.post()](https://daddyprogrammer.org/post/4245/angular2-httpclient-proxy/)
+```
+app.post('*', (req, res) => {
+  let Authorization = '';
+  for (let cookie in req.body) {
+    if (cookie == 'Authorization') {
+      Authorization = req.body['Authorization'];
+    }
+    ...
+  }
+
+  res.writeHead(302, { Location: 'https://'+ req.headers.host + req.url + '&tx-Authorization=' + Authorization });
+  res.end();
+});
+```
+
 ### 외부 라이브러리 제작 시 필요한 선행
 1. [[Gulp.js] Gulp 입문 ① - Gulp에 대한 소개](https://programmingsummaries.tistory.com/356)
 2. [Angular 라이브러리 만들기](https://angular.kr/guide/creating-libraries)
