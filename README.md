@@ -206,7 +206,7 @@ console.log(t1 - t0, 'milliseconds')
 - [RGB <-> HEX 색상코드 확인](https://hi098123.tistory.com/132#94d0cc)
 - [Color palettes](https://colorhunt.co/)
 - [함수 퍼포먼스 체크](https://jsbench.me/)
-  
+- [slide할때 opacity조절하여 css적용](https://stackoverflow.com/questions/25347946/add-fade-effect-in-slideshow-javascript)
 
 ### 개발 도구
 
