@@ -130,6 +130,28 @@ ngOnInit() {
 }
 ```
 
+# animation
+- safari animation 문제
+- [Angular 8 Safari 12 Animation not working](https://www.titanwolf.org/Network/q/ab849e5e-8c56-4bd9-87c4-24596a7a30bd/y)
+```
+export const fadeOutAnimation = trigger(
+'fadeOut',
+[
+  transition(
+    ':enter', [
+      style({ 'opacity': 0 }),
+      animate('250ms', style({ 'opacity': 1 }))
+    ]
+  ),
+  transition(
+    ':leave', [
+      style({ 'opacity': 1 }),
+      animate('250ms', style({ 'opacity': 0 })),
+    ]
+  )
+]);
+```
+
 ## NG0200: Circular dependency in DI detected while instantiating a provider
 [Injectable root인 서비스에서 같은 root의 서비스를 호출할 때의 문제점](https://angular.io/errors/NG0200)
 - 종속성에 어긋나기때문에 같은 레벨의 서비스는 호출이 불가하고, 해당 에러가 발생한다.
