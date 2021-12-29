@@ -152,6 +152,32 @@ export const fadeOutAnimation = trigger(
 ]);
 ```
 
+# swipe
+```
+private swipeCoord?: [number, number];
+private swipeTime?: number;
+
+swipe(e: TouchEvent, when: string): void {
+  const coord: [number, number] = [e.changedTouches[0].clientX, e.changedTouches[0].clientY];
+  const time = new Date().getTime();
+
+  if (when === 'start') {
+    this.swipeCoord = coord;
+    this.swipeTime = time;
+  } else if (when === 'end') {
+    const direction = [coord[0] - this.swipeCoord[0], coord[1] - this.swipeCoord[1]];
+    const duration = time - this.swipeTime;
+
+    if (duration < 1000 //
+      && Math.abs(direction[0]) > 30 // Long enough
+      && Math.abs(direction[0]) > Math.abs(direction[1] * 3)) { // Horizontal enough
+        const swipe = direction[0] < 0 ? 'next' : 'previous';
+        // Do whatever you want with swipe
+    }
+  }
+}
+```
+
 ## NG0200: Circular dependency in DI detected while instantiating a provider
 [Injectable root인 서비스에서 같은 root의 서비스를 호출할 때의 문제점](https://angular.io/errors/NG0200)
 - 종속성에 어긋나기때문에 같은 레벨의 서비스는 호출이 불가하고, 해당 에러가 발생한다.
