@@ -3,6 +3,7 @@
 ## ProtoType과 Instance
 - Prototype : 객체를 만드는 기본 틀, 객체의 원형 속성과 기능(함수)이 들어있다.
 - Instance : 프로토타입을 통해 새로 만들어진 객체. 객체의 속성과 함수를 사용할 수 있다.
+  - object가 자신의 prototype chain으로 접근할 수 있는 모든 prototype.constructor는 자신을 인스턴스로 가지고 있다.
 
 ## javascript prototype
 - javascript는 프로토타입기반 언어
