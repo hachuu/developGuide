@@ -139,6 +139,12 @@ orientation: 특정 방향을 강제로 지정(landscape, portrait 중 설정)
   fruits.map(fruit => fruit === 'apple' ? 'cherry' : fruit)
   ```
 
+16. React 18
+- suspense
+- SSR
+- server component
+
+
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
 ](https://m.blog.naver.com/PostView.nhn?blogId=bkcaller&logNo=221366361792&proxyReferer=https:%2F%2Fwww.google.co.kr%2F)
