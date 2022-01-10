@@ -144,6 +144,16 @@ orientation: 특정 방향을 강제로 지정(landscape, portrait 중 설정)
 - SSR
 - server component
 
+17. 컴포넌트 리랜더 되는 시점
+- 자신이 전달받은 props가 변경될 때
+- 자신의 state가 바뀔 때
+- 부모 component가 리랜더링될 때
+- forceUpdate 함수가 실행될 때 
+  - forceUpdate : 직접 React에게 해당 component가 re-rendering 되야한다고 알려야 할 때 쓰이는 함수
+  - 해당 함수를 호출하면 곧바로 render()가 호출되므로 React 공식 document에서는 사용을 권장하지 않는다.
+  ```
+  component.forceUpdate(callback)
+  ```
 
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
