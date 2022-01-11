@@ -207,6 +207,7 @@ console.log(t1 - t0, 'milliseconds')
 - [Color palettes](https://colorhunt.co/)
 - [함수 퍼포먼스 체크](https://jsbench.me/)
 - [slide할때 opacity조절하여 css적용](https://stackoverflow.com/questions/25347946/add-fade-effect-in-slideshow-javascript)
+- [우아한 형제들 채팅 구현](https://techblog.woowahan.com/2681/)
 
 ### 개발 도구
 
