@@ -25,3 +25,6 @@
 
 ## pdf 저장
 - https://www.c-sharpcorner.com/article/how-to-export-pdf-in-angular/
+
+## excel 저장
+- https://codezup.com/angular-export-table-data-to-excel-file/
