@@ -6,19 +6,20 @@
 4. [RxJS Websocket](https://rxjs.dev/api/webSocket/webSocket)
 
 
-## 과거 이력 history query 검색
+## Sendbird document
+1. 과거 이력 history query 검색
 - https://sendbird.com/docs/chat/v3/platform-api/guides/message-search#2-search-messages
 
-## 생성된 채팅방 리스트 보기
+2. 생성된 채팅방 리스트 보기
 - https://sendbird.com/docs/chat/v3/javascript/guides/application#2-retrieve-a-list-of-users
 
-## 채팅방 삭제
+3. 채팅방 삭제
 - https://sendbird.com/docs/chat/v3/javascript/guides/group-channel#2-delete-a-channel
 
-## 이름 멘션
+4. 이름 멘션
 - https://sendbird.com/docs/chat/v3/javascript/guides/group-channel#2-mention-other-members-in-a-message
 
-## 읽음 표시
+5. 읽음 표시
 - https://sendbird.com/docs/chat/v3/javascript/guides/group-channel-advanced#2-mark-messages-as-read
 
 # form
