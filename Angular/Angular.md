@@ -202,23 +202,7 @@ trackByUserId(index: number, user: User) {
 }
 ```
 
-## angular universal
-- Angular에서 SSR을 사용하는 방법
-- Angular Universal is a toolkit that allows us to do server-side rendering (SSR) and pre-rendering for our Angular applications.
-1. Improve Search Engine Optimization (SEO)
-2. Show the first page quickly
-3. Improve performance for low-powered devices
 
-- 빌드 방법
-  - npm run dev:ssr
-
-- 서버 구동
-  - npm run serve:ssr 또는 dist> node server
-  - [실습예제](https://ksrae.github.io//angular/angular-universal/)
-  - [바닐라 Node.js를 사용한 Angular SSR](https://dev.to/igorfilippov3/angular-ssr-with-vanilla-node-js-15pj)
-  - [Angular universal 실전 상](https://m.blog.naver.com/kitepc/221380895021)
-  - [Angular universal 실전 하](https://m.blog.naver.com/kitepc/221380916242)
-- [Angular RU Universal Starter](https://github.com/Angular-RU/universal-starter)
   
 ## Observable, BehaviorSubject 차이
   - [Angular Observable과 BehaviorSubject로 구독, 갱신하기](https://blog.eunsatio.io/develop/Angular-Observable%EA%B3%BC-BehaviorSubject%EB%A1%9C-%EA%B5%AC%EB%8F%85,-%EA%B0%B1%EC%8B%A0%ED%95%98%EA%B8%B0)
