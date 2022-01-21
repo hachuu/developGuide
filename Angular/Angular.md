@@ -109,6 +109,10 @@ ngOnInit() {
 
 ```
 
+4. Input checked control
+```
+<input type="checkbox" [checked]="item.selected" (change)="item.selected = !item.selected">
+```
 # 양방향 바인딩
 
 ```html
