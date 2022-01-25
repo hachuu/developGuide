@@ -398,8 +398,12 @@ ngOnDestroy() {
 this.router.navigate() // 문제
 window.replace // 로 해결
 ```
+
+## change detection
+[Change Detection 중심 Angular 최적화 방법](https://medium.com/coinone/change-detection-%EC%A4%91%EC%8B%AC-angular-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%B0%A9%EB%B2%95-957962ba3d2e?source=false---------0)
 ## Infinite scroll
 [Infinite Virtual Scroll with the Angular CDK](https://fireship.io/lessons/infinite-virtual-scroll-angular-cdk/)
+
 
 
 ## ngcc 에러..
