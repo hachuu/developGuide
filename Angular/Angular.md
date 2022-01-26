@@ -182,6 +182,9 @@ swipe(e: TouchEvent, when: string): void {
 }
 ```
 
+## trackbyFn
+- 제대로 알고 사용하기! 잘못쓰면 하위 컴포넌트 재랜더가 일어남
+
 ## NG0200: Circular dependency in DI detected while instantiating a provider
 [Injectable root인 서비스에서 같은 root의 서비스를 호출할 때의 문제점](https://angular.io/errors/NG0200)
 - 종속성에 어긋나기때문에 같은 레벨의 서비스는 호출이 불가하고, 해당 에러가 발생한다.
