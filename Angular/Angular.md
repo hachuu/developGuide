@@ -85,6 +85,18 @@ ngOnInit() {
 }
 ```
 
+```
+<tr *ngFor="let listForm of pastedArray; let rowIdx = index;" formArrayName="list">
+    <ng-container [formGroup]="list" >
+    <ng-container [formGroupName]="rowIdx" >
+                ...
+```
+```
+  registerExcelForm = this.formBuilder.group({
+    list: this.formBuilder.array(Array.from(Array(this.EXCEL_LENGTH), () => Object.assign({}, this.pastedObj))),
+  });
+```
+
 2. 리액티브 폼
 - 컴포넌트 클래스에서 폼 요소의 값 및 유효성 검증 상태를 관리하는 자바스크립트 객체인 폼 모델(FormGroup, FormControl, FormArray)을 직접 정의/생성
 - form* 접두사가 붙은 디렉티브(formGroup, formGroupName, formControlName, formArrayName)를 사용하여 템플릿의 폼 요소와 컴포넌트 클래스의 폼 모델을 프로퍼티 바인딩으로 연결
