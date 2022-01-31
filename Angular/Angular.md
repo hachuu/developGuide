@@ -125,6 +125,17 @@ ngOnInit() {
 ```
 <input type="checkbox" [checked]="item.selected" (change)="item.selected = !item.selected">
 ```
+
+5. FormControl 확인 값
+```
+valid : 유효성 통과 true/ 실패 false
+untouched : 포커스를 주지 않은 경우 true
+touched : 포커스를 잃어버린 경우 true
+pristine : 값이 한번도 입력되지 않은 경우
+dirty : 값이 한 번이라도 입력된 경우
+erros : 검증 실패, 에러는 {{value.error | json}} 으로 확인 가능
+```
+
 # 양방향 바인딩
 
 ```html
