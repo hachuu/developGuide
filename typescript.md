@@ -17,3 +17,10 @@ constructor(
   this.getSessionApi = this.apiService.buildApi(getSessionApiSpec, true);
 }
 ```
+
+# Union type
+- 정의 : any 대신 쓸 수 있는 타입 별칭/ 하나 이상의 타입을 명시
+- cf : intersection type : &로 묶여있음 (잘 안쓰임)
+```
+const age: string | number
+```
