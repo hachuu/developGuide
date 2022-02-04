@@ -638,6 +638,12 @@ app.post('*', (req, res) => {
 });
 ```
 
+### scroll smooth
+```
+nativeElement.scrollIntoView()
+element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+```
+
 ### 외부 라이브러리 제작 시 필요한 선행
 1. [[Gulp.js] Gulp 입문 ① - Gulp에 대한 소개](https://programmingsummaries.tistory.com/356)
 2. [Angular 라이브러리 만들기](https://angular.kr/guide/creating-libraries)
