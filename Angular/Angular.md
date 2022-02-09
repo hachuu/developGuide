@@ -121,6 +121,48 @@ ngOnInit() {
 
 ```
 
+```
+  companyForm: FormGroup = this.formBuilder.group({
+    companyTp: new FormControl("", Validators.required),
+    companyTxt: new FormControl(""),
+    companyEn: new FormControl("", Validators.compose([Validators.required, Validators.pattern(/^[a-zA-Z]*$/)])),
+    companyKr: new FormControl(""),
+    nationEn: new FormControl("", Validators.required),
+    nationKr: new FormControl("", Validators.required),
+    addressEn: new FormControl("", Validators.required),
+    addressKr: new FormControl(""),
+    addressGoogle: new FormControl(""),
+    deAddressEn: new FormControl(""),
+    deAddressKr: new FormControl(""),
+    tel: new FormControl(""),
+    fax: new FormControl(""),
+    email: new FormControl(""),
+    remarks: new FormControl(""),
+    list: new FormArray([]),
+  });
+  
+  form: FormGroup = this.formBuilder.group({
+    empName: new FormControl(""),
+    empStage: new FormControl(""),
+    empTask: new FormControl(""),
+    empTel: new FormControl(""),
+    empPhone: new FormControl(""),
+    empEmail: new FormControl(""),
+    empRemarks: new FormControl(""),
+  });
+
+  get list() {
+    return this.companyForm.controls["list"] as FormArray;
+  }
+
+  addList() {
+    // empform 복사
+    const newForm = this.formBuilder.group(this.form);
+    this.listist.push(newForm);
+    this.form.reset();
+  }
+```
+
 4. Input checked control
 ```
 <input type="checkbox" [checked]="item.selected" (change)="item.selected = !item.selected">
