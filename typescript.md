@@ -24,3 +24,14 @@ constructor(
 ```
 const age: string | number
 ```
+
+# Enums 이넘
+- 정의 : 특징 값들의 집합을 의미
+```
+  enum Shoes {
+    Nike,
+    Adidas
+  }
+  const nike = Shoes.Nike;
+  console.log(nike); // 0
+```
