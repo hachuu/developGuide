@@ -33,5 +33,22 @@ const age: string | number
     Adidas
   }
   const nike = Shoes.Nike;
-  console.log(nike); // 0
+  console.log(nike); // 0 => 값에 대한 초기값을 설정하지 않은 경우
+```
+```
+  enum Shoes {
+    Nike = '나이키',
+    Adidas = '아디다스'
+  }
+  const nike = Shoes.Nike;
+  console.log(nike); // 나이키
+```
+```
+"use strict";
+var Shoes;
+(function (Shoes) {
+    Shoes["Nike"] = "\uB098\uC774\uD0A4";
+    Shoes["Adidas"] = "\uC544\uB514\uB2E4\uC2A4";
+})(Shoes || (Shoes = {}));
+const nike = Shoes.Nike;
 ```
