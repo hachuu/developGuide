@@ -65,6 +65,9 @@ rmdir node_modules /s /q  && npm install --legacy-peer-deps
 ssh-keygen -C "jamal@fabrikam.com"
 ```
 
+- 환경변수
+vi ~/.zshrc
+
 ## Setting Of Developement
 
 - java
