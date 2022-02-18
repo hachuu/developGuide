@@ -423,6 +423,17 @@ openLogin() {
 ## garbage collector
 - [javascript ](https://developer.mozilla.org/ko/docs/Web/JavaScript/Memory_Management)
 
+## bfcache
+- 이슈 : submit 날리는 페이지에서 뒤로가기 했을 경우 브라우저 캐싱이 되어 input에 값은 표기되지만 실질적으로 값매핑은 안된 케이스
+- 참조 : [Back Forward Cache(bfcache) 해결(?)한 이야기(https://dev-t-blog.tistory.com/9)
+```
+window.onpageshow = (event) => {
+      if ( event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+        this.loginForm.reset();
+      }
+    }
+```
+
 ### 일시적 사각 지대 (Temporal Dead Zone; TDZ)
 - var 변수의 경우 선언 단계 - 초기화 가 동시에 이루어지는 반면, let/const 변수의 경우 선언 단계와 초기화 단계가 나누어서 이루어짐
 - let/const 변수의 선언 단계와 초기화 단계 사이를 일시적 사각 지대 (Temporal Dead Zone; TDZ)라고 부름
