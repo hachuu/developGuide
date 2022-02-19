@@ -12,3 +12,4 @@
 10. count
 11. countReset
 12. trace
+13. groupcollapsed
