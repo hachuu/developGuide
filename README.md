@@ -224,4 +224,5 @@ console.log(t1 - t0, 'milliseconds')
 10. [HTML WEB 웹 개발 각각 cache 유무 코드의 no-cache 캐시삭제, browser 가 caching 하지 않게 하는 http header 설정](https://202psj.tistory.com/763)
 11. [Azure 배포](https://helloblog.net/azure-devops/)
 12. [[웹폰트] 올바른 방법으로 로딩하자. - 사이트 로딩 속도 개선](https://web-atelier.tistory.com/43)
+13. [웹브라우저에서 알림](https://dororongju.tistory.com/125)
 ---
