@@ -169,6 +169,25 @@ ngOnInit() {
   }
 ```
 
+```
+  // form 다시 값 세팅
+  this.form.setValue({
+    ...values
+  })
+```
+```
+<!--  ngFor formArray in template  -->
+   <div formArrayName="experiences">
+    <div *ngFor="let exp of experiences.controls; let n=index">
+      <div [formGroupName]="n">
+        <div *ngFor="let e of expArray | keyvalue">
+          <input [formControlName]="e.key" placeholder="Experience">
+        </div>
+      </div>
+    </div>
+  </div>
+```
+
 4. Input checked control
 ```
 <input type="checkbox" [checked]="item.selected" (change)="item.selected = !item.selected">
