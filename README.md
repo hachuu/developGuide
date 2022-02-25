@@ -225,4 +225,8 @@ console.log(t1 - t0, 'milliseconds')
 11. [Azure 배포](https://helloblog.net/azure-devops/)
 12. [[웹폰트] 올바른 방법으로 로딩하자. - 사이트 로딩 속도 개선](https://web-atelier.tistory.com/43)
 13. [웹브라우저에서 알림](https://dororongju.tistory.com/125)
+14. [mac에서 input file할때 한글 깨짐 현상](https://gemimi.tistory.com/43)
+  ```
+  fileName = Normalizer.normalize(fileName, Normalizer.Form.NFC)
+  ```
 ---
