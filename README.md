@@ -89,6 +89,8 @@ document.head.appendChild(link);
 PUT|	Update/Replace|	405 (Method Not Allowed), unless you want to update/replace every resource in the entire collection.|	200 (OK) or 204 (No Content). 404 (Not Found), if ID not found or invalid.
 PATCH|	Update/Modify|	405 (Method Not Allowed), unless you want to modify the collection itself.|	200 (OK) or 204 (No Content). 404 (Not Found), if ID not found or invalid.
 ```
+- 413: 브라우저에서 파일 업로드 하는 경우 파일 용량이 제한되어 발생할 수 있는 error
+
 ## 도커 Docker
 - 컨테이너 기반의 오픈소스 가상화 플랫폼
 - 도커 빌드
