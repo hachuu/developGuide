@@ -232,3 +232,13 @@ console.log(t1 - t0, 'milliseconds')
   fileName = Normalizer.normalize(fileName, Normalizer.Form.NFC)
   ```
 ---
+
+```
+ngAfterViewInit() {
+    window.onpageshow = (event) => {
+      if ( event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+        this.loginForm.reset();
+      }
+    }
+  }
+```
