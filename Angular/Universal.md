@@ -49,3 +49,5 @@ tsconfig.server.json         TypeScript 서버용 환경설정 파일
 tsconfig.spec.json           TypeScript 스펙용 환경설정 파일
 ```
 
+- TIL
+[How to build an Angular App with Server-Side Rendering](https://medium.com/upstate-interactive/how-to-build-an-angular-app-with-server-side-rendering-f7f415b851c8)
