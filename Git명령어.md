@@ -91,7 +91,7 @@ git fetch -p origin // remote 서버 브랜치 정보를 다시 가져옴
 [git reset/revert](https://www.devpools.kr/2017/02/05/%EC%B4%88%EB%B3%B4%EC%9A%A9-git-%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0-reset-revert/)
 
 * git reset --hard gitversion
-* git push -f origin master
+* git push -f origin master => 현재 소스 기준으로 강제 Push
 * 원하는 git version으로 되돌릴때
 
 4. push
