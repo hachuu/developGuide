@@ -183,6 +183,19 @@ window.MyNamespace = window.MyNamespace || {};
     (window as any).tradlinx.app = app;
 ```
 
+## IE => edge로 연결
+```
+<script>
+  var agent = navigator.userAgent.toLowerCase();
+  if ( (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
+    window.location = 'microsoft-edge:' + window.location;
+    setTimeout(function () {
+    //window.close();
+    window.open('','_self').close();
+  }, 1000);
+  }
+</script>
+```
 ## javascript 퍼포먼스 속도 체크하기
 ```
 const t0 = performance.now()
