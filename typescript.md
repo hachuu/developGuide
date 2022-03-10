@@ -23,6 +23,16 @@ constructor(
   this.getSessionApi = this.apiService.buildApi(getSessionApiSpec, true);
 }
 ```
+```
+  interface DropdownItem<T> {
+    value: T
+    selected: boolean
+  }
+  
+  const emails: Dropdownitem<string> = {
+    value: 'naver.com', selected: true
+  }
+```
 
 # Union type
 - 정의 : any 대신 쓸 수 있는 타입 별칭/ 하나 이상의 타입을 명시
