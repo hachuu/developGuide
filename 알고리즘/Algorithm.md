@@ -129,3 +129,15 @@ console.log(b); // [1, 2, 3, 4, 5, 6]
 const testArr = Array.from({length: 5}, (x, i) => i+1);
 //  [1, 2, 3, 4, 5]
 ```
+
+## reduce 2d array
+1. Array.prototype.flat() 방법
+```
+const newArr = arr.flat([depth])
+const arr1 = [1, 2, [3, 4]];
+arr1.flat();
+// [1, 2, 3, 4]
+```
+2. reduce 방법
+```
+```
