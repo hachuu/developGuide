@@ -140,4 +140,16 @@ arr1.flat();
 ```
 2. reduce 방법
 ```
+var array=[[{value:5,suit:'s'},{value:4,suit:'s'},{value:6,suit:'c'},{value:11,suit:'d'},{value:12,suit:'c'}],[{value:9,suit:'d'},{value:12,suit:'h'},{value:8,suit:'c'},{value:12,suit:'s'},{value:2,suit:'s'}],[{value:4,suit:'h'},{value:6,suit:'s'},{value:10,suit:'c'},{value:3,suit:'d'},{value:7,suit:'d'}]];
+
+var result = array.reduce(function(p, c) {
+      p.push(c.reduce(function(a, b) {
+        a.values.push(b.value);
+        a.suits.push(b.suit);
+        return a;
+      }, {values: [],suits: []}));
+    return p;
+  },[]);
+
+console.log(result);
 ```
