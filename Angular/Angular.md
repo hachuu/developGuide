@@ -687,6 +687,13 @@ onSubmit() {
 autocomplete="new-password"
 ```
 
+### angular router reload
+- {onSameUrlNavigation: 'reload'}
+```
+@NgModule({
+  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})] })
+```
+
 ### Angular 내부에서 post로 받고 싶을때..
 [프록시 혹은 app.post()](https://daddyprogrammer.org/post/4245/angular2-httpclient-proxy/)
 [response.writeHead not sending post data](https://stackoverflow.com/questions/23356313/response-writehead-not-sending-post-data)
