@@ -255,3 +255,4 @@ ngAfterViewInit() {
     }
   }
 ```
+15. [아이폰 사파리 script ](https://orangeheeya.tistory.com/entry/%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%95%84%EC%9D%B4%ED%8F%B0-%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C%EB%B3%B4%EA%B8%B0)
