@@ -24,6 +24,7 @@ ng g c new-component --module app => 실행하는 경우 app.module.ts에 자동
 - hook
   1. canActivate: canActivate 메서드를 구현하여 Route 이동시 먼저 체크하는 guard 기능
   2. canDeactivate: 페이지를 떠나는 경우 활성화되는 method
+- queryParamsHandling: 'merge' // QueryParamsHandling-merge: Merge new with current parameters.
 - 
 # 속도 최적화
 - [Angular 앱 성능 최적화를 위한 14가지 방법](https://dev.grapecity.co.kr/bbs/board.php?bo_table=Insight&wr_id=2&sca=IT%EF%BC%86%EA%B0%9C%EB%B0%9C+%EC%A0%95%EB%B3%B4&page=1)
