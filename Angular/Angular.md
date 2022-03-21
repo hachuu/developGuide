@@ -460,6 +460,7 @@ abstract removeChild(parent: any, oldChild: any, isHostElement?: boolean): void;
 [비동기 로직 처리 구분(comparing observables)](https://angular.kr/guide/comparing-observables)
 
 ## download excel file as an API response
+- [iframe preview pdf](https://angularquestions.com/2020/09/28/how-to-set-a-blob-pdf-filename-in-a-iframe/)
 - [출처](https://stackoverflow.com/questions/58335807/how-to-download-an-excel-file-in-angular-8-as-an-api-response)
 - Add header { responseType: 'blob'}
 ```
