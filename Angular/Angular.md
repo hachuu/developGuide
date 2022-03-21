@@ -461,6 +461,40 @@ abstract removeChild(parent: any, oldChild: any, isHostElement?: boolean): void;
 
 ## download excel file as an API response
 - [iframe preview pdf](https://angularquestions.com/2020/09/28/how-to-set-a-blob-pdf-filename-in-a-iframe/)
+```
+tempImgUrl: SafeUrl | undefined;
+@ViewChild('fileUpload', { static: false })
+fileUpload!: ElementRef;
+constructor(private domSanitizer: DomSanitizer) {}
+  
+var pdf = new jsPDF();
+
+    pdf.setFontSize(20);
+    pdf.text('PACKING LIST', 11, 8);
+    pdf.setFontSize(12);
+    pdf.setTextColor(99);
+   (pdf as any).autoTable({
+    head: [['ID', 'Name', 'Email', 'Profile']],
+    body: [
+      [1, 'John', 'john@yahoo.com', 'HR'],
+      [2, 'Angel', 'angel@yahoo.com', 'Marketing'],
+      [3, 'Harry', 'harry@yahoo.com', 'Finance'],
+      [4, 'Anne', 'anne@yahoo.com', 'Sales'],
+      [5, 'Hardy', 'hardy@yahoo.com', 'IT'],
+      [6, 'Nikole', 'nikole@yahoo.com', 'Admin'],
+      [7, 'Sandra', 'Sandra@yahoo.com', 'Sales'],
+      [8, 'Lil', 'lil@yahoo.com', 'Sales']
+    ],
+    theme: 'plain',
+    didDrawCell: (data: { column: { index: any; }; }) => {
+        console.log(data.column.index)
+      }
+    })
+    this.tempImgUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(pdf.output('blob')));
+```
+```html
+<iframe #iframe [src]="tempImgUrl" frameborder="0" width="100%" height="600" style="border: none;"></iframe>
+```
 - [출처](https://stackoverflow.com/questions/58335807/how-to-download-an-excel-file-in-angular-8-as-an-api-response)
 - Add header { responseType: 'blob'}
 ```
@@ -473,6 +507,7 @@ downloadFile(data: Response) {
   window.open(url);
 }
 ```
+
 
 ## SPA 공통 사항
 1. router이동시 이미 받아진 라이브러리는 다시 받지 않는다.
