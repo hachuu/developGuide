@@ -459,6 +459,21 @@ const unescape = str => str.replace(/&/g , '&').replace(/&lt;/g  , '<').replace(
 - Top 5 JavaScript ES12 Features You Should Start Using Now
 - 지금 사용하기 시작해야 하는 JavaScript ES12 기능
 
+### 드래그 특정영역 활성화
+- css에 작업
+```
+// 드래그 방지
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+// 드래그 활성화
+-webkit-user-select: all;
+-moz-user-select: all;
+-ms-user-select: all;
+user-select: all;
+```
 
 
 ### [브라우저 닫기 새로고침 이벤트 리스너](https://taewooblog.tistory.com/m/75) - 둘의 독립 처리는 어려움..
