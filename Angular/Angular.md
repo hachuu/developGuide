@@ -203,6 +203,10 @@ pristine : 값이 한번도 입력되지 않은 경우
 dirty : 값이 한 번이라도 입력된 경우
 erros : 검증 실패, 에러는 {{value.error | json}} 으로 확인 가능
 ```
+6. formgroup to object
+```
+this.content = Object.assign(this.content, this.contentForm.value);
+```
 
 # 양방향 바인딩
 
