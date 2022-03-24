@@ -299,6 +299,10 @@ trackByUserId(index: number, user: User) {
  return user.id;
 }
 ```
+- ngfor index + 1하고 싶을때
+```        
+<ng-container *ngFor="let head of header | slice : (docsCargo.isActivePkgUnit ? 2 : 1); let i = index;">
+```
 
 
   
