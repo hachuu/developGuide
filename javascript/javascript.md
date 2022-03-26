@@ -434,6 +434,13 @@ window.onpageshow = (event) => {
     }
 ```
 
+## iframe pdf 미리보기
+```
+pdf.output('bloburl')
+//iframe 주소연결
+```
+
+
 ### 일시적 사각 지대 (Temporal Dead Zone; TDZ)
 - var 변수의 경우 선언 단계 - 초기화 가 동시에 이루어지는 반면, let/const 변수의 경우 선언 단계와 초기화 단계가 나누어서 이루어짐
 - let/const 변수의 선언 단계와 초기화 단계 사이를 일시적 사각 지대 (Temporal Dead Zone; TDZ)라고 부름
