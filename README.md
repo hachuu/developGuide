@@ -224,7 +224,7 @@ console.log(t1 - t0, 'milliseconds')
 - [함수 퍼포먼스 체크](https://jsbench.me/)
 - [slide할때 opacity조절하여 css적용](https://stackoverflow.com/questions/25347946/add-fade-effect-in-slideshow-javascript)
 - [우아한 형제들 채팅 구현](https://techblog.woowahan.com/2681/)
-
+- [change detection](https://medium.com/coinone/change-detection-%EC%A4%91%EC%8B%AC-angular-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%B0%A9%EB%B2%95-957962ba3d2e)
 ### 개발 도구
 
 1. [정규식 검사](https://regex101.com/r/cO8lqs/4)
