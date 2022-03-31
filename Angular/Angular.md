@@ -277,6 +277,11 @@ swipe(e: TouchEvent, when: string): void {
 }
 ```
 
+# ngFor array length 만큼 돌리기
+```
+ *ngFor="let item of [].constructor(20)"
+```
+
 ## trackbyFn
 - 제대로 알고 사용하기! 잘못쓰면 하위 컴포넌트 재랜더가 일어남
 
