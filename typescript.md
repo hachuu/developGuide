@@ -73,3 +73,22 @@ var Shoes;
 })(Shoes || (Shoes = {}));
 const nike = Shoes.Nike;
 ```
+
+# type 단언: 개발자가 타입을 알고 있으니 typescript에서 지정한 타입이 아닌 개발자가 지정한 타입으로 변수를 선언한다.
+```
+let div = document.querySelector('div') as HTMLDivElement;
+div.innerText;
+```
+
+# type guard
+```
+function isDeveloper(target: Developer | Person): target is Developer {
+  return ( target as Developer).skill !== undefined
+}
+
+if(isDeveloper(tony)){
+  tony.skill
+} else {
+  tony.age
+}
+```
