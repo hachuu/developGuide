@@ -92,3 +92,28 @@ if(isDeveloper(tony)){
   tony.age
 }
 ```
+
+# 타입 호환
+: 특정 타입이 다른 타입에 잘 맞는지를 의미
+
+```
+interface Developer {
+  name: string;
+  skill: string;
+}
+interface Person {
+  name: string;
+}
+class Person {
+  name: string;
+}
+var developer: Developer;
+var person: Person;
+
+developer = person; // 호환이 안됨 
+person = developer; // 호환 됨 
+developer = new Person(); // 호환 됨
+```
+
+- 구조적 타이핑 : interface나 class에 대한 차이를 비교하는 것이 아닌 {}값 안의 값을 호환될 수 있도록 하는 것
+- 
