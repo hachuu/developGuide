@@ -176,6 +176,12 @@ Array.prototype.push.apply(arr1, arr2);
 console.log(arr1); // [1, 2, 3, 4, 5, 6]
 ```
 3. splice
+
+3-1. 삭제
+.splice(index, 1);
+3-2. 추가
+.splice(index, 0, data);
+
 ```javascript
 var arr1 = [1, 2, 3, 6];
 var arr2 = [4, 5];
