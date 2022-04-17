@@ -117,3 +117,7 @@ developer = new Person(); // 호환 됨
 
 - 구조적 타이핑 : interface나 class에 대한 차이를 비교하는 것이 아닌 {}값 안의 값을 호환될 수 있도록 하는 것
 - 
+
+# interface vs class
+- 화면의 구현체는 class를 통해 작업
+- 서버 단에 참조되는 것은 인터페이스 (인터페이스를 상속한 클래스로 변환시켜줌)
