@@ -51,6 +51,11 @@ ng update @angular/cli@11.2.9 --allow-dirty --force
 - module provider 등록하는 경우 service의 Injdectable의 providedIn 메타데이터 삭제 (모듈에 등록된 서비스가 많은 경우 모듈의 프로바이더에서 서비스를 관리하는 것이 유리)
 - [angular module(component 및 module 만들기)](https://kamang-it.tistory.com/entry/Angular-08angular-modulecomponent-%EB%B0%8F-module-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
+- app module 구성 요소
+  - provider: service등록
+  - bootstrap : 처음 진행할 컴포넌트
+  - selector: 'app-root' => index.html에 루트로 있는 컴포넌트 요소
+
 # Form
   - FormControl
   - FormGroup
