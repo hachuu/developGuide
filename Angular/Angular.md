@@ -56,7 +56,7 @@ ng update @angular/cli@11.2.9 --allow-dirty --force
   - bootstrap : 처음 진행할 컴포넌트
   - selector: 'app-root' => index.html에 루트로 있는 컴포넌트 요소
 
-- 모든 컴포넌트는 모듈에 
+- 모든 컴포넌트는 모듈에 등록을 해야함
 
 # Form
   - FormControl
