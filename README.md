@@ -118,6 +118,11 @@ firebase init hosting
 firebase deploy --only hosting
 firebase serve --only hosting
 ```
+```
+yarn build
+firebase deploy
+```
+[Firebase로 배포하기(yarn 명령어)](https://velog.io/@mygomi/Firebase%EB%A1%9C-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0yarn-%EB%AA%85%EB%A0%B9%EC%96%B4)
   
   
 ## Azure 배포
