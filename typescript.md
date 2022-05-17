@@ -121,3 +121,16 @@ developer = new Person(); // 호환 됨
 # interface vs class
 - 화면의 구현체는 class를 통해 작업
 - 서버 단에 참조되는 것은 인터페이스 (인터페이스를 상속한 클래스로 변환시켜줌)
+
+# TIL [extends implements](https://velog.io/@hkoo9329/%EC%9E%90%EB%B0%94-extends-implements-%EC%B0%A8%EC%9D%B4)
+```
+extends는 일반 클래스와 abstract 클래스 상속에 사용되고, implement는 interface 상속에 사용된다.
+class가 class를 상속받을 땐 extends를 사용하고, interface가 interface를 상속 받을 땐 extends를 사용한다.
+class가 interface를 사용할 땐 implements를 써야하고
+interface가 class를 사용할 땐 implements를 쓸수 없다.
+extends는 클래스 한 개만 상속 받을 수 있다.
+extends 자신 클래스는 부모 클래스의 기능을 사용한다.
+implements는 여러개 사용 가능하다.
+implements는 설계 목적으로 구현 가능하다.
+implements한 클래스는 implements의 내용을 다 사용해야 한다.
+```
