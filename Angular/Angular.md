@@ -8,6 +8,7 @@ ng g c new-component => Error: More than one module matches. Use skip-import opt
 
 ng g c new-component --module app => 실행하는 경우 app.module.ts에 자동 component import가 된다.
 [ng g c --skipTest true](https://stackoverflow.com/questions/66242718/angular-11-cli-ng-generate-option-skip-tests)
+ng g c name --spec true
 # HttpClient async/await화
 - [Angular HttpClient의 프로미스화, 그리고 HttpInterceptor](https://blog.eunsatio.io/develop/Angular-HttpClient%EC%9D%98-%ED%94%84%EB%A1%9C%EB%AF%B8%EC%8A%A4%ED%99%94,-%EA%B7%B8%EB%A6%AC%EA%B3%A0-HttpInterceptor)
 
