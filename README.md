@@ -263,3 +263,10 @@ ngAfterViewInit() {
   }
 ```
 15. [아이폰 사파리 script ](https://orangeheeya.tistory.com/entry/%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%95%84%EC%9D%B4%ED%8F%B0-%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C%EB%B3%B4%EA%B8%B0)
+
+16. frontend
+```
+  a tag에서 keyup.enter 이벤트는 (click)과 동일한 이벤트로 인지하여 둘다 선언하는 경우 이벤트가 중복되어 사용됨
+
+  => (keyup.enter)를 삭제 해줘야함
+```
