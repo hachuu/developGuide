@@ -488,6 +488,11 @@ user-select: none;
 user-select: all;
 ```
 
+### 5월의 시작하는 날과 마지막날
+```
+const startDayO = new Date(2022, 4, 1);
+const endDay = new Date(2022, 5, 0);
+```
 
 ### [브라우저 닫기 새로고침 이벤트 리스너](https://taewooblog.tistory.com/m/75) - 둘의 독립 처리는 어려움..
 ### 출처
