@@ -13,6 +13,8 @@
 |styles|스타일 파일을 최적화할 것인지 지정합니다.	|boolean \| 스타일 최적화 옵션|true|
 |fonts|폰트를 최적화할 것인지 지정합니다.참고: 인터넷 연결이 필요합니다.|boolean \| 폰트 최적화 옵션|true|
 
+
+* optimization true인 경우 local 화면이 안뜨는 이슈가 있음..
 ```
 "optimization": {
   "scripts": true,
