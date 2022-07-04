@@ -92,3 +92,6 @@ vendorChunk false : 번들 크기가 크게 줄어듭니다. 또는 클라이언
 ],
 ```
 "outputHashing": "all"
+
+
+# ng serve와 node serve차이??
