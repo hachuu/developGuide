@@ -270,3 +270,19 @@ ngAfterViewInit() {
 
   => (keyup.enter)를 삭제 해줘야함
 ```
+
+17. HTML <slot> Tag
+❮Reference ❯
+
+Example
+The template element holds HTML code without displaying it:
+
+<template>
+  <div>Name:
+    <slot name="username"></slot>
+  </div>
+  <div>Birthday:
+    <slot name="birthday"></slot>
+  </div>
+</template>
+Try it Yourself »
