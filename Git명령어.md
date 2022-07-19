@@ -191,3 +191,8 @@ git push origin master // git push
 ```
 git reset --hard {git version}
 ```
+19. 삭제된 원격 브랜치 vscode에서 업데이트 안되는 문제 해결
+```
+git remote prune origin
+```
+
