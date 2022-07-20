@@ -8,6 +8,9 @@
 - [tslint to eslint](https://pks2974.medium.com/tslint-%EC%97%90%EC%84%9C-eslint-%EB%A1%9C-%EC%9D%B4%EC%82%AC%ED%95%98%EA%B8%B0-ecd460a1e599)
 - [[VScode]터미널에서 VSCode 실행하기](https://grahams.tistory.com/188)
 - code .
+
+- npm과 yarn의 주요 차이점 중 하나는 패키지 설치 프로세스를 처리하는 방법입니다. npm은 패키지를 한 번에 하나씩 순차적으로 설치합니다. 그에 비해 yarn은 여러 패키지를 동시에 가져오고 설치하도록 최적화되어 있어 패키지 설치 속도 측면에서 yarn이 npm보다 빠릅니다.
+- 
 ## 'ng'는 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다.
 - 시스템 환경 변수 편집
   1. 시스템 변수 Path => %SystemRoot%\system32%SystemRoot% 추가
