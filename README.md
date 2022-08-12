@@ -80,20 +80,6 @@ document.head.appendChild(link);
 - Babel : JavaScript 컴파일러, ES6 이후의 코드를 구형 브라우저 환경에 맞게 변환
 - polyfill : 폴리필은 웹 개발에서 기능을 지원하지 않는 웹 브라우저 상의 기능을 구현하는 코드
 
-## RESTful Api
-- 400: 400 Bad Request 응답 상태 코드는 서버가 클라이언트 오류(예: 잘못된 요청 구문, 유효하지 않은 요청 메시지 프레이밍, 또는 변조된 요청 라우팅) 를 감지해 요청을 처리할 수 없거나, 하지 않는다는 것을 의미
-- 401, 403: 권한 없음
-  - 401 에러는 유효하지 않은 인증 토큰일 경우 반환하고
-  - 403 에러는 토큰은 있지만, 그 토큰을 받은 유저가 scope 가 부족할 때 반환하는 것
-- [REST API 제대로 알고 사용하기](https://meetup.toast.com/posts/92)
-- [고양이사진으로 보는 응답코드](https://http.cat/)
-- [Front 외부 API 연동 의구심](https://okky.kr/article/882992?note=2257178)
-- put과 patch의 차이점
-```
-PUT|	Update/Replace|	405 (Method Not Allowed), unless you want to update/replace every resource in the entire collection.|	200 (OK) or 204 (No Content). 404 (Not Found), if ID not found or invalid.
-PATCH|	Update/Modify|	405 (Method Not Allowed), unless you want to modify the collection itself.|	200 (OK) or 204 (No Content). 404 (Not Found), if ID not found or invalid.
-```
-- 413: 브라우저에서 파일 업로드 하는 경우 파일 용량이 제한되어 발생할 수 있는 error
 
 ## 도커 Docker
 - 컨테이너 기반의 오픈소스 가상화 플랫폼
