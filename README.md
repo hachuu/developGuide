@@ -2,7 +2,15 @@
 
 ## Front-End 개발 가이드
 - 2022.08.12 가이드 정리
-- html, css, 크로스브라우징, javascript, http, tool(git, webpack, babel, eslint, npm...), framework, tdd, 알고리즘, 자료구조
+  1. html
+  2. css
+  3. 크로스브라우징
+  4. javascript
+  5. http
+  6. tool(git, webpack, babel, eslint, npm...)
+  7. framework
+  8. tdd
+  9. 알고리즘 / 자료구조
 
 ## [각종 Setting 문서 정리](https://github.com/hachuu/developGuide/blob/main/%EA%B0%81%EC%A2%85Setting.md)
 
