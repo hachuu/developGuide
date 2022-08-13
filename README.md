@@ -6,11 +6,12 @@
   2. css
   3. 크로스브라우징
   4. javascript
-  5. http
+  5. [http](https://github.com/hachuu/developGuide/blob/main/http/http.md)
   6. tool(git, webpack, babel, eslint, npm...)
   7. framework
   8. tdd
   9. 알고리즘 / 자료구조
+  10. [cs](https://github.com/hachuu/developGuide/blob/main/cs/cs.md)
 
 ## [각종 Setting 문서 정리](https://github.com/hachuu/developGuide/blob/main/%EA%B0%81%EC%A2%85Setting.md)
 
