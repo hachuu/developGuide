@@ -107,4 +107,44 @@ downThumbnail() {
     //     // saveAs(canvas.toDataURL("image/png"), "capture01.png");
     //   },
     // );
+    
+    
+    // downThumbnail() {
+  //   const element = document.getElementById("template-box") as HTMLElement;
+
+  //   const width = element.offsetWidth; //  dom  （      、      ，      ）
+  //   const height = element.offsetHeight;
+
+  //   html2canvas(document.getElementById("template-box"), {
+  //     width,
+  //     height,
+  //     useCORS: true,
+  //   }).then(function (canvas: { toDataURL: (arg0: string) => string }) {
+  //     // var myImg = canvas.toDataURL("image/png");
+  //     // myImg = myImg.replace("data:image/png;base64,", "");
+  //     // console.log(myImg);
+
+  //     function dataURItoBlob(dataURI: string) {
+  //       //console.log( dataURI.replace(/^data:image\/(png|jpeg);base64,/, ""))
+  //       var byteStr = atob(dataURI.split(",")[1]);
+  //       var mimeStr = dataURI.split(",")[0].split(":")[1].split(";")[0];
+
+  //       var arrBuf = new ArrayBuffer(byteStr.length);
+  //       var uInt8Arr = new Uint8Array(arrBuf);
+  //       for (var i = 0; i < byteStr.length; i++) {
+  //         uInt8Arr[i] = byteStr.charCodeAt(i);
+  //       }
+  //       return new Blob([uInt8Arr], { type: mimeStr });
+  //     }
+  //     var blob = dataURItoBlob(canvas.toDataURL("image/jpeg"));
+  //     var objectURL = URL.createObjectURL(blob);
+
+  //     var el = document.createElement("a");
+
+  //     el.href = objectURL;
+  //     // el.href = canvas.toDataURL("image/jpeg");
+  //     el.download = "이미지.jpg"; //다운로드 할 파일명 설정
+  //     el.click();
+  //   });
+  // }
 ```
