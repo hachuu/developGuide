@@ -148,3 +148,7 @@ downThumbnail() {
   //   });
   // }
 ```
+4. html 속성에 원하는 영역 안나오게 하는 것
+```
+data-html2canvas-ignore="true"
+```
