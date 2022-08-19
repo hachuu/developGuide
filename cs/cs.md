@@ -55,4 +55,9 @@
     - 오라클 데이터베이스의 함수 와 프로지저 및 트리거에 대한 정보
     - 기타 일반적인 DATABASE 정보
 ---
-8. 
+8. cpu 스케쥴링 알고리즘의 종류와 설명 [2022/08/18 출처](https://khj93.tistory.com/entry/Database-RDBMS%EC%99%80-NOSQL-%EC%B0%A8%EC%9D%B4%EC%A0%90#:~:text=NoSQL%EC%9D%B4%EB%9E%80(Not%20Only%20SQL,%EA%B4%80%EA%B3%84%EB%A5%BC%20%EC%A0%95%EC%9D%98%ED%95%98%EC%A7%80%20%EC%95%8A%EC%8A%B5%EB%8B%88%EB%8B%A4.)
+9. RDBMS와 Nosql의 차이점
+
+  - NoSQL 정의
+    1. (Not Only SQL)의 약자로 말 그대도 위에서 설명한 RDB 형태의 관계형 데이터베이스가 아닌 다른 형태의 데이터 저장 기술을 의미
+    2. 테이블 간 관계를 정의하지 않음
