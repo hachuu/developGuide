@@ -110,6 +110,29 @@ git fetch -p origin // remote 서버 브랜치 정보를 다시 가져옴
 ### git merge
 - git merge feature/{기능이름}
 - [git merge rebase 차이](https://firework-ham.tistory.com/12)
+
+1. rebase? 두 개의 공통 Base를 가진 Branch에서 한 Branch의 Base를 다른 Branch의 최신 커밋으로 branch의 base를 옮기는 작업
+2. [출처](https://backlog.com/git-tutorial/kr/stepup/stepup2_8.html)
+```
+$ git checkout issue3
+Switched to branch 'issue3'
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: pull 설명을 추가
+Using index info to reconstruct a base tree...
+<stdin>:13: new blank line at EOF.
++
+warning: 1 line adds whitespace errors.
+Falling back to patching base and 3-way merge...
+Auto-merging myfile.txt
+CONFLICT (content): Merge conflict in myfile.txt
+Failed to merge in the changes.
+Patch failed at 0001 pull 설명을 추가
+
+When you have resolved this problem run "git rebase --continue".
+If you would prefer to skip this patch, instead run "git rebase --skip".
+To check out the original branch and stop rebasing run "git rebase --abort".
+```
 # 기타
 1. 한글깨짐 문제
 - git config --global gui.encoding utf-8 => utf-8 한글깨짐 문제
