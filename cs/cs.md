@@ -83,3 +83,4 @@ CDN 서비스는 이러한 문제를 해결하기 위해 개발되었습니다.
 11. 클라우딩 컴퓨팅 [2022/08/21 출처](https://aws.amazon.com/ko/what-is-cloud-computing/)
 - 정의: 클라우드 컴퓨팅은 IT 리소스를 인터넷을 통해 온디맨드로 제공하고 사용한 만큼만 비용을 지불하는 것
 12. https://gengmi.tistory.com/entry/Cache-%EC%BA%90%EC%8B%9C-%EB%8F%99%EC%9E%91%EA%B3%BC-%EC%BA%90%EC%8B%9C-%EA%B5%90%EC%B2%B4-%EC%A0%95%EC%B1%85
+13. [정적 라우팅 vs 동적 라우팅](https://m.blog.naver.com/dreamxpeed/221671848467)
