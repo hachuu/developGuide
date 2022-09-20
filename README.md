@@ -301,3 +301,11 @@ function handleEnter(evt) {
     }
 }
 ```
+20. textarea 현재 커서의 위치를 찾는다
+```
+  // 입력받은 @의 index를 찾는다.
+  // 현재 커서의 위치를 찾는다.
+  // @의 위치와 커서의 위치를 비교한다.
+  // @의 위치가 커서의 위치보다 작으면 자동완성을 띄운다.
+  this.indexOfAt = event.target.selectionStart;
+```
