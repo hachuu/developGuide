@@ -290,4 +290,14 @@ The template element holds HTML code without displaying it:
 Try it Yourself »
 
 
-- 성능체크 (https://jsbench.me/)
+18. 성능체크 (https://jsbench.me/)
+19. shift+enter check
+```
+function handleEnter(evt) {
+    if (evt.keyCode == 13 && evt.shiftKey) {
+        if (evt.type == "keypress") {
+        }
+        evt.preventDefault();
+    }
+}
+```
