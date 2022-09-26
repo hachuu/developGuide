@@ -501,6 +501,17 @@ console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 ```
 
 ### [브라우저 닫기 새로고침 이벤트 리스너](https://taewooblog.tistory.com/m/75) - 둘의 독립 처리는 어려움..
+### 브라우저 알림 처리
+```
+Notification.requestPermission();
+
+const permission = Notification.permission;
+if (permission === "granted") {
+   new Notification(`${userId}가 보냄`, {
+   body: text,
+   });
+}
+```
 ### 출처
 1. [[Javascript ] 프로토타입 이해하기](https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67)
 2. [출처 poiemaweb](https://poiemaweb.com/js-prototype)
