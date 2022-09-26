@@ -776,6 +776,30 @@ nativeElement.scrollIntoView()
 element.scrollIntoView({ behavior: 'smooth', block: 'start' })
 ```
 
+### 채팅에서 상단으로 scroll 하는 경우 이전 메세지 보여주는 코드
+```
+@HostListener("mousewheel", ["$event"])
+  async onWindowScroll(event: any) {
+    if (this.loadSmallHistory) {
+      return;
+    }
+    const browser = { agent: navigator.userAgent.toLowerCase() };
+    const isMac = browser.agent.indexOf("mac") != -1;
+    if (isMac) {
+      if (this.chatBoxElement.nativeElement.scrollTop === 0) {
+        await this.getHistory();
+      }
+    } else {
+      if (
+        event.wheelDelta > 0 &&
+        this.chatBoxElement.nativeElement.scrollTop === 0
+      ) {
+        await this.getHistory();
+      }
+    }
+  }
+```
+
 ### 외부 라이브러리 제작 시 필요한 선행
 1. [[Gulp.js] Gulp 입문 ① - Gulp에 대한 소개](https://programmingsummaries.tistory.com/356)
 2. [Angular 라이브러리 만들기](https://angular.kr/guide/creating-libraries)
