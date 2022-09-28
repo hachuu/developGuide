@@ -289,6 +289,15 @@ swipe(e: TouchEvent, when: string): void {
 ```
  *ngFor="let item of [].constructor(20)"
 ```
+# ngFor에서 index, first, last, even, odd 사용법
+- ngFor로 돌리는 item의 타입을 정의하는 경우 그 타입이 {}인 경우에 first as isFirst => {}의 타입을 반환해서 directive에 값을 넘기는 경우 타입확인을 해야함.
+```
+<div class="message-line" [ngClass]="chat.send" focusIn
+[show]="last">
+
+let first = first => 마지막 인덱스인 경우에 true: boolean의 값을 가짐.
+first as isFirst => 마지막 인덱스인 경우에 {}값을 갖는 듯..
+```
 
 ## trackbyFn
 - 제대로 알고 사용하기! 잘못쓰면 하위 컴포넌트 재랜더가 일어남
