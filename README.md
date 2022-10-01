@@ -3,7 +3,7 @@
 ## Front-End 개발 가이드
 - 2022.08.12 가이드 정리
   1. [html](https://github.com/hachuu/developGuide/blob/main/html/html.md)
-  2. css
+  2. [css](https://github.com/hachuu/developGuide/tree/main/CSS)
   3. 크로스브라우징
   4. [javascript](https://github.com/hachuu/developGuide/tree/main/javascript)
     - [typescript](https://github.com/hachuu/developGuide/tree/main/typescript)
