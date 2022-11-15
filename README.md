@@ -17,7 +17,7 @@
   10. [cs](https://github.com/hachuu/developGuide/blob/main/cs/cs.md)
   
 ## 기술 spec study 목록
-- [vuejs (2,3)](https://github.com/hachuu/developGuide/tree/main/Vue)
+- [vuejs (2,3)](https://github.com/hachuu/developGuide/tree/main/vue)
 - [Linux](https://github.com/hachuu/developGuide/tree/main/Linux)
 - spring boot
 - [NginX](https://github.com/hachuu/developGuide/tree/main/NginxX)
