@@ -16,7 +16,7 @@
   9. 알고리즘 / 자료구조
   10. [cs](https://github.com/hachuu/developGuide/blob/main/cs/cs.md)
   
-## 기술 spec study 목록
+## 기술 spec study 목록 (2022/11/14~)
 - [vuejs (2,3)](https://github.com/hachuu/developGuide/tree/main/vue)
 - [Linux](https://github.com/hachuu/developGuide/tree/main/Linux)
 - spring boot
