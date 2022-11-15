@@ -20,7 +20,7 @@
 - [vuejs (2,3)](https://github.com/hachuu/developGuide/tree/main/vue)
 - [Linux](https://github.com/hachuu/developGuide/tree/main/Linux)
 - spring boot
-- [NginX](https://github.com/hachuu/developGuide/tree/main/NginxX)
+- [NginX](https://github.com/hachuu/developGuide/tree/main/NginX)
 
 ## [각종 Setting 문서 정리](https://github.com/hachuu/developGuide/blob/main/%EA%B0%81%EC%A2%85Setting.md)
 
