@@ -1,3 +1,6 @@
+# 2022/11/17 Angular 15 version launch
+[Angular v15 is now available!](https://blog.angular.io/angular-v15-is-now-available-df7be7f2f4c8)
+
 # angular cli project 생성
 ng new my-project
 cd my-project
