@@ -15,12 +15,16 @@
   8. tdd
   9. 알고리즘 / 자료구조
   10. [cs](https://github.com/hachuu/developGuide/blob/main/cs/cs.md)
+  11. [MPA VS SPA](https://docs.astro.build/en/concepts/mpa-vs-spa/)
   
 ## 기술 spec study 목록 (2022/11/14~)
 - [vuejs (2,3)](https://github.com/hachuu/developGuide/tree/main/vue)
 - [Linux](https://github.com/hachuu/developGuide/tree/main/Linux)
 - spring boot
 - [NginX](https://github.com/hachuu/developGuide/tree/main/NginX)
+---
+## TIL 요즘 
+- [Astro](https://namu.wiki/w/Astro(%EC%9B%B9%20%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC))
 
 ## [각종 Setting 문서 정리](https://github.com/hachuu/developGuide/blob/main/%EA%B0%81%EC%A2%85Setting.md)
 
