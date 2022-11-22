@@ -18,3 +18,13 @@ $ 접두사의 경우 Vue 생태계 내에서의 목적은 사용자에게 노�
 Vuex는 $store.
 Vue 라우터는 $route및 $router.
 ```
+
+2. store에서 mapActions
+```
+..mapActions([
+  'increment' // this.increment()을 this.$store.dispatch('increment')에 매핑
+]),
+...mapActions({
+  add: 'increment' // this.add()을 this.$store.dispatch('increment')에 매핑
+})
+```
