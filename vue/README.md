@@ -28,3 +28,9 @@ Vue 라우터는 $route및 $router.
   add: 'increment' // this.add()을 this.$store.dispatch('increment')에 매핑
 })
 ```
+
+3. watch
+- watch 속성은 특정 데이터의 변화를 감지하여 자동으로 특정 로직을 수행해주는 속성
+
+4. computed
+- 컴퓨티드(computed) 속성은 템플릿의 데이터 표현을 더 직관적이고 간결하게 도와주는 속성
