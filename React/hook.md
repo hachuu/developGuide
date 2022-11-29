@@ -52,7 +52,11 @@ const onChange = useCallback(
 );
 ```
 - [useCallback 을 사용하여 함수 재사용하기](https://react.vlpt.us/basic/18-useCallback.html)
-*함수 안에서 사용하는 상태 혹은 props 가 있다면 꼭, deps 배열안에 포함시켜야 된다*
+- *함수 안에서 사용하는 상태 혹은 props 가 있다면 꼭, deps 배열안에 포함시켜야 된다*
+- *useMemo는 값을 메모이제이션하여
+의존성 배열에 있는 값의 변경을 감지하여 캐싱된 값을 반환하는 반면
+useCallback은 함수를 메모이제이션 하여
+의존성 배열에 있는 값의 변경을 감지하여 캐싱된 함수 자체를 다시 반환하는 것의 차이이다.*
 
 4. useReducer 패턴: 
 - reducer 는 현재 상태와 액션 객체를 파라미터로 받아와서 새로운 상태를 반환해주는 함수
