@@ -155,6 +155,8 @@ const refContainer = useRef(initialValue);
 
 - useRef는 .current 프로퍼티로 전달된 인자(initialValue)로 초기화된 변경 가능한 ref 객체를 반환
 - 반환된 객체는 컴포넌트의 전 생애주기를 통해 유지
+- state 와 달리 값의 변화에 의한 리렌더링이 발생하지 않는다.
+- current 라는 속성을 통해 어느 값이든 보유할 수 있는 일종의 컨테이너 역할을 할 수 있다.
 
 ```
 function TextInputWithFocusButton() {
