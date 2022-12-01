@@ -23,6 +23,7 @@
 - [Linux](https://github.com/hachuu/developGuide/tree/main/Linux)
 - spring boot
 - [NginX](https://github.com/hachuu/developGuide/tree/main/NginX)
+- [Python](https://github.com/hachuu/developGuide/tree/main/Python)
 ---
 ## TIL 요즘 
 - [Astro](https://namu.wiki/w/Astro(%EC%9B%B9%20%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC))
