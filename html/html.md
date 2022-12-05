@@ -30,3 +30,7 @@
 |div, span |header, nav, aside, section, article, footer|
 
 5. [여기서부터](https://poiemaweb.com/html5-tag-basic)
+
+## HTMLAudioElement
+- onEnded : 음원이 끝나는 경우 event
+- ontimeupdate : time update 될 때 마다!
