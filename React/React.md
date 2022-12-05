@@ -154,6 +154,12 @@ orientation: 특정 방향을 강제로 지정(landscape, portrait 중 설정)
   ```
   component.forceUpdate(callback)
   ```
+  
+18. ref
+- render 메서드에서 생성된 DOM 노드나 React 엘리먼트에 접근하는 방법을 제공
+- 포커스, 텍스트 선택영역, 혹은 미디어의 재생을 관리
+- 애니메이션을 직접적으로 실행시킬 때
+- 남용하지 않기
 
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
