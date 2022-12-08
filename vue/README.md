@@ -34,3 +34,14 @@ Vue 라우터는 $route및 $router.
 
 4. computed
 - 컴퓨티드(computed) 속성은 템플릿의 데이터 표현을 더 직관적이고 간결하게 도와주는 속성
+
+5. 동적 component 제어
+```
+<component 
+  :is="{문자열이나 컴포넌트 이름}"
+/>
+<script>
+components: { nonArtist, artist, Promotion }
+</...>
+```
+6. 
