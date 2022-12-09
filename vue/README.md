@@ -44,4 +44,38 @@ Vue 라우터는 $route및 $router.
 components: { nonArtist, artist, Promotion }
 </...>
 ```
-6. 
+6. router
+- router에 params도 구상해서 작업할 수 잇음
+
+|pattern|matched path|$route.params|
+|---|-------|-------|
+|/user/:username|/user/evan|{ username: 'evan' }|
+|/user/:username/post/:post_id|/user/evan/post/123|{ username: 'evan', post_id: '123' }|
+
+		
+```
+const User = {
+  template: '<div>User {{ $route.params.id }}</div>'
+}
+
+// route 변경 감지 1. watch로 감지
+const User = {
+  template: '...',
+  watch: {
+    $route(to, from) {
+      // react to route changes...
+    }
+  }
+}
+
+// route 변경 감지 2. beforeRouteUpdate 감지
+const User = {
+  template: '...',
+  beforeRouteUpdate(to, from, next) {
+    // react to route changes...
+    // don't forget to call next()
+  }
+}
+
+```
+
