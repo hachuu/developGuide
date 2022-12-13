@@ -13,4 +13,4 @@
 ## createSlice
 - redux-toolkit
 - 간소한 코드작성 가능
-- Ducks 패턴을 사용할 수 있음
+- [Ducks 패턴](https://velog.io/@dolarge/React-Redux-Ducks-%ED%8C%A8%ED%84%B4)을 사용할 수 있음
