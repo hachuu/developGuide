@@ -24,6 +24,29 @@ useEffect(() => {
   , [user]);
 ```
 - deps 안에 값이 있는 경우 언마운트시에도 호출, 값이 바뀌기 직전에도 호출
+- useEffect 안에서의 async, await 패턴 체크
+    - [Typescript: Type 'Promise<void>' is not assignable to type 'void | Destructor'](https://stackoverflow.com/questions/72234152/typescript-type-promisevoid-is-not-assignable-to-type-void-destructor)
+    
+    ```
+    useEffect(() => funAsync(), []); // 에러, funAsync()라는 Promise<void>를 Return 시킨다.
+    useEffect(() => {
+        funAsync();
+    }, []); // ok
+    
+    const funAsync = async () => {
+        console.log('funAsync')
+
+        const res = await fetch(`${URL}/api/something`)
+        const data = await res.json()
+
+        if (res) {
+            setUser(data.user)
+        } else {
+            setUser(null)
+        }
+    }
+    
+    ```
 
 2. useMemo 패턴: 연산한 값 재사용
 ```
