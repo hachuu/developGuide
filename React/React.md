@@ -185,6 +185,9 @@ orientation: 특정 방향을 강제로 지정(landscape, portrait 중 설정)
 5. [Context 와 함께 사용하기](https://react.vlpt.us/integrate-api/05-using-with-context.html#)
 6. [React Router 제한적 경로 접근](https://velog.io/@public_danuel/Restrict-Route)
 7. [함수형 컴포넌트 || styled-component로 kakaomap 불러올 때 문제](https://gingerkang.tistory.com/65)
+8. [](https://blog.logrocket.com/vue-composition-api-vs-react-hooks/)
+9. [](https://kyounghwan01.github.io/blog/React/cant-perform-a-React-state-update-on-an-unmounted-component/#%E1%84%87%E1%85%A1%E1%86%AF%E1%84%89%E1%85%A2%E1%86%BC-%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%B2)
+10. [](https://velog.io/@jay/you-might-need-useEffect-diet)
 ---
 
 - [함수형 컴포넌트 클래스형 컴포넌트 차이](https://xiubindev.tistory.com/107)
