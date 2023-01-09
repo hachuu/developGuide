@@ -1,5 +1,7 @@
-[css참고](https://poiemaweb.com/css3-syntax)
-[position](https://creamilk88.tistory.com/197)
+# reference
+- [css참고](https://poiemaweb.com/css3-syntax)
+- [position](https://creamilk88.tistory.com/197)
+- [css mozila](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient)
 
 # css에서 link a tag 밑줄 지우기
 ```
