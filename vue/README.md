@@ -79,3 +79,10 @@ const User = {
 
 ```
 
+7. src 절대 경로
+- @로 src내 파일 절대경로로 사용할 수 있다.
+- 이미지 경로가  src/assets/img/sample.png 일때 vue 에서는 @/assets/img/sample.png 로 src를 절대경로로 사용 할 수 있다.
+```
+<!-- 이미지 삽입 -->
+<img src = "@/assets/img/sample.png" />
+```
