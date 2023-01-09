@@ -13,3 +13,6 @@
       color: black;
     }
 ```
+
+# Image sprite 반응형
+- background-position의 값을 %로 계산
