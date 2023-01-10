@@ -86,3 +86,23 @@ const User = {
 <!-- 이미지 삽입 -->
 <img src = "@/assets/img/sample.png" />
 ```
+
+8. directive
+```
+v-text
+v-html
+v-show
+v-if
+v-else
+v-else-if
+v-for
+v-on
+v-bind
+v-model
+v-slot
+v-pre
+v-once
+v-memo
+v-cloak
+```
+9. 
