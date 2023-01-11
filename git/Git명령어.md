@@ -219,3 +219,11 @@ git reset --hard {git version}
 git remote prune origin
 ```
 
+### git submodule
+1. .gitmodules 파일
+```
+[submodule "Submodule"]
+path = Submodule
+url = https://github.com/chaconinc/DbConnector
+```
+2. [submodule 읽어보기](https://great-developer.tistory.com/207)
