@@ -25,6 +25,7 @@
 - [NginX](https://github.com/hachuu/developGuide/tree/main/NginX)
 - [Python](https://github.com/hachuu/developGuide/tree/main/Python)
 - [Jenkins](https://github.com/hachuu/developGuide/tree/main/Jenkins)
+- [adb connect 명령어](https://treejsh.tistory.com/entry/adb-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%AA%A8%EC%9D%8C)
 ---
 ## TIL 요즘 
 - [Astro](https://namu.wiki/w/Astro(%EC%9B%B9%20%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC))
