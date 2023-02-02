@@ -19,3 +19,14 @@
 
 # Image sprite 반응형
 - background-position의 값을 %로 계산
+
+# 기본 선택자
+- *
+- .
+- #
+- 타입 선택자 : div
+- 속성 선택자 : input[type="text"]
+
+# 복합 선택자
+- 태그 선택자 : span.orange
+- 자식 선택자 : ul > .orange 
