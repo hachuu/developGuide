@@ -43,3 +43,12 @@
     - .className *:nth-child(2n) // 짝수, 괄호 안에 변수로 다양하게 선택 가능
     - .className *:nth-child(2n+1) // 홀수
 
+# 가상 요소 선택자
+1. .className::before 
+```
+// 선택자 요소의 내부 앞에 내용(content)을 삽입
+.box:before {
+    content: "앞!"
+}
+```
+3. 
