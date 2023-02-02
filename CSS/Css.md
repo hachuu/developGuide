@@ -33,3 +33,13 @@
 - 하위 선택자 : div .orange { // 띄어쓰기도 선택자의 기호!!!
 - 인접 형제 선택자 : .orange + li // + 다음 형제 요소 하나
 - 일반 형제 선택자 : .orange ~ li // ~ 다음 형제 요소 모두 선택
+
+# 선택자 가상 클래스
+1. :focus / :active / :hover
+2. 
+    - .className div:first-child
+    - .className div:last-child
+    - .className *:not(span) // 부정 선택자
+    - .className *:nth-child(2n) // 짝수, 괄호 안에 변수로 다양하게 선택 가능
+    - .className *:nth-child(2n+1) // 홀수
+
