@@ -5,8 +5,9 @@
 
 2. remote
 - git remote –v 현재 원격 저장소 주소 확인
+- git remote add origin {url}  // 현재 경로에 원격 git 주소 연결
 - git remote add 
-- git remote set-url {url} url 변경
+- git remote set-url {url}  // url 변경
 
 3. branch
 - git branch {branchName} 브랜치 생성
