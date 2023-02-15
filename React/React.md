@@ -161,6 +161,17 @@ orientation: 특정 방향을 강제로 지정(landscape, portrait 중 설정)
 - 애니메이션을 직접적으로 실행시킬 때
 - 남용하지 않기
 
+19. onClick 내부 함수에 대한 비교
+```
+<button onClick={console.log('go home')}>Go to Home</button>
+<button onClick={()=>console.log('go home')}>Go to Home</button> 의 차이?
+```
+- React에서 이벤트 핸들러로 함수를 등록할 때, 함수 자체를 바로 전달하는 것이 아니라 함수를 호출하는 새로운 함수를 생성하여 전달하는 것이 좋은 프로그래밍 관행입니다.
+- <button onClick={()=>console.log('go home')}>Go to Home</button>처럼 함수를 호출하는 새로운 함수를 생성하여 전달하는 것이 바람직합니다.
+- <button onClick={console.log('go home')}>Go to Home</button>의 경우, console.log('go home') 함수가 렌더링 시점에서 즉시 호출됩니다. 이는 버튼 클릭 없이도 콘솔에 "go home"이 출력되는 원인이 됩니다. 또한, 이벤트가 발생할 때마다 console.log이 실행되는 것이 아니라, 페이지가 렌더링될 때마다 한 번만 실행되므로 의도한 동작과 다를 수 있습니다.
+- 반면에, <button onClick={()=>console.log('go home')}>Go to Home</button>의 경우, 익명 함수가 클릭 이벤트가 발생할 때마다 호출됩니다. 이는 버튼 클릭 시에만 콘솔에 "go home"이 출력되도록 보장합니다.
+- 따라서 이벤트 핸들러로 함수를 등록할 때는 항상 함수를 호출하는 새로운 함수를 생성하여 전달하도록 하고, 이를 화살표 함수로 간단하게 표현하는 것이 좋은 프로그래밍 습관입니다.
+- 
 ## react to do admin
 - [React 041. Socket.IO로 실시간 채팅 구현
 ](https://m.blog.naver.com/PostView.nhn?blogId=bkcaller&logNo=221366361792&proxyReferer=https:%2F%2Fwww.google.co.kr%2F)
