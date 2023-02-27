@@ -105,4 +105,26 @@ v-once
 v-memo
 v-cloak
 ```
-9. 
+
+9. resolver
+- Angular에 있던 개념인데.. Vue에는 따로 기능이 없어서 아래 예시문처럼 작업하면 된다.
+- onBeforeRouteEnter : Vue Router and the Composition API
+```
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
+
+export default {
+  setup() {
+    const route = useRoute()
+    const data = ref(null)
+
+    onBeforeRouteEnter(async (to, from, next) => {
+      const result = await fetchData(route.params.id)
+      data.value = result
+      next()
+    })
+
+    return { data }
+  }
+}
+```
