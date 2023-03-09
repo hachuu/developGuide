@@ -31,7 +31,7 @@
 - [Astro](https://namu.wiki/w/Astro(%EC%9B%B9%20%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC))
 - [Jenkins](https://github.com/hachuu/developGuide/tree/main/Jenkins)
 - [Web Develop](https://code-lab1.tistory.com/199)
-- 
+- [sqld](https://github.com/hachuu/developGuide/blob/main/sql/%5B%EC%A0%95%EB%A6%AC%5D%20SQLD.pdf)
 
 ## [각종 Setting 문서 정리](https://github.com/hachuu/developGuide/blob/main/%EA%B0%81%EC%A2%85Setting.md)
 
