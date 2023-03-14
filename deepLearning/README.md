@@ -1,4 +1,4 @@
-# 딥러닝 교육
+# [딥러닝 교육](https://www.notion.so/c28d54a55bc34c6da9db3f3965706ac1?pvs=4)
 
 
 - 머신러닝
