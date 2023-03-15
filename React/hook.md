@@ -213,12 +213,19 @@ function useInputs(initialForm) {
  export default useInputs;
 }
 ```
-- 같은 Hook을 사용하는 두 개의 컴포넌트는 state를 공유하지 않으
+- 같은 Hook을 사용하는 두 개의 컴포넌트는 state를 공유하지 않음
 - 사용자 정의 Hook은 상태 관련 로직(구독을 설정하고 현재 변숫값을 기억하는 것)을 재사용하는 메커니즘이지만 사용자 Hook을 사용할 때마다 그 안의 state와 effect는 완전히 독립적 [참조](https://ko.reactjs.org/docs/hooks-custom.html)
 
 
 7. Api error처리에 따른 hook 관리
 [Centralizing API error handling in React App](https://itnext.io/centralizing-api-error-handling-in-react-apps-810b2be1d39d)
+
+8. useImperativeHandle
+- useImperativeHandle은 useRef hook과 함께 사용되어, 자식 컴포넌트에서 부모 컴포넌트의 함수나 프로퍼티에 접근하고자 할 때 사용
+- 자식 컴포넌트에서 forwardRef를 사용하여 부모 컴포넌트에 접근 가능한 ref를 전달하고, useImperativeHandle을 사용하여 ref를 가리키는 객체에 대한 메서드나 프로퍼티를 정의할 수 있음
+- 이렇게 정의한 메서드나 프로퍼티는 부모 컴포넌트에서 호출할 수 있습니다.
+    - 자식 컴포넌트에서 부모 컴포넌트의 함수를 호출하고자 할 때
+    - 자식 컴포넌트에서 부모 컴포넌트의 프로퍼티 값을 변경하고자 할 때
 
 ## 참조 url
 https://react.vlpt.us/
