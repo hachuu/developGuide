@@ -74,6 +74,17 @@
 ```
 
 ### 임베딩 : 텍스트를 다루기 쉽도록 변환하는 과정 (자연어 처리)
+- ex) Amazon Fine Food Reviews
+
+
+## 자연어 처리
+- temperature : 0~2사이값 0.8 이상 : random / 0.2 : 좀 더 집중되고, 결정론적인 출력
+
+## Best practices
+- The model is better at inserting longer completions
+- Prefer finish_reason == "stop"
+- resampling 3 or 5 times
+
 ---
 
 tensorflow는 어디꺼야?
