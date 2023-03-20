@@ -18,7 +18,7 @@
   10. [cs](https://github.com/hachuu/developGuide/blob/main/cs/cs.md)
   11. [MPA VS SPA](https://docs.astro.build/en/concepts/mpa-vs-spa/)
   
-## 기술 spec study 목록 (2022/11/14~)
+## 기술 spec study 목록 (실질적 업무에 관련한)(2022/11/14~)
 - [vuejs (2,3)](https://github.com/hachuu/developGuide/tree/main/vue)
 - [Linux](https://github.com/hachuu/developGuide/tree/main/Linux)
 - spring boot
@@ -28,6 +28,7 @@
 - [adb connect 명령어](https://treejsh.tistory.com/entry/adb-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%AA%A8%EC%9D%8C)
 ---
 ## TIL 요즘 
+- [Deep Learning](https://github.com/hachuu/developGuide/tree/main/deepLearning) : chat GPT의 관심사가 높아지면서 딥러닝 관련 기술에도 관심을 가지고 있다.
 - [Astro](https://namu.wiki/w/Astro(%EC%9B%B9%20%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC))
 - [Jenkins](https://github.com/hachuu/developGuide/tree/main/Jenkins)
 - [Web Develop](https://code-lab1.tistory.com/199)
