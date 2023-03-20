@@ -34,7 +34,7 @@
 - [Web Develop](https://code-lab1.tistory.com/199)
 - [sqld](https://github.com/hachuu/developGuide/blob/main/sql/%5B%EC%A0%95%EB%A6%AC%5D%20SQLD.pdf)
 
-## [각종 Setting 문서 정리](https://github.com/hachuu/developGuide/blob/main/%EA%B0%81%EC%A2%85Setting.md)
+## [각종 Setting 문서 정리](https://github.com/hachuu/developGuide/tree/main/%EA%B0%9C%EB%B0%9C%EC%84%B8%ED%8C%85)
 
 ## SEO canonical 기존 link rel 삭제, 새로 등록하는 script
 ```
