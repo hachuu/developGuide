@@ -108,6 +108,9 @@ brew cask install jumpcut(에러: brew cask install is disabled)
 |스포트라이트| command + space bar |
 |Tab 순방향| Command + Shift + { |
 |Tab 역방향| Command + Shift + } |
+|전체 화면 캡처| Command + Shift + 3 |
+|부분 + 화면 캡처| Command + Shift + 4 |
+|창 영역 캡처| Command + Shift + 4 + space bar |
 
 | VSCode              | 단축키                                                         |
 | ----------------- | ------------------------------------------------------------ |
