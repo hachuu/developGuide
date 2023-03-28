@@ -40,6 +40,53 @@
 - 문장에서 단어 간의 유사도를 계산하거나, 문서 간의 유사도를 계산하는 등의 작업에 사용
 - [참조: youtube | Introduction to Text and Code Embeddings in the OpenAI API](https://www.youtube.com/watch?v=mnTV_TIkf9M)
 
+### 임베딩을 통한 텍스트 유사성 조회
+- 임베딩된 벡터값으로부터 특정 키워드를 추출하는 방법은 다양한 방법이 존재
+- 이 중에서 가장 간단하면서도 효과적인 방법 중 하나는 벡터값 간의 코사인 유사도(Cosine Similarity)를 계산하여 특정 키워드와 유사한 단어들을 추출하는 것
+- 코사인 유사도는 두 벡터 간의 유사도를 계산하는 데 사용되는 지표로, 벡터값이 공간에서 이루는 각도를 이용하여 유사도를 측정합니다. 즉, 코사인 유사도가 1에 가까울수록 두 벡터가 비슷하다는 것을 의미
+- 과정
+    1. 임베딩된 벡터값을 얻습니다. 예를 들어, OpenAI API의 createEmbedding 함수를 사용하여 벡터값을 얻을 수 있습니다.
+    2. 추출하려는 키워드를 벡터값으로 변환합니다. 예를 들어, OpenAI API의 encode 함수를 사용하여 키워드를 벡터값으로 변환할 수 있습니다.
+    3. 코사인 유사도를 계산하여 가장 유사한 단어들을 추출합니다. 벡터값 간의 코사인 유사도를 계산하는 데에는 여러 가지 방법이 있습니다. 예를 들어, numpy 패키지에서 제공하는 cosine_similarity 함수를 사용할 수 있습니다.
+```
+const openai = require('openai');
+const { cosine } = require('calculate-cosine-similarity');
+
+// OpenAI API 인증
+openai.api_key = "YOUR_API_KEY";
+
+// 키워드와 비교할 텍스트
+const keyword = "apple";
+const text = "I like to eat apples and bananas.";
+
+// 키워드와 텍스트를 임베딩된 벡터값으로 변환
+openai.Embedding.create({
+  engine: "text-davinci-002",
+  documents: [text],
+  query: [keyword]
+}).then(result => {
+  const keywordVector = result.data[0].vector;
+  const textVector = result.data[1].vector;
+
+  // 키워드와 텍스트 간의 코사인 유사도 계산
+  const similarity = cosine(keywordVector, textVector);
+  console.log("Similarity:", similarity);
+
+  // 텍스트에서 유사한 단어 추출
+  const wordList = text.split(" ");
+  const similarityList = cosine(keywordVector, textVector);
+  const topN = 3;  // 상위 n개의 단어
+  const topNSimilarWords = wordList
+    .map((word, index) => ({ word, similarity: similarityList[index] }))
+    .filter(({ word }) => word !== keyword)
+    .sort((a, b) => b.similarity - a.similarity)
+    .slice(0, topN)
+    .map(({ word }) => word);
+  console.log("Top N similar words:", topNSimilarWords);
+}).catch(error => console.error(error));
+
+```
+
 ## Best practices 와 정교한 모델을 위한 방안
 - The model is better at inserting longer completions => 정교한 모델일수록 token이 많이 필요 함
 - Prefer finish_reason == "stop"
