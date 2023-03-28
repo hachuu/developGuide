@@ -86,6 +86,37 @@ openai.Embedding.create({
 }).catch(error => console.error(error));
 
 ```
+```
+const tf = require('@tensorflow/tfjs-node');
+const cosineSimilarity = require('cosine-similarity');
+
+// TensorFlow.js 모델 로드
+const model = await tf.loadLayersModel('path/to/embedding/model.json');
+
+// 입력 문장의 embedding 벡터 추출
+const sentence = "Hello, how are you?";
+const sentenceTokens = sentence.toLowerCase().split(" ");
+const sentenceEmbedding = model.predict(tf.tensor([sentenceTokens])).arraySync()[0];
+
+// OpenAI API로 completion 생성
+const openai = require('openai');
+const api_key = 'your_api_key';
+const api_endpoint = 'https://api.openai.com/v1';
+const prompt = `Your prompt goes here`;
+const max_tokens = 32;
+const n = 5;
+const engine = 'davinci';
+const completions = await openai.complete({ engine, prompt, max_tokens, n, api_key, api_endpoint });
+
+// 각 completion의 embedding 벡터 추출 및 유사도 계산
+const completionEmbeddings = completions.choices.map(c => c.embedding);
+const similarities = completionEmbeddings.map(c => cosineSimilarity(sentenceEmbedding, c));
+
+// 가장 유사한 completion 출력
+const mostSimilarIndex = similarities.indexOf(Math.max(...similarities));
+console.log(`Most similar completion: ${completions.choices[mostSimilarIndex].text}`);
+
+```
 
 ### 간단한 결론
 - embedding하는 데이터들의 vector를 db에 저장하여, 신규 input으로 completion을 생성할 때 입력된 input 언어의 vector값을 구해 db에서 가장 유사한 데이터를 찾아 가장 유사성이 높은 solution으로 completion으로 돌려주는 작업임..
