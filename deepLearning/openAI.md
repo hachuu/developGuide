@@ -118,8 +118,9 @@ console.log(`Most similar completion: ${completions.choices[mostSimilarIndex].te
 
 ```
 
-### 간단한 결론
-- embedding하는 데이터들의 vector를 db에 저장하여, 신규 input으로 completion을 생성할 때 입력된 input 언어의 vector값을 구해 db에서 가장 유사한 데이터를 찾아 가장 유사성이 높은 solution으로 completion으로 돌려주는 작업임..
+### embedding을 통해 구현하는 것을 간략히 이해되도록 설명하자면...
+- 학습시킬 데이터들의 Vector값을 db에 모두 저장한다. => createEmbedding api로 모두 vector 값 추출 가능
+- 신규 input으로 createCompletion을 하면서 입력된 input 언어의 vector값을 구해 db에서 가장 유사한 데이터를 찾아 가장 유사성이 높은 solution으로 completion으로 돌려주는 작업
 
 ## Best practices 와 정교한 모델을 위한 방안
 - The model is better at inserting longer completions => 정교한 모델일수록 token이 많이 필요 함
