@@ -87,6 +87,9 @@ openai.Embedding.create({
 
 ```
 
+### 간단한 결론
+- embedding하는 데이터들의 vector를 db에 저장하여, 신규 input으로 completion을 생성할 때 입력된 input 언어의 vector값을 구해 db에서 가장 유사한 데이터를 찾아 가장 유사성이 높은 solution으로 completion으로 돌려주는 작업임..
+
 ## Best practices 와 정교한 모델을 위한 방안
 - The model is better at inserting longer completions => 정교한 모델일수록 token이 많이 필요 함
 - Prefer finish_reason == "stop"
