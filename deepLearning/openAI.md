@@ -3,7 +3,9 @@
 ## openAi에서 지원하는 자연어 처리 기술
 - Embedding
 - Fine tuning
-- 기타 등등...
+- Completion
+    - Text-Completion
+    - Chat-Completion
 
 ## Embedding vs Fine tuning 개념
 - 임베딩은 텍스트를 벡터로 변환하는 과정 ( 벡터 : 문장에서 단어 간의 유사도를 계산하거나, 문서 간의 유사도를 계산하는 등의 작업에 사용 )
@@ -127,6 +129,17 @@ console.log(`Most similar completion: ${completions.choices[mostSimilarIndex].te
 - Prefer finish_reason == "stop"
     => 모델이 가능한한 "stop" 이유로 대화를 종료하도록 하는 조건을 의미합니다. 이는 모델이 대화를 지속할 수 있는 상황에서도 적절한 시점에서 대화를 종료하여 자연스러운 대화 흐름을         유지하고, 사용자의 경험을 향상시키기 위한 전략
 - resampling 3 or 5 times => 데이터에 대한 리샘플링이 많을 수록 정교해짐
+
+## Chat Completion vs Text Completion
+```
+"Create chat completion"과 "Create completion"은 모두 GPT 모델에서 사용되는 용어입니다.
+
+"Create chat completion"은 사용자와의 대화를 유지하면서 모델이 다음에 올 말을 자동으로 생성하는 기능을 말합니다. 즉, 모델이 이전 대화 내용을 이해하고 그에 맞는 응답을 생성하는 것입니다. 이것은 챗봇과 같은 인터랙티브한 응용 프로그램에서 매우 유용합니다.
+
+반면에 "Create completion"은 모델에게 특정 문장이나 단락을 주면, 그것을 이어지는 문맥과 일치하도록 자동으로 끝을 작성하도록 하는 기능입니다. 이것은 글쓰기, 번역, 요약 등의 응용 프로그램에서 유용합니다.
+
+따라서, "Create chat completion"은 인터랙티브 대화 형식에서 자동 응답 생성을 위해 사용되는 반면에, "Create completion"은 문장 또는 문단을 자동으로 완성하고 이어지는 문맥에 맞추기 위해 사용됩니다.
+```
 
 ### open AI와 Microsoft의 상관관계
 - The partnership between Microsoft and OpenAI is aimed at advancing the development of AI technologies and making them more accessible to people and businesses around the world. It also allows both companies to leverage each other's expertise and resources to drive innovation in the field of AI.
