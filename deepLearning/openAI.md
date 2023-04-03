@@ -146,7 +146,8 @@ console.log(`Most similar completion: ${completions.choices[mostSimilarIndex].te
 - frequency_penalty : -2.0에서 2.0 사이의 숫자, 양수 값은 지금까지 텍스트의 기존 빈도를 기반으로 새 토큰에 페널티를 주어 모델이 동일한 줄을 그대로 반복할 가능성을 줄임
 - temperature : 값이 높을수록 모델이 더 많은 위험을 감수하게 됨 => 더 창의적인 응용 프로그램에는 0.9를, 잘 정의된 답이 있는 응용 프로그램에는 0을 사용, top_p와 같이 사용하는 것을 비추천
 - top_p : 0.1은 상위 10% 확률 질량을 구성하는 토큰만 고려됨을 의미, 일반적으로 온도와 같이 조절하는 것을 추천하지 않음
-
+- stream : 부분 진행 상황을 스트리밍할지 여부 / [서버 전송 이벤트](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#Event_stream_format)로 전송
+- best_of : 서버측에서 `best_of` 완료를 생성하고 \"최고\"(토큰당 로그 확률이 ​​가장 높은 것)를 반환, 결과를 스트리밍할 수 없음 `n`과 함께 사용할 때 `best_of`는 후보 완료 수를 제어하고 `n`은 반환할 수를 지정, `best_of`는 `n`보다 커야 합니다. **참고:** 이 매개변수는 많은 완료를 생성하기 때문에 토큰 할당량을 빠르게 소모할 수 있음. 신중하게 사용하고 `max_tokens` 및 `stop`에 대한 적절한 설정이 있는지 확인해야함
 
 ### open AI와 Microsoft의 상관관계
 - The partnership between Microsoft and OpenAI is aimed at advancing the development of AI technologies and making them more accessible to people and businesses around the world. It also allows both companies to leverage each other's expertise and resources to drive innovation in the field of AI.
