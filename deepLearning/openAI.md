@@ -141,6 +141,16 @@ console.log(`Most similar completion: ${completions.choices[mostSimilarIndex].te
 따라서, "Create chat completion"은 인터랙티브 대화 형식에서 자동 응답 생성을 위해 사용되는 반면에, "Create completion"은 문장 또는 문단을 자동으로 완성하고 이어지는 문맥에 맞추기 위해 사용됩니다.
 ```
 
+### Completion Request Param 정의
+- presence_penalty : -2.0에서 2.0 사이의 숫자, 지금까지 텍스트에 나타나는지 여부에 따라 새로운 토큰에 페널티를 주어 모델이 새로운 주제에 대해 이야기할 가능성을 높임.
+- frequency_penalty : -2.0에서 2.0 사이의 숫자, 양수 값은 지금까지 텍스트의 기존 빈도를 기반으로 새 토큰에 페널티를 주어 모델이 동일한 줄을 그대로 반복할 가능성을 줄임
+- temperature : 값이 높을수록 모델이 더 많은 위험을 감수하게 됨 => 더 창의적인 응용 프로그램에는 0.9를, 잘 정의된 답이 있는 응용 프로그램에는 0을 사용, top_p와 같이 사용하는 것을 비추천
+- top_p : 0.1은 상위 10% 확률 질량을 구성하는 토큰만 고려됨을 의미, 일반적으로 온도와 같이 조절하는 것을 추천하지 않음
+
+
 ### open AI와 Microsoft의 상관관계
 - The partnership between Microsoft and OpenAI is aimed at advancing the development of AI technologies and making them more accessible to people and businesses around the world. It also allows both companies to leverage each other's expertise and resources to drive innovation in the field of AI.
 - As a language model created by OpenAI, I'm also running on Microsoft Azure.
+
+### 읽을거리들..
+[AI가 우리 삶에 끼치는 영향들](https://news.hada.io/weekly/202314?utm_source=slack&utm_medium=bot&utm_campaign=T0138F4V7L0)
