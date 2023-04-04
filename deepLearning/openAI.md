@@ -49,7 +49,9 @@
 - 과정
     1. 임베딩된 벡터값을 얻습니다. 예를 들어, OpenAI API의 createEmbedding 함수를 사용하여 벡터값을 얻을 수 있습니다.
     2. 추출하려는 키워드를 벡터값으로 변환합니다. 예를 들어, OpenAI API의 encode 함수를 사용하여 키워드를 벡터값으로 변환할 수 있습니다.
-    3. 코사인 유사도를 계산하여 가장 유사한 단어들을 추출합니다. 벡터값 간의 코사인 유사도를 계산하는 데에는 여러 가지 방법이 있습니다. 예를 들어, numpy 패키지에서 제공하는 cosine_similarity 함수를 사용할 수 있습니다.
+    3. 코사인 vs 디스턴스
+        - 코사인 유사도를 계산하여 가장 유사한 단어들을 추출합니다. 벡터값 간의 코사인 유사도를 계산하는 데에는 여러 가지 방법이 있습니다. 예를 들어, numpy 패키지에서 제공하는 cosine_similarity 함수를 사용할 수 있습니다.
+        - distance는 두 벡터간의 거리를 의미, Distance를 사용하면 벡터간의 유사도를 계산하여 비교
 ```
 const openai = require('openai');
 const { cosine } = require('calculate-cosine-similarity');
