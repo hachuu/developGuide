@@ -131,6 +131,17 @@ console.log(`Most similar completion: ${completions.choices[mostSimilarIndex].te
 - Prefer finish_reason == "stop"
     => 모델이 가능한한 "stop" 이유로 대화를 종료하도록 하는 조건을 의미합니다. 이는 모델이 대화를 지속할 수 있는 상황에서도 적절한 시점에서 대화를 종료하여 자연스러운 대화 흐름을         유지하고, 사용자의 경험을 향상시키기 위한 전략
 - resampling 3 or 5 times => 데이터에 대한 리샘플링이 많을 수록 정교해짐
+- text completion으로 chat형태처럼 completion을 연속해서 받고 싶은 경우 prompt의 형태 : 이전 completion 결과를 계속해서 이어서 사용하여 연속적인 completion을 수행 , 아래 예시
+```
+첫 번째 prompt: "나는 학교에 갔다"
+첫 번째 completion 결과: " 그리고 친구들을 만났다."
+
+두 번째 prompt: "나는 학교에 갔다 그리고 친구들을 만났다."
+두 번째 completion 결과: " 그리고 수업을 들었다."
+
+세 번째 prompt: "나는 학교에 갔다 그리고 친구들을 만났다 그리고 수업을 들었다."
+세 번째 completion 결과: " 그리고 집에 돌아왔다."
+```
 
 ## Chat Completion vs Text Completion
 ```
