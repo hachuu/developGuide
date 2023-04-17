@@ -228,3 +228,13 @@ path = Submodule
 url = https://github.com/chaconinc/DbConnector
 ```
 2. [submodule 읽어보기](https://great-developer.tistory.com/207)
+
+### unversioned files
+- Git이 추적하지 않는 파일입니다. Git은 파일을 추적하려면 해당 파일을 레포지토리에 추가해야 합니다.
+- Git에서 unversioned files는 두 가지 유형으로 나뉩니다.
+
+1. Untracked Files: 이전에 Git에 의해 추적되지 않은 새로운 파일입니다. 이 파일은 아직 Git 레포지토리에 추가되지 않았으므로, Git에서 관리되지 않습니다. 새로운 파일을 만들거나, 다운로드 받은 파일을 레포지토리에 추가하지 않았을 때, 해당 파일은 untracked files가 됩니다.
+
+2. Ignored Files: Git이 무시하는 파일입니다. Git은 .gitignore 파일에서 정의된 파일들을 무시합니다. .gitignore 파일에 추가된 파일들은 Git에 의해 추적되지 않습니다. 예를 들어, 로그 파일, 빌드 시스템 파일 등은 .gitignore 파일에 추가되어야 합니다.
+
+- 두 가지 경우에도, Git 명령어를 사용하여 파일을 추적하고, Git 레포지토리에 추가할 수 있습니다. untracked files는 git add 명령어를 사용하여 Git에 추가할 수 있으며, ignored files는 .gitignore 파일에서 삭제하거나, git add 명령어에서 --force 옵션을 사용하여 추가할 수 있습니다.
