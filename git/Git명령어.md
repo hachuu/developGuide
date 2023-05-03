@@ -2,6 +2,7 @@
 
 1. clone 
 - git clone {url} => git repository clone
+- git clone {url} -b dev => git 특정 브랜치 clone
 
 2. remote
 - git remote –v 현재 원격 저장소 주소 확인
