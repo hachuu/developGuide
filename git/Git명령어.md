@@ -71,6 +71,22 @@ git branch -D estimate // 병합되지 않은 branch의 경우
 git fetch -p origin // remote 서버 브랜치 정보를 다시 가져옴
 ```
 
+15. git 롤백 : reset
+
+* 원하는 git version으로 되돌릴때
+  - reset 만 들어간 경우
+  ```
+  git reset {version} => 그때 당시의 commit 상태의 소스로 돌아감
+  git reset HEAD^ => 가장 최근의 commit 취소 (HEAD^는 git commit id 번호)
+  git push => source가 자동 머지되어 conflict날 때도 있는데 수기로 머지해야하고, version 전의 history는 유지하면서 현재 소스 상태만 바꿔줌
+  ```
+  - reset --hard 까지 한 경우
+  ```
+  git reset --hard HEAD => 원격 저장소 마지막 commit 상태로 history까지 되돌림
+  git reset --hard {version}
+  git push -f origin master => 현재 소스 기준으로 강제 Push
+  ```
+
 
 ## git commit 과정
 
