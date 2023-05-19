@@ -34,3 +34,6 @@ module.exports = withTypescript(withLess({
 3. _error.js
 
 Error 처리 공통으로 할 수 있음
+
+
+4. API CORS 에러 나는 경우
