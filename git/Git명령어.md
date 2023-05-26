@@ -9,6 +9,7 @@
 - git remote add origin {url}  // 현재 경로에 원격 git 주소 연결
 - git remote add 
 - git remote set-url {url}  // url 변경
+- ***git remote update origin --prune*** **로컬 원격 브랜치로 업데이트**
 
 3. branch
 - git branch {branchName} 브랜치 생성
