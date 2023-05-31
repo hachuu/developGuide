@@ -9,3 +9,7 @@
 - 해당 작업은 mac에서 진행하여 windows에서 진행하는 경우 chmod 400 명령어나 ssh 명령어가 작업이 되지 않는다.
 - 기존 파일 속성에서 사용 권한 -> 속성 권한 사용하지 않음 후 현재 사용자만 등록하여 읽기 및 실행 & 읽기만 선택 후 작업
 - [출처](https://tipsoda.com/2600)
+
+### github actions와 aws 연동
+- aws 인스턴스 생성 방법 여기서 사용자 추가에서 막혔다가 추가로 작업할 수 있었던 링크
+- [출처](https://velog.io/@arthur/AWS-EC2%EC%99%80-Github-Actions%EB%A1%9C-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EB%B0%B0%ED%8F%AC%ED%95%B4%EB%B3%B4%EA%B8%B0-3)
