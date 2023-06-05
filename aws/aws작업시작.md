@@ -26,3 +26,8 @@ vi codedeploy-agent.log
 - InstanceAgent::Plugins::CodeDeployPlugin::CommandPoller: Missing credentials - please check if this instance was started with an IAM instance profile
 - [출처](https://sarc.io/index.php/aws/1327-tip-codedeploy-missing-credentials)
 - sudo service codedeploy-agent restart 실행 후 sudo service codedeploy-agent status 실행해서 active인지 확인 후 배포 진행
+
+### root 비밀번호 생성
+```
+sudo passwd root
+```
