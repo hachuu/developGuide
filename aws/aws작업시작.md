@@ -31,3 +31,16 @@ vi codedeploy-agent.log
 ```
 sudo passwd root
 ```
+
+### DNS 접속안되는 경우 해결 방법
+- 아직 시도 중 ㅜㅜ
+1. su root 계정 접속
+2. iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+3. service iptables save (설정 저장 명령어 인데 저장이 안되어서 다른 것으로 진행함) [출처](https://steady-snail.tistory.com/153)
+3-1. ubuntu 버전문제로 위 명령어가 실행안되는 경우 아래처럼 진행
+```
+apt-get install iptables-persistent
+netfilter-persistent save
+netfilter-persistent reload
+```
+4. 접속해보기 
