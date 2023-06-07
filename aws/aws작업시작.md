@@ -1,6 +1,16 @@
 # AWS + Nextjs + GitHub 연동
 
-## AWS 세팅
+## AWS 세팅 순서
+1. 인스턴스 생성
+2. 인스턴스에 IAM 설정
+3. IAM > 역할 생성 > 권한 추가
+4. 인스턴스 > 작업 > 보안 > IAM 역할 수정 > 생성한 IAM 연결
+5. s3생성
+6. 버킷 생성
+7. IAM > 사용자 정책 연결
+8. github에서 Secrets key 연결
+
+## AWS 세팅하는 방법
 ### aws 인스턴스 생성 방법
 - [출처](https://velog.io/@hajun-ryu/EC2-Github-Actions%EB%A1%9C-Next.js-%EB%B0%B0%ED%8F%AC-%EB%B0%8F-%EC%9E%90%EB%8F%99%ED%99%94CICD-1%ED%8E%B8-AWS-EC2-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EC%84%A4%EC%A0%95)
 - ec2 인스턴스 생성하는 방법 순차대로 진행하면됨
@@ -44,3 +54,5 @@ netfilter-persistent save
 netfilter-persistent reload
 ```
 4. 접속해보기 
+- s3 버킷에서 정적 파일 업로드 후 권한 생성 작업 
+- [출처](https://weekwith.tistory.com/entry/Nextjs-AWS-S3%EB%A5%BC-%ED%86%B5%ED%95%9C-%EC%A0%95%EC%A0%81-%EC%9B%B9-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%B0%B0%ED%8F%AC-%EB%B0%8F-GitHub-Actions%E1%84%85%E1%85%B3%E1%86%AF-%E1%84%90%E1%85%A9%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB-CICD)
