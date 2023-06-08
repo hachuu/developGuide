@@ -56,3 +56,8 @@ netfilter-persistent reload
 4. 접속해보기 
 - s3 버킷에서 정적 파일 업로드 후 권한 생성 작업 
 - [출처](https://weekwith.tistory.com/entry/Nextjs-AWS-S3%EB%A5%BC-%ED%86%B5%ED%95%9C-%EC%A0%95%EC%A0%81-%EC%9B%B9-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%B0%B0%ED%8F%AC-%EB%B0%8F-GitHub-Actions%E1%84%85%E1%85%B3%E1%86%AF-%E1%84%90%E1%85%A9%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB-CICD)
+
+### Link
+- [EC2 인스턴스 배포](https://hojung-testbench.tistory.com/entry/AWS-EC2-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B0%B0%ED%8F%AC-NextJS-Express)
+- [nodejs EC2 배포](https://velog.io/@whrod/Node.js-EC2-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0)
+- [인스턴스 삭제](https://velog.io/@jch9537/AWS-EC2-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%82%AD%EC%A0%9C)
