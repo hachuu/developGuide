@@ -128,6 +128,16 @@ git fetch -p origin // remote 서버 브랜치 정보를 다시 가져옴
 
 ### git merge
 - git merge feature/{기능이름}
+- merge 명령어
+```
+ // feature/{name} 브랜치 내용을 main 브랜치로 머지하는 작업
+ git switch main
+ git merge feature/{name}
+ git log (HEAD 찾기)
+ git status (현재 상태 체크: 커밋만 되어있는 상태) 
+ git push origin main
+
+```
 - [git merge rebase 차이](https://firework-ham.tistory.com/12)
 
 1. rebase? 두 개의 공통 Base를 가진 Branch에서 한 Branch의 Base를 다른 Branch의 최신 커밋으로 branch의 base를 옮기는 작업
