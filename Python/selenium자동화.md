@@ -8,7 +8,8 @@
    - 경로 : C:\Users\KTDS\AppData\Local\Programs\Python\Python311\Scripts
    - 다시 시작 후 pip 명령어 실행 => 정상 동작
 3. chromedriver 다운로드
-  - https://sites.google.com/a/chromium.org/chromedriver/downloads
+  - https://sites.google.com/a/chromium.org/chromedriver/downloads : 9x version 이하
+  - https://sites.google.com/chromium.org/driver/downloads?authuser=0 : 현재 114 version 
 4. 소스 구현
 ```
 from selenium import webdriver
