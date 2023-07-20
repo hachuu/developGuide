@@ -11,6 +11,8 @@
   - https://sites.google.com/a/chromium.org/chromedriver/downloads : 9x version 이하
   - https://sites.google.com/chromium.org/driver/downloads?authuser=0 : 현재 114 version 
 4. 소스 구현
+5. venv\Scripts\activate
+6. debug start
 ```
 from selenium import webdriver
 from selenium.webdriver.common.by import By
