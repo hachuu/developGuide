@@ -1,22 +1,36 @@
 # Develop Guide Reference
 
-## Front-End 개발 가이드
-- 2022.08.12 가이드 정리
+## 개발 가이드 Index
+- Front-End 개발 가이드
   1. [html](https://github.com/hachuu/developGuide/blob/main/html/html.md)
-  2. [css](https://github.com/hachuu/developGuide/tree/main/CSS)
+  2. [CSS](https://github.com/hachuu/developGuide/tree/main/CSS)
   3. 크로스브라우징
-  4. [javascript](https://github.com/hachuu/developGuide/tree/main/javascript)
+  4. language
+    - [javascript](https://github.com/hachuu/developGuide/tree/main/javascript)
     - [typescript](https://github.com/hachuu/developGuide/tree/main/typescript)
+    - [python](https://github.com/hachuu/developGuide/tree/main/Python)
   5. [http](https://github.com/hachuu/developGuide/blob/main/http/http.md)
   6. tool(git, webpack, babel, eslint, npm...)
   7. framework
     - [Angular](https://github.com/hachuu/developGuide/tree/main/Angular)
     - [React](https://github.com/hachuu/developGuide/tree/main/React)
+    - [next](https://github.com/hachuu/developGuide/tree/main/next)
     - [vue](https://github.com/hachuu/developGuide/tree/main/vue)
+    - [svelte](https://github.com/hachuu/developGuide/tree/main/svelte)
   8. tdd
-  9. 알고리즘 / 자료구조
-  10. [cs](https://github.com/hachuu/developGuide/blob/main/cs/cs.md)
-  11. [MPA VS SPA](https://docs.astro.build/en/concepts/mpa-vs-spa/)
+  9. [알고리즘 / 자료구조](https://github.com/hachuu/developGuide/tree/main/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
+  10. [MPA VS SPA](https://docs.astro.build/en/concepts/mpa-vs-spa/)
+- Back-End + Server 개발 가이드
+  1. [cs](https://github.com/hachuu/developGuide/blob/main/cs/cs.md)
+  2. [aws](https://github.com/hachuu/developGuide/tree/main/aws)
+  3. [cicd](https://github.com/hachuu/developGuide/tree/main/cicd)
+  4. [DB](https://github.com/hachuu/developGuide/tree/main/db)
+  5. [NginX](https://github.com/hachuu/developGuide/tree/main/NginX)
+  6. [Jenkins](https://github.com/hachuu/developGuide/tree/main/Jenkins)
+  7. [Linux](https://github.com/hachuu/developGuide/tree/main/Linux)
+  8. [SSO](https://github.com/hachuu/developGuide/tree/main/SSO)
+  9. [sql](https://github.com/hachuu/developGuide/tree/main/sql)
+
   
 ## 기술 spec study 목록 (실질적 업무에 관련한)(2022/11/14~)
 - [vuejs (2,3)](https://github.com/hachuu/developGuide/tree/main/vue)
@@ -33,6 +47,7 @@
 - [Jenkins](https://github.com/hachuu/developGuide/tree/main/Jenkins)
 - [Web Develop](https://code-lab1.tistory.com/199)
 - [sqld](https://github.com/hachuu/developGuide/blob/main/sql/%5B%EC%A0%95%EB%A6%AC%5D%20SQLD.pdf)
+- [aws](https://github.com/hachuu/developGuide/tree/main/aws)
 
 ## [각종 Setting 문서 정리](https://github.com/hachuu/developGuide/tree/main/%EA%B0%9C%EB%B0%9C%EC%84%B8%ED%8C%85)
 
