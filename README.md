@@ -35,7 +35,7 @@
 ## 기술 spec study 목록 (실질적 업무에 관련한)(2022/11/14~)
 - [vuejs (2,3)](https://github.com/hachuu/developGuide/tree/main/vue)
 - [Linux](https://github.com/hachuu/developGuide/tree/main/Linux)
-- spring boot
+- [spring boot](https://github.com/hachuu/developGuide/tree/main/%EA%B0%9C%EB%B0%9C%EC%84%B8%ED%8C%85)
 - [NginX](https://github.com/hachuu/developGuide/tree/main/NginX)
 - [Python](https://github.com/hachuu/developGuide/tree/main/Python)
 - [Jenkins](https://github.com/hachuu/developGuide/tree/main/Jenkins)
