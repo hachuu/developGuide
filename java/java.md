@@ -60,6 +60,27 @@ public class Main {
 
 ```
 
+## static 변수처리
+- envrionment 변수 가져오는 방법 (static 파일에서)
+```
+@Component
+public class Sample.java implements EnvironmentAware {
+
+	// do something
+	@Override
+	public void setEnvironment(Environment environment) {
+		staticKey = environment.getProperty("something.something"); // application.yml에 설정된 값
+	}
+
+}
+```
+- 환경변수에 final 을 설정할 수 없는 이유
+- final자체가 마지막으로 주입이 불가능한데 @value 어노테이션은 설정한 값을 다시 주입하는 개념임 => 불가능
+```
+    @Value("${something.something}")
+    private String something; //
+```
+
 ### java CompletableFuture.runAsync
 - Thread로 구현하지 않아도 java 비동기식 호출 가능
 - [Java - CompletableFuture 사용 방법](https://codechacha.com/ko/java-completable-future/)
