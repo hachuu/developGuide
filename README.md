@@ -40,6 +40,7 @@
 - [Python](https://github.com/hachuu/developGuide/tree/main/Python)
 - [Jenkins](https://github.com/hachuu/developGuide/tree/main/Jenkins)
 - [adb connect 명령어](https://treejsh.tistory.com/entry/adb-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%AA%A8%EC%9D%8C)
+- [gradle](https://github.com/hachuu/developGuide/blob/main/gradle/gradle.md)
 ---
 ## TIL 요즘 
 - [Deep Learning](https://github.com/hachuu/developGuide/tree/main/deepLearning) : chat GPT의 관심사가 높아지면서 딥러닝 관련 기술에도 관심을 가지고 있다.
