@@ -1,4 +1,5 @@
 # gradle 관련 Ref
+- [gradle 공식 유저 가이드](https://docs.gradle.org/current/userguide/userguide.html)
 - [gradle-dependencies](https://kwonnam.pe.kr/wiki/gradle/dependencies)
 - [declaring dependencies](https://docs.gradle.org/current/userguide/declaring_dependencies.html)
 
