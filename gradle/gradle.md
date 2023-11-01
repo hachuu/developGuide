@@ -48,6 +48,15 @@
     exclude group: "org.apache.tomcat.embed", module: "tomcat-embed-el"
   }
   ```
+  - org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ServletWebServerApplicationContext due to missing ServletWebServerFactory bean.
+  1. application.yml에 해당 변수 추가함
+    - wildfly run은 문제 없는데 bootRun시 에러나는 문제로 아래 변수 추가 하면 run은 되지만 서버 설정 ex) db, port 이런 설정이 다 작업이 안돼서 더 봐야할 듯
+  ```
+  spring:
+    profiles: prod
+    main:
+      web-application-type: none
+  ```
 ---
 - [spring-boot-library 1.5.22 version](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot/1.5.22.RELEASE)
 - 요약 : 공부하다 알게 된 점
