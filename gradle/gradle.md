@@ -3,6 +3,20 @@
 - [gradle-dependencies](https://kwonnam.pe.kr/wiki/gradle/dependencies)
 - [declaring dependencies](https://docs.gradle.org/current/userguide/declaring_dependencies.html)
 
+- **`gradle bootRun`** 및 WildFly 서버로 Spring Boot 애플리케이션을 실행하는 주요 차이점
+  1. 내장 웹 서버 vs. 외부 애플리케이션 서버:
+      - **`gradle bootRun`**: **`gradle bootRun`** 명령을 사용하면 Spring Boot 애플리케이션을 내장 웹 서버 (일반적으로 Tomcat, Jetty 또는 Undertow)에서 실행합니다. 즉, 애플리케이션과 웹 서버가 함께 패키지되어 있으며 독립 실행 가능한 JAR 파일 또는 WAR 파일로 실행됩니다.
+      - WildFly Server: WildFly (이전에는 JBoss)와 같은 외부 애플리케이션 서버를 사용하는 경우 Spring Boot 애플리케이션은 외부 서버에서 실행됩니다. 애플리케이션은 서버의 컨테이너 내에서 실행되며 서버의 관리 및 설정이 필요합니다. 애플리케이션은 서버에 배포된 WAR 파일로 실행됩니다.
+  2. 배포 및 구성:
+      - **`gradle bootRun`**: Spring Boot의 내장 웹 서버를 사용하면 애플리케이션을 JAR 파일로 패키지하고 간단하게 실행할 수 있습니다. 애플리케이션의 구성은 애플리케이션 소스 코드와 함께 제공되며 **`application.properties`** 또는 **`application.yml`** 파일을 통해 설정됩니다.
+      - WildFly Server: 외부 애플리케이션 서버를 사용하는 경우 애플리케이션을 WAR 파일로 패키지하고 서버에 배포해야 합니다. 서버의 설정 및 구성은 서버 관리자 또는 설정 파일을 통해 수행됩니다.
+  3. 환경 및 운영:
+      - **`gradle bootRun`**: **`gradle bootRun`**을 사용하면 개발 및 로컬 테스트 목적으로 애플리케이션을 간단히 실행할 수 있습니다. 주로 개발 환경에서 사용됩니다.
+      - WildFly Server: 외부 애플리케이션 서버를 사용하면 애플리케이션을 본격적인 프로덕션 환경에서 실행할 수 있습니다. 서버 환경에서 대규모 및 실제 운영용 애플리케이션을 호스팅하는 데 사용됩니다.
+  4. 서버 종속성:
+      - **`gradle bootRun`**: Spring Boot의 내장 웹 서버는 애플리케이션과 함께 제공되므로 별도의 웹 서버 설치나 구성이 필요하지 않습니다.
+      - WildFly Server: 외부 애플리케이션 서버를 사용하려면 해당 서버 (예: WildFly)를 설치하고 구성해야 합니다.
+
 ---
 - [spring-boot-library 2.5.15 version](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot/2.5.15)
 - 요약 : 오류 해결하면서 발견한 점
@@ -56,6 +70,18 @@
     profiles: prod
     main:
       web-application-type: none
+  ```
+  2. web-application-type: none으로 설정하는 경우 tomcat server를 띄우지못해 설정은 servlet으로 하고 tomcat을 띄우는 경우 configurations에서 tomcat을 exclude하는 로직을 지워야함!
+  ```
+  //configurations.all {
+  //	exclude group: "org.springframework.boot", module: "spring-boot-starter-tomcat"
+  //	exclude group: "org.apache.tomcat.embed", module: "tomcat-embed-el"
+  //}
+
+  spring:
+  profiles: prod
+  main:
+    web-application-type: servlet
   ```
 ---
 - [spring-boot-library 1.5.22 version](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot/1.5.22.RELEASE)
