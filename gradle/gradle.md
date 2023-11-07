@@ -19,6 +19,8 @@
 
 ---
 - [spring-boot-library 2.5.15 version](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot/2.5.15)
+- dependencies 종속성에서는 implementation, runtimeOnly, testImplementation, testRuntimeOnly, compileOnly, annotationProcessor, kapt, providedCompile, providedRuntime, 그리고 사용자 정의 구성(configuration)을 사용
+  - Gradle 7.0 버전부터 compile 및 runtime과 같은 구성(configuration) 이름은 더 이상 사용되지 않음
 - 요약 : 오류 해결하면서 발견한 점
   - slf4j-jboss-logmanager-1.1.0.Final.jar LoggerFactory is not a Logback LoggerContext but Logback is on the classpath.   
   ```
@@ -82,6 +84,11 @@
   profiles: prod
   main:
     web-application-type: servlet
+  ```
+  3. configurations.all 은 모든 종속성 구성에 대해 적용되기 때문에 스위치 형태로 적용할 수 없음 => providedRuntime로 설정하는 것으로 최종 수정하고 configurations에 설정되어있는거 모두 삭제 함
+  ```
+  providedRuntime group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.5.15'
+	providedRuntime group: 'org.apache.tomcat.embed', name: 'tomcat-embed-el'
   ```
 ---
 - [spring-boot-library 1.5.22 version](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot/1.5.22.RELEASE)
