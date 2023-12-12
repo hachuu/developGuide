@@ -532,6 +532,24 @@ async downloadFile(fileUrl: string) {
   }
 ```
 
+### string to unicode / unicode to string
+- '한'.charCodeAt(0).toString(16);
+- '글'.charCodeAt(0).toString(16);
+  ```
+  charToUnicode = function(str) {
+    if (!str) return false; // Escaping if not exist
+    var unicode = '';
+    for (var i = 0, l = str.length; i < l; i++) {
+      unicode += '\\' + str[i].charCodeAt(0).toString(16);
+    };
+    return unicode;
+  }
+
+  charToUnicode('한글'); // "\d55c\ae00"
+  ```
+- String.fromCharCode(parseInt('\d55c',16));
+
+
 ### 출처
 1. [[Javascript ] 프로토타입 이해하기](https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67)
 2. [출처 poiemaweb](https://poiemaweb.com/js-prototype)
@@ -539,4 +557,4 @@ async downloadFile(fileUrl: string) {
 4. [[Javascript] Symbol 에 대해서](https://medium.com/@hyunwoojo/javascript-symbol-%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-6aa5903fb6f1)
 5. [이메일, 이름 *처리](https://okayoon.tistory.com/entry/%EC%9D%B4%EB%A9%94%EC%9D%BC-UI%EB%8B%A8-%EB%B3%B4%EC%95%88%ED%95%98%EA%B8%B0)
 6. [url로 파일 다운로드](https://stackoverflow.com/questions/3916191/download-data-url-file)
-7. 
+7. [unicode string 변환](https://webisfree.com/2018-07-20/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-unicode-string%EC%9C%BC%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EA%B1%B0%EB%82%98-%EC%95%8C%EC%95%84%EB%82%B4%EB%8A%94-%EB%B0%A9%EB%B2%95)
