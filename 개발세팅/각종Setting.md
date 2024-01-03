@@ -1,5 +1,10 @@
 # Setting 정리 문서
 
+## Jetbrain intellij 세팅
+- offline intellij 세팅 방법
+  - https://account.jetbrains.com/licenses -> Download a code for offline activation -> 파일 다운로드 후 토큰 정보 복사
+  - intellij -> help -> register plugins...
+
 ## VSCode 세팅
 [TSLint](http://ngmsoftware.com/bbs/board.php?bo_table=study&wr_id=266&sca=Error&sst=wr_datetime&sod=desc&sop=and&page=1)
 => eslint 변환 작업
