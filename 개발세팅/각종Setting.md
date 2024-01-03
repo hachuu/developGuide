@@ -71,6 +71,14 @@ rmdir node_modules /s /q  && npm install --legacy-peer-deps
 [맥 세팅 작업중...](https://github.com/hachuu/developGuide/blob/main/MacSetting.md)
 [GitHub ssh key 생성하고 등록하고 사용하기](https://syung05.tistory.com/20)
 * window ssh key 생성 [Use SSH key authentication](https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops)
+- window (powershell)
+```
+ssh-keygen
+// 생성된 폴더 찾아가서
+cat .\id_rsa.pub
+// ssh-rsa로 시작하는 전문 복사
+```
+- mac?
 ```
 ~/.ssh
 ssh-keygen -C "jamal@fabrikam.com"
