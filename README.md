@@ -20,6 +20,7 @@
   8. tdd
   9. [알고리즘 / 자료구조](https://github.com/hachuu/developGuide/tree/main/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
   10. [MPA VS SPA](https://docs.astro.build/en/concepts/mpa-vs-spa/)
+  11. [성능 개선][https://github.com/hachuu/developGuide/tree/main/UX개선](https://github.com/hachuu/developGuide/blob/main/UX%EA%B0%9C%EC%84%A0/%08README.md)
 - Back-End + Server 개발 가이드
   1. [cs](https://github.com/hachuu/developGuide/blob/main/cs/cs.md)
   2. [aws](https://github.com/hachuu/developGuide/tree/main/aws)
@@ -52,24 +53,6 @@
 
 ## [각종 Setting 문서 정리](https://github.com/hachuu/developGuide/tree/main/%EA%B0%9C%EB%B0%9C%EC%84%B8%ED%8C%85)
 
-## SEO canonical 기존 link rel 삭제, 새로 등록하는 script
-```
-const headerDoc = this.document.head;
-const bodyDoc = this.document.body;
-for (let i = 0; i < bodyDoc.children.length; i++) {
-  if (bodyDoc.children[i].localName === 'link' && bodyDoc.children[i].rel === 'canonical') bodyDoc.children[i].remove();
-}
-for (let i = 0; i < headerDoc.children.length; i++) {
-  if (headerDoc.children[i].localName === 'link' && headerDoc.children[i].rel === 'canonical') headerDoc.children[i].remove();
-}
-
-const domain = 'www....';
-
-var link = document.createElement('link');
-link.setAttribute('rel', 'canonical');
-link.setAttribute('href', 'https://' + domain + window.location.pathname);
-document.head.appendChild(link);
-```
 
 ## 개발자도구 lighthouse-SEO
 
@@ -112,7 +95,7 @@ document.head.appendChild(link);
 - Webpack = (Grunt|Gulp) + Browserify(Node.js기반 javascript code를 브라우저 환경에서도 실행 가능하도록 해줌)
 - Webpack = 모듈 번들러 / Grunt vs Gulp = task runners
 
-### webpack
+### ejected webpack
 - An ejected project cannot use the build command anymore.
 => 해결 angular-cli.json 에서 다음 기입
 ```
@@ -147,37 +130,7 @@ document.head.appendChild(link);
 [React 정리](https://github.com/hachuu/developGuide/blob/main/React/React.md)
 [Hook 정리](https://github.com/hachuu/developGuide/blob/main/React/hook.md)
 
-## Firebase 배포
-```
-npm run build
-firebase init hosting
-firebase deploy --only hosting
-firebase serve --only hosting
-```
-```
-yarn build
-firebase deploy
-```
-[Firebase로 배포하기(yarn 명령어)](https://velog.io/@mygomi/Firebase%EB%A1%9C-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0yarn-%EB%AA%85%EB%A0%B9%EC%96%B4)
 
-### Firebase 규칙 수정
-- 읽기 데이터 수정
-- [출처](https://fomaios.tistory.com/entry/Firebase-%EB%B3%B4%EC%95%88-%EA%B7%9C%EC%B9%99%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90)
-  
-## Azure 배포
-### Storage, CDN 구조
-- Storage 실 소스가 반영
-  1. 스토리지 생성
-  2. 정적 웹 사이트 사용 활성화 => 엔드포인트 활성화
-- CDN 도메인 변경...
-  1. 프로필 생성
-- Storage - CDN 연결 작업
-  1. 엔드포인트 추가
-  2. 스토리지 생성에서 생긴 엔드포인트 연결
-  
-## host 파일 경로
-- C:\Windows\System32\drivers\etc
-  
 ## jquery => javascript
 - [JQUERY TO JAVASCRIPT](http://www.workversatile.com/jquery-to-javascript-converter)
   
@@ -194,11 +147,7 @@ firebase deploy
 [React build 시 sourcemap 제거하기](https://velog.io/@racoon/React-build-%EC%8B%9C-sourcemap-%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0)
   2. node --max-old-space-size=???? : 힙 메모리 부족시 
   
-## device나 mobile/pc 판별
-```
-  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-```
-  
+
 ## Static web app 설정
 ```
   // 
@@ -211,43 +160,6 @@ firebase deploy
     }
   ]
 }
-```
-## How do you explicitly set a new property on `window` in TypeScript?
-1. 방법1
-```
-declare global {
-  interface Window { MyNamespace: any; }
-}
-
-window.MyNamespace = window.MyNamespace || {};
-```
-2. 방법2
-```
-    (window as any).tradlinx = this;
-    (window as any).tradlinx.app = app;
-```
-
-## IE => edge로 연결
-```
-<script>
-  var agent = navigator.userAgent.toLowerCase();
-  if ( (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
-    window.location = 'microsoft-edge:' + window.location;
-    setTimeout(function () {
-    //window.close();
-    window.open('','_self').close();
-  }, 1000);
-  }
-</script>
-```
-## javascript 퍼포먼스 속도 체크하기
-```
-const t0 = performance.now()
-for (let i = 0; i < array.length; i++) {
-  // some code.......
-}
-const t1 = performance.now()
-console.log(t1 - t0, 'milliseconds')
 ```
 
 ## 종합 개발 
@@ -287,63 +199,6 @@ console.log(t1 - t0, 'milliseconds')
 11. [Azure 배포](https://helloblog.net/azure-devops/)
 12. [[웹폰트] 올바른 방법으로 로딩하자. - 사이트 로딩 속도 개선](https://web-atelier.tistory.com/43)
 13. [웹브라우저에서 알림](https://dororongju.tistory.com/125)
-14. [mac에서 input file할때 한글 깨짐 현상](https://gemimi.tistory.com/43)
-  ```
-  fileName = Normalizer.normalize(fileName, Normalizer.Form.NFC)
-  ```
----
-
-```
-ngAfterViewInit() {
-    window.onpageshow = (event) => {
-      if ( event.persisted || (window.performance && window.performance.navigation.type == 2)) {
-        this.loginForm.reset();
-      }
-    }
-  }
-```
-15. [아이폰 사파리 script ](https://orangeheeya.tistory.com/entry/%EB%AA%A8%EB%B0%94%EC%9D%BC-%EC%95%84%EC%9D%B4%ED%8F%B0-%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C%EB%B3%B4%EA%B8%B0)
-
-16. frontend
-```
-  a tag에서 keyup.enter 이벤트는 (click)과 동일한 이벤트로 인지하여 둘다 선언하는 경우 이벤트가 중복되어 사용됨
-
-  => (keyup.enter)를 삭제 해줘야함
-```
-
-17. HTML <slot> Tag
-❮Reference ❯
-
-Example
-The template element holds HTML code without displaying it:
-
-<template>
-  <div>Name:
-    <slot name="username"></slot>
-  </div>
-  <div>Birthday:
-    <slot name="birthday"></slot>
-  </div>
-</template>
-Try it Yourself »
 
 
-18. 성능체크 (https://jsbench.me/)
-19. shift+enter check
-```
-function handleEnter(evt) {
-    if (evt.keyCode == 13 && evt.shiftKey) {
-        if (evt.type == "keypress") {
-        }
-        evt.preventDefault();
-    }
-}
-```
-20. textarea 현재 커서의 위치를 찾는다
-```
-  // 입력받은 @의 index를 찾는다.
-  // 현재 커서의 위치를 찾는다.
-  // @의 위치와 커서의 위치를 비교한다.
-  // @의 위치가 커서의 위치보다 작으면 자동완성을 띄운다.
-  this.indexOfAt = event.target.selectionStart;
-```
+
