@@ -31,6 +31,19 @@
 
 5. [여기서부터](https://poiemaweb.com/html5-tag-basic)
 
+6. HTML <slot> Tag
+- Example : The template element holds HTML code without displaying it:
+```
+<template>
+  <div>Name:
+    <slot name="username"></slot>
+  </div>
+  <div>Birthday:
+    <slot name="birthday"></slot>
+  </div>
+</template>
+```
+
 ## HTMLAudioElement
 - onEnded : 음원이 끝나는 경우 event
 - ontimeupdate : time update 될 때 마다!
