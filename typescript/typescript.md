@@ -134,3 +134,18 @@ implements는 여러개 사용 가능하다.
 implements는 설계 목적으로 구현 가능하다.
 implements한 클래스는 implements의 내용을 다 사용해야 한다.
 ```
+
+## How do you explicitly set a new property on `window` in TypeScript?
+1. 방법1
+```
+declare global {
+  interface Window { MyNamespace: any; }
+}
+
+window.MyNamespace = window.MyNamespace || {};
+```
+2. 방법2
+```
+    (window as any).tradlinx = this;
+    (window as any).tradlinx.app = app;
+```
