@@ -1,3 +1,6 @@
+# 정리 잘 되어있는 링크 공유
+- [링크](https://www.heropy.dev/p/PcUkdT?fbclid=IwZXh0bgNhZW0CMTEAAR1DBtJfVWU5MMgvq9SEzBiSQjPxMMdmWQl-zwG4jvBEPdtRV7YueElKitQ_aem_AeFxQGL3_eAQ3-FNdiohxC94_mxagbVisfxGqXydSFQjFl2DLkYlNome-gRwP8eNXZqoO9uY0DoGk3FT2PC_upbM&mibextid=K35XfP)
+
 # 자주 쓰는 git 명령어 정리
 
 1. clone 
