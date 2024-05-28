@@ -71,8 +71,9 @@ jar {
 
 **[version upgrade 배치 변경 작업]**
 1. AbstractGboxBatch.java
-  1. 기존 batch 변경 작업으로 해당 파일 삭제 -> [작업 내용 정리](https://github.com/hachuu/developGuide/blob/main/java/%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B0%B0%EC%B9%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)
+  1. 기존 batch 변경 작업으로 해당 파일 삭제 -> [배치 변경 작업 내용 정리](https://github.com/hachuu/developGuide/blob/main/java/%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B0%B0%EC%B9%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)
 2. ScholasticTutorBatchService.java
+  1. CronTrigger 및 ApplicationRunner 배치 작업 -> [배치 변경 작업 내용 정리](https://github.com/hachuu/developGuide/blob/main/java/%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B0%B0%EC%B9%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)
 3. GboxBatchConfig.java
   1. batch 서버인지 판별하는 로직에서 isEmpty -> hasText로 변경 작업 (StringUtils.hasText)
     - 기존 null이거나 빈 문자열을 체크하는 isEmpty가 null, 비어 있지 않고, 실제 텍스트를 포함하는지 확인하는 hasText로 변경함.
@@ -91,16 +92,16 @@ if (!StringUtils.hasText(str)) {
 
 ## 인사이트 (이번 작업하면서 알게 되었던 것들...)
 1. gradle bootRun 및 WildFly 서버로 Spring Boot 애플리케이션을 실행하는 주요 차이점
-  1. 내장 웹 서버 vs. 외부 애플리케이션 서버:
+  - 내장 웹 서버 vs. 외부 애플리케이션 서버:
       - **`gradle bootRun`**: **`gradle bootRun`** 명령을 사용하면 Spring Boot 애플리케이션을 내장 웹 서버 (일반적으로 Tomcat, Jetty 또는 Undertow)에서 실행합니다. 즉, 애플리케이션과 웹 서버가 함께 패키지되어 있으며 독립 실행 가능한 JAR 파일 또는 WAR 파일로 실행됩니다.
       - WildFly Server: WildFly (이전에는 JBoss)와 같은 외부 애플리케이션 서버를 사용하는 경우 Spring Boot 애플리케이션은 외부 서버에서 실행됩니다. 애플리케이션은 서버의 컨테이너 내에서 실행되며 서버의 관리 및 설정이 필요합니다. 애플리케이션은 서버에 배포된 WAR 파일로 실행됩니다.
-  2. 배포 및 구성:
+  - 배포 및 구성:
       - **`gradle bootRun`**: Spring Boot의 내장 웹 서버를 사용하면 애플리케이션을 JAR 파일로 패키지하고 간단하게 실행할 수 있습니다. 애플리케이션의 구성은 애플리케이션 소스 코드와 함께 제공되며 **`application.properties`** 또는 **`application.yml`** 파일을 통해 설정됩니다.
       - WildFly Server: 외부 애플리케이션 서버를 사용하는 경우 애플리케이션을 WAR 파일로 패키지하고 서버에 배포해야 합니다. 서버의 설정 및 구성은 서버 관리자 또는 설정 파일을 통해 수행됩니다.
-  3. 환경 및 운영:
+  - 환경 및 운영:
       - **`gradle bootRun`**: **`gradle bootRun`**을 사용하면 개발 및 로컬 테스트 목적으로 애플리케이션을 간단히 실행할 수 있습니다. 주로 개발 환경에서 사용됩니다.
       - WildFly Server: 외부 애플리케이션 서버를 사용하면 애플리케이션을 본격적인 프로덕션 환경에서 실행할 수 있습니다. 서버 환경에서 대규모 및 실제 운영용 애플리케이션을 호스팅하는 데 사용됩니다.
-  4. 서버 종속성:
+  - 서버 종속성:
       - **`gradle bootRun`**: Spring Boot의 내장 웹 서버는 애플리케이션과 함께 제공되므로 별도의 웹 서버 설치나 구성이 필요하지 않습니다.
       - WildFly Server: 외부 애플리케이션 서버를 사용하려면 해당 서버 (예: WildFly)를 설치하고 구성해야 합니다.
 
@@ -116,10 +117,15 @@ if (!StringUtils.hasText(str)) {
       - 이것이 Wildfly와 같은 외부 서버에서 Spring Boot 애플리케이션을 실행할 때 필요한 설정 중 하나입니다.
 
 3. application.yml에서 context-path '/' 설정
-  1. 루트 컨텍스트 설정
-  2. 단일 애플리케이션 배포
+  - 루트 컨텍스트 설정
+    - context-path 설정은 애플리케이션의 URL 경로에서 루트 경로를 설정합니다.
+    - /로 설정하면 애플리케이션이 웹 서버의 루트 경로에서 시작됩니다. (예를 들어, 'http://localhost:8080/' 가 애플리케이션의 기본 URL이 됩니다.)
+  - 단일 애플리케이션 배포
+    - 이 설정은 단일 애플리케이션을 루트 컨텍스트에서 제공할 때 유용합니다.
+    - 특히, 마이크로서비스 아키텍처나 독립적으로 실행되는 애플리케이션에서는 루트 경로에서 애플리케이션을 제공하는 것이 일반적입니다.
+
 4. application.yml에서 spring.main.web-application-type: servlet설정
-  1. 서블릿 기반 웹 애플리케이션
-  - Spring Boot는 기본적으로 여러 유형의 웹 애플리케이션을 지원합니다. servlet, reactive, none 세 가지 유형이 있습니다. 여기서 servlet은 전통적인 서블릿 기반 웹 애플리케이션을 나타냅니다.
-  - spring.main.web-application-type: servlet은 애플리케이션이 서블릿 컨테이너(Tomcat, Jetty, Undertow 등)에서 실행되는 표준 서블릿 기반 웹 애플리케이션임을 명시합니다.
+  - 서블릿 기반 웹 애플리케이션
+    - Spring Boot는 기본적으로 여러 유형의 웹 애플리케이션을 지원합니다. servlet, reactive, none 세 가지 유형이 있습니다. 여기서 servlet은 전통적인 서블릿 기반 웹 애플리케이션을 나타냅니다.
+    - spring.main.web-application-type: servlet은 애플리케이션이 서블릿 컨테이너(Tomcat, Jetty, Undertow 등)에서 실행되는 표준 서블릿 기반 웹 애플리케이션임을 명시합니다.
 
