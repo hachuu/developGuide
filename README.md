@@ -31,6 +31,7 @@
   7. [Linux](https://github.com/hachuu/developGuide/tree/main/Linux)
   8. [SSO](https://github.com/hachuu/developGuide/tree/main/SSO)
   9. [sql](https://github.com/hachuu/developGuide/tree/main/sql)
+  10. [java](https://github.com/hachuu/developGuide/tree/main/java)
 
   
 ## 기술 spec study 목록 (실질적 업무에 관련한)(2022/11/14~)
