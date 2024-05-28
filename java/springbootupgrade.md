@@ -3,7 +3,7 @@
 
 ## 작업 요약
 - 사건 발단 : Logback 1.2.9 취약성 발견 => 업그레이드 필요
-- 이슈 : 오픈 소스 보안취약점 검사 이력을 진행 도중 logback 뿐만 아니라 spring boot 2.5.15, junit, apache tomcat에서도 취약점 검출됨
+- 이슈 : 오픈 소스 보안취약점 검사 이력을 진행 도중 logback 뿐만 아니라 spring boot 2.5.15, junit, apache tomcat에서도 취약점 검출됨
 - 해결 방안 : 취약점 오픈소스 SW를 올릴 겸, java 8에서 최대로 올릴 수 있는 spring boot version을 업데이트하면서 문제를 해결하자.
 - 추가 작업 : gradle version, wildfly version도 올려야하는 문제 발생
 - 작업 소요 시간 : 3~4개월 (스터디 및 실제 개발 2개월, 테스트 2개월, 진단 검수과정 1개월)
