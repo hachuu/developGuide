@@ -91,7 +91,7 @@ if (!StringUtils.hasText(str)) {
 ``` 
   
 
-### 이번 작업하면서 알게 되었던 것들
+## 인사이트 (이번 작업하면서 알게 되었던 것들...)
 1. gradle bootRun 및 WildFly 서버로 Spring Boot 애플리케이션을 실행하는 주요 차이점
   1. 내장 웹 서버 vs. 외부 애플리케이션 서버:
       - **`gradle bootRun`**: **`gradle bootRun`** 명령을 사용하면 Spring Boot 애플리케이션을 내장 웹 서버 (일반적으로 Tomcat, Jetty 또는 Undertow)에서 실행합니다. 즉, 애플리케이션과 웹 서버가 함께 패키지되어 있으며 독립 실행 가능한 JAR 파일 또는 WAR 파일로 실행됩니다.
