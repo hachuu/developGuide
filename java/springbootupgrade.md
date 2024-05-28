@@ -1,8 +1,6 @@
 # Spring boot upgrade
 ----------------------------------------------------------------------
 
-# 작업 내용
-
 ## 작업 요약
 - 사건 발단 : Logback 1.2.9 취약성 발견 => 업그레이드 필요
 - 이슈 : 오픈 소스 보안취약점 검사 이력을 진행 도중 logback 뿐만 아니라 spring boot 2.5.15, junit, apache tomcat에서도 취약점 검출됨
@@ -32,7 +30,7 @@
   ```
 
 ### 각 파일 별 수정 사항과 변경 이유
-[version upgrade 설정 부분 수정 사항]
+**[version upgrade 설정 부분 수정 사항]**
 1. build.gradle
   1. dependencies에 명시하는 compile, providedRuntime, testCompile, runtime이 implementation providedRuntime, runtimeOnly 등으로 변경
      
@@ -71,7 +69,7 @@ jar {
 7. gradle-wrapper.properties
   1. distributionUrl 의 target gradle version 변경
 
-[version upgrade 배치 변경 작업]
+**[version upgrade 배치 변경 작업]**
 1. AbstractGboxBatch.java
   1. 기존 batch 변경 작업으로 해당 파일 삭제 -> [작업 내용 정리](https://github.com/hachuu/developGuide/blob/main/java/%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B0%B0%EC%B9%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0.md)
 2. ScholasticTutorBatchService.java
