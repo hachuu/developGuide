@@ -92,3 +92,36 @@ if (!StringUtils.hasText(str)) {
   
 
 ### 이번 작업하면서 알게 되었던 것들
+1. gradle bootRun 및 WildFly 서버로 Spring Boot 애플리케이션을 실행하는 주요 차이점
+  1. 내장 웹 서버 vs. 외부 애플리케이션 서버:
+      - **`gradle bootRun`**: **`gradle bootRun`** 명령을 사용하면 Spring Boot 애플리케이션을 내장 웹 서버 (일반적으로 Tomcat, Jetty 또는 Undertow)에서 실행합니다. 즉, 애플리케이션과 웹 서버가 함께 패키지되어 있으며 독립 실행 가능한 JAR 파일 또는 WAR 파일로 실행됩니다.
+      - WildFly Server: WildFly (이전에는 JBoss)와 같은 외부 애플리케이션 서버를 사용하는 경우 Spring Boot 애플리케이션은 외부 서버에서 실행됩니다. 애플리케이션은 서버의 컨테이너 내에서 실행되며 서버의 관리 및 설정이 필요합니다. 애플리케이션은 서버에 배포된 WAR 파일로 실행됩니다.
+  2. 배포 및 구성:
+      - **`gradle bootRun`**: Spring Boot의 내장 웹 서버를 사용하면 애플리케이션을 JAR 파일로 패키지하고 간단하게 실행할 수 있습니다. 애플리케이션의 구성은 애플리케이션 소스 코드와 함께 제공되며 **`application.properties`** 또는 **`application.yml`** 파일을 통해 설정됩니다.
+      - WildFly Server: 외부 애플리케이션 서버를 사용하는 경우 애플리케이션을 WAR 파일로 패키지하고 서버에 배포해야 합니다. 서버의 설정 및 구성은 서버 관리자 또는 설정 파일을 통해 수행됩니다.
+  3. 환경 및 운영:
+      - **`gradle bootRun`**: **`gradle bootRun`**을 사용하면 개발 및 로컬 테스트 목적으로 애플리케이션을 간단히 실행할 수 있습니다. 주로 개발 환경에서 사용됩니다.
+      - WildFly Server: 외부 애플리케이션 서버를 사용하면 애플리케이션을 본격적인 프로덕션 환경에서 실행할 수 있습니다. 서버 환경에서 대규모 및 실제 운영용 애플리케이션을 호스팅하는 데 사용됩니다.
+  4. 서버 종속성:
+      - **`gradle bootRun`**: Spring Boot의 내장 웹 서버는 애플리케이션과 함께 제공되므로 별도의 웹 서버 설치나 구성이 필요하지 않습니다.
+      - WildFly Server: 외부 애플리케이션 서버를 사용하려면 해당 서버 (예: WildFly)를 설치하고 구성해야 합니다.
+
+2. gradle bootrun에서 providedRuntime로 tomcat을 선언 (cf. wildfly에서는 tomcat이 필요하지 않을까)
+  - 이유 :
+      - **`gradle bootRun`** 명령을 사용할 때 Tomcat이 필요한 이유는 Spring Boot 애플리케이션을 내장 서블릿 컨테이너로 실행하려는 것입니다. 
+      - Spring Boot는 기본적으로 내장 서블릿 컨테이너로 Tomcat을 사용하며, **`bootRun`** 명령은 내장 서블릿 컨테이너를 시작하고 애플리케이션을 실행하는 것을 의미합니다.
+      - Wildfly에서는 **`gradle bootRun`**을 사용하는 대신 Wildfly 애플리케이션 서버를 사용하므로 내장 서블릿 컨테이너가 필요하지 않습니다. 
+      - Wildfly는 Java EE (Enterprise Edition) 애플리케이션 서버로, Spring Boot의 애플리케이션을 Wildfly에 배포하고 실행할 때는 Wildfly의 서블릿 컨테이너를 사용합니다.
+      - 따라서 **`gradle bootRun`**을 실행하면 Spring Boot 애플리케이션은 Tomcat을 내장 서블릿 컨테이너로 사용하며, 배포 환경에 따라 다른 서블릿 컨테이너나 애플리케이션 서버를 사용할 수 있습니다. Wildfly에서 Spring Boot 애플리케이션을 실행하는 경우에는 Tomcat이 필요하지 않습니다.
+  - 동작 :
+      - Wildfly 같은 외부 애플리케이션 서버를 사용하는 경우, spring-boot-starter-tomcat과 tomcat-embed-el 의존성을 providedRuntime으로 추가하면 더 이상 내장 Tomcat이 포함되지 않고 애플리케이션 서버에서 실행될 것입니다.
+      - 이것이 Wildfly와 같은 외부 서버에서 Spring Boot 애플리케이션을 실행할 때 필요한 설정 중 하나입니다.
+
+3. application.yml에서 context-path '/' 설정
+  1. 루트 컨텍스트 설정
+  2. 단일 애플리케이션 배포
+4. application.yml에서 spring.main.web-application-type: servlet설정
+  1. 서블릿 기반 웹 애플리케이션
+  - Spring Boot는 기본적으로 여러 유형의 웹 애플리케이션을 지원합니다. servlet, reactive, none 세 가지 유형이 있습니다. 여기서 servlet은 전통적인 서블릿 기반 웹 애플리케이션을 나타냅니다.
+  - spring.main.web-application-type: servlet은 애플리케이션이 서블릿 컨테이너(Tomcat, Jetty, Undertow 등)에서 실행되는 표준 서블릿 기반 웹 애플리케이션임을 명시합니다.
+
