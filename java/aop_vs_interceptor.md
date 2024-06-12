@@ -1,7 +1,7 @@
 ### interceptor
 
 - Controller 클래스에서 메서드가 두 경로를 모두 처리하도록 설정할 수 있습니다.
-- 이렇게 하면 /api/audioBook/getPublisherListDev와 /api/audioBook/gapp/getPublisherListDev 경로로 들어오는 요청을 동일한 메서드에서 처리할 수 있습니다.
+- 이렇게 하면 /api/sample/getSomething /api/sample/catch/getSomething 경로로 들어오는 요청을 동일한 메서드에서 처리할 수 있습니다.
 ```java
 import org.springframework.web.bind.annotation.*;
 
