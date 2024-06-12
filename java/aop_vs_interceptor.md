@@ -20,7 +20,7 @@ public class SampleController {
 - Interceptor를 이용한 암호화 및 JWT 토큰 검증
 - 위의 설정을 기반으로 인터셉터를 사용하여 파라미터 복호화 및 JWT 토큰 검증을 수행할 수 있습니다. 이렇게 하면 두 경로 모두 동일한 검증 로직을 적용할 수 있습니다.
 
-RequestInterceptor.java
+- RequestInterceptor.java
 
 ```java
 import org.springframework.stereotype.Component;
