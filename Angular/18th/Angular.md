@@ -45,4 +45,29 @@ export class PhotoGalleryComponent {
 export class AlbumModule {}
 ```
 - 라우터 API는 단독 컴포넌트가 도입되면서 더 단순해졌습니다. 이제는 지연 로딩 하는 경우에 NgModule을 사용하지 않습니다.
-2. 
+
+2. @If / @else
+```typescript
+template: `
+  @if (isServerRunning) { ... }
+  @else { ... }
+`;
+```
+3. @for
+```
+template: `
+  @for (os of operatingSystems; track os.id) {
+    {{ os.name }}
+  }
+
+  @for (user of users; track user.id) {
+    <p>{{ user.name }}</p>
+  }
+`,
+```
+4. 
+5. 
+
+
+
+
