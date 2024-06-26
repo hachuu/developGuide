@@ -92,6 +92,17 @@ ssh-keygen -C "jamal@fabrikam.com"
 - 환경변수
 vi ~/.zshrc
 
+- 크롬 무한 로딩 해결
+```
+sudo rm -rf ~/Library/Application\ Support/Google/Chrome
+
+cd ~/Library/Application\ Support/Google
+
+sudo mkdir Chrome
+
+sudo chmod a+w Chrome
+```
+
 ## Setting Of Developement
 
 - java
