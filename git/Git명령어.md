@@ -128,6 +128,7 @@ git fetch -p origin // remote 서버 브랜치 정보를 다시 가져옴
 - git status
 - git log => 전체 log 확인 무한 enter 후 나가고 싶을 때 q를 누르면 됨
 - git log -g => 가장 최근 log 확인
+- git ls-files --stage {경로} => 캐시 상태 확인
 
 ### git merge
 - git merge feature/{기능이름}
