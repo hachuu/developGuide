@@ -134,6 +134,19 @@
 
 ## jquery => javascript
 - [JQUERY TO JAVASCRIPT](http://www.workversatile.com/jquery-to-javascript-converter)
+
+## npm registry 설정
+- 하게 된 이유 : 회사 pc에 레지스트리가 회사 전용 nexus로 연결되어 library install이 안됨
+- 방법 : 해당 repo에 레지스트리 연결해지 후 기본 값으로 설정
+- 현재 레지스트리 확인 : npm config get registry
+- 전역 레지스트리 변경 : npm config set registry https://registry.npmjs.org/
+- 디렉토리 기준으로 레지스트리 변경 ex) C:\dev\ang19에서 실행시
+  ```
+  cd C:\dev\ang19 // 경로 이동
+  echo registry=https://registry.npmjs.org/ > .npmrc // 해당 경로에 npmrc 파일 생성
+  type .npmrc // registry=https://registry.npmjs.org/ : 출력 확인
+  npm config get registry // 레지스트리 확인
+  ```
   
 ## npm 배포[출처](https://www.daleseo.com/js-npm-publish/)
 ```
