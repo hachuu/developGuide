@@ -2,10 +2,10 @@
 
 ## 개발 가이드 Index
 - [AI](https://github.com/hachuu/developGuide/blob/main/AI)
-- [Back-End + Server 개발 가이드](https://github.com/hachuu/developGuide/blob/main/Back-End)
-- [Cloud 개발 가이드](https://github.com/hachuu/developGuide/blob/main/Cloud)
-- [DevOps 개발 가이드](https://github.com/hachuu/developGuide/blob/main/DevOps)
-- [Front-End 개발 가이드](https://github.com/hachuu/developGuide/blob/main/Front-End)
+- [Back-End + Server](https://github.com/hachuu/developGuide/blob/main/Back-End)
+- [Cloud](https://github.com/hachuu/developGuide/blob/main/Cloud)
+- [DevOps](https://github.com/hachuu/developGuide/blob/main/DevOps)
+- [Front-End](https://github.com/hachuu/developGuide/blob/main/Front-End)
 ---
 ## TIL 요즘 
 
