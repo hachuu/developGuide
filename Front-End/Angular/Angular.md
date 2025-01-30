@@ -1,3 +1,8 @@
+# Angular 읽어보기 - 성능 최적화 
+[대규모 앵귤러 웹 애플리케이션 성능 최적화: 카카오 챗봇 관리자센터 사례](https://tech.kakao.com/posts/685)
+
+
+
 # 2022/11/17 Angular 15 version launch
 [Angular v15 is now available!](https://blog.angular.io/angular-v15-is-now-available-df7be7f2f4c8)
 
