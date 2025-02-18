@@ -109,6 +109,7 @@
   
   ```
   - function.json (Azure Timer Trigger 설정)
+  - 5분마다 실행..=> 출근 시각으로 변경 필요
   ```
   {
     "bindings": [
@@ -120,4 +121,25 @@
       }
     ]
   }
+```
+5. 환경 변수 설정 (local.settings.json)
+- Azure Functions의 Application Settings에서 환경 변수를 설정하세요.
+```
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "OPENWEATHER_API_KEY": "여기에_당신의_API_키",
+    "SLACK_WEBHOOK_URL": "여기에_당신의_Slack_Webhook_URL"
+  }
+}
+```
+6. 실행 및 배포
+- 로컬에서 실행
+```
+func start
+```
+- Azure Functions 배포
+```
+func azure functionapp publish <your-function-app-name>
 ```
