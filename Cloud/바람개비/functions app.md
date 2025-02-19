@@ -185,6 +185,58 @@ func start
     3. "Logs" 탭에서 실행 상태 확인
     4. Slack 알림이 정상적으로 도착하는지 체크
 
+
+
+9. API 응답 데이터
+
+```
+Weather data received:  {
+  coord: { lon: 127.1, lat: 37.4 },
+  weather: [ { id: 800, main: 'Clear', description: 'clear sky', icon: '01d' } ],
+  base: 'stations',
+  main: {
+    temp: 274.84,
+    feels_like: 272.59,
+    temp_min: 274.84,
+    temp_max: 274.84,
+    pressure: 1028,
+    humidity: 29,
+    sea_level: 1028,
+    grnd_level: 1015
+  },
+  visibility: 10000,
+  clouds: { all: 0 },
+  dt: 1739945400,
+  sys: {
+    type: 1,
+    id: 5509,
+    country: 'KR',
+  dt: 1739945400,
+  sys: {
+    type: 1,
+    id: 5509,
+    country: 'KR',
+  sys: {
+    type: 1,
+    id: 5509,
+    country: 'KR',
+    id: 5509,
+    country: 'KR',
+    country: 'KR',
+    sunrise: 1739916995,
+    sunset: 1739956479
+  },
+  timezone: 32400,
+  id: 1897000,
+  name: 'Seongnam-si',
+  cod: 200
+}
+```
+10. 결과
+
+![image](https://github.com/user-attachments/assets/c109a94b-e502-46c3-91b3-687134e50cad)
+
+    
 ---
 ### 코멘트
 - 로컬 실행은 비용 안듦 -> azure 배포 후 클라우드 환경에서 실행하는 경우 비용 발생
