@@ -151,3 +151,8 @@ For detailed output, run func with --verbose flag.
 ```
 func azure functionapp publish <your-function-app-name>
 ```
+
+---
+### 코멘트
+- Github Actions와 Event Grid 차이 비교
+- 소스관리를 azure에서 할 지 github에서 할 지 고민
