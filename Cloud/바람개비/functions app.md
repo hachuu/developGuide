@@ -113,18 +113,24 @@ func start
 
 ### 주의 사항
 - func start만 실행하면 아래 에러 발생
-```
-대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다. (127.0.0.1:d in ClientOptions.Retry or by configuring a custom retry policy in ClientOptions.RetryPolicy. (대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다.
-Worker process started and initialized.
+  1. func 인지 못하는 문제
+  ```
+  npm install -g azure-functions-core-tools@4 --unsafe-perm true
+  ```
 
-Functions:
-
-        WeatherCheckFunction: timerTrigger
-
-For detailed output, run func with --verbose flag.
-[2025-02-19T05:50:39.491Z] The listener for function 'Functions.WeatherCheckFunction' was unable to start.
-
-```
+  2. 연결 거부 문제
+  ```
+  대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다. (127.0.0.1:d in ClientOptions.Retry or by configuring a custom retry policy in ClientOptions.RetryPolicy. (대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다.
+  Worker process started and initialized.
+  
+  Functions:
+  
+          WeatherCheckFunction: timerTrigger
+  
+  For detailed output, run func with --verbose flag.
+  [2025-02-19T05:50:39.491Z] The listener for function 'Functions.WeatherCheckFunction' was unable to start.
+  
+  ```
 - 원인
   - 127.0.0.1:10000에서 연결을 거부한 오류는 로컬 Azure Storage Emulator와 연결이 제대로 되지 않음을 의미
     
