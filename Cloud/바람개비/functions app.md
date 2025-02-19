@@ -101,7 +101,7 @@
   }
   ```
 
-## 6. 실행 및 배포
+## 6. 실행
 
 *---func start만 하면 에러 발생하므로 AzureStorageEmulator를 설치받아 에뮬레이터 실행 후 func start 해야함!!!---*
 
@@ -152,11 +152,38 @@ func start
     ```
 
 
-- Azure Functions 배포
+7. Azure Functions App에 배포
 
-```
-func azure functionapp publish <your-function-app-name>
-```
+  1. Azure Functions App 생성
+  - 먼저 Azure CLI를 이용해 배포할 Function App 생성
+    ```
+    az group create --name WeatherAlertRG --location eastus
+  
+    az storage account create --name weatheralertstorage --location eastus --resource-group WeatherAlertRG --sku Standard_LRS
+    
+    az functionapp create --resource-group WeatherAlertRG --consumption-plan-location eastus \
+        --runtime node --runtime-version 18 \
+        --name WeatherAlertFunctionApp --storage-account weatheralertstorage
+  
+    ```
+  - WeatherAlertRG → 리소스 그룹 이름
+  - WeatherAlertFunctionApp → Function App 이름
+  - weatheralertstorage → 스토리지 계정
+
+  2. Azure 에 배포
+  ```
+  func azure functionapp publish WeatherAlertFunctionApp
+  // func azure functionapp publish <your-function-app-name>
+  ```
+  3. Azure에서 실행!!
+
+8. Azure Functions App에서 실행 확인
+  
+  - Azure Portal에서 확인:
+    1. Azure Portal 접속 → Function Apps → WeatherAlertFunctionApp
+    2. WeatherCheckFunction 선택
+    3. "Logs" 탭에서 실행 상태 확인
+    4. Slack 알림이 정상적으로 도착하는지 체크
 
 ---
 ### 코멘트
