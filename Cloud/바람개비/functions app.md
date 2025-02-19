@@ -160,5 +160,6 @@ func azure functionapp publish <your-function-app-name>
 
 ---
 ### 코멘트
+- 로컬 실행은 비용 안듦 -> azure 배포 후 클라우드 환경에서 실행하는 경우 비용 발생
 - Github Actions와 Event Grid 차이 비교
 - 소스관리를 azure에서 할 지 github에서 할 지 고민
