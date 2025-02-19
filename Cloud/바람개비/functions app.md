@@ -152,7 +152,7 @@ func start
     ```
 
 
-7. Azure Functions App에 배포
+## 7. Azure Functions App에 배포
 
   1. Azure Functions App 생성
   - 먼저 Azure CLI를 이용해 배포할 Function App 생성
@@ -177,7 +177,7 @@ func start
   ```
   3. Azure에서 실행!!
 
-8. Azure Functions App에서 실행 확인
+## 8. Azure Functions App에서 실행 확인
   
   - Azure Portal에서 확인:
     1. Azure Portal 접속 → Function Apps → WeatherAlertFunctionApp
@@ -187,7 +187,7 @@ func start
 
 
 
-9. API 응답 데이터
+## 9. API 응답 데이터
 
 ```
 Weather data received:  {
@@ -232,7 +232,7 @@ Weather data received:  {
   cod: 200
 }
 ```
-10. 결과
+## 10. 결과
 
 ![image](https://github.com/user-attachments/assets/c109a94b-e502-46c3-91b3-687134e50cad)
 
