@@ -239,9 +239,66 @@ Weather data received:  {
 
 ![image](https://github.com/user-attachments/assets/c109a94b-e502-46c3-91b3-687134e50cad)
 
-    
----
+ 
 ### 코멘트
 - 로컬 실행은 비용 안듦 -> azure 배포 후 클라우드 환경에서 실행하는 경우 비용 발생
 - Github Actions와 Event Grid 차이 비교
 - 소스관리를 azure에서 할 지 github에서 할 지 고민
+
+   
+---
+
+
+# Functions app 에서 Event grid 구독
+
+## Azure Functions와 Azure Event Grid를 연계하여 이벤트 기반 애플리케이션 구조
+### 1. Azure Event Grid와 연계하기 위한 기본 흐름:
+- Azure Event Grid 주제 (Event Grid Topic)를 설정합니다.
+- Azure Functions에서 이벤트를 트리거할 수 있도록 Event Grid 이벤트 핸들러를 작성합니다.
+- Azure Event Grid와 Azure Functions 연결: Event Grid의 이벤트를 Azure Functions에서 수신하고, 이를 처리합니다.
+### 2. Azure Event Grid와 Azure Functions 연계 설정
+- Azure Event Grid Topic 생성: Azure Portal에서 Event Grid Topic을 생성합니다.
+
+- Event Grid Topic은 이벤트를 발행하는 위치로, 다양한 서비스에서 발생하는 이벤트를 수신할 수 있습니다.
+- Azure Event Grid Topic 만들기
+- Azure Functions에서 Event Grid 트리거 사용: Azure Functions에서 Event Grid 트리거를 설정하여 Event Grid에서 발생한 이벤트를 처리하도록 합니다.
+
+- Azure Functions에 Event Grid Trigger 추가: Node.js로 Azure Functions 앱을 작성한다고 가정할 때, Event Grid Trigger를 사용하여 이벤트를 수신합니다.
+
+### Azure Functions에서 Event Grid 트리거 함수 설정
+- function.json
+```json
+{
+  "bindings": [
+    {
+      "name": "eventGridEvent",
+      "type": "eventGridTrigger",
+      "direction": "in"
+    }
+  ]
+}
+```
+- Azure Functions 앱에서 Event Grid에서 발생한 이벤트를 처리하는 코드
+```javascript
+const axios = require('axios');
+
+module.exports = async function (context, eventGridEvent) {
+    context.log('Event Grid trigger function processed event:', eventGridEvent);
+
+    // Event Grid에서 전달받은 이벤트 내용 로그
+    context.log(`Event Type: ${eventGridEvent.eventType}`);
+    context.log(`Event Data:`, eventGridEvent.data);
+
+    // 예시: 날씨 변화 이벤트가 발생했을 경우 Slack으로 알림 전송
+    if (eventGridEvent.eventType === 'WeatherChange') {
+        const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL;
+        const slackMessage = {
+            text: `Alert: Weather condition changed! Previous: ${eventGridEvent.data.previousWeather}, Current: ${eventGridEvent.data.currentWeather}`
+        };
+
+        // Slack 알림 전송
+        await axios.post(slackWebhookUrl, slackMessage);
+        context.log('Slack notification sent');
+    }
+};
+```
