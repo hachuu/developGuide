@@ -1,5 +1,8 @@
 # [VS Code] 로컬 환경에서 functions app 실행하기
 
+## 아키텍처 구성
+- functions app에서 주기적으로 OpenWeather API를 호출하고, 날씨가 바뀌면 Slack Webhook을 호출하여 알림을 보냄
+
 ## 0. 사전 준비
 - vscode 환경
   - extensions 설치 : Azure Functions Extension, Azure CLI, Azure Functions Core Tools
