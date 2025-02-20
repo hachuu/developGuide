@@ -1,12 +1,12 @@
 # 날씨 변화 감지 시 Event Grid를 통해 확장성 있는 이벤트 트리거 생성🚀
 
-🛠️ 기능 개요
+## 🛠️ 기능 개요
 1. OpenWeather API를 통해 현재 날씨를 확인
 2. 이전 상태와 비교하여 비(Rain) 또는 눈(Snow) 변화 감지
 3. Azure Event Grid에 이벤트 발행
 4. Azure Event Grid의 구독자(Azure Functions, Logic Apps, Event Hubs 등)에서 이벤트 처리
 
-1️⃣ Event Grid 주제(Topic) 생성
+### 1️⃣ Event Grid 주제(Topic) 생성
 - Azure CLI를 사용하여 Event Grid 주제를 생성하세요.
 - endpoint와 key1 값을 환경 변수로 설정해야 합니다.
 ```
@@ -22,7 +22,7 @@ az eventgrid topic key list --name WeatherEventTopic --resource-group YourResour
 ```
 
 
-2️⃣ index.js (Azure Functions 코드 업데이트)
+### 2️⃣ index.js (Azure Functions 코드 업데이트)
 - 이제 Azure Event Grid에 이벤트를 발행하도록 기존 함수를 업데이트합니다.
 
 ```javascript
@@ -109,7 +109,8 @@ module.exports = async function (context, myTimer) {
     previousWeather = weatherConditions;
 };
 ```
-3️⃣ function.json (Azure Timer Trigger 설정)
+
+### 3️⃣ function.json (Azure Timer Trigger 설정)
 - 기존과 동일하게 5분마다 실행되도록 설정합니다.
 
 ```json
@@ -124,7 +125,8 @@ module.exports = async function (context, myTimer) {
   ]
 }
 ```
-4️⃣ 환경 변수 설정 (local.settings.json)
+
+### 4️⃣ 환경 변수 설정 (local.settings.json)
 - Azure Functions의 환경 변수(Application Settings)에서 Event Grid 설정 추가하세요.
 
 ```json
@@ -139,7 +141,8 @@ module.exports = async function (context, myTimer) {
   }
 }
 ```
-5️⃣ Azure Event Grid 구독 설정
+
+### 5️⃣ Azure Event Grid 구독 설정
 - 이제 Event Grid 이벤트를 구독하여 처리할 수 있습니다.
 - 예를 들어 Azure Functions에서 Event Grid 이벤트를 처리하려면, 아래와 같이 Event Grid 트리거를 추가하면 됩니다.
 ```
@@ -149,9 +152,73 @@ az eventgrid event-subscription create \
   --endpoint-type azurefunction \
   --endpoint "/subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/sites/{your-function-app}/functions/{your-eventgrid-function}"
 ```
-🔥 최종 흐름
+
+## 🔥 최종 흐름
 1. Azure Functions (Timer Trigger) → OpenWeather API 호출
 2. 비 또는 눈 감지 시
   - Slack에 메시지 전송
   - Azure Event Grid에 이벤트 발행
 3. Azure Event Grid 구독자(Event Grid Trigger, Logic Apps, Event Hubs 등)에서 이벤트 처리
+
+---
+
+# Event Grid 필터링
+- Azure **Event Grid 필터링(Event Filtering)**은 이벤트를 특정 조건에 맞는 경우에만 처리하도록 설정하는 기능
+- 즉, 불필요한 이벤트를 걸러내서 비용 절감과 성능 최적화할 수 있음
+
+## Event Grid 필터링이 필요한 이유
+- 예시
+```
+✅ "맑음 → 비" 변화하면 Slack 알림 보내야 함
+❌ "맑음 → 맑음" 같은 경우엔 알림을 보낼 필요 없음
+👉 필터링을 적용하면 중복된 이벤트를 걸러내서 비용을 아낄 수 있음
+```
+## Event Grid 필터링 방식
+
+### 1️⃣ 기본 속성 필터링 (Property Filtering)
+- 이벤트 데이터에서 특정 필드 값을 기준으로 필터링
+- 예를 들어, "비가 오거나 눈이 올 때만 이벤트를 처리"할 수 있음
+```json
+{
+  "filter": {
+    "subjectBeginsWith": "/weather/",
+    "data": {
+      "weather": {
+        "in": ["Rain", "Snow"]
+      }
+    }
+  }
+}
+```
+- 🔹 설명:
+    - subjectBeginsWith: "/weather/" → "weather"와 관련된 이벤트만 필터링
+    - data.weather.in: ["Rain", "Snow"] → "비" 또는 "눈"이 포함된 이벤트만 처리
+### 2️⃣ 고급 필터링 (Advanced Filtering)
+- 숫자, 문자열, 존재 여부 같은 조건으로 필터링 가능
+- 예를 들어, 강수량이 5mm 이상일 때만 알림을 보내려면?
+
+```json
+{
+  "filter": {
+    "data.precipitation": {
+      "greaterThanOrEquals": 5
+    }
+  }
+}
+```
+- 🔹 설명:
+    - data.precipitation 값이 5mm 이상일 경우만 이벤트를 트리거함
+
+### 3️⃣ Event Grid 구독 필터링 (Event Subscription Filtering)
+- 특정 구독(Event Subscription)에 필터링 규칙을 추가해서 불필요한 이벤트를 받지 않도록 설정 가능
+```
+az eventgrid event-subscription create \
+  --name WeatherAlertSubscription \
+  --source-resource-id /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.EventGrid/topics/{event-grid-topic} \
+  --endpoint /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/sites/{function-app} \
+  --advanced-filter data.weather StringIn 'Rain' 'Snow'
+```
+- 🔹 설명:
+    - StringIn 'Rain' 'Snow' → "비" 또는 "눈"이 올 때만 이벤트 구독
+
+## 📌 결론: 필터링을 활용한 최적화 전략
