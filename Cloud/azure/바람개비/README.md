@@ -11,7 +11,7 @@
 - Event Processing: Azure Event Grid (날씨 변화 감지)
 - Notification: Azure Notification Hubs → Slack Webhook
 
-## 📂 전체 아키텍처 파일 구조
+## 📂 전체 아키텍처 파일 구조 (Azure Notification Hubs 없는 구조)
 ```
 /weather-alert
  ├── /functions
@@ -186,6 +186,125 @@ EVENT_GRID_KEY=YOUR_EVENT_GRID_ACCESS_KEY
 COSMOS_DB_ENDPOINT=YOUR_COSMOS_DB_ENDPOINT
 COSMOS_DB_KEY=YOUR_COSMOS_DB_KEY
 ```
+
+## ✨ Notification Hubs 추가 적용 아키텍처
+- Event Grid → Notification Hubs → Slack Webhook 형태로 알림이 전송되도록 변경
+
+### 📂 파일 구조
+```bash
+/weather-alert
+ ├── /functions
+ │    ├── checkWeather.js   # 날씨 조회 및 이벤트 트리거
+ │    ├── sendSlack.js      # Slack Webhook 메시지 전송
+ │    ├── publishEvent.js   # Event Grid에 이벤트 발행
+ │    ├── getLocations.js   # Cosmos DB에서 위치 정보 조회
+ │    ├── handleNotification.js  # Event Grid에서 이벤트 받아 Notification Hubs에 전송
+ │    ├── sendNotification.js  # Notification Hubs를 통해 Slack Webhook 호출
+ ├── index.js               # Azure Functions 엔트리 포인트 (타이머 트리거 및 HTTP 핸들러 정의)
+ ├── package.json           # 프로젝트 설정 및 의존성 관리
+ ├── .env                   # 환경 변수 파일
+```
+
+### 🔹 1️⃣ sendNotification.js (Azure Notification Hubs로 메시지 전송)
+- Notification Hubs를 사용하여 이벤트를 푸시하고, Slack Webhook을 통해 최종 알림을 전송합니다.
+```javascript
+const { NotificationHubClient } = require("@azure/notification-hubs");
+const sendSlackNotification = require("./sendSlack");
+require("dotenv").config();
+
+const NOTIFICATION_HUB_CONNECTION_STRING = process.env.NOTIFICATION_HUB_CONNECTION_STRING;
+const NOTIFICATION_HUB_NAME = process.env.NOTIFICATION_HUB_NAME;
+
+// Notification Hub 클라이언트 생성
+const hubClient = new NotificationHubClient(NOTIFICATION_HUB_CONNECTION_STRING, NOTIFICATION_HUB_NAME);
+
+async function sendNotification(eventData) {
+    const message = `🔔 날씨 변경 알림!\n📍 ${eventData.location.name} → ${eventData.weatherStatus}`;
+
+    try {
+        // Notification Hubs에 알림 전송
+        const response = await hubClient.sendFcmNativeNotification({
+            notification: {
+                title: "날씨 알림",
+                body: message
+            }
+        });
+
+        console.log("✅ Notification Hubs 푸시 전송 성공:", response);
+        await sendSlackNotification(message);  // Slack으로도 알림 전송
+    } catch (error) {
+        console.error("❌ Notification Hubs 푸시 전송 실패:", error.message);
+    }
+}
+
+module.exports = sendNotification;
+```
+### 🔹 2️⃣ handleNotification.js (Event Grid에서 이벤트 받아 Notification Hubs로 전달)
+```javascript
+const sendNotification = require('./sendNotification');
+
+async function handleNotification(event) {
+    const eventData = event.data;
+    console.log("📩 Event Grid 이벤트 수신:", eventData);
+
+    // Notification Hubs에 메시지 전송
+    await sendNotification(eventData);
+}
+
+module.exports = handleNotification;
+```
+### 🔹 3️⃣ index.js (Azure Functions 엔트리 포인트)
+```javascript
+const { app } = require('@azure/functions');
+const checkWeather = require('./functions/checkWeather');
+const handleNotification = require('./functions/handleNotification');
+
+app.timer('WeatherTimerTrigger', {
+    schedule: '0 */10 8-9 * * 1-5',  // 평일 오전 8~9시 10분 간격 실행
+    handler: async () => {
+        console.log("🌦️ 날씨 체크 시작...");
+        await checkWeather();
+    }
+});
+
+app.http('WeatherEventHandler', {
+    methods: ['POST'],
+    authLevel: 'function',
+    handler: async (request, context) => {
+        const event = await request.json();
+        console.log("📩 Event Grid 이벤트 수신:", event);
+        await handleNotification(event);
+        return { status: 200, body: "Event received successfully!" };
+    }
+});
+```
+### ✅ 환경 변수 설정 (.env)
+```ini
+OPENWEATHER_API_KEY=YOUR_OPENWEATHER_API_KEY
+SLACK_WEBHOOK_URL=YOUR_SLACK_WEBHOOK_URL
+EVENT_GRID_ENDPOINT=YOUR_EVENT_GRID_ENDPOINT
+EVENT_GRID_KEY=YOUR_EVENT_GRID_ACCESS_KEY
+COSMOS_DB_ENDPOINT=YOUR_COSMOS_DB_ENDPOINT
+COSMOS_DB_KEY=YOUR_COSMOS_DB_KEY
+NOTIFICATION_HUB_CONNECTION_STRING=YOUR_NOTIFICATION_HUB_CONNECTION_STRING
+NOTIFICATION_HUB_NAME=YOUR_NOTIFICATION_HUB_NAME
+```
+### 🚀 실행 및 배포
+- .env 파일을 프로젝트 루트에 생성하고 환경 변수를 설정
+- 필요한 패키지 설치
+```sh
+npm install @azure/functions axios dotenv @azure/cosmos @azure/notification-hubs
+```
+- Azure Functions 로컬 실행
+```sh
+func start
+```
+- Azure에 배포
+```sh
+func azure functionapp publish <YOUR_FUNCTION_APP>
+```
+
+---
 
 
 # Event Grid vs Functions App
