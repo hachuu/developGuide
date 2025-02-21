@@ -335,7 +335,7 @@ func azure functionapp publish <YOUR_FUNCTION_APP>
 ### ✅ 역할: 서버리스 컴퓨팅 플랫폼
 
 - 이벤트 기반으로 코드를 실행하는 서비스
-- 다양한 **트리거(Trigger) 및 바인딩(Binding)**을 지원하여 자동 실행 가능
+- 다양한 **트리거(Trigger) 및 바인딩(Binding)** 을 지원하여 자동 실행 가능
 - 필요할 때만 실행되므로 비용 절감 가능 (서버리스 구조)
 - 이벤트 핸들러 역할을 수행할 수 있음 (Event Grid, Queue, Timer, HTTP 요청 등 트리거 가능)
 
@@ -365,7 +365,7 @@ func azure functionapp publish <YOUR_FUNCTION_APP>
 
 ### 🎯 예제: OpenWeather API와 연동
 - ✅ Event Grid 없이 Azure Functions만 사용
-  - **Azure Functions(Timer Trigger)**가 주기적으로 OpenWeather API를 호출하고, 날씨가 바뀌면 Slack Webhook을 호출하여 알림을 보냄
+  - **Azure Functions(Timer Trigger)** 가 주기적으로 OpenWeather API를 호출하고, 날씨가 바뀌면 Slack Webhook을 호출하여 알림을 보냄
   - 단점: 필요 없는 알림이 전송될 수 있음, 확장성이 떨어짐
 
 - ✅ Event Grid + Azure Functions 조합
