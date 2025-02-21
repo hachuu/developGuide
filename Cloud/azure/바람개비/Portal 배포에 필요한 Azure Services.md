@@ -12,6 +12,13 @@ az functionapp create --resource-group hachu-static-web-app \
     --name HachuFunctionApp --storage-account hachustorage
 ```
 
+## ✅3. Azure Function App 생성 (기존 storage account, resource group 사용)
+```
+az functionapp create --resource-group hachu-static-web-app \
+    --consumption-plan-location eastasia \
+    --runtime node --runtime-version 18 \
+    --name HachuFunctionApp --storage-account hachustaticwebapp83ce
+```
 ---
 
 # 🔹 Azure Functions에서 Storage Account가 필요한 이유
