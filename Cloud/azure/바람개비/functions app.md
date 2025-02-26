@@ -173,7 +173,7 @@ func start
   - WeatherAlertFunctionApp → Function App 이름
   - weatheralertstorage → 스토리지 계정
 
-  2. Azure 에 배포
+  2. Azure functions app 생성
 
 ```
 az functionapp create --resource-group hachu-static-web-app \
@@ -192,8 +192,19 @@ az functionapp create --resource-group hachu-static-web-app \
   ```bash
   winget install Microsoft.Azure.FunctionsCoreTools
   ```
+  2-2. az 에러
+  ```
+ winget list Microsoft.AzureCLI
+  ```
 
-  3. Azure에서 실행!!
+  3. Azure에 배포
+  ```
+  1. az login
+  2. az login --tenant 19955f77-5bd7-4d83-b971-a6abcaa08266 // az login 안되는 경우, tenant로 로그인
+
+  3. zip -r functionapp.zip . // 현재 소스 경로 기준으로 zip 파일 생성 -> zip.exe C:\Windows\System32 경로에 있어야함
+  4. az functionapp deployment source config-zip  --resource-group hachu-static-web-app  --name HachuFunctionApp --src ./functionapp.zip
+  ```
 
 ## 8. Azure Functions App에서 실행 확인
   
