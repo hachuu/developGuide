@@ -271,6 +271,69 @@ Weather data received:  {
 - Github Actions와 Event Grid 차이 비교
 - 소스관리를 azure에서 할 지 github에서 할 지 고민
 
+---
+# 🔥 Azure Functions 트리거 타입 정리 > function.json > type
+
+
+| 트리거 타입          | 설명 및 사용 사례  |
+|----------------------|------------------------------------------------------------|
+| **httpTrigger**      | - HTTP 요청(GET, POST 등)을 받아 실행됨  <br> - API 엔드포인트를 만들 때 사용 |
+| **timerTrigger**     | - 일정한 시간 간격으로 함수 실행 <br> - 예: 매일 아침 8시에 실행 |
+| **queueTrigger**     | - Azure Storage Queue에 메시지가 추가될 때 실행됨 <br> - 예: 비동기 작업 처리 (메일 전송, 배치 작업 등) |
+| **blobTrigger**      | - Azure Blob Storage에 파일이 업로드되거나 변경될 때 실행됨 <br> - 예: 이미지 업로드 후 자동 리사이징 |
+| **eventHubTrigger**  | - Azure Event Hub에서 이벤트가 발생할 때 실행됨 <br> - 예: IoT 데이터 스트림 처리 |
+| **serviceBusTrigger**| - Azure Service Bus Queue 또는 Topic에 메시지가 도착하면 실행됨 <br> - 예: 마이크로서비스 간 메시지 전달 |
+| **cosmosDBTrigger**  | - Azure Cosmos DB의 특정 컬렉션에 변경이 생기면 실행됨 <br> - 예: DB 변경 사항을 감지하여 처리 |
+| **eventGridTrigger** | - Azure Event Grid에서 이벤트를 수신할 때 실행됨 <br> - 예: Azure Storage에 파일 업로드 이벤트 감지 |
+| **signalRTrigger**   | - Azure SignalR 서비스에서 이벤트가 발생하면 실행됨 <br> - 예: 실시간 채팅, 알림 시스템 |
+| **kafkaTrigger**     | - Apache Kafka에서 메시지가 수신되면 실행됨 <br> - 예: 대용량 실시간 데이터 처리 |
+| **webhookTrigger**   | - 특정 Webhook 호출 시 실행됨 <br> - 예: GitHub Webhook을 통해 CI/CD 파이프라인 트리거 |
+
+
+## ✅ 어떤 트리거를 선택해야 할까?
+- API 엔드포인트를 만들고 싶다면? → httpTrigger
+- 주기적으로 실행하고 싶다면? → timerTrigger
+- 메시지 큐 기반의 비동기 처리? → queueTrigger or serviceBusTrigger
+- Storage에 파일이 업로드될 때? → blobTrigger
+- DB 변경을 감지해서 처리? → cosmosDBTrigger
+- 이벤트 기반 아키텍처를 사용? → eventGridTrigger or eventHubTrigger
+- 실시간 알림 및 채팅? → signalRTrigger
+### 🚀 예제: HTTP 트리거
+- function.json에서 HTTP 요청을 받는 트리거를 정의하는 방법:
+
+```json
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "methods": ["get", "post"],
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    }
+  ]
+}
+```
+- 이제 https://<your-function-app>.azurewebsites.net/api/your-function으로 요청을 보내면 실행됨.
+
+### 🔥 예제: Timer 트리거 (매일 아침 8시 실행)
+```json
+{
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 0 8 * * *"
+    }
+  ]
+}
+```
    
 ---
 
