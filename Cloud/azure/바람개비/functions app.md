@@ -320,6 +320,14 @@ Weather data received:  {
 }
 ```
 - 이제 https://<your-function-app>.azurewebsites.net/api/your-function으로 요청을 보내면 실행됨.
+- response를 받고 싶은 경우 index.js에서 response를 추가 해야 함
+```
+context.res = {
+    status: 200, // 202 대신 200으로 응답
+    body: "처리 완료"
+};
+```
+
 
 ### 🔥 예제: Timer 트리거 (매일 아침 8시 실행)
 ```json
