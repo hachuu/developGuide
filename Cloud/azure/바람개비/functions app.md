@@ -213,6 +213,24 @@ az functionapp create --resource-group hachu-static-web-app \
     2. WeatherCheckFunction 선택
     3. "Logs" 탭에서 실행 상태 확인
     4. Slack 알림이 정상적으로 도착하는지 체크
+  - code + test 실행 시 에러
+    1. CORS에러 나는 경우
+       - 방법 1. portal functions app에서 왼쪽 "API Management" 아래 "CORS" 클릭 Allowed Origins 섹션에서 아래 항목 추가: https://portal.azure.com
+       - 방법 2. host.json 파일 수정
+        ```
+        {
+          "version": "2.0",
+          "extensions": {
+            "http": {
+              "cors": {
+                "allowedOrigins": [
+                  "https://portal.azure.com"
+                ]
+              }
+            }
+          }
+        }
+        ```
 
 
 
@@ -319,7 +337,7 @@ Weather data received:  {
   ]
 }
 ```
-- 이제 https://<your-function-app>.azurewebsites.net/api/your-function으로 요청을 보내면 실행됨.
+- 'https://<your-function-app>.azurewebsites.net/api/your-function' 으로 요청을 보내면 실행됨.
 - response를 받고 싶은 경우 index.js에서 response를 추가 해야 함
 ```
 context.res = {
