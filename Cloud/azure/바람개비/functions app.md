@@ -174,10 +174,25 @@ func start
   - weatheralertstorage → 스토리지 계정
 
   2. Azure 에 배포
+
+```
+az functionapp create --resource-group hachu-static-web-app \
+    --consumption-plan-location eastasia \
+    --runtime node --runtime-version 18 \
+    --name HachuFunctionApp --storage-account hachustaticwebapp83ce
+```
+
   ```
-  func azure functionapp publish WeatherAlertFunctionApp
+ func azure functionapp publish HachuFunctionApp
   // func azure functionapp publish <your-function-app-name>
   ```
+
+  2-1. Windows - azure cli에서 bash: func: command not found 에러
+  
+  ```bash
+  winget install Microsoft.Azure.FunctionsCoreTools
+  ```
+
   3. Azure에서 실행!!
 
 ## 8. Azure Functions App에서 실행 확인
