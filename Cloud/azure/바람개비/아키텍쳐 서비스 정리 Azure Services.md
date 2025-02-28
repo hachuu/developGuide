@@ -1,10 +1,16 @@
 # Azure Service Portal 배포 시 명령어
+- Resource Group: 여러 서비스를 관리하는 프로젝트 폴더
+- Subscription: Azure 서비스를 쓸 수 있는 권한, 패스권
+- Storage Account: 데이터를 저장하는 클라우드 드라이브
+- Application Insights: 앱을 실시간으로 점검하는 도구
+- App Service Plan: 앱을 실행할 서버 성능을 조절하는 옵션
+
 ## 1. Storage Account 생성 (이름은 고유해야 함)
 ```
 az storage account create --name hachustorage --location eastasia \
     --resource-group hachu-static-web-app --sku Standard_LRS
 ```
-## 2. Azure Function App 생성 (소비 요금제 사용, Node.js 18 버전)
+## 2. Azure Function App 생성 - 저렴한 요금제(consumption plan : y1) 사용, Node.js 18 버전)
 ```
 az functionapp create --resource-group hachu-static-web-app \
     --consumption-plan-location eastasia \
