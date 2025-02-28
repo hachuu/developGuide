@@ -1,9 +1,13 @@
-# Azure Service Portal 배포 시 명령어
+# 아키텍쳐 서비스 종류
 - Resource Group: 여러 서비스를 관리하는 프로젝트 폴더
 - Subscription: Azure 서비스를 쓸 수 있는 권한, 패스권
 - Storage Account: 데이터를 저장하는 클라우드 드라이브
 - Application Insights: 앱을 실시간으로 점검하는 도구
 - App Service Plan: 앱을 실행할 서버 성능을 조절하는 옵션
+- functions app : 이벤트 핸들러 (행동 대장 : 실제 이벤트 처리)
+- event grid : 이벤트 브로커 (알림이 : 이벤트 알림)
+
+# 각 Azure Service Portal 배포 시 명령어
 
 ## 1. Storage Account 생성 (이름은 고유해야 함)
 ```
