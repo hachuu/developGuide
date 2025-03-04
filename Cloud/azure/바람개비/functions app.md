@@ -15,7 +15,6 @@
     ```
     func init my-java-functions --worker-runtime java --language java
     func new --name TimerTriggerExample --template "Timer trigger" --language java
-    
     ```   
   - 패키지 설치 : OpenWeather API 호출, 환경 변수 관리
     ```
