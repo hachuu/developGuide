@@ -6,29 +6,62 @@
 ## 0. 사전 준비
 - vscode 환경
   - extensions 설치 : Azure Functions Extension, Azure CLI, Azure Functions Core Tools
- 
+ 1. node.js 버전 : functions app 생성
     ```
     func init --worker-runtime node --language javascript
     func new --name WeatherCheckFunction --template "Timer trigger"
     ```
+ 2. java 버전 (java도 가능) : functions app 생성
+    ```
+    func init my-java-functions --worker-runtime java --language java
+    func new --name TimerTriggerExample --template "Timer trigger" --language java
     
+    ```   
   - 패키지 설치 : OpenWeather API 호출, 환경 변수 관리
-    
     ```
     npm install axios dotenv
     ```
-
+- 소스 구조
+  1. node.js 버전
+  ```
+  WeatherCheckFunction/   # 프로젝트 루트
+  │── .vscode/            # VS Code 설정 파일
+  │── WeatherCheckFunction/  # 함수 디렉터리 (생성된 함수 코드 포함)
+  │   ├── function.json   # 함수 설정 파일 (트리거 정보 포함)
+  │   └── index.js        # 함수 실행 코드
+  │── host.json           # 전체 Functions 앱 설정 파일
+  │── local.settings.json # 로컬 개발 환경 변수 파일
+  │── package.json        # npm 패키지 설정 파일 (의존성 관리)
+  │── .gitignore          # Git 저장소 설정
+  │── README.md           # 기본 설명 파일
+  ```
+  2. java 버전
+  ```
+  my-java-functions/
+  │── .vscode/               # VS Code 관련 설정 파일
+  │── src/                   # Java 코드가 위치하는 폴더
+  │   └── main/
+  │       └── java/
+  │           └── com/example/
+  │               └── TimerTriggerExample.java  # 생성된 함수 코드
+  │── pom.xml                # Maven 설정 파일
+  │── host.json              # Functions 앱 설정 파일
+  │── local.settings.json    # 로컬 개발 환경 변수 파일 (저장소 연결, API Key 등)
+  │── function.json          # 개별 함수 설정 파일
+  │── .gitignore             # Git 저장소 설정
+  │── README.md              # 프로젝트 설명 파일
+  ```
 ## 1. 필요한 설정
 - [OpenWeather API Key를 발급 필요](https://openweathermap.org/api)
 - [Slack Webhook URL을 생성](https://api.slack.com/)
 
 
 ## 2. 환경 변수 설정
-- Azure Functions의 Application Settings 환경 변수를 추가
-- OPENWEATHER_API_KEY → OpenWeather API 키
-- SLACK_WEBHOOK_URL → Slack Webhook URL
+- Azure Functions의 Application Settings 환경 변수를 추가 (local.settings.json)
+  - OPENWEATHER_API_KEY → OpenWeather API 키
+  - SLACK_WEBHOOK_URL → Slack Webhook URL
 
-  
+
 ## 3. 실행 방법
 - Azure Functions에서 Timer Trigger를 사용하여 특정 시간마다 실행되도록 설정
 - 예를 들어, 5분마다 실행하려면 0 */5 * * * * (CRON 표현식) 사용
@@ -158,7 +191,7 @@ func start
 ## 7. Azure Functions App에 배포
 
   1. Azure Functions App 생성
-  - 먼저 Azure CLI를 이용해 배포할 Function App 생성
+  - 먼저 Azure CLI를 이용해 배포할 Function App 생성a
     ```
     az group create --name WeatherAlertRG --location eastus
   
@@ -213,6 +246,7 @@ az functionapp create --resource-group hachu-static-web-app \
     2. WeatherCheckFunction 선택
     3. "Logs" 탭에서 실행 상태 확인
     4. Slack 알림이 정상적으로 도착하는지 체크
+ 
   - code + test 실행 시 에러
     1. CORS에러 나는 경우
        - 방법 1. portal functions app에서 왼쪽 "API Management" 아래 "CORS" 클릭 Allowed Origins 섹션에서 아래 항목 추가: https://portal.azure.com
@@ -231,7 +265,9 @@ az functionapp create --resource-group hachu-static-web-app \
           }
         }
         ```
-
+    2. Settings > Environment variables 값 추가 필요
+        - local 실행시 : local.settings.json 파일
+        - 서비스(포탈) 실행시 : Environment variables 설정 필요
 
 
 ## 9. API 응답 데이터
