@@ -19,8 +19,8 @@
     ```
 
 ## 1. 필요한 설정
-- OpenWeather API Key를 발급 필요
-- Slack Webhook URL을 생성
+- [OpenWeather API Key를 발급 필요](https://openweathermap.org/api)
+- [Slack Webhook URL을 생성](https://api.slack.com/)
 
 
 ## 2. 환경 변수 설정
