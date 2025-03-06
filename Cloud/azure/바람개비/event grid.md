@@ -222,3 +222,104 @@ az eventgrid event-subscription create \
     - StringIn 'Rain' 'Snow' → "비" 또는 "눈"이 올 때만 이벤트 구독
 
 ## 📌 결론: 필터링을 활용한 최적화 전략
+
+---
+# 이미 생성된 Azure Functions App에 Event Grid 추가하기
+- 부제 : 현재 Timer Trigger로 동작하는 WeatherCheckFunction이 있는 상태에서 Event Grid를 연동하는 방법
+
+## ✅ 1. Event Grid 트리거 추가 (CLI 명령어)
+- 먼저, Event Grid 트리거를 새로운 함수로 추가
+- EventGridHandler/ 폴더가 생성되면서 Event Grid 트리거가 포함된 새로운 함수가 만들어짐
+```sh
+func new --name EventGridHandler --template "Event Grid trigger"
+```
+## ✅ 2. 새로 생성된 함수의 구조
+- 새로 생성된 EventGridHandler/ 폴더 안의 구조
+```pgsql
+EventGridHandler/
+│── function.json       # 트리거 및 바인딩 설정 파일
+│── index.js            # 이벤트를 처리하는 코드
+📌 index.js (기본 코드)
+```
+
+```javascript
+module.exports = async function (context, eventGridEvent) {
+    context.log("Event Grid event received: ", eventGridEvent);
+
+    // 이벤트 데이터 추출
+    const eventData = eventGridEvent.data;
+    context.log("Event Data: ", JSON.stringify(eventData));
+
+    // 필요한 작업 수행
+};
+```
+- eventGridEvent → Event Grid에서 수신한 이벤트 데이터를 담고 있어요.
+- context.log(...) → 이벤트 로그를 출력하는 코드.
+## ✅ 3. function.json (Event Grid 트리거 설정)
+- 함수 생성 시 자동으로 function.json 파일이 생성
+
+```json
+{
+  "bindings": [
+    {
+      "type": "eventGridTrigger",
+      "direction": "in",
+      "name": "eventGridEvent"
+    }
+  ]
+}
+```
+- type: "eventGridTrigger" → Event Grid에서 발생한 이벤트를 수신하는 트리거
+- name: "eventGridEvent" → index.js에서 사용할 이벤트 객체 이름
+## ✅ 4. Event Grid가 Azure Functions에 이벤트를 보낼 수 있도록 권한 부여
+- Event Grid가 Azure Functions를 호출할 수 있도록 권한을 설정
+
+### ① Azure CLI로 Event Grid 구독 생성
+- Azure CLI를 사용해서 Event Grid 구독을 추가
+- 특정 이벤트가 발생할 때 Event Grid가 Azure Functions로 이벤트를 전송할 수 있게 됨
+```sh
+az eventgrid event-subscription create \
+  --name MyEventGridSubscription \
+  --source-resource-id /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Storage/storageAccounts/{storage-account} \
+  --endpoint https://{your-function-app-name}.azurewebsites.net/runtime/webhooks/eventgrid?functionName=EventGridHandler \
+  --included-event-types Microsoft.Storage.BlobCreated Microsoft.Storage.BlobDeleted
+```
+- 🔹 {your-function-app-name}: Azure Functions App 이름
+- 🔹 {resource-group}: 리소스 그룹 이름
+- 🔹 {subscription-id}: Azure Subscription ID
+- 🔹 {storage-account}: Event Grid를 구독할 대상 리소스 (예: Storage Account)
+
+## ✅ 5. 로컬 테스트 (Event Grid 이벤트 모의 전송)
+- Azure에서 Event Grid 트리거를 실제로 테스트하려면, Event Grid에 직접 이벤트를 보낼 수도 있음.
+- 실제 테스트 이벤트를 보내는 명령어
+```sh
+curl -X POST -H "Content-Type: application/json" \
+     -d '[{
+           "id": "1234567890",
+           "eventType": "Microsoft.Storage.BlobCreated",
+           "subject": "/blobServices/default/containers/my-container/blobs/myfile.txt",
+           "eventTime": "2024-03-04T12:00:00Z",
+           "data": {
+               "api": "PutBlob",
+               "clientRequestId": "1234",
+               "requestId": "5678",
+               "eTag": "0x8D4BCC2E4835CD0",
+               "contentType": "text/plain",
+               "contentLength": 524288
+           },
+           "dataVersion": "2.0",
+           "metadataVersion": "1"
+     }]' \
+     http://localhost:7071/runtime/webhooks/eventgrid?functionName=EventGridHandler
+```
+- 🚀 Event Grid 트리거가 정상적으로 작동하는지 확인할 수 있음
+
+## 🎯 정리
+- Event Grid 트리거 추가
+```sh
+func new --name EventGridHandler --template "Event Grid trigger"
+```
+- index.js에서 이벤트 처리 코드 작성
+- Event Grid 트리거 설정 확인 (function.json)
+- Azure CLI로 Event Grid와 Functions 연동
+- 로컬에서 curl로 테스트 이벤트 전송
