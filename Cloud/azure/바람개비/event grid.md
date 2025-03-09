@@ -231,8 +231,19 @@ az eventgrid event-subscription create \
 - 먼저, Event Grid 트리거를 새로운 함수로 추가
 - EventGridHandler/ 폴더가 생성되면서 Event Grid 트리거가 포함된 새로운 함수가 만들어짐
 ```sh
-func new --name EventGridHandler --template "Event Grid trigger"
+func new --name EventGridHandler --template "Azure Event Grid trigger"
 ```
+- func new --name EventGridHandler --template "Event Grid trigger" error 처리
+  1. powershell에서 'npm update -g azure-functions-core-tools@4 --unsafe-perm true' 명령어 실행
+  2. func --version 확인 후 최신버전인지 확인필요
+  3. func templates list로 template 네이밍 확인 필요
+  ```sh
+  func new --name EventGridHandler --template "Azure Event Grid trigger"
+    Use the up/down arrow keys to select a template:Event Grid trigger
+    Can't find template "Event Grid trigger" in "javascript"
+  ```
+
+
 ## ✅ 2. 새로 생성된 함수의 구조
 - 새로 생성된 EventGridHandler/ 폴더 안의 구조
 ```pgsql
