@@ -296,10 +296,7 @@ az provider show --namespace Microsoft.EventGrid --query "registrationState"
 ```
 - pre :  Event Grid Topic 생성
 ```
-az eventgrid topic create \
-  --name WeatherEventTopic \
-  --resource-group hachu-static-web-app \
-  --location <location>
+az eventgrid topic create --name WeatherEventTopic --resource-group hachu-static-web-app --location eastasia
 ```
 - Event Grid가 Azure Functions를 호출할 수 있도록 권한을 설정
 ### ① [Azure CLI로 Event Grid 구독 생성](https://github.com/hachuu/developGuide/blob/main/Cloud/azure/%EB%B0%94%EB%9E%8C%EA%B0%9C%EB%B9%84/%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%A0%95%EB%A6%AC%20Azure%20Services.md#azure-cli%EB%A1%9C-%EA%B5%AC%EB%8F%85-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-id-%EC%B0%BE%EA%B8%B0)
