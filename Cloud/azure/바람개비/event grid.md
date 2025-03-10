@@ -21,6 +21,7 @@ az eventgrid topic show --name WeatherEventTopic --resource-group YourResourceGr
 az eventgrid topic key list --name WeatherEventTopic --resource-group YourResourceGroup --query "key1" --output tsv
 ```
 
+- 생성 이유 : *Event Grid 주제(Topic)** 를 생성하는 이유는, 이벤트를 전송하고 수신하는 구조에서 이벤트의 발행 지점을 정의하기 위함입니다. 주제(Topic)는 이벤트를 발생시키는 **발행자(publisher)**와 그 이벤트를 수신하는 구독자(subscriber) 사이의 중간 매개체 역할을 합니다. Event Grid에서 주제는 이벤트가 어떤 종류인지, 어디서 발생했는지를 나타내는 중요한 요소이기 때문이다.
 
 ### 2️⃣ index.js (Azure Functions 코드 업데이트)
 - 이제 Azure Event Grid에 이벤트를 발행하도록 기존 함수를 업데이트합니다.
