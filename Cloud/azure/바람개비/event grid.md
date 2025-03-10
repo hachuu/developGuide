@@ -316,9 +316,6 @@ az eventgrid event-subscription create \
   --source-resource-id /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Storage/storageAccounts/{storage-account} \
   --endpoint https://{your-function-app-name}.azurewebsites.net/runtime/webhooks/eventgrid?functionName=EventGridHandler \
   --included-event-types Microsoft.Storage.BlobCreated Microsoft.Storage.BlobDeleted
-
-
-az eventgrid event-subscription create --name WeatherEventSubscription --source-resource-id "/subscriptions/2e0e8e71-8cf1-4068-b548-5e36761f05bc/resourceGroups/hachu-static-web-app/providers/Microsoft.EventGrid/topics/WeatherEventTopic" --endpoint-type azurefunction --endpoint "/subscriptions/2e0e8e71-8cf1-4068-b548-5e36761f05bc/resourceGroups/hachu-static-web-app/providers/Microsoft.Web/sites/HachuFunctionApp/functions/eventGridEvent"
 ```
 - 🔹 {your-function-app-name}: Azure Functions App 이름
 - 🔹 {resource-group}: 리소스 그룹 이름
@@ -358,6 +355,9 @@ curl -X POST -H "Content-Type: application/json" \
      }]' \
      http://localhost:7071/runtime/webhooks/eventgrid?functionName=EventGridHandler
 ```
+- post man 호출
+![image](https://github.com/user-attachments/assets/e143d732-8862-4d06-ab07-8fceedc290da)
+
 - 🚀 Event Grid 트리거가 정상적으로 작동하는지 확인할 수 있음
 
 ## 🎯 정리
