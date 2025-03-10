@@ -162,72 +162,6 @@ az eventgrid event-subscription create \
 
 ---
 
-# Event Grid 필터링
-- Azure **Event Grid 필터링(Event Filtering)**은 이벤트를 특정 조건에 맞는 경우에만 처리하도록 설정하는 기능
-- 즉, 불필요한 이벤트를 걸러내서 비용 절감과 성능 최적화할 수 있음
-
-## Event Grid 필터링이 필요한 이유
-- 예시
-```
-✅ "맑음 → 비" 변화하면 Slack 알림 보내야 함
-❌ "맑음 → 맑음" 같은 경우엔 알림을 보낼 필요 없음
-👉 필터링을 적용하면 중복된 이벤트를 걸러내서 비용을 아낄 수 있음
-```
-## Event Grid 필터링 방식
-
-### 1️⃣ 기본 속성 필터링 (Property Filtering)
-- 이벤트 데이터에서 특정 필드 값을 기준으로 필터링
-- 예를 들어, "비가 오거나 눈이 올 때만 이벤트를 처리"할 수 있음
-```json
-{
-  "filter": {
-    "subjectBeginsWith": "/weather/",
-    "data": {
-      "weather": {
-        "in": ["Rain", "Snow"]
-      }
-    }
-  }
-}
-```
-- 🔹 설명:
-    - subjectBeginsWith: "/weather/" → "weather"와 관련된 이벤트만 필터링
-    - data.weather.in: ["Rain", "Snow"] → "비" 또는 "눈"이 포함된 이벤트만 처리
-### 2️⃣ 고급 필터링 (Advanced Filtering)
-- 숫자, 문자열, 존재 여부 같은 조건으로 필터링 가능
-- 예를 들어, 강수량이 5mm 이상일 때만 알림을 보내려면?
-
-```json
-{
-  "filter": {
-    "data.precipitation": {
-      "greaterThanOrEquals": 5
-    }
-  }
-}
-```
-- 🔹 설명:
-    - data.precipitation 값이 5mm 이상일 경우만 이벤트를 트리거함
-
-### 3️⃣ Event Grid 구독 필터링 (Event Subscription Filtering)
-- 특정 구독(Event Subscription)에 필터링 규칙을 추가해서 불필요한 이벤트를 받지 않도록 설정 가능
-```
-az eventgrid event-subscription create \
-  --name WeatherAlertSubscription \
-  --source-resource-id /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.EventGrid/topics/{event-grid-topic} \
-  --endpoint /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/sites/{function-app} \
-  --advanced-filter data.weather StringIn 'Rain' 'Snow'
-```
-- 🔹 설명:
-    - StringIn 'Rain' 'Snow' → "비" 또는 "눈"이 올 때만 이벤트 구독
-
-## 📌 결론: 필터링을 활용한 최적화 전략
-
-
-
----
-
-
 # 이미 생성된 Azure Functions App에 Event Grid 추가하기
 - 부제 : 현재 Timer Trigger로 동작하는 WeatherCheckFunction이 있는 상태에서 Event Grid를 연동하는 방법
 
@@ -369,3 +303,83 @@ func new --name EventGridHandler --template "Event Grid trigger"
 - Event Grid 트리거 설정 확인 (function.json)
 - Azure CLI로 Event Grid와 Functions 연동
 - 로컬에서 curl로 테스트 이벤트 전송
+
+---
+
+# Event Grid 필터링
+- event grid 구독에서만 사용 가능 : filter 설정은 Azure Event Grid 구독에서만 적용되는 것이며, 이를 통해 이벤트를 필터링한 후, 해당 필터를 만족하는 이벤트만 구독한 대상(예: Azure Function, Webhook 등)으로 전달 / 단순 event grid listener에서는 함수 실행됨!
+- Azure **Event Grid 필터링(Event Filtering)**은 이벤트를 특정 조건에 맞는 경우에만 처리하도록 설정하는 기능
+- 즉, 불필요한 이벤트를 걸러내서 비용 절감과 성능 최적화할 수 있음
+
+## Event Grid 필터링이 필요한 이유
+- 예시
+```
+✅ "맑음 → 비" 변화하면 Slack 알림 보내야 함
+❌ "맑음 → 맑음" 같은 경우엔 알림을 보낼 필요 없음
+👉 필터링을 적용하면 중복된 이벤트를 걸러내서 비용을 아낄 수 있음
+```
+## Event Grid 필터링 방식
+
+### 1️⃣ 기본 속성 필터링 (Property Filtering)
+- 이벤트 데이터에서 특정 필드 값을 기준으로 필터링
+- 예를 들어, "비가 오거나 눈이 올 때만 이벤트를 처리"할 수 있음
+```json
+{
+  "filter": {
+    "subjectBeginsWith": "/weather/",
+    "data": {
+      "weather": {
+        "in": ["Rain", "Snow"]
+      }
+    }
+  }
+}
+```
+- 🔹 설명:
+    - subjectBeginsWith: "/weather/" → "weather"와 관련된 이벤트만 필터링
+    - data.weather.in: ["Rain", "Snow"] → "비" 또는 "눈"이 포함된 이벤트만 처리
+### 2️⃣ 고급 필터링 (Advanced Filtering)
+- 숫자, 문자열, 존재 여부 같은 조건으로 필터링 가능
+- 예를 들어, 강수량이 5mm 이상일 때만 알림을 보내려면?
+
+```json
+{
+  "filter": {
+    "data.precipitation": {
+      "greaterThanOrEquals": 5
+    }
+  }
+}
+```
+- 🔹 설명:
+    - data.precipitation 값이 5mm 이상일 경우만 이벤트를 트리거함
+
+### 3️⃣ Event Grid 구독 필터링 (Event Subscription Filtering)
+- 특정 구독(Event Subscription)에 필터링 규칙을 추가해서 불필요한 이벤트를 받지 않도록 설정 가능
+```
+az eventgrid event-subscription create \
+  --name WeatherAlertSubscription \
+  --source-resource-id /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.EventGrid/topics/{event-grid-topic} \
+  --endpoint /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Web/sites/{function-app} \
+  --advanced-filter data.weather StringIn 'Rain' 'Snow'
+```
+- 🔹 설명:
+    - StringIn 'Rain' 'Snow' → "비" 또는 "눈"이 올 때만 이벤트 구독
+
+## 📌 결론: 필터링을 활용한 최적화 전략
+
+# Event Grid destination
+- Event Grid에서 이벤트를 전달할 대상을 설정하는 부분
+- Event Grid 이벤트가 전달될 **엔드포인트(Endpoint)** 를 정의하며, 그 엔드포인트에서 이벤트를 처리할 수 있도록 함
+- 구체적으로, "destination" 항목은 이벤트를 수신할 대상(보통은 웹훅, Azure Function, 서비스 등)을 지정하는 역할 (여기서 "endpointType": "Webhook"은 이벤트가 웹훅 URL로 전달될 것임)
+- 예시
+```
+"properties": {
+  "destination": {
+    "endpointType": "Webhook",          // 이벤트를 전달할 엔드포인트 타입 (여기서는 웹훅)
+    "properties": {
+      "url": "https://<your-function-app-name>.azurewebsites.net/api/your-function?code=<your-function-key>"      // 이벤트를 수신할 실제 URL (웹훅 URL)
+    }
+  }
+}
+```
