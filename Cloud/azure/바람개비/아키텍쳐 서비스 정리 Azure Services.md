@@ -87,23 +87,25 @@ az functionapp create --resource-group hachu-static-web-app \
 ```
 - 💡 Azure에서는 모든 리소스가 반드시 하나의 Resource Group에 속해야 하며, 이를 활용하면 인프라 관리를 훨씬 효율적으로 할 수 있습니다. 🚀
 ---
-1. 구독ID 찾기
+# Azure CLI로 구독 생성하기 위한 ID 찾기
+
+## 1. 구독ID 찾기
 ```sh
 az account show --query id --output tsv
 ```
-2. **스토리 계정에 따른 리소스 그룹 찾기**
+## 2. **스토리 계정에 따른 리소스 그룹 찾기**
 ```
 az storage account list --query "[].{Name:name, ResourceGroup:resourceGroup}" --output table
 ```
-2-1. 리소스 그룹 이름 찾기
+### 2-1. 리소스 그룹 이름 찾기
 ```
 az group list --query "[].{Name:name}" --output table
 ```
-2-2. 스토리지 계정 이름 찾기
+### 2-2. 스토리지 계정 이름 찾기
 ```sh
 az account show --query id --output ts
 ```
-4. 함수 앱 이름 찾기
+## 3. 함수 앱 이름 찾기
 ```
 az functionapp list --query "[].{Name:name}" --output table
 ```
