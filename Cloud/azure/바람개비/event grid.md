@@ -369,7 +369,7 @@ az eventgrid event-subscription create \
 
 ## 📌 결론: 필터링을 활용한 최적화 전략
 
-# Event Grid destination
+# Event Grid destination(event grid -> 구독 webhook 처리)
 - Event Grid에서 이벤트를 전달할 대상을 설정하는 부분
 - Event Grid 이벤트가 전달될 **엔드포인트(Endpoint)** 를 정의하며, 그 엔드포인트에서 이벤트를 처리할 수 있도록 함
 - 구체적으로, "destination" 항목은 이벤트를 수신할 대상(보통은 웹훅, Azure Function, 서비스 등)을 지정하는 역할 (여기서 "endpointType": "Webhook"은 이벤트가 웹훅 URL로 전달될 것임)
@@ -380,6 +380,27 @@ az eventgrid event-subscription create \
     "endpointType": "Webhook",          // 이벤트를 전달할 엔드포인트 타입 (여기서는 웹훅)
     "properties": {
       "url": "https://<your-function-app-name>.azurewebsites.net/api/your-function?code=<your-function-key>"      // 이벤트를 수신할 실제 URL (웹훅 URL)
+    }
+  }
+}
+```
+
+## destination에 param을 추가하고 싶은 경우
+- event grid index.js에서 context.res에 param을 추가해줄 수 있음
+```
+    // 필요한 추가 로직을 처리하거나 외부 시스템에 호출
+    context.res = {
+        status: 200,
+        body: `Received param1: ${param1}, param2: ${param2}`
+    };
+```
+- webhook url에 param을 붙이면 됨
+```
+{
+  "destination": {
+    "endpointType": "Webhook",
+    "properties": {
+      "url": "https://<your-function-app-name>.azurewebsites.net/api/your-function?param1=value1&param2=value2"
     }
   }
 }
