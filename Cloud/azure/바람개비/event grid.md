@@ -238,7 +238,7 @@ func new --name EventGridHandler --template "Azure Event Grid trigger"
   2. func --version 확인 후 최신버전인지 확인필요
   3. func templates list로 template 네이밍 확인 필요
   ```sh
-  func new --name EventGridHandler --template "Azure Event Grid trigger"
+  func new --name EventGridHandler --template "Event Grid trigger"
     Use the up/down arrow keys to select a template:Event Grid trigger
     Can't find template "Event Grid trigger" in "javascript"
   ```
@@ -283,9 +283,20 @@ module.exports = async function (context, eventGridEvent) {
 - type: "eventGridTrigger" → Event Grid에서 발생한 이벤트를 수신하는 트리거
 - name: "eventGridEvent" → index.js에서 사용할 이벤트 객체 이름
 ## ✅ 4. Event Grid가 Azure Functions에 이벤트를 보낼 수 있도록 권한 부여
-- Event Grid가 Azure Functions를 호출할 수 있도록 권한을 설정
 
-### ① Azure CLI로 Event Grid 구독 생성
+- 🔧 Event Grid 리소스 공급자 등록하기
+```sh
+az provider register --namespace Microsoft.EventGrid
+// 해당 구독에서 Microsoft.EventGrid를 등록
+```
+
+- 📌 등록 상태 확인 방법
+```sh
+az provider show --namespace Microsoft.EventGrid --query "registrationState"
+```
+
+- Event Grid가 Azure Functions를 호출할 수 있도록 권한을 설정
+### ① [Azure CLI로 Event Grid 구독 생성](https://github.com/hachuu/developGuide/blob/main/Cloud/azure/%EB%B0%94%EB%9E%8C%EA%B0%9C%EB%B9%84/%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%A0%95%EB%A6%AC%20Azure%20Services.md#azure-cli%EB%A1%9C-%EA%B5%AC%EB%8F%85-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-id-%EC%B0%BE%EA%B8%B0)
 - Azure CLI를 사용해서 Event Grid 구독을 추가
 - 특정 이벤트가 발생할 때 Event Grid가 Azure Functions로 이벤트를 전송할 수 있게 됨
 ```sh
