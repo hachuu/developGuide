@@ -223,7 +223,11 @@ az eventgrid event-subscription create \
 
 ## 📌 결론: 필터링을 활용한 최적화 전략
 
+
+
 ---
+
+
 # 이미 생성된 Azure Functions App에 Event Grid 추가하기
 - 부제 : 현재 Timer Trigger로 동작하는 WeatherCheckFunction이 있는 상태에서 Event Grid를 연동하는 방법
 
@@ -243,6 +247,10 @@ func new --name EventGridHandler --template "Azure Event Grid trigger"
     Can't find template "Event Grid trigger" in "javascript"
   ```
 
+- ✔ **배포 해야 다음 진행 가능**
+```
+func azure functionapp publish HachuFunctionApp --resource-group hachu-static-web-app
+```
 
 ## ✅ 2. 새로 생성된 함수의 구조
 - 새로 생성된 EventGridHandler/ 폴더 안의 구조
@@ -308,6 +316,9 @@ az eventgrid event-subscription create \
   --source-resource-id /subscriptions/{subscription-id}/resourceGroups/{resource-group}/providers/Microsoft.Storage/storageAccounts/{storage-account} \
   --endpoint https://{your-function-app-name}.azurewebsites.net/runtime/webhooks/eventgrid?functionName=EventGridHandler \
   --included-event-types Microsoft.Storage.BlobCreated Microsoft.Storage.BlobDeleted
+
+
+az eventgrid event-subscription create --name WeatherEventSubscription --source-resource-id "/subscriptions/2e0e8e71-8cf1-4068-b548-5e36761f05bc/resourceGroups/hachu-static-web-app/providers/Microsoft.EventGrid/topics/WeatherEventTopic" --endpoint-type azurefunction --endpoint "/subscriptions/2e0e8e71-8cf1-4068-b548-5e36761f05bc/resourceGroups/hachu-static-web-app/providers/Microsoft.Web/sites/HachuFunctionApp/functions/eventGridEvent"
 ```
 - 🔹 {your-function-app-name}: Azure Functions App 이름
 - 🔹 {resource-group}: 리소스 그룹 이름
@@ -316,6 +327,16 @@ az eventgrid event-subscription create \
 
 ## ✅ 5. 로컬 테스트 (Event Grid 이벤트 모의 전송)
 - Azure에서 Event Grid 트리거를 실제로 테스트하려면, Event Grid에 직접 이벤트를 보낼 수도 있음.
+
+- endpoint 조회
+```sh
+az eventgrid topic show --name WeatherEventTopic --resource-group hachu-static-web-app --query "endpoint"
+```
+- Event Grid Topic에 대한 액세스 키
+```
+az eventgrid topic key list --name <your-topic-name> --resource-group <your-resource-group> --query "key1"
+az eventgrid topic key list --name WeatherEventTopic --resource-group hachu-static-web-app --query "key1"
+```
 - 실제 테스트 이벤트를 보내는 명령어
 ```sh
 curl -X POST -H "Content-Type: application/json" \
