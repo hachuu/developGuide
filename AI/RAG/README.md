@@ -77,3 +77,4 @@
   - LLM은 대규모 데이터 처리를 위해 많은 전력과 GPU 자원을 사용 → 환경 부담이 큼
   - SLM은 소규모 데이터로 동작 가능하여 에너지를 절약할 수 있음
 
+# [RAG 구현 Study](https://github.com/hachuu/developGuide/blob/main/AI/RAG/azure%EC%97%B0%EB%8F%99.md)
