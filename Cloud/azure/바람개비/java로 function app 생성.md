@@ -1,0 +1,49 @@
+# vscode에서 명령어 위주로 생성하기
+1. java version 11 이상 필요, 환경변수 설정 JAVA_HOME
+- java -version
+```
+PS C:\dev\azurestudy> java -version
+java version "11.0.22" 2024-01-16 LTS
+```
+2. mvn 다운로드 필요, 환경변수 설정 MAVEN_HOME
+3. 터미널에서 mvn 명령어 실행해야하는데 명령어로 복붙하면 실행안됨 -> cmd 파일 생성 후 실행 (generate.cmd)
+- generate.cmd
+```
+mvn archetype:generate ^
+ -DarchetypeGroupId=com.microsoft.azure ^
+ -DarchetypeArtifactId=azure-functions-archetype ^
+ -DarchetypeVersion=1.42 ^
+ -DgroupId=com.example ^
+ -DartifactId=java-function-app ^
+ -Dversion=1.0-SNAPSHOT ^
+ -Dpackage=com.example ^
+ -DappName=javafunctionapp ^
+ -DjavaVersion=11 ^
+ -DinteractiveMode=false
+```
+```
+PS C:\dev\azurestudy> cd .\azurefuncdemo\
+PS C:\dev\azurestudy\azurefuncdemo> .\generate.cmd     
+```
+4. mvn clean package (pom.xml 있는 경로에서 실행)
+5. func start 실행하는데 경로가 중요함
+- cd target/azure-functions/javafunctionapp
+- func start
+```
+
+Azure Functions Core Tools
+Core Tools Version:       4.0.6821 Commit hash: N/A +c09a2033faa7ecf51b3773308283af0ca9a99f83 (64-bit)
+Function Runtime Version: 4.1036.1.23224
+
+[2025-03-25T08:25:48.932Z] File 'C:\Program Files\dotnet\dotnet.exe' is not found, 'dotnet' invocation will rely on the PATH environment variable.
+[2025-03-25T08:25:49.379Z] File 'C:\Program Files\dotnet\dotnet.exe' is not found, 'dotnet' invocation will rely on the PATH environment variable.
+[2025-03-25T08:25:49.385Z] File 'C:\Program Files\dotnet\dotnet.exe' is not found, 'dotnet' invocation will rely on the PATH environment variable.
+
+Functions:
+
+        HttpExample: [GET,POST] http://localhost:7071/api/HttpExample
+
+For detailed output, run func with --verbose flag.
+[2025-03-25T08:25:52.038Z] Worker process started and initialized.
+[2025-03-25T08:25:54.545Z] Host lock lease acquired by instance ID '000000000000000000000000406DAACF'.
+```
