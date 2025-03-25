@@ -1,11 +1,25 @@
 # 아키텍쳐 서비스 종류
-- Resource Group: 여러 서비스를 관리하는 프로젝트 폴더
+
 - Subscription: Azure 서비스를 쓸 수 있는 권한, 패스권
-- Storage Account: 데이터를 저장하는 클라우드 드라이브
-- Application Insights: 앱을 실시간으로 점검하는 도구
-- App Service Plan: 앱을 실행할 서버 성능을 조절하는 옵션
+- Resource Group: 여러 서비스를 관리하는 프로젝트 폴더
 - functions app : 이벤트 핸들러 (행동 대장 : 실제 이벤트 처리)
+- Storage Account: 데이터를 저장하는 클라우드 드라이브
+- App Service Plan: 앱을 실행할 서버 성능을 조절하는 옵션
+- Application Insights: 앱을 실시간으로 점검하는 도구
 - event grid : 이벤트 브로커 (알림이 : 이벤트 알림)
+
+## - Function App 구성에 필요한 리소스들
+|리소스|필요성/역할|
+|-----|------------|
+|Subscription|리소스 과금 및 관리 단위. Function App이 속하게 될 청구 계정|
+|Resource Group	|관련 리소스를 논리적으로 묶는 단위. 관리, 배포, 삭제에 용이|
+|Function App|	실제 함수가 실행되는 호스팅 환경. 앱 서비스의 일종|
+|Storage Account|함수 코드, 로그, 실행 상태 등을 저장하는 필수 리소스 (Function Runtime 동작에 필요)|
+|App Service Plan (선택적)|Consumption Plan이 아닌 경우 필요. 컴퓨팅 자원을 정의|
+|Application Insights (선택적이지만 권장)|모니터링 및 로깅 도구. 함수 성능과 오류 분석에 유용|
+
+![image](https://github.com/user-attachments/assets/1670aa95-42fd-4c27-9f0c-d6c26ef312dc)
+
 
 # 각 Azure Service Portal 배포 시 명령어
 
