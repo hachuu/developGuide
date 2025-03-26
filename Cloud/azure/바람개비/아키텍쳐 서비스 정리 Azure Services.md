@@ -18,6 +18,33 @@
 |App Service Plan (선택적)|Consumption Plan이 아닌 경우 필요. 컴퓨팅 자원을 정의|
 |Application Insights (선택적이지만 권장)|모니터링 및 로깅 도구. 함수 성능과 오류 분석에 유용|
 
+### 용어 정리
+- Function Runtime : Azure Function을 실제로 실행시키는 백그라운드 소프트 웨어 환경 / Function App 내부에서 함수의 트리거 감지, 실행, 로깅 등 모든 동작을 처리하는 엔진
+- App Service Plan : CPU, 메모리, 인스턴스 수, 과금 방식 등을 정의하는 호스팅 리소스, Function App이 어디서 어떻게 실행될지 결정
+    - 🔄 Subscription과의 관계
+        - Subscription은 리소스들을 청구/관리 단위로 묶는 최상위 컨테이너입니다.
+        - App Service Plan은 그 Subscription 안에 리소스 그룹에 속해 있는 하나의 리소스입니다.
+        - 따라서 과금도 해당 Subscription 단위로 청구됩니다.
+
+    ```yaml
+    Subscription: 회사A Azure 계정
+    └── Resource Group: 개발팀 프로젝트
+        ├── App Service Plan: Premium Plan (서버 2개, 상시 실행)
+        │   ├── Function App 1: 주문 처리
+        │   └── Web App: 관리 포털
+        └── Storage Account: 함수 코드 저장
+    ```
+- Consumption Plan vs App Service Plan
+|항목	|Consumption Plan	|App Service Plan|
+|-------|-------------------|----------------|
+|요금	|실행 시간 + 호출 횟수 기반 (완전 서버리스)	|상시 실행 기반 (VM 단위 과금)|
+|스케일	|자동 확장 (필요시 인스턴스 자동 증가)	수동 또는 제한적 자동 스케일|
+|기본 요금	|사용 없으면 요금 없음	사용하지 않아도 요금 발생|
+|성능|	콜드 스타트 발생 가능	콜드 스타트 없음 (항상 준비됨)|
+|VNET 통합	|제한적 (Premium Plan 이상 필요)	가능|
+|사용 목적	|간단한 서버리스 작업, 비용 민감한 서비스	고성능, VNET 필요, 항상 실행되는 앱|
+|사용량 제한	|무료 티어 존재, 1M 호출 + 400,000 GB-초	무제한 (VM 리소스 범위 내)|
+
 ![image](https://github.com/user-attachments/assets/1670aa95-42fd-4c27-9f0c-d6c26ef312dc)
 
 
