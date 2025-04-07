@@ -154,5 +154,62 @@ async def ask_question(req: QuestionRequest):
 ```
 uvicorn app.main:app --reload
 ```
-8. 
-9. 
+8. 환경변수 설정 (open ai키)
+- .env 파일을 루트 폴더에 생성 후 작성
+```
+OPENAI_API_KEY=your-api-key-here
+```
+9. dotenv 라이브러리사용하여 환경변수 설정
+```
+pip install python-dotenv
+```
+10. rag python에 key 가져오는 소스 작업
+```
+# app/rag_engine.py
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # .env 파일에서 환경변수 로딩
+api_key = os.environ["OPENAI_API_KEY"]
+```
+11. 다시 실행
+```
+uvicorn app.main:app --reload
+```
+- ✅ 상황별 다시 실행 방법
+  - ▶️ FastAPI 서버 실행 중이라면:
+  ```bash
+  Ctrl + C  # 서버 중지
+  uvicorn app.main:app --reload  # 다시 시작
+  ```
+  - ▶️ Streamlit 앱이라면:
+  ```bash
+  Ctrl + C
+  streamlit run frontend/app.py
+  ```
+  - ▶️ VS Code에서 실행 중이라면:
+    - 터미널에서 멈추고 다시 python your_file.py
+  - .env 파일 사용 시, VS Code 재시작하면 자동 적용되기도 함
+ 
+12. 실행이 안됨
+- ❌ 에러 원인 요약
+```vbnet
+ModuleNotFoundError: Module langchain_community.embeddings not found.
+```
+- 명령어 실행
+```
+pip install -U langchain-community
+```
+13. echo Hello RAG! This is a test document. > data\raw_docs\sample.txt
+14. py app/generate_vector_store.py (python 하면 명령어 실행이 안됨 : python --version은 안되고 py --version가 되는 특징..)
+15. pip install -U langchain-openai
+16. import 명시 수정
+```
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain_community.document_loaders import TextLoader
+```
+17. 이슈 sample.txt가 utf-8로 저장이 안됨
+- 해결방법 : vscode로 연다음 select encoding을 UTF-8 | CRLF로 변경
+18. py app\generate_vector_store.py 실행됨
+19. uvicorn app.main:app --reload : 명령어 실행후 테스트 진행
