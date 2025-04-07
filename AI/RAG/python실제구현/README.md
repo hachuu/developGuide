@@ -244,3 +244,5 @@ streamlit run frontend/app.py
 ```
 3. 화면 구현
 ![image](https://github.com/user-attachments/assets/e7514a04-c443-4891-8ffc-190302f018b2)
+4. 웹앱 구현
+[링크](https://github.com/hachuu/developGuide/tree/main/AI/RAG/python%EC%8B%A4%EC%A0%9C%EA%B5%AC%ED%98%84/RAG_WEBAPP)
