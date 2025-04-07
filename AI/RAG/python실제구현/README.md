@@ -9,8 +9,9 @@
 
 - 명령어
 ```
-1. py app\generate_vector_store.py
-2. uvicorn app.main:app --reload
+1. py app\generate_vector_store.py // txt 파일 vectors 변환
+2. uvicorn app.main:app --reload // BE
+3. streamlit run frontend/app.py // FE
 ```
 
 ## 환경 세팅
