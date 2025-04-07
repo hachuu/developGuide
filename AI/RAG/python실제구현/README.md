@@ -7,6 +7,12 @@
 3. vector 데이터 추출
 4. api 테스트
 
+- 명령어
+```
+1. py app\generate_vector_store.py
+2. uvicorn app.main:app --reload
+```
+
 ## 환경 세팅
 ### 1. python version 확인
 ```
