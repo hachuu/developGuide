@@ -213,3 +213,8 @@ from langchain_community.document_loaders import TextLoader
 - 해결방법 : vscode로 연다음 select encoding을 UTF-8 | CRLF로 변경
 18. py app\generate_vector_store.py 실행됨
 19. uvicorn app.main:app --reload : 명령어 실행후 테스트 진행
+20. 에러 남 -> "allow_dangerous_deserialization=True" 추가하면 main 실행 가능
+- ✅의미 : 직접 생성한 벡터 DB니까 True로 설정해도 전~혀 문제 없습니다.
+```
+vector_store = FAISS.load_local("data/vectors", embeddings=embedding_model, allow_dangerous_deserialization=True)
+```
