@@ -71,7 +71,7 @@ New-Item frontend\app.py -ItemType File
   - 4️⃣	질문 입력 → 유사 문서 검색 → LLM 응답 생성
   - 5️⃣	전체 통합해서 실사용 가능한 서비스 완성!
 
-### 구현
+### BE 구현
 1. backend api 설치
 ```
 pip install fastapi uvicorn
@@ -230,3 +230,16 @@ from langchain_community.document_loaders import TextLoader
 ```
 vector_store = FAISS.load_local("data/vectors", embeddings=embedding_model, allow_dangerous_deserialization=True)
 ```
+
+### FE 구현
+
+1. ui framework 설치
+```
+pip install streamlit
+```
+2. app.py 파일 실행
+```
+streamlit run frontend/app.py
+```
+3. 화면 구현
+![image](https://github.com/user-attachments/assets/e7514a04-c443-4891-8ffc-190302f018b2)
