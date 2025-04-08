@@ -104,7 +104,7 @@ api_key = os.getenv("OPENAI_API_KEY", "fallback-key-here")
 
 ---
 
-# VS Code 사용
+# GitHub 저장소를 Azure App Service에 연결해서 자동 배포
 
 ## ✅ 전체 흐름 요약
 ```css
