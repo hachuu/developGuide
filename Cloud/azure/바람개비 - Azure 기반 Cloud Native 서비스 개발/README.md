@@ -4,12 +4,24 @@
 - Azure Functions가 OpenWeather API에서 날씨 정보 조회
 - 날씨 변화 감지 시 Azure Event Grid를 통해 이벤트 트리거
 - Azure Notification Hubs를 통해 Slack으로 푸시 알림 전송
+
 ## ⚙️ 기술 스택
 - Backend: Azure Functions (Node.js or Python)
 - Database: Azure Cosmos DB (사용자가 등록한 지역 저장)
 - API 연동: OpenWeather API (날씨 데이터 조회)
 - Event Processing: Azure Event Grid (날씨 변화 감지)
 - Notification: Azure Notification Hubs → Slack Webhook
+
+### 참조) 아키텍처 서비스 설명 및 구현 정리 자료
+```
+1. Functions와 Event Grid 관점.
+2-1. java로 function app 생성.
+2. functions app 구현하기.md
+3. event grid 구현하기.md
+4. group형 tenant 생성하기.md
+5. 아키텍쳐 서비스 정리 Azure Services.md
+6. (번외) App Service vs Static Web Apps.md
+```
 
 ## 📂 전체 아키텍처 파일 구조 (Azure Notification Hubs 없는 구조)
 ```

@@ -1,6 +1,6 @@
 # Index
 / azure
- ├── 바람개비
+ ├── 바람개비 - Azure 기반 Cloud Native 서비스 개발
  ├── 스터디
 
 # TIL
