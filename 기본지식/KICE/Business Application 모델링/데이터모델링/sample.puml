@@ -1,0 +1,108 @@
+@startuml
+!define table(x) class x << (T,#FFAAAA) >>
+!define primary_key(x) <b>x</b>
+!define foreign_key(x) <u>x</u>
+
+'------------------ 엔터티 정의 --------------------
+table(HOME) {
+    primary_key(home_id): INT
+    address: VARCHAR
+    built_year: YEAR
+}
+
+table(FAMILY_MEMBER) {
+    primary_key(member_id): INT
+    name: VARCHAR
+    birth_date: DATE
+    relationship: VARCHAR
+    foreign_key(home_id): INT
+}
+
+table(ROOM) {
+    primary_key(room_id): INT
+    name: VARCHAR
+    size_sqm: FLOAT
+    foreign_key(home_id): INT
+}
+
+table(APPLIANCE) {
+    primary_key(appliance_id): INT
+    name: VARCHAR
+    brand: VARCHAR
+    foreign_key(room_id): INT
+}
+
+table(FURNITURE) {
+    primary_key(furniture_id): INT
+    name: VARCHAR
+    material: VARCHAR
+    foreign_key(room_id): INT
+}
+
+table(CAR) {
+    primary_key(car_id): INT
+    model: VARCHAR
+    plate_number: VARCHAR
+    foreign_key(member_id): INT
+}
+
+table(PET) {
+    primary_key(pet_id): INT
+    name: VARCHAR
+    type: VARCHAR
+    foreign_key(owner_id): INT
+}
+
+table(ACTIVITY) {
+    primary_key(activity_id): INT
+    name: VARCHAR
+    activity_date: DATE
+    foreign_key(member_id): INT
+}
+
+table(SCHEDULE) {
+    primary_key(schedule_id): INT
+    title: VARCHAR
+    start_time: DATETIME
+    foreign_key(member_id): INT
+}
+
+table(VISITOR) {
+    primary_key(visitor_id): INT
+    name: VARCHAR
+    visit_date: DATE
+    foreign_key(invited_by): INT
+}
+
+table(MEAL) {
+    primary_key(meal_id): INT
+    menu: VARCHAR
+    meal_date: DATE
+    foreign_key(prepared_by): INT
+}
+
+table(MEAL_ATTENDEE) {
+    foreign_key(meal_id): INT
+    foreign_key(member_id): INT
+    -- PK는 두 컬럼 조합 --
+}
+
+'------------------ 관계 정의 --------------------
+
+HOME ||--o{ FAMILY_MEMBER : has
+HOME ||--o{ ROOM : contains
+
+ROOM ||--o{ APPLIANCE : has
+ROOM ||--o{ FURNITURE : has
+
+FAMILY_MEMBER ||--|| CAR : owns
+FAMILY_MEMBER ||--o{ PET : owns
+FAMILY_MEMBER ||--o{ ACTIVITY : does
+FAMILY_MEMBER ||--o{ SCHEDULE : has
+FAMILY_MEMBER ||--o{ VISITOR : invites
+FAMILY_MEMBER ||--o{ MEAL : prepares
+
+MEAL ||--o{ MEAL_ATTENDEE : includes
+FAMILY_MEMBER ||--o{ MEAL_ATTENDEE : joins
+
+@enduml
