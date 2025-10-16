@@ -19,6 +19,24 @@
 - Emergent Abilities(창발적 능력): 임계점을 넘으면 나타나는 능력 -> 쉬운 비유: 물이 끓는 현상
 - 벡터 검색 : 의미 기반
 - 임베딩 : 사람의 언어 -> 컴퓨터의 언어로 번역(숫자)
-
+- 청킹 : 데이터 조각
 
 ## python 3.11 실습
+git clone https://github.com/parkseohuinim/lecture.git
+py -m venv venv
+python.exe -m pip install --upgrade pip (py -3.11 -m pip install --upgrade pip)
+py -3.11 -m pip install -r req
+pip install -r req
+
+```
+py -0p
+
+# 3.11로 파이썬 실행
+py -3.11
+
+# 3.11 인터프리터로 스크립트 실행 : lab 해당 경로로 가서
+py -3.11 basic_embedding.py
+```
+# 3.11 인터프리터에 패키지 설치 (중요!)
+py -3.11 -m pip install openai tiktoken python-dotenv
+``
