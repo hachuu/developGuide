@@ -78,3 +78,4 @@
   - SLM은 소규모 데이터로 동작 가능하여 에너지를 절약할 수 있음
 
 # [RAG 구현 Study](https://github.com/hachuu/developGuide/blob/main/AI/RAG/azure%EC%97%B0%EB%8F%99.md)
+# [MCP 기반 RAG 멀티에이전트 개발 및 ITO 활용 실무 교육](https://github.com/hachuu/developGuide/blob/main/AI/RAG/10_16-17%20%EA%B5%90%EC%9C%A1%20MCP%20%EA%B8%B0%EB%B0%98%20RAG%20%EB%A9%80%ED%8B%B0%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EA%B0%9C%EB%B0%9C%20%EB%B0%8F%20ITO%20%ED%99%9C%EC%9A%A9%20%EC%8B%A4%EB%AC%B4.md)
