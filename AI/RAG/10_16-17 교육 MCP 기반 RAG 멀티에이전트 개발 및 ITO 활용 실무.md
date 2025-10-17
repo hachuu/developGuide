@@ -24,9 +24,14 @@
 ## python 3.11 실습
 git clone https://github.com/parkseohuinim/lecture.git
 py -m venv venv
+.\venv\Scripts\activate
+cd .\lab03~~
+Readme.md 참조
+
+
 python.exe -m pip install --upgrade pip (py -3.11 -m pip install --upgrade pip)
 py -3.11 -m pip install -r req
-pip install -r req
+pip install -r req(tab)
 
 ```
 py -0p
