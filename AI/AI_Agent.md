@@ -23,7 +23,8 @@
   - 가드레일 : 정책/보안/PII 마스킹, 입력 검증, 비용/시간 제한
 
 4. AI Agent 구조
-  1. **Single** : 단순구조
+
+  - 4-1. **Single** : 단순구조
     - 구조
       1. 사용자 입력
       2. LLM이 "생각 + 툴 호출" 결정
@@ -32,7 +33,7 @@
       1. 검색, 요약, 분류, 검증, 액션
       2. 실패/지연/비용이 늘음
       3. 테스트/디버깅 어려움
-  2. **Multie** : Single 보완, 역할 분리, LLM을 여러번 쓰는 것이 아니라, 책임과 실패 영역을 분리해서 운영이 쉬워짐
+  - 4-2. **Multie** : Single 보완, 역할 분리, LLM을 여러번 쓰는 것이 아니라, 책임과 실패 영역을 분리해서 운영이 쉬워짐
     - 구조
       1. Router(분기/의도문류)
       2. Retriever(검색/근거수집)
@@ -42,12 +43,12 @@
       6. Summarizer(결과 정리)
       7. Memory Manager(STM/LTM 저장/삭제/회수)
 
-  3. Single에서 멀티로 발전한 이유
+  - 4-3. Single에서 멀티로 발전한 이유
     - 하나의 Agent가 모든 역할을 맡으면 복잡도와 실패 리스크가 증가
     - 역할별 Agent 분리 책임, 품질, 디버깅이 쉬워짐
     - 대규모 처리와 확장을 위해 비동기, 분산 구조가 필요해짐
     
-  4. Single -> Multie 구조화 단계
+  - 4-4. Single -> Multie 구조화 단계
      - 단계 A. 역할 분리 + 계약 (Contract)
        - 각 서브 에이전트는 입력/출력 스키마(JSON)를 고정
        - 예 : Retriever는 "근거 목록 + 출처 + 신뢰도"만 반환
@@ -72,23 +73,24 @@
          - 에이전트들은 각자 메모리 갖고 있지 말고 Memory Service를 통해 읽고 씀
 
 5. 멀티 에이전트의 아키텍처 패턴 3가지
-  1. Manager-Worker
+  - 5-1. Manager-Worker
     - Manager(오케스트레이터)가 계획 수립
     - Worker 서브 에이전트들이 실행/검색/검증 수행
     - 장점 : 통제가 쉽고 운영/디버깅 용이
     - ex) 대부분의 사내 업무 자동화, 고객응대, 워크플로우
-  2. Event-Driven
+  - 5-2. Event-Driven
     - 이벤트 발생 -> 여러 에이전트가 구독해서 각자 처리
     - 장점 : 확장성/느슨한 결합, 기능 추가가 쉬움
     - 단점 : 추적/디버깅(관측성) 없으면 지옥
     - ex) 비동기 파이프라인, 로그/레코드 기반 자동화
-  3. Pipeline / DAG
+  - 5-3. Pipeline / DAG
     - 정해진 단계대로 흘러감 (A->B->C)
     - 장점 : 결과 재현/테스트 쉬움
     - 단점 : 예외 케이스 분기 많아지면 복잡
     - ex) 문서 처리(분류->추출->요약->검증), 정형 워크 플로우
 
 6. Pub/Sub VS Queue
+
 ```
 사용자 메시지 들어옴 -> 콘텐츠인지 판단 -> 웹검색/사내검색 -> 요약 -> 검증 -> Slack 전송/저장
 ```
@@ -107,7 +109,8 @@
   - RunPublishJob
  
 7. Sample Architecture
-  1. 멀티 에이전트 아키텍처 다이어그램
+  - 7-1. 멀티 에이전트 아키텍처 다이어그램
+    
      a. 동기(초기) 버전 : Orchestrator 중심
      <img width="1089" height="767" alt="image" src="https://github.com/user-attachments/assets/2b2fbf9f-c050-41b4-80ec-d7fd7fe9aeae" />
      
@@ -161,7 +164,8 @@
         PUB --> EG2[Event: Done/Failed] --> EG
       ```
       
-      **(참고) Azure 리소스 위치(포털에서 찾는 경로)**
+      ### **(참고) Azure 리소스 위치(포털에서 찾는 경로)**
+      
         1. Event Grid: Azure Portal → Event Grid → Topics / Subscriptions
         2. Service Bus(Queue/Topic): Azure Portal → Service Bus → Queues / Topics
         3. Azure Functions: Azure Portal → Function App
@@ -169,7 +173,7 @@
         5. Cosmos DB: Azure Portal → Azure Cosmos DB
         6. Monitor/Logs: Azure Portal → Monitor → Log Analytics / Application Insights
         
-  2. 서브 에이전트 "입력/출력 JSON 계약(Contract)" 템플릿
+  - 7-2. 서브 에이전트 "입력/출력 JSON 계약(Contract)" 템플릿
   
     a. 공통 Envelope (모든 Agent 공통)
     
@@ -354,7 +358,8 @@
     }
     ```
      
-  3. 샘플 워크플로우 : "콘텐츠명 추정 -> 검색 -> 요약 -> 검증 -> 공유/저장"
+  - 7-3. 샘플 워크플로우 : "콘텐츠명 추정 -> 검색 -> 요약 -> 검증 -> 공유/저장"
+    
     a. 이벤트/큐 기준 흐름(실제 운영 형태)
       1. API: 사용자 발화 수신 → MessageReceived 이벤트 발행
       2. Router Job(Queue): Router Agent가 콘텐츠명/뉴스/일반QA 분기
@@ -379,13 +384,15 @@
       }
       ```
     
-  4. 구현 팁 (Node/Azure에서 "멀티로 갈때" 제일 중요한 것)\
+  - 7-4. 구현 팁 (Node/Azure에서 "멀티로 갈때" 제일 중요한 것)
+    ```
     a. TraceId 필수: 모든 이벤트/큐 메시지에 traceId 넣기
     b. Idempotency Key: 같은 job이 2번 실행돼도 결과가 깨지지 않게(특히 publish)
     c. Timeout/Retry 정책 분리: Retrieval은 재시도 2~3회, Publish는 멱등+짧게
     d. LLM 비용 상한: step별 maxTokens / maxToolCalls 하드 제한
     e. Memory Service 중앙화: 에이전트가 Redis/DB 직접 만지지 말고 서비스로만
     f. Observability: 단계별 latency/에러율/토큰/툴콜 수를 App Insights에 로깅
+    ```
 
   **Sample : "오늘 날씨 무드에 맞는 노래랑 영화 추천"**
   1. 처리 흐름도 (동기 Orchestrator 중심)
