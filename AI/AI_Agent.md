@@ -49,9 +49,27 @@
     
   4. Single -> Multie 구조화 단계
      - 단계 A. 역할 분리 + 계약 (Contract)
+       - 각 서브 에이전트는 입력/출력 스키마(JSON)를 고정
+       - 예 : Retriever는 "근거 목록 + 출처 + 신뢰도"만 반환
+       - 장점 : 테스트 가능, 교체 가능
      - 단계 B. 오케스트레이터 도입
+       - 중앙 Orchestrator(Manager/Coordinator)를 둡니다.
+       - 역할 :
+         - 어떤 에이전트를 언제 호출할지 결정
+         - 타임아웃/재시도/폴백
+         - 상태(세션) 관리
      - 단계 C. 비동기화 + Pub/Sub / Queue로 확장
+       요청이 많아지면 동기 체인이 길어져서 느려지고 불안정해짐
+       이때 Pub/Sub + Queue 가 들어가짐
+       - Pub/Sub(이벤트 브로드캐스트) : "무슨 일이 발생했다"를 여러 소비자에게 알림
+       - Queue(작업 대기열) : "일을 처리해라"를 안정적으로 순서/부하조절하며 처리
+       * Pub/Sub = 알림(이벤트), Queue = 작업(잡 처리)
      - 단계 D. 상태/메모리 분리
+       멀티 에이전트에서 제일 많이 터지는 문제가 "상태 공유"
+       - 추천 원칙 : 
+         - 세션 상태(STM) : Redis 같은 빠른 저장소
+         - 장기 메모리(LTM) : DB/Vector DB(추후 Cosmos DB  확장 계획인 경우)
+         - 에이전트들은 각자 메모리 갖고 있지 말고 Memory Service를 통해 읽고 씀
 
 5. 멀티 에이전트의 아키텍처 패턴 3가지
   1. Manager-Worker
@@ -70,5 +88,32 @@
     - 단점 : 예외 케이스 분기 많아지면 복잡
     - ex) 문서 처리(분류->추출->요약->검증), 정형 워크 플로우
 
+6. Pub/Sub VS Queue
+```
+사용자 메시지 들어옴 -> 콘텐츠인지 판단 -> 웹검색/사내검색 -> 요약 -> 검증 -> Slack 전송/저장
+```
+- Pub/Sub 이벤트 :
+  - MesssageReceived
+  - ContentDetected
+  - EvidenceCollected
+  - DraftReady
+  - Verified
+- Queue 작업
+  - RunDetectionJob
+  - RunRetrievalJob
+  - RunSummarizeJob
+  - RunVerificationJob
+  - RunPublishJob
+ 
+7. Sample Architecture
+  1. 멀티 에이전트 아키텍처 다이어그램
+  2. 서브 에이전트 "입력/출력 JSON 계약(Contract)" 템플릿
+  3. 샘플 워크플로우 : "콘텐츠명 추정 -> 검색 -> 요약 -> 검증 -> 공유/저장"
+  4. 구현 팁 (Node/Azure에서 "멀티로 갈때" 제일 중요한 것)
+
+  **Sample : "오늘 날씨 무드에 맞는 노래랑 영화 추천"**
+  1. 처리 흐름도 (동기 Orchestrator 중심)
+  2. 처리 흐름도 (비동기 Pub/Sub + Queue 버전)
+  3. 실제 "응답 포맷" 예시 (멀티 에이전트 결과물 느낌)
 
 6. Next AI Agent
