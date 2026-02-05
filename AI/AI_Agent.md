@@ -92,6 +92,7 @@
 ```
 사용자 메시지 들어옴 -> 콘텐츠인지 판단 -> 웹검색/사내검색 -> 요약 -> 검증 -> Slack 전송/저장
 ```
+
 - Pub/Sub 이벤트 :
   - MesssageReceived
   - ContentDetected
@@ -109,6 +110,7 @@
   1. 멀티 에이전트 아키텍처 다이어그램
      a. 동기(초기) 버전 : Orchestrator 중심
      <img width="1089" height="767" alt="image" src="https://github.com/user-attachments/assets/2b2fbf9f-c050-41b4-80ec-d7fd7fe9aeae" />
+     
       ```
       flowchart LR
         U[User/App] --> API[Fastify API]
@@ -128,8 +130,10 @@
         EXE --> TOOLS[Tools: DB/API/Slack]
         ORCH --> API --> U
       ```
+      
      b. 비동기(확장) 버전 : Pub/Sub + Queue
      <img width="1674" height="924" alt="image" src="https://github.com/user-attachments/assets/7542b4b3-1a5d-4632-b9c7-2aeb48d6719c" />
+     
       ```
       flowchart TB
         U[User/App] --> API[Fastify API]
@@ -156,6 +160,7 @@
         PUB --> DB[(DB/Blob)]
         PUB --> EG2[Event: Done/Failed] --> EG
       ```
+      
       **(참고) Azure 리소스 위치(포털에서 찾는 경로)**
         1. Event Grid: Azure Portal → Event Grid → Topics / Subscriptions
         2. Service Bus(Queue/Topic): Azure Portal → Service Bus → Queues / Topics
@@ -166,6 +171,7 @@
         
   2. 서브 에이전트 "입력/출력 JSON 계약(Contract)" 템플릿
     a. 공통 Envelope (모든 Agent 공통)
+    
     ```
     {
       "traceId": "uuid",
@@ -180,15 +186,19 @@
       }
     }
     ```
+    
     b. Router Agent (의도/분기)
     - input
+    
     ```
     {
       "message": "사용자 원문",
       "hints": { "channel": "web|slack|app", "knownIntents": ["news", "weather", "content"] }
     }
     ```
+    
     - output
+    
     ```
     {
       "route": "content_search|qa|action|handoff",
@@ -198,8 +208,10 @@
       "language": "ko"
     }
     ```
+    
     c. Planner Agent (계획 수립)
     - input
+    
     ```
     {
       "goal": "무엇을 달성할지",
@@ -207,7 +219,9 @@
       "constraints": { "timeLimitMs": 8000, "noWeb": false }
     }
     ```
+    
     - output
+    
     ```
     {
       "plan": [
@@ -218,8 +232,10 @@
       "stopConditions": { "maxSteps": 6, "failFast": true }
     }
     ```
+    
     d. Retriever Agent (근거 수집)
     - input
+    
     ```
     {
       "query": "검색어",
@@ -227,7 +243,9 @@
       "topK": 5
     }
     ```
+    
     - output
+    
     ```
     {
       "evidence": [
@@ -243,8 +261,10 @@
       "coverage": { "isEnough": true, "missingAngles": ["공식 발표", "가격"] }
     }
     ```
+    
     e. Executor Agent (툴 실행)
     - input
+    
     ```
     {
       "actions": [
@@ -253,7 +273,9 @@
       ]
     }
     ```
+    
     - output
+    
     ```
     {
       "results": [
@@ -263,8 +285,10 @@
       "errors": []
     }
     ```
+    
     f. Summarizer Agent (요약/서술)
     - input
+    
     ```
     {
       "evidence": [/* retriever evidence */],
@@ -273,7 +297,9 @@
       "maxChars": 600
     }
     ```
+    
     - output
+    
     ```
     {
       "draft": "요약 결과 텍스트",
@@ -281,8 +307,10 @@
       "citations": ["evidence[0]", "evidence[2]"]
     }
     ```
+    
     g. Verifier Agent (검증/가드레일)
     - input
+    
     ```
     {
       "draft": "초안",
@@ -290,7 +318,9 @@
       "rules": { "noPII": true, "mustCite": true, "noHallucination": true }
     }
     ```
+    
     - output
+    
     ```
     {
       "verdict": "pass|revise|fail",
@@ -301,8 +331,10 @@
       "revisedDraft": "수정본(필요 시)"
     }
     ```
+    
     h. Memory Manager (STM/LTM 저장)
     - input
+    
     ```
     {
       "op": "read|write|summarize|delete",
@@ -311,7 +343,9 @@
       "payload": { "notes": "..." }
     }
     ```
+    
     - output
+    
     ```
     {
       "ok": true,
@@ -334,6 +368,7 @@
     b. Router 분기 예시(콘텐츠명 추정 로직)
       - 입력 : "냉부해 보고 싶어"
       - Router Output 예시 : 
+      
       ```
       {
         "route": "content_search",
@@ -354,6 +389,7 @@
   **Sample : "오늘 날씨 무드에 맞는 노래랑 영화 추천"**
   1. 처리 흐름도 (동기 Orchestrator 중심)
   <img width="771" height="1326" alt="image" src="https://github.com/user-attachments/assets/13d030f9-b878-487d-85f4-bed533ed62cb" />
+  
   ```
   flowchart TD
     U[User: 오늘 날씨 무드에 맞는 노래랑 영화추천] --> API[API Gateway / Fastify]
@@ -377,6 +413,7 @@
   
     S --> API --> U
   ```
+  
     - 각 Agent가 하는 일
       - Router : 날씨 기반 감성 추천으로 분기 + 입력을 "날씨 조회/ 무드 추출 / 음악 / 영화"로 쪼갬
       - Planner : "날씨->무드->후보 수집->정렬->검증->응답" 플랜 생성
@@ -389,6 +426,7 @@
   
   2. 처리 흐름도 (비동기 Pub/Sub + Queue 버전)
   <img width="276" height="2322" alt="image" src="https://github.com/user-attachments/assets/43b0a994-669c-4dbd-9761-7babbedbe327" />
+  
   ```
   flowchart TB
     U[User] --> API[Fastify]
@@ -414,6 +452,7 @@
     Q6 --> OUT[Send Response + Store Logs/Memory]
     OUT --> EV2((Event: Completed/Failed))
   ```
+  
   - 특정 단계(예: 추천 후보 수집)가 느려도 큐에 쌓아 처리 가능
   - 실패하면 재시도 / DLQ로 보내고 운영 알람 가능
   
