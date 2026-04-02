@@ -31,40 +31,49 @@ curl -v https://example.com
 확인 포인트
 > GET / HTTP/1.1 (요청)
 < HTTP/1.1 200 OK (응답)
-2. 헤더 확인
 
+### 2. 헤더 확인
 요청 헤더:
-
+```
 Host:
 User-Agent:
 Accept:
-
+```
 응답 헤더:
-
+```
 Content-Type:
 Content-Length:
-3. POST 요청 보내기
+```
+### 3. POST 요청 보내기
+```
 curl -v -X POST https://httpbin.org/post \
   -H "Content-Type: application/json" \
   -d '{"name":"test"}'
+```
 확인 포인트
-Body(JSON)가 서버로 전달되는지 확인
-4. 실패 케이스 확인
+- Body(JSON)가 서버로 전달되는지 확인
+
+### 4. 실패 케이스 확인
+```
 curl -v https://wrong.domain.test
+```
 확인 포인트
-요청 실패 이유 분석 (DNS / 네트워크)
+- 요청 실패 이유 분석 (DNS / 네트워크)
 ✅ 오늘 체크리스트
 
 아래를 설명할 수 있어야 함:
-
+```
  GET vs POST 차이
  Header 역할
  Body가 필요한 이유
  curl -v 옵션 의미
+```
 🤔 사고 질문
+```
 브라우저 없이 요청 보내도 서버는 왜 응답할까?
 Content-Length 없으면 어떻게 될까?
 서버는 왜 User-Agent를 받을까?
+```
 🔁 복습 방법 (15분)
 
 노트 보지 말고 말로 설명:
