@@ -12,13 +12,13 @@
 ## Week 1: 요청 흐름 이해
 > "요청이 어떻게 이동하는지 눈으로 이해"
 
-- Day 1: HTTP 구조 (curl)
-- Day 2: DNS (도메인 → IP)
-- Day 3: TCP 연결
-- Day 4: 서버 띄우기
-- Day 5: 포트 & 프로세스
-- Day 6: 로드 테스트
-- Day 7: 전체 흐름 정리
+- [Day 1: HTTP 구조 (curl)](https://github.com/hachuu/developGuide/blob/main/%EA%B8%B0%EB%B3%B8%EC%A7%80%EC%8B%9D/OS%2C%20NW%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EB%BF%8C%EC%8B%9C%EA%B8%B0!/day01.md)
+- [Day 2: DNS (도메인 → IP)](https://github.com/hachuu/developGuide/blob/main/%EA%B8%B0%EB%B3%B8%EC%A7%80%EC%8B%9D/OS%2C%20NW%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EB%BF%8C%EC%8B%9C%EA%B8%B0!/day02.md)
+- [Day 3: TCP 연결](https://github.com/hachuu/developGuide/blob/main/%EA%B8%B0%EB%B3%B8%EC%A7%80%EC%8B%9D/OS%2C%20NW%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EB%BF%8C%EC%8B%9C%EA%B8%B0!/day03.md)
+- [Day 4: 서버 띄우기](https://github.com/hachuu/developGuide/blob/main/%EA%B8%B0%EB%B3%B8%EC%A7%80%EC%8B%9D/OS%2C%20NW%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EB%BF%8C%EC%8B%9C%EA%B8%B0!/day04.md)
+- [Day 5: 포트 & 프로세스](https://github.com/hachuu/developGuide/blob/main/%EA%B8%B0%EB%B3%B8%EC%A7%80%EC%8B%9D/OS%2C%20NW%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EB%BF%8C%EC%8B%9C%EA%B8%B0!/day05.md)
+- [Day 6: 로드 테스트](https://github.com/hachuu/developGuide/blob/main/%EA%B8%B0%EB%B3%B8%EC%A7%80%EC%8B%9D/OS%2C%20NW%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EB%BF%8C%EC%8B%9C%EA%B8%B0!/day06.md)
+- [Day 7: 전체 흐름 정리](https://github.com/hachuu/developGuide/blob/main/%EA%B8%B0%EB%B3%B8%EC%A7%80%EC%8B%9D/OS%2C%20NW%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EB%BF%8C%EC%8B%9C%EA%B8%B0!/day07.md)
 
 ---
 
