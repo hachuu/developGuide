@@ -54,6 +54,7 @@
 
 3. TLS Handshake (Day 1 확장)
 <img width="2386" height="756" alt="image" src="https://github.com/user-attachments/assets/b9a2891f-2734-4b1e-b37d-16f3678b03ce" />
+
 - 역할
   - 암호화 채널 생성 (HTTPS)
 - 핵심
