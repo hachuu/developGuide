@@ -121,3 +121,12 @@ User → HTTP → DNS → TCP → Server → Process → Port → Response
 **"이 시점부터 성능이 급격히 나빠진다"**
 
 ---
+
+
+# 🛠️ GitHub 정리를 위한 심화 섹션: "The Missing Link"
+
+5. Load & Availability: 가용성이 곧 보안이다
+- 공격자는 서버를 뚫지 못하면 '눕히려고' 합니다 (DoS/DDoS).
+- Rate Limiting (속도 제한): 특정 IP에서 초당 요청 횟수를 제한하여 서버 자원을 보호합니다.
+- Circuit Breaker: 특정 모듈이나 DB에 과부하가 걸리면 연결을 잠시 차단해 시스템 전체가 무너지는(Cascading Failure) 것을 방지합니다.
+- 로드 테스트의 목적 변경: "내 서버는 얼마나 빠른가?"가 아니라, **"내 서버는 어느 지점에서 무너지는가?"**를 기록하세요.
