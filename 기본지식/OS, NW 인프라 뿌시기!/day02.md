@@ -228,3 +228,13 @@ DNS → IP 확인
 # 📌 한 줄 정리
 
 > DNS는 시작일 뿐이고, 실제 문제는 TCP/TLS/HTTP 단계에서 발생한다
+
+# 🛠️ GitHub 정리를 위한 심화 섹션: "The Missing Link"
+
+1. DNS & Network: 보이지 않는 위협 탐지
+- 도메인을 IP로 바꾸는 과정은 '가로채기'에 취약합니다.
+
+- DNS Spoofing/Poisoning: 공격자가 가짜 IP를 DNS 캐시에 심어 엉뚱한 사이트로 유도하는 기법입니다.
+- 대응 기술: * DNSSEC: DNS 응답에 디지털 서명을 추가해 위변조를 방지합니다.
+  - DoH (DNS over HTTPS): DNS 쿼리 자체를 암호화하여 중간에 누가 훔쳐보지 못하게 합니다.
+- 핵심 개념: "신뢰할 수 있는 이름 해결(Name Resolution)이 모든 보안의 시작이다."
