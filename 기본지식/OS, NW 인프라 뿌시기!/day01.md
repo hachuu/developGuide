@@ -297,3 +297,33 @@ curl -H "Cache-Control: no-cache" -v https://example.com
 📌 한 줄 정리
 
 HTTP 요청은 DNS → TCP → TLS → HTTP 흐름 위에서 동작한다
+
+# 🛠️ GitHub 정리를 위한 심화 섹션: "The Missing Link"
+1. HTTP Layer: 헤더(Header) 뒤에 숨은 보안 전략
+- 단순한 데이터 전송을 넘어, 브라우저와 서버 사이의 약속을 이용해 공격을 방어합니다.
+
+- 보안 필수 헤더:
+  - Content-Security-Policy (CSP): 허용된 도메인의 스크립트만 실행하게 하여 XSS 공격을 원천 봉쇄합니다.
+  - Strict-Transport-Security (HSTS): 브라우저가 강제로 HTTPS로만 접속하게 만듭니다.
+
+- 실습 과제: curl -I https://www.google.com을 입력해 실제 글로벌 서비스들이 어떤 보안 헤더를 쓰는지 분석하고 깃허브에 기록하세요.
+
+```
+C:\Users\KTDS>curl -I https://www.google.com
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=ISO-8859-1
+Content-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-CyTwhCu5Hcm_rhilhrez3A' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+Accept-CH: Sec-CH-Prefers-Color-Scheme
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+Date: Wed, 15 Apr 2026 00:03:46 GMT
+Server: gws
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+Expires: Wed, 15 Apr 2026 00:03:46 GMT
+Cache-Control: private
+Set-Cookie: AEC=AaJma5vpD5uIT-CtR6qX8zSW7BUQCUtgcAj0P-z_UwzI27UkwM39ctlbnOc; expires=Mon, 12-Oct-2026 00:03:46 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax
+Set-Cookie: NID=530=tc07X7g7e90mxHzhj_DQVHI1l-0laDyUHLTYpPlRcT0kbZ0kdRvNy4Ap15W4VPbvMJfcfldbTIIdMZpzWxLu9iwGGlf0SMSi5VD54LS6yl67DcyaySCv_VNaEWvXIMLHvt_jmC8TEF4ybcOqSBFpNbPu3byvAJGCL5aJ9V2GrpX3LvSmmhdWKE_QTwzHivPntGEytEDDx8ZuJIswTlNy-fi_EQ; expires=Thu, 15-Oct-2026 00:03:46 GMT; path=/; domain=.google.com; HttpOnly
+Set-Cookie: __Secure-BUCKET=CMMH; expires=Mon, 12-Oct-2026 00:03:46 GMT; path=/; domain=.google.com; Secure; HttpOnly
+Transfer-Encoding: chunked
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+```
