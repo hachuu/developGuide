@@ -376,3 +376,14 @@ DNS → TCP → TLS → HTTP → CDN → Server
 
 > 요청은 항상 서버로 가지 않는다  
 > 대부분 CDN에서 끝난다
+
+
+
+
+# 🛠️ GitHub 정리를 위한 심화 섹션: "The Missing Link"
+
+3. Connection: TLS 1.3과 현대적 암호화
+- TCP 연결 위에 입혀지는 보안 레이어의 핵심을 이해해야 합니다.
+- Perfect Forward Secrecy (PFS): 오늘 서버의 비밀키가 유출되어도, 과거에 암호화해서 저장해둔 통신 내용은 풀 수 없게 만드는 성질입니다.
+- 성능 최적화: TLS 1.3은 핸드셰이크 과정을 1-RTT(Round Trip Time)로 줄여 보안과 속도를 동시에 잡았습니다.
+- 정리 팁: 3-Way Handshake 도식 옆에 TLS Handshake 도식을 나란히 배치해 비교하세요.
