@@ -25,7 +25,7 @@
 ## Week 2: 성능 문제 이해
 > "왜 느려지는지 파악"
 
-- Day 8: Blocking vs Non-blocking
+- [Day 8: Blocking vs Non-blocking](https://github.com/hachuu/developGuide/blob/main/%EA%B8%B0%EB%B3%B8%EC%A7%80%EC%8B%9D/OS%2C%20NW%20%EC%9D%B8%ED%94%84%EB%9D%BC%20%EB%BF%8C%EC%8B%9C%EA%B8%B0!/day08.md)
 - Day 9: Thread / Event Loop
 - Day 10: Connection Pool
 - Day 11: Timeout
