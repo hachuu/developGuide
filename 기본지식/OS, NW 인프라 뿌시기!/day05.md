@@ -114,3 +114,11 @@ Error: EADDRINUSE
 👉 Day 6: Load Test (부하 테스트)
 - 여러 요청을 동시에 보내면 어떻게 되는가?
 - 서버는 몇 개까지 버틸 수 있는가?
+
+# 🛠️ GitHub 정리를 위한 심화 섹션: "The Missing Link"
+
+4. Process & Port: 시스템 하드닝 (Hardening)
+- 서버 내부에서 일어나는 일을 통제하는 것이 보안의 핵심입니다.
+- Privilege Separation (권한 분리): 웹 서버 프로세스를 root 권한으로 실행하지 마세요. 해킹당했을 때 서버 전체의 제어권을 뺏깁니다.
+- Zombie/Orphan Process 관리: 비정상 종료된 프로세스가 자원(Port, Memory)을 점유하지 않도록 SIGTERM을 처리하는 코드를 작성하는 법을 정리하세요.
+- 포트 스캐닝 대비: 불필요하게 열린 포트는 공격자의 출입구입니다. 0.0.0.0 바인딩의 위험성을 명시하세요.
