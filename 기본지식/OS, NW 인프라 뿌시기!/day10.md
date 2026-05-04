@@ -16,7 +16,7 @@ Connection Pool은 **DB 연결을 미리 생성해두고 재사용하는 구조*
 ```
 서버 시작 -> DB 연결 여러 개 생성 -> Pool에 저장
 요청 -> Pool에서 연결 꺼내 사용 -> 다시 반환
-
+```
 
 ## 2. 왜 필요한가?
 
@@ -33,8 +33,6 @@ Connection Pool은 **DB 연결을 미리 생성해두고 재사용하는 구조*
 
 ## 3. 동작 구조
 <img width="661" height="427" alt="image" src="https://github.com/user-attachments/assets/54567ea3-3fdf-4a41-ab6e-51f89b01e3ba" />
-<img width="661" height="427" alt="image" src="https://github.com/user-attachments/assets/2422380c-57e9-4efa-bb0b-13cb44421978" />
-<img width="661" height="427" alt="image" src="https://github.com/user-attachments/assets/93d61654-49dd-4958-9c29-bffb12ac2c60" />
 
 ## 4. 핵심 설정값
 **max (pool size)**
